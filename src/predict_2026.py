@@ -1,0 +1,280 @@
+"""
+predict_2026.py — Generate match outcome predictions for the 2026 World Cup.
+
+Steps:
+  1. Load 2026 WC fixtures from the Gulati dataset (is_world_cup == 1, date >= 2026)
+  2. Load trained models
+  3. For each match, build feature matrices using 2026 squad data
+  4. Run through all 3 models and generate probability outputs
+
+Note: Player-level features (lineups + club stats) must be scraped first for 2026.
+If not yet available, we fall back to zero player matrices (context-only prediction).
+
+Output: outputs/predictions/wc2026_predictions.csv
+"""
+
+import sys
+import pickle
+import logging
+import numpy as np
+import pandas as pd
+import torch
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import config
+from src.models.baseline_mlp  import BaselineMLP
+from src.models.tactical_cnn  import TacticalCNN
+from src.models.attention_cnn import AttentionCNN
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+log = logging.getLogger(__name__)
+
+WC2026_DATE_START = pd.Timestamp("2026-06-11")
+WC2026_DATE_END   = pd.Timestamp("2026-07-19")
+
+# Stage ordering for display
+STAGE_ORDER = {
+    "Group Stage":      0,
+    "Round of 32":      1,
+    "Round of 16":      2,
+    "Quarter-finals":   3,
+    "Semi-finals":      4,
+    "Third place":      5,
+    "Final":            6,
+}
+
+
+def load_2026_fixtures(gulati_path: Path) -> pd.DataFrame:
+    """
+    Load and filter the Gulati dataset to 2026 WC fixtures.
+    Falls back to the full dataset if no 2026 data found yet.
+    """
+    df = pd.read_csv(gulati_path, parse_dates=["date"])
+    wc26 = df[
+        (df["is_world_cup"] == 1) &
+        (df["date"] >= WC2026_DATE_START)
+    ].copy()
+
+    if len(wc26) == 0:
+        log.warning(
+            "No 2026 WC fixtures found in the dataset yet. "
+            "The dataset may not include post-tournament data. "
+            "Using the most recent available matches as a demonstration."
+        )
+        # Use last 50 WC matches as demonstration
+        wc = df[df["is_world_cup"] == 1].tail(50).copy()
+        return wc
+
+    log.info(f"Loaded {len(wc26)} 2026 WC fixtures.")
+    return wc26
+
+
+def load_2026_player_matrices(lineups_path: Path, player_stats_path: Path) -> dict | None:
+    """
+    Load 2026-specific player matrices if available.
+    Returns None if scraping hasn't been done yet.
+    """
+    if not lineups_path.exists() or not player_stats_path.exists():
+        log.warning("2026 lineup/player stats not found — using zero player features.")
+        return None
+
+    # Re-use merge_data logic inline for 2026 cycle
+    try:
+        from src.processing.merge_data import (
+            compute_position_medians, build_player_matrix, join_lineups_to_gulati
+        )
+        lineups   = pd.read_csv(lineups_path, parse_dates=["match_date"])
+        p_stats   = pd.read_csv(player_stats_path)
+        p_stats["player_id"] = p_stats["player_id"].astype(str)
+        # Filter to 2026 cycle only
+        lineups = lineups[lineups["match_date"] >= WC2026_DATE_START]
+        medians = compute_position_medians(p_stats)
+        # Build a dummy gulati DataFrame for joining
+        fixtures_df = load_2026_fixtures(config.GULATI_CSV)
+        _, lineups_matched = join_lineups_to_gulati(fixtures_df, lineups)
+        home_mats, away_mats = {}, {}
+        for match_idx, group in lineups_matched.groupby("match_idx"):
+            row = fixtures_df[fixtures_df.index == match_idx]
+            if not len(row):
+                continue
+            home_team = row.iloc[0]["home_team"]
+            away_team = row.iloc[0]["away_team"]
+            from src.scraping.utils import normalize_team_name
+            teams = {normalize_team_name(t).lower(): t for t in group["team"].unique()}
+            ht = teams.get(normalize_team_name(home_team).lower())
+            at = teams.get(normalize_team_name(away_team).lower())
+            if ht and at:
+                home_mats[match_idx] = build_player_matrix(group, p_stats, ht, 2026, medians)
+                away_mats[match_idx] = build_player_matrix(group, p_stats, at, 2026, medians)
+        return {"home": home_mats, "away": away_mats}
+    except Exception as e:
+        log.warning(f"Could not build 2026 player matrices: {e}")
+        return None
+
+
+def load_scalers() -> dict | None:
+    if not config.SCALER_PKL.exists():
+        log.warning("Scalers not found — features will not be normalized.")
+        return None
+    with open(config.SCALER_PKL, "rb") as f:
+        return pickle.load(f)
+
+
+def load_trained_model(model_class, name: str, C: int) -> torch.nn.Module | None:
+    path = config.OUTPUTS_MODELS / f"{name}_best.pt"
+    if not path.exists():
+        log.warning(f"  {name} checkpoint not found: {path}")
+        return None
+    model = model_class(F=config.F, C=C)
+    model.load_state_dict(torch.load(path, map_location="cpu"))
+    model.eval()
+    return model
+
+
+@torch.no_grad()
+def predict_match(models: dict,
+                  home_players: np.ndarray,
+                  away_players: np.ndarray,
+                  context: np.ndarray) -> dict:
+    """Run all models on a single match. Returns dict of probabilities."""
+    home_t = torch.from_numpy(home_players).float().unsqueeze(0)   # (1, 11, F)
+    away_t = torch.from_numpy(away_players).float().unsqueeze(0)
+    ctx_t  = torch.from_numpy(context).float().unsqueeze(0)         # (1, C)
+
+    probs = {}
+    for model_name, model in models.items():
+        if model is None:
+            continue
+        logits = model(home_t, away_t, ctx_t)
+        p      = torch.softmax(logits, dim=1).squeeze(0).numpy()
+        probs[model_name] = p
+
+    return probs
+
+
+def infer_stage(tournament_str: str, date: pd.Timestamp) -> str:
+    """Infer match stage from tournament string."""
+    t = str(tournament_str).lower()
+    if "final" in t and "quarter" not in t and "semi" not in t and "third" not in t:
+        return "Final"
+    if "semi" in t:
+        return "Semi-finals"
+    if "quarter" in t:
+        return "Quarter-finals"
+    if "third" in t or "3rd" in t:
+        return "Third place"
+    if "round of 16" in t or "r16" in t:
+        return "Round of 16"
+    if "round of 32" in t or "r32" in t:
+        return "Round of 32"
+    return "Group Stage"
+
+
+def main():
+    config.OUTPUTS_PREDICTIONS.mkdir(parents=True, exist_ok=True)
+
+    # ── 1. Load fixtures ──────────────────────────────────────────────────────
+    fixtures = load_2026_fixtures(config.GULATI_CSV)
+    log.info(f"Processing {len(fixtures)} 2026 matches …")
+
+    # ── 2. Load scalers ───────────────────────────────────────────────────────
+    scaler_data = load_scalers()
+    if scaler_data:
+        scalers      = scaler_data["scalers"]
+        context_cols = scaler_data["context_cols"]
+    else:
+        scalers      = None
+        context_cols = config.CONTEXT_FEATURE_COLS
+
+    # ── 3. Load player matrices ───────────────────────────────────────────────
+    player_mats = load_2026_player_matrices(
+        config.LINEUPS_CSV, config.PLAYER_STATS_CSV
+    )
+
+    # ── 4. Build context array ────────────────────────────────────────────────
+    available_cols = [c for c in context_cols if c in fixtures.columns]
+    ctx_array = fixtures[available_cols].fillna(0).values.astype(np.float32)
+    if scalers:
+        ctx_array = scalers["context"].transform(ctx_array).astype(np.float32)
+    C_actual = ctx_array.shape[1]
+    log.info(f"Context dimension: {C_actual}")
+
+    # ── 5. Load models ────────────────────────────────────────────────────────
+    models = {
+        "mlp":       load_trained_model(BaselineMLP,  "baseline_mlp",  C_actual),
+        "cnn":       load_trained_model(TacticalCNN,  "tactical_cnn",  C_actual),
+        "attention": load_trained_model(AttentionCNN, "attention_cnn", C_actual),
+    }
+    loaded = {k: v for k, v in models.items() if v is not None}
+    log.info(f"Loaded models: {list(loaded.keys())}")
+
+    if not loaded:
+        log.error("No trained models found. Run src/train.py first.")
+        return
+
+    # ── 6. Generate predictions ───────────────────────────────────────────────
+    results = []
+    home_mats = player_mats["home"] if player_mats else {}
+    away_mats = player_mats["away"] if player_mats else {}
+
+    for i, (row_idx, row) in enumerate(fixtures.iterrows()):
+        home_team = row["home_team"]
+        away_team = row["away_team"]
+        date      = row["date"]
+
+        # Player matrices (zero if not available)
+        if row_idx in home_mats:
+            hp = home_mats[row_idx]
+            ap = away_mats.get(row_idx, np.zeros((config.N_PLAYERS, config.F), dtype=np.float32))
+        else:
+            hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+            ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+
+        if scalers:
+            hp = scalers["player"].transform(hp.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
+            ap = scalers["player"].transform(ap.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
+
+        ctx = ctx_array[i]
+
+        probs = predict_match(loaded, hp, ap, ctx)
+
+        # Build output row
+        match_row = {
+            "date":      date.strftime("%Y-%m-%d") if hasattr(date, "strftime") else str(date),
+            "home_team": home_team,
+            "away_team": away_team,
+            "stage":     infer_stage(row.get("tournament", ""), date),
+        }
+
+        # Individual model probabilities
+        for mname, p in probs.items():
+            match_row[f"{mname}_home%"] = round(p[0] * 100, 1)
+            match_row[f"{mname}_draw%"] = round(p[1] * 100, 1)
+            match_row[f"{mname}_away%"] = round(p[2] * 100, 1)
+
+        # Ensemble: simple average of available models
+        if probs:
+            prob_stack = np.array(list(probs.values()))
+            ens = prob_stack.mean(axis=0)
+            match_row["ensemble_home%"] = round(ens[0] * 100, 1)
+            match_row["ensemble_draw%"] = round(ens[1] * 100, 1)
+            match_row["ensemble_away%"] = round(ens[2] * 100, 1)
+            match_row["predicted_outcome"] = config.RESULT_NAMES[ens.argmax()]
+
+        results.append(match_row)
+
+    # ── 7. Save ───────────────────────────────────────────────────────────────
+    out_df  = pd.DataFrame(results)
+    out_csv = config.OUTPUTS_PREDICTIONS / "wc2026_predictions.csv"
+    out_df.to_csv(out_csv, index=False)
+    log.info(f"\n✓ Saved {len(out_df)} match predictions → {out_csv}")
+
+    # Print summary
+    if "predicted_outcome" in out_df.columns:
+        counts = out_df["predicted_outcome"].value_counts()
+        log.info(f"\nPrediction distribution:\n{counts.to_string()}")
+
+
+if __name__ == "__main__":
+    main()
