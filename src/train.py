@@ -144,7 +144,7 @@ def train_model(model: nn.Module,
     scheduler = None
     if use_lr_scheduler:
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-            optimizer, mode="min", patience=10, factor=0.5, verbose=True
+            optimizer, mode="min", patience=10, factor=0.5
         )
 
     # Mixed precision (GPU only)
