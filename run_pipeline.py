@@ -25,7 +25,7 @@ def run_step(script_path: str, args: list = None) -> bool:
         cmd.extend(args)
 
     print(f"\n======================================================================")
-    print(f"▶ Running: {' '.join(cmd)}")
+    print(f"[*] Running: {' '.join(cmd)}")
     print(f"======================================================================")
     
     start_time = time.time()
@@ -49,14 +49,14 @@ def run_step(script_path: str, args: list = None) -> bool:
         elapsed = time.time() - start_time
         
         if process.returncode == 0:
-            print(f"✓ Step completed successfully in {elapsed:.1f}s.")
+            print(f"[OK] Step completed successfully in {elapsed:.1f}s.")
             return True
         else:
-            print(f"❌ Step failed with exit code {process.returncode} after {elapsed:.1f}s.")
+            print(f"[FAIL] Step failed with exit code {process.returncode} after {elapsed:.1f}s.")
             return False
             
     except Exception as e:
-        print(f"❌ Exception occurred: {e}")
+        print(f"[ERROR] Exception occurred: {e}")
         return False
 
 def main():
@@ -78,13 +78,13 @@ def main():
     ensemble_step = ("src/ensemble_2026.py", [])
 
     if args.only_train:
-        print("🚀 Starting pipeline (TRAINING ONLY mode)...")
+        print("[START] Starting pipeline (TRAINING ONLY mode)...")
         pipeline = [train_step, eval_step]
     elif args.skip_scraping:
-        print("🚀 Starting pipeline (SKIPPING SCRAPING mode)...")
+        print("[START] Starting pipeline (SKIPPING SCRAPING mode)...")
         pipeline = [merge_step, feat_step, train_step, eval_step, predict_step, ensemble_step]
     else:
-        print("🚀 Starting FULL pipeline (including web scraping)...")
+        print("[START] Starting FULL pipeline (including web scraping)...")
         pipeline = [
             scrape_lineups_step,
             scrape_stats_step,
@@ -101,11 +101,11 @@ def main():
         print(f"\n[Step {idx}/{total_steps}] Processing {script}...")
         success = run_step(script, script_args)
         if not success:
-            print(f"\n❌ Pipeline stopped due to failure at step: {script}")
+            print(f"\n[ERROR] Pipeline stopped due to failure at step: {script}")
             sys.exit(1)
 
     print("\n======================================================================")
-    print("🎉 All pipeline steps executed successfully!")
+    print("[SUCCESS] All pipeline steps executed successfully!")
     print("======================================================================")
 
 if __name__ == "__main__":
