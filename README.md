@@ -105,33 +105,47 @@ playwright install chromium
 
 ### Running the Pipeline
 
+You can run the entire pipeline (scraping, processing, training, evaluation, and prediction) using the master orchestrator script:
+
 ```bash
-# Step 1: Scrape starting lineups from Transfermarkt (~2,000 matches)
-python src/scraping/scrape_lineups.py
+# Run the full pipeline (including web scraping)
+python run_pipeline.py
 
-# Step 2: Scrape player club stats for every player found
-python src/scraping/scrape_player_stats.py
+# Skip the web scraping phase and run processing + training + predictions
+# (Uses zero-filled player features to establish a strong team-level baseline immediately)
+python run_pipeline.py --skip-scraping
 
-# Step 3: Merge all data sources
-python src/processing/merge_data.py
-
-# Step 4: Build and normalize feature tensors
-python src/processing/feature_engineering.py
-
-# Step 5: Train all 3 models
-python src/train.py --model all
-
-# Step 6: Evaluate and generate plots
-python src/evaluate.py
-
-# Step 7: Generate 2026 predictions
-python src/predict_2026.py
-
-# Step 8: PlayerElo ensemble (requires data/raw/player_elo/players.csv)
-python src/ensemble_2026.py
+# Run only model training and validation evaluation
+python run_pipeline.py --only-train
 ```
 
-> **Note:** Steps 3–8 can be run immediately without scraping, using context-only features (player matrices will be zero-filled). This gives a strong team-level baseline before adding player-level data.
+Alternatively, you can run each step manually:
+
+```bash
+# 1. Scrape lineups from Transfermarkt
+python src/scraping/scrape_lineups.py
+
+# 2. Scrape player club stats
+python src/scraping/scrape_player_stats.py
+
+# 3. Merge data sources
+python src/processing/merge_data.py
+
+# 4. Feature engineering and scaling
+python src/processing/feature_engineering.py
+
+# 5. Train MLP, CNN, and Attention models
+python src/train.py --model all
+
+# 6. Evaluate and save plots
+python src/evaluate.py
+
+# 7. Generate 2026 predictions
+python src/predict_2026.py
+
+# 8. Run PlayerElo ensemble (requires player_elo data downloaded)
+python src/ensemble_2026.py
+```
 
 ---
 
