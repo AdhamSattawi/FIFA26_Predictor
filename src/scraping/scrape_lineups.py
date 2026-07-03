@@ -26,7 +26,7 @@ import config
 from src.scraping.utils import (
     polite_sleep, new_browser_context,
     safe_inner_text, safe_get_attribute,
-    normalize_team_name, log,
+    normalize_team_name, dismiss_consent, log,
 )
 
 # ── Output ────────────────────────────────────────────────────────────────────
@@ -43,30 +43,13 @@ WC_DATES = {
 
 def get_match_scope(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Filter the Gulati dataset to only the matches we want lineups for:
-      - All WC matches (is_world_cup == 1)
-      - All qualifier matches (is_qualifier == 1)
-      - Friendlies within 12 months before each WC
+    Filter the Gulati dataset to only the matches we want lineups for.
+    To avoid Transfermarkt rate limits and ensure reasonable runtimes, we only scrape
+    the World Cup final matches for the 2014, 2018, and 2022 tournaments.
     """
     df["date"] = pd.to_datetime(df["date"])
-    mask_wc  = df["is_world_cup"] == 1
-    mask_qual = df["is_qualifier"] == 1
-
-    # Friendlies within FRIENDLY_WINDOW_MONTHS before each WC
-    friendly_masks = []
-    for wc_year, wc_date in WC_DATES.items():
-        window_start = wc_date - timedelta(days=config.FRIENDLY_WINDOW_MONTHS * 30)
-        m = (
-            (df["is_friendly"] == 1)
-            & (df["date"] >= window_start)
-            & (df["date"] <= wc_date)
-        )
-        friendly_masks.append(m)
-
-    import functools, operator
-    mask_friendly = functools.reduce(operator.or_, friendly_masks)
-
-    return df[mask_wc | mask_qual | mask_friendly].copy().reset_index(drop=True)
+    mask_wc  = (df["is_world_cup"] == 1) & df["date"].dt.year.isin([2014, 2018, 2022])
+    return df[mask_wc].copy().reset_index(drop=True)
 
 
 def build_tm_search_url(home_team: str, away_team: str, date: str) -> str:
@@ -81,38 +64,47 @@ def build_tm_search_url(home_team: str, away_team: str, date: str) -> str:
     )
 
 
-def scrape_lineup_from_page(page, match_id: str) -> list[dict]:
+def scrape_lineup_from_page(page, match_id: str, home_team: str, away_team: str) -> list[dict]:
     """
     Given a Transfermarkt lineup page already loaded, extract starting XI for
     both teams. Returns a list of player dicts.
     """
     players = []
     try:
-        # Both team lineup boxes
-        lineup_boxes = page.locator("div.aufstellung-vereinssektion").all()
-        if len(lineup_boxes) < 2:
-            log.warning(f"  Only {len(lineup_boxes)} lineup box(es) found for match {match_id}")
+        tables = page.locator("table.items").all()
+        if len(tables) < 2:
+            log.warning(f"  Only {len(tables)} lineup table(s) found for match {match_id}")
+            return players
 
-        for box_idx, box in enumerate(lineup_boxes[:2]):
-            team_name_raw = safe_inner_text(box.locator("a.vereinprofil_tooltip").first)
-            team_name = normalize_team_name(team_name_raw)
-
-            player_rows = box.locator("table.items tbody tr").all()
-            for row in player_rows:
-                # Each row has: shirt number | position | player name
+        # Table 0 is home starting XI, Table 1 is away starting XI
+        for idx, table in enumerate(tables[:2]):
+            team_name = home_team if idx == 0 else away_team
+            rows = table.locator("tbody > tr").all()
+            
+            # Each player takes 3 rows in the new layout
+            for i in range(0, len(rows), 3):
+                if i >= len(rows):
+                    break
+                row = rows[i]
                 cells = row.locator("td").all()
-                if len(cells) < 3:
+                if len(cells) < 5:
                     continue
+                
                 shirt_number = safe_inner_text(cells[0])
-                position     = safe_inner_text(cells[1])
-                name_cell    = cells[2]
-                player_name  = safe_inner_text(name_cell.locator("a").first)
-                player_href  = safe_get_attribute(name_cell.locator("a").first, "href")
-
-                # Extract player_id from href like /player-name/profil/spieler/12345
+                
+                # Player name and ID from cell 3
+                name_anchor = cells[3].locator("a").first
+                player_name = safe_inner_text(name_anchor)
+                player_href = safe_get_attribute(name_anchor, "href")
+                
+                # Position from cell 4
+                position_raw = safe_inner_text(cells[4])
+                position = position_raw.split(",")[0].strip()
+                
+                # Extract player_id
                 pid_match = re.search(r"/spieler/(\d+)", player_href)
                 player_id = pid_match.group(1) if pid_match else ""
-
+                
                 if player_name:
                     players.append({
                         "match_id":     match_id,
@@ -122,42 +114,49 @@ def scrape_lineup_from_page(page, match_id: str) -> list[dict]:
                         "position":     position,
                         "shirt_number": shirt_number,
                     })
-
     except Exception as e:
         log.error(f"  Error parsing lineup for match {match_id}: {e}")
 
     return players
 
 
-def find_match_id_on_tm(page, home_team: str, away_team: str,
-                         date: pd.Timestamp, competition_id: str) -> str | None:
+def build_schedule_cache(page, competition_id: str, saison: int) -> dict:
     """
-    Try to find the Transfermarkt match ID for a given match by browsing
-    the competition schedule page for that date's matchday.
-
-    Returns the match_id string or None if not found.
+    Load the schedule page once and parse all matches to build a lookup cache:
+    {(home_team_normalized, away_team_normalized, date_str): match_id}
     """
-    # Transfermarkt spielplan URL for the competition
-    year = date.year
-    # For WC: e.g. WM22 saison 2022; for qualifiers: the relevant saison year
-    saison = year - 1 if date.month < 7 else year
-    url = (
-        f"https://www.transfermarkt.com/x/spielplan/wettbewerb/{competition_id}"
-        f"/plus/?saison_id={saison}"
-    )
+    cache = {}
+    if competition_id in ("WM14", "WM18", "WM22"):
+        url = f"https://www.transfermarkt.com/world-cup/gesamtspielplan/pokalwettbewerb/FIWC/saison_id/{saison}"
+    else:
+        url = (
+            f"https://www.transfermarkt.com/x/spielplan/wettbewerb/{competition_id}"
+            f"/plus/?saison_id={saison}"
+        )
 
+    log.info(f"  Building schedule cache from: {url}")
     try:
         page.goto(url, timeout=30000)
-        page.wait_for_selector("table.spielplan-ergebnis", timeout=10000)
-    except (PWTimeout, Exception) as e:
+        dismiss_consent(page)
+        page.wait_for_selector("table.spielplan-ergebnis, div.box, table.items, tr", timeout=15000)
+    except Exception as e:
         log.warning(f"  Could not load schedule page {url}: {e}")
-        return None
+        return cache
 
-    # Find all match rows and match by teams + date
-    rows = page.locator("table.spielplan-ergebnis tbody tr").all()
+    # Find all match rows
+    if competition_id in ("WM14", "WM18", "WM22"):
+        rows = page.locator("tr").filter(has=page.locator("a[href*='spielbericht']")).all()
+    else:
+        rows = page.locator("table.spielplan-ergebnis tbody tr").all()
+
+    log.info(f"  Found {len(rows)} match rows on the schedule page.")
     for row in rows:
         try:
-            row_date_str = safe_inner_text(row.locator("td").nth(1))
+            if competition_id in ("WM14", "WM18", "WM22"):
+                row_date_str = safe_inner_text(row.locator("td").nth(0))
+            else:
+                row_date_str = safe_inner_text(row.locator("td").nth(1))
+                
             row_home = normalize_team_name(
                 safe_get_attribute(row.locator("a[title]").first, "title")
             )
@@ -170,32 +169,60 @@ def find_match_id_on_tm(page, home_team: str, away_team: str,
             except Exception:
                 continue
 
-            date_match  = abs((row_date - date).days) <= 1
-            teams_match = (
-                (row_home.lower() in home_team.lower() or home_team.lower() in row_home.lower())
-                and
-                (row_away.lower() in away_team.lower() or away_team.lower() in row_away.lower())
-            )
-
-            if date_match and teams_match:
-                # Get match report link
-                match_link = row.locator("a[href*='spielbericht']").first
-                href = safe_get_attribute(match_link, "href")
-                mid_match = re.search(r"/spielbericht/(\d+)", href)
-                if mid_match:
-                    return mid_match.group(1)
+            # Get match report link
+            match_link = row.locator("a[href*='spielbericht']").first
+            href = safe_get_attribute(match_link, "href")
+            mid_match = re.search(r"/spielbericht/(\d+)", href)
+            if mid_match:
+                match_id = mid_match.group(1)
+                key = (row_home.lower(), row_away.lower(), row_date.strftime("%Y-%m-%d"))
+                cache[key] = match_id
         except Exception:
             continue
 
+    return cache
+
+
+def lookup_match_id(cache: dict, home_team: str, away_team: str, date: pd.Timestamp) -> str | None:
+    """Find a match ID from cache with flexible team names and +/- 1 day date tolerance."""
+    home_norm = normalize_team_name(home_team).lower()
+    away_norm = normalize_team_name(away_team).lower()
+    
+    for (cached_home, cached_away, cached_date_str), match_id in cache.items():
+        try:
+            cached_date = pd.to_datetime(cached_date_str)
+        except Exception:
+            continue
+            
+        date_match = abs((cached_date - date).days) <= 1
+        teams_match = (
+            (cached_home in home_norm or home_norm in cached_home)
+            and
+            (cached_away in away_norm or away_norm in cached_away)
+        )
+        if date_match and teams_match:
+            return match_id
     return None
 
 
 def run_scraper(competition_id: str, matches_df: pd.DataFrame, page) -> list[dict]:
     """
-    For each match in matches_df, find its Transfermarkt match ID, then
-    scrape the lineup page. Returns list of player dicts.
+    For each match in matches_df, lookup its Transfermarkt match ID using a cached schedule,
+    then scrape the lineup page. Returns list of player dicts.
     """
     all_players = []
+    if len(matches_df) == 0:
+        return []
+
+    # Get season ID from first match in df
+    first_date = pd.to_datetime(matches_df.iloc[0]["date"])
+    saison = first_date.year - 1 if first_date.month < 7 else first_date.year
+
+    # Load and cache matches schedule
+    cache = build_schedule_cache(page, competition_id, saison)
+    if not cache:
+        log.warning(f"  Schedule cache empty for {competition_id} saison {saison}. Skipping all matches.")
+        return []
 
     for _, row in matches_df.iterrows():
         home  = str(row["home_team"])
@@ -204,10 +231,9 @@ def run_scraper(competition_id: str, matches_df: pd.DataFrame, page) -> list[dic
 
         log.info(f"  [{competition_id}] {date.date()} {home} vs {away}")
 
-        match_id = find_match_id_on_tm(page, home, away, date, competition_id)
+        match_id = lookup_match_id(cache, home, away, date)
         if not match_id:
-            log.warning(f"    → Match ID not found, skipping.")
-            polite_sleep(1.0, 2.0)
+            log.warning(f"    → Match ID not found in cache, skipping.")
             continue
 
         lineup_url = (
@@ -215,13 +241,14 @@ def run_scraper(competition_id: str, matches_df: pd.DataFrame, page) -> list[dic
         )
         try:
             page.goto(lineup_url, timeout=30000)
-            page.wait_for_selector("div.aufstellung-vereinssektion", timeout=10000)
+            dismiss_consent(page)
+            page.wait_for_selector("table.items", timeout=10000)
         except (PWTimeout, Exception) as e:
             log.warning(f"    → Lineup page load failed ({e}), skipping.")
             polite_sleep(2.0, 4.0)
             continue
 
-        players = scrape_lineup_from_page(page, match_id)
+        players = scrape_lineup_from_page(page, match_id, home, away)
         # Attach match metadata
         for p in players:
             p["match_date"]  = date.strftime("%Y-%m-%d")
@@ -237,6 +264,10 @@ def run_scraper(competition_id: str, matches_df: pd.DataFrame, page) -> list[dic
 
 
 def main():
+    if LINEUPS_CSV.exists():
+        log.info(f"Lineups file already exists at {LINEUPS_CSV}. Skipping lineup scraping.")
+        return
+
     log.info("Loading Gulati dataset …")
     df = pd.read_csv(config.GULATI_CSV)
     scope_df = get_match_scope(df)

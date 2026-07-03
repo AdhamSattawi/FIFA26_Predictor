@@ -41,6 +41,30 @@ def new_browser_context(playwright):
     return browser, context, page
 
 
+def dismiss_consent(page) -> None:
+    """Dismiss GDPR / cookie consent dialogs on Transfermarkt if present."""
+    try:
+        # Check main page
+        accept_btn = page.locator("button:has-text('Accept & continue'), button:has-text('Accept'), button:has-text('Zustimmen')")
+        if accept_btn.count() > 0:
+            accept_btn.first.click(timeout=2000)
+            page.wait_for_timeout(1000)
+            return
+        
+        # Check if inside frame
+        for frame in page.frames:
+            try:
+                frame_btn = frame.locator("button:has-text('Accept & continue'), button:has-text('Akzeptieren'), button:has-text('Zustimmen')")
+                if frame_btn.count() > 0:
+                    frame_btn.first.click(timeout=2000)
+                    page.wait_for_timeout(1000)
+                    return
+            except Exception:
+                pass
+    except Exception:
+        pass
+
+
 def safe_inner_text(locator, default: str = "") -> str:
     """Extract inner text from a locator, returning default on failure."""
     try:

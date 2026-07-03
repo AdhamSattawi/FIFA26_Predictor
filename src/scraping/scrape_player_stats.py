@@ -19,7 +19,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import config
 from src.scraping.utils import (
     polite_sleep, new_browser_context,
-    safe_inner_text, safe_get_attribute, log,
+    safe_inner_text, safe_get_attribute,
+    dismiss_consent, USER_AGENT, log,
 )
 
 # ── Output ────────────────────────────────────────────────────────────────────
@@ -64,7 +65,7 @@ def extract_player_slug(name: str) -> str:
 
 def parse_stats_table(page) -> dict:
     """
-    Parse the Transfermarkt player performance detail page.
+    Parse the Transfermarkt player performance detail page Svelte grid.
     Returns a dict of aggregated season stats across all competitions.
     """
     stats = {
@@ -77,48 +78,25 @@ def parse_stats_table(page) -> dict:
     }
 
     try:
-        # Each competition row in the stats table
-        rows = page.locator("table.items tbody tr").all()
-        for row in rows:
-            cells = row.locator("td").all()
-            if len(cells) < 7:
-                continue
-
-            def to_int(idx):
-                txt = safe_inner_text(cells[idx]).replace(".", "").replace("'", "").strip()
-                if txt in ("-", "", "–"):
-                    return 0
-                try:
-                    return int(txt)
-                except ValueError:
-                    return 0
-
-            # Transfermarkt column order (varies slightly; use robust parsing):
-            # col 0: competition name
-            # col 1: appearances
-            # col 2: goals
-            # col 3: assists
-            # col 4: own goals (ignore)
-            # col 5: yellow cards
-            # col 6: yellow-red (count as red for simplicity)
-            # col 7: red cards
-            # col 8: minutes played
-            try:
-                stats["appearances"]    += to_int(1)
-                stats["goals"]          += to_int(2)
-                stats["assists"]        += to_int(3)
-                stats["yellow_cards"]   += to_int(5)
-                stats["red_cards"]      += to_int(6) + to_int(7)
-                # Minutes: strip "'" suffix
-                min_txt = safe_inner_text(cells[8]).replace("'", "").replace(".", "").strip()
-                if min_txt not in ("-", "", "–"):
+        total_row = page.locator("div.grid-row").filter(has_text="Total:").first
+        if total_row.count() > 0:
+            cells = total_row.locator("> div").all()
+            if len(cells) >= 8:
+                def to_int(text):
+                    txt = text.replace(".", "").replace("'", "").replace(",", "").strip()
+                    if txt in ("-", "", "–"):
+                        return 0
                     try:
-                        stats["minutes_played"] += int(min_txt)
+                        return int(txt)
                     except ValueError:
-                        pass
-            except IndexError:
-                continue
+                        return 0
 
+                stats["appearances"] = to_int(safe_inner_text(cells[1]))
+                stats["goals"] = to_int(safe_inner_text(cells[2]))
+                stats["assists"] = to_int(safe_inner_text(cells[3]))
+                stats["yellow_cards"] = to_int(safe_inner_text(cells[4]))
+                stats["red_cards"] = to_int(safe_inner_text(cells[6]))
+                stats["minutes_played"] = to_int(safe_inner_text(cells[7]))
     except Exception as e:
         log.debug(f"  Stats table parse error: {e}")
 
@@ -135,6 +113,7 @@ def scrape_player(page, player_id: str, player_name: str,
 
     try:
         page.goto(url, timeout=30000)
+        dismiss_consent(page)
         # Wait for either the stats table or the profile header
         page.wait_for_selector("div.dataArea, h1.data-header__headline-wrapper", timeout=10000)
     except (PWTimeout, Exception) as e:
@@ -148,6 +127,7 @@ def scrape_player(page, player_id: str, player_name: str,
         )
         try:
             page.goto(url_fallback, timeout=20000)
+            dismiss_consent(page)
             page.wait_for_selector("div.dataArea", timeout=8000)
         except Exception:
             log.warning(f"  Fallback also failed for player {player_id}.")
@@ -169,6 +149,16 @@ def scrape_player(page, player_id: str, player_name: str,
         club = safe_inner_text(club_el)
     except Exception:
         pass
+
+    # Scroll to load the Svelte grids and wait for elements to render
+    try:
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight/4);")
+        page.wait_for_selector("div.grid-row", timeout=6000)
+    except Exception:
+        try:
+            page.wait_for_timeout(1500)
+        except Exception:
+            pass
 
     stats = parse_stats_table(page)
 
@@ -219,7 +209,11 @@ def main():
     results: list[dict] = []
 
     with sync_playwright() as p:
-        browser, context, page = new_browser_context(p)
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent=USER_AGENT)
+        page = context.new_page()
+
+        scraped_since_refresh = 0
 
         for i, row in unique_pairs.iterrows():
             pid       = str(int(row["player_id"]))
@@ -231,22 +225,40 @@ def main():
             if key in existing_ids:
                 continue
 
+            # Recreate context every 40 players to avoid browser crashes and memory leaks
+            if scraped_since_refresh >= 40:
+                log.info("  Refreshing browser context to prevent memory leaks...")
+                try:
+                    page.close()
+                    context.close()
+                except Exception:
+                    pass
+                context = browser.new_context(user_agent=USER_AGENT)
+                page = context.new_page()
+                scraped_since_refresh = 0
+
             log.info(f"[{i+1}/{len(unique_pairs)}] {name} (ID: {pid}) — saison {saison}")
             record = scrape_player(page, pid, name, saison, wc_cycle)
+            scraped_since_refresh += 1
 
             if record:
                 results.append(record)
                 log.info(f"  → {record['appearances']} apps, {record['goals']} goals, "
                          f"{record['minutes_played']} min")
 
-            # Save incrementally every 50 players
-            if (i + 1) % 50 == 0 and results:
+            # Save incrementally every 20 players to reduce data loss if a crash occurs
+            if len(results) >= 20:
                 _save_results(results, append=config.PLAYER_STATS_CSV.exists())
                 results = []
                 log.info(f"  [Checkpoint] Saved to {config.PLAYER_STATS_CSV}")
 
             polite_sleep()
 
+        try:
+            page.close()
+            context.close()
+        except Exception:
+            pass
         browser.close()
 
     # Final save
