@@ -120,7 +120,10 @@ def join_lineups_to_gulati(gulati: pd.DataFrame,
                row["away_team_norm"].lower())
         return lookup.get(key, -1)
 
-    lineups["match_idx"] = lineups.apply(find_idx, axis=1)
+    if lineups.empty:
+        lineups["match_idx"] = pd.Series(dtype=int)
+    else:
+        lineups["match_idx"] = lineups.apply(find_idx, axis=1)
     matched = lineups[lineups["match_idx"] >= 0]
     unmatched = lineups[lineups["match_idx"] < 0]
 
