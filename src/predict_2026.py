@@ -47,27 +47,37 @@ STAGE_ORDER = {
 
 def load_2026_fixtures(gulati_path: Path) -> pd.DataFrame:
     """
-    Load and filter the Gulati dataset to 2026 WC fixtures.
-    Falls back to the full dataset if no 2026 data found yet.
+    Load 2026 WC fixtures from the extended dataset (dataset_with_2026.csv),
+    returning only upcoming/unplayed matches (result is NaN).
+    Falls back to the original Gulati CSV if the extended file doesn't exist.
     """
-    df = pd.read_csv(gulati_path, parse_dates=["date"])
+    extended_path = config.DATA_PROCESSED / "dataset_with_2026.csv"
+    if extended_path.exists():
+        df = pd.read_csv(extended_path, parse_dates=["date"])
+        log.info(f"Using extended dataset: {extended_path}")
+    else:
+        df = pd.read_csv(gulati_path, parse_dates=["date"])
+        log.warning("Extended dataset not found — using original Gulati CSV. "
+                    "Run src/processing/compute_features_2026.py first.")
+
     wc26 = df[
         (df["is_world_cup"] == 1) &
         (df["date"] >= WC2026_DATE_START)
     ].copy()
 
-    if len(wc26) == 0:
+    # Only predict matches where result is not yet known
+    upcoming = wc26[wc26["result"].isna()].copy()
+
+    if len(upcoming) == 0:
         log.warning(
-            "No 2026 WC fixtures found in the dataset yet. "
-            "The dataset may not include post-tournament data. "
-            "Using the most recent available matches as a demonstration."
+            "No unplayed 2026 WC fixtures found. "
+            "Using the most recent 50 WC matches as a demonstration."
         )
-        # Use last 50 WC matches as demonstration
         wc = df[df["is_world_cup"] == 1].tail(50).copy()
         return wc
 
-    log.info(f"Loaded {len(wc26)} 2026 WC fixtures.")
-    return wc26
+    log.info(f"Loaded {len(upcoming)} upcoming 2026 WC fixtures to predict.")
+    return upcoming
 
 
 def load_2026_player_matrices(lineups_path: Path, player_stats_path: Path) -> dict | None:
