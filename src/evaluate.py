@@ -37,19 +37,29 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 log = logging.getLogger(__name__)
 
 CLASS_NAMES = config.RESULT_NAMES  # ["Home Win", "Draw", "Away Win"]
-PALETTE = {"baseline_mlp": "#4A90D9", "tactical_cnn": "#E67E22", "attention_cnn": "#2ECC71"}
+PALETTE = {"baseline_mlp": "#4A90D9", "tactical_cnn": "#E67E22", "attention_cnn": "#2ECC71", "xgboost": "#9B59B6"}
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
 
-def load_val_dataset() -> TensorDataset:
-    data = np.load(config.VAL_NPZ)
-    return TensorDataset(
+def load_eval_dataset() -> tuple[TensorDataset, str]:
+    """Load evaluation dataset. Prefers TEST_NPZ if available, otherwise falls back to VAL_NPZ."""
+    if config.TEST_NPZ.exists():
+        log.info(f"Loading test split for evaluation: {config.TEST_NPZ}")
+        data = np.load(config.TEST_NPZ)
+        split_name = "test"
+    else:
+        log.info(f"Loading val split for evaluation: {config.VAL_NPZ}")
+        data = np.load(config.VAL_NPZ)
+        split_name = "val"
+
+    ds = TensorDataset(
         torch.from_numpy(data["home_players"]).float(),
         torch.from_numpy(data["away_players"]).float(),
         torch.from_numpy(data["context"]).float(),
         torch.from_numpy(data["targets"]).long(),
     )
+    return ds, split_name
+
 
 
 def load_model(model_class, name: str, C: int) -> torch.nn.Module | None:
@@ -209,12 +219,14 @@ def main():
     config.OUTPUTS_PLOTS.mkdir(parents=True, exist_ok=True)
     config.OUTPUTS_PREDICTIONS.mkdir(parents=True, exist_ok=True)
 
-    # Load val dataset
-    val_ds = load_val_dataset()
-    loader = DataLoader(val_ds, batch_size=64, shuffle=False)
+    # Load eval dataset (Item 4)
+    eval_ds, split_name = load_eval_dataset()
+    loader = DataLoader(eval_ds, batch_size=64, shuffle=False)
+
 
     # Actual context dim from loaded data
-    C_actual = val_ds[0][2].shape[0]
+    C_actual = eval_ds[0][2].shape[0]
+
 
     # Load training history
     hist_path = config.OUTPUTS_MODELS / "training_histories.pkl"
@@ -226,17 +238,24 @@ def main():
     # Load training targets for class distribution
     train_data = np.load(config.TRAIN_NPZ)
     y_train    = train_data["targets"]
-    val_data   = np.load(config.VAL_NPZ)
-    y_val_all  = val_data["targets"]
+    
+    if split_name == "test":
+        eval_data = np.load(config.TEST_NPZ)
+    else:
+        eval_data = np.load(config.VAL_NPZ)
+    y_eval_all = eval_data["targets"]
 
     # Class distribution plot
-    plot_class_distribution(y_train, y_val_all)
+    plot_class_distribution(y_train, y_eval_all)
+
 
     model_registry = {
         "baseline_mlp":  (BaselineMLP,    {}),
         "tactical_cnn":  (TacticalCNN,    {}),
         "attention_cnn": (AttentionCNN,   {}),
+        "xgboost":       (None,           {}),
     }
+
 
     all_results = {}
     all_preds   = {}
@@ -247,11 +266,26 @@ def main():
     print("="*70)
 
     for model_name, (model_class, kwargs) in model_registry.items():
-        model = load_model(model_class, model_name, C=C_actual)
-        if model is None:
-            continue
+        if model_name == "xgboost":
+            path = config.OUTPUTS_MODELS / "xgboost_best.pkl"
+            if not path.exists():
+                log.warning(f"  Model checkpoint not found: {path}")
+                continue
+            with open(path, "rb") as f:
+                model = pickle.load(f)
+            log.info(f"  Loaded xgboost from {path}")
+            
+            # Direct prediction on evaluation features
+            X_eval = eval_ds.tensors[2].numpy()
+            y_true = eval_ds.tensors[3].numpy()
+            y_prob = model.predict_proba(X_eval)
+            y_pred = model.predict(X_eval)
+        else:
+            model = load_model(model_class, model_name, C=C_actual)
+            if model is None:
+                continue
+            y_true, y_pred, y_prob = get_predictions(model, loader)
 
-        y_true, y_pred, y_prob = get_predictions(model, loader)
 
         # Metrics
         acc      = accuracy_score(y_true, y_pred)
@@ -308,9 +342,10 @@ def main():
                 row[f"{mname}_away%"]  = round(pdata["y_prob"][i][2] * 100, 1)
             rows.append(row)
 
-        pred_csv = config.OUTPUTS_PREDICTIONS / "val_predictions.csv"
+        pred_csv = config.OUTPUTS_PREDICTIONS / f"{split_name}_predictions.csv"
         pd.DataFrame(rows).to_csv(pred_csv, index=False)
-        log.info(f"\nSaved val predictions → {pred_csv}")
+        log.info(f"\nSaved {split_name} predictions → {pred_csv}")
+
 
     log.info("\n✓ evaluate.py complete.")
 

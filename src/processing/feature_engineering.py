@@ -45,11 +45,12 @@ def load_dataset():
     return df, player_matrices
 
 
-def get_split_mask(df: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
+def get_split_mask(df: pd.DataFrame) -> tuple[pd.Series, pd.Series, pd.Series]:
     """
     Temporal split:
-      Train: 2014 and 2018 cycles (is_world_cup, qualifiers, and filtered friendlies up to those WCs)
-      Val:   2022 cycle
+      Train: 2014 cycle (defined by config.TRAIN_CYCLES)
+      Val:   2018 cycle (defined by config.VAL_CYCLES)
+      Test:  2022 cycle (defined by config.TEST_CYCLES)
     We define cycle by the WC they belong to.
     """
     from datetime import timedelta
@@ -69,12 +70,18 @@ def get_split_mask(df: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
         return cycle_start <= date <= wc_date
 
     train_mask = df["date"].apply(
-        lambda d: in_cycle(d, 2014) or in_cycle(d, 2018)
+        lambda d: any(in_cycle(d, y) for y in config.TRAIN_CYCLES)
     )
-    val_mask = df["date"].apply(lambda d: in_cycle(d, 2022))
+    val_mask = df["date"].apply(
+        lambda d: any(in_cycle(d, y) for y in config.VAL_CYCLES)
+    )
+    test_mask = df["date"].apply(
+        lambda d: any(in_cycle(d, y) for y in config.TEST_CYCLES)
+    )
 
-    log.info(f"Split: {train_mask.sum()} train / {val_mask.sum()} val rows.")
-    return train_mask, val_mask
+    log.info(f"Split: {train_mask.sum()} train / {val_mask.sum()} val / {test_mask.sum()} test rows.")
+    return train_mask, val_mask, test_mask
+
 
 
 def build_context_features(df: pd.DataFrame) -> np.ndarray:
@@ -204,14 +211,20 @@ def fit_scalers(home_train: np.ndarray,
 
 def apply_scalers(home: np.ndarray, away: np.ndarray,
                   context: np.ndarray, scalers: dict):
-    """Apply fitted scalers to arrays in-place."""
+    """Apply fitted scalers to arrays in-place and clip outlier values."""
     N, n_p, F = home.shape
 
     home_scaled    = scalers["player"].transform(home.reshape(-1, F)).reshape(N, n_p, F)
     away_scaled    = scalers["player"].transform(away.reshape(-1, F)).reshape(N, n_p, F)
     context_scaled = scalers["context"].transform(context)
 
+    # Item 5: Clip outliers to [-3.0, 3.0] standard deviations to prevent gradient explosion
+    home_scaled    = np.clip(home_scaled, -3.0, 3.0)
+    away_scaled    = np.clip(away_scaled, -3.0, 3.0)
+    context_scaled = np.clip(context_scaled, -3.0, 3.0)
+
     return home_scaled.astype(np.float32), away_scaled.astype(np.float32), context_scaled.astype(np.float32)
+
 
 
 def save_split(path: Path, home: np.ndarray, away: np.ndarray,
@@ -242,16 +255,18 @@ def main():
     df["result_encoded"] = df["result"].map(config.RESULT_MAP)
     targets_all = df["result_encoded"].fillna(1).values.astype(np.int64)
 
-    # ── 5. Train / val split ──────────────────────────────────────────────────
-    train_mask, val_mask = get_split_mask(df)
+    # ── 5. Train / val / test split ───────────────────────────────────────────
+    train_mask, val_mask, test_mask = get_split_mask(df)
 
     train_idx = np.where(train_mask.values)[0]
     val_idx   = np.where(val_mask.values)[0]
+    test_idx  = np.where(test_mask.values)[0]
 
     home_train, away_train = home_all[train_idx], away_all[train_idx]
     home_val,   away_val   = home_all[val_idx],   away_all[val_idx]
-    ctx_train, ctx_val     = context_all[train_idx], context_all[val_idx]
-    tgt_train, tgt_val     = targets_all[train_idx], targets_all[val_idx]
+    home_test,  away_test  = home_all[test_idx],  away_all[test_idx]
+    ctx_train, ctx_val, ctx_test = context_all[train_idx], context_all[val_idx], context_all[test_idx]
+    tgt_train, tgt_val, tgt_test = targets_all[train_idx], targets_all[val_idx], targets_all[test_idx]
 
     # ── 6. Augmentation (train set only) ─────────────────────────────────────
     is_neutral_train = df["neutral"].values[train_idx]
@@ -264,10 +279,12 @@ def main():
     scalers = fit_scalers(home_train, away_train, ctx_train)
     home_train, away_train, ctx_train = apply_scalers(home_train, away_train, ctx_train, scalers)
     home_val,   away_val,   ctx_val   = apply_scalers(home_val,   away_val,   ctx_val,   scalers)
+    home_test,  away_test,  ctx_test  = apply_scalers(home_test,  away_test,  ctx_test,  scalers)
 
     # ── 8. Save ───────────────────────────────────────────────────────────────
     save_split(config.TRAIN_NPZ, home_train, away_train, ctx_train, tgt_train)
     save_split(config.VAL_NPZ,   home_val,   away_val,   ctx_val,   tgt_val)
+    save_split(config.TEST_NPZ,  home_test,  away_test,  ctx_test,  tgt_test)
 
     config.OUTPUTS_MODELS.mkdir(parents=True, exist_ok=True)
     with open(config.SCALER_PKL, "wb") as f:
@@ -275,13 +292,14 @@ def main():
     log.info(f"Saved scalers → {config.SCALER_PKL}")
 
     # ── 9. Class distribution report ─────────────────────────────────────────
-    for name, tgt in [("Train", tgt_train), ("Val", tgt_val)]:
+    for name, tgt in [("Train", tgt_train), ("Val", tgt_val), ("Test", tgt_test)]:
         counts = np.bincount(tgt, minlength=3)
         pcts   = counts / counts.sum() * 100
         log.info(f"{name} class distribution: "
                  f"H={counts[0]}({pcts[0]:.1f}%) "
                  f"D={counts[1]}({pcts[1]:.1f}%) "
                  f"A={counts[2]}({pcts[2]:.1f}%)")
+
 
     log.info("\n✓ feature_engineering.py complete.")
 

@@ -2,11 +2,12 @@
 train.py — Train all 3 models on the processed feature tensors.
 
 Usage:
-  python src/train.py                     # train all models
-  python src/train.py --model mlp         # train only the baseline MLP
-  python src/train.py --model cnn         # train only the tactical CNN
-  python src/train.py --model attention   # train only the attention CNN
-  python src/train.py --model all         # train all (default)
+  python src/train.py                        # train all models (focal loss)
+  python src/train.py --model mlp            # train only the baseline MLP
+  python src/train.py --model cnn            # train only the tactical CNN
+  python src/train.py --model attention      # train only the attention CNN
+  python src/train.py --model all            # train all (default)
+  python src/train.py --loss cross_entropy   # use plain CrossEntropyLoss instead
 """
 
 import sys
@@ -31,6 +32,43 @@ log = logging.getLogger(__name__)
 
 torch.manual_seed(config.SEED)
 np.random.seed(config.SEED)
+
+
+# ── Focal Loss ────────────────────────────────────────────────────────────────
+
+class FocalLoss(nn.Module):
+    """
+    Focal Loss: down-weights easy examples so the model focuses on hard ones.
+    FL(p_t) = -alpha_t * (1 - p_t)^gamma * log(p_t)
+
+    gamma=2.0  : standard focal loss exponent
+    class_weights: same as CrossEntropyLoss weight parameter
+
+    This combats class imbalance better than class weighting alone because
+    it also suppresses confident correct predictions (e.g. obvious Home Wins)
+    and forces attention on ambiguous matches (draws, upsets).
+    """
+    def __init__(self, gamma: float = 2.0,
+                 class_weights: torch.Tensor | None = None):
+        super().__init__()
+        self.gamma   = gamma
+        self.register_buffer(
+            "class_weights",
+            class_weights if class_weights is not None
+            else torch.ones(3)
+        )
+
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+        # Standard cross-entropy with class weights gives log(p_t)
+        ce = nn.functional.cross_entropy(
+            logits, targets,
+            weight=self.class_weights.to(logits.device),
+            reduction="none"
+        )
+        # p_t = exp(-ce) — probability assigned to the correct class
+        pt = torch.exp(-ce)
+        focal_weight = (1.0 - pt) ** self.gamma
+        return (focal_weight * ce).mean()
 
 
 # ── Dataset helper ────────────────────────────────────────────────────────────
@@ -119,10 +157,11 @@ def train_model(model: nn.Module,
                 patience: int,
                 max_epochs: int,
                 use_lr_scheduler: bool = False,
-                class_weights: torch.Tensor | None = None) -> dict:
+                class_weights: torch.Tensor | None = None,
+                loss_type: str = "focal") -> tuple:
     """
     Full training loop with early stopping and checkpointing.
-    Returns training history dict.
+    Returns (model, history) tuple.
     """
     log.info(f"\n{'='*60}")
     log.info(f"Training: {model_name}")
@@ -130,16 +169,25 @@ def train_model(model: nn.Module,
 
     model = model.to(device)
 
-    # Loss
+    # Loss — class weights applied to all models (Item 2)
     if class_weights is not None:
-        criterion = nn.CrossEntropyLoss(weight=class_weights.to(device))
         log.info(f"  Class weights: {class_weights.numpy().round(3)}")
-    else:
-        criterion = nn.CrossEntropyLoss()
 
-    # Optimizer
-    wd = config.WEIGHT_DECAY if use_lr_scheduler else 0.0
-    optimizer = torch.optim.Adam(model.parameters(), lr=config.LEARNING_RATE, weight_decay=wd)
+    if loss_type == "focal":
+        criterion = FocalLoss(gamma=2.0, class_weights=class_weights)
+        log.info("  Loss: FocalLoss(gamma=2.0) with class weights")
+    else:
+        criterion = nn.CrossEntropyLoss(
+            weight=class_weights.to(device) if class_weights is not None else None
+        )
+        log.info("  Loss: CrossEntropyLoss with class weights")
+
+    # Optimizer — weight_decay applied to ALL models unconditionally (Item 3)
+    optimizer = torch.optim.Adam(
+        model.parameters(),
+        lr=config.LEARNING_RATE,
+        weight_decay=config.WEIGHT_DECAY  # was 0.0 for MLP/CNN — now always 1e-4
+    )
 
     scheduler = None
     if use_lr_scheduler:
@@ -197,7 +245,7 @@ def train_model(model: nn.Module,
     log.info(f"  Saved best model → {save_path}")
 
     # Load best weights
-    model.load_state_dict(torch.load(save_path, map_location=device))
+    model.load_state_dict(torch.load(save_path, map_location=device, weights_only=True))
     history["best_epoch"]    = best_epoch
     history["best_val_loss"] = best_val_loss
 
@@ -210,6 +258,9 @@ def main():
     parser = argparse.ArgumentParser(description="Train FIFA26 prediction models")
     parser.add_argument("--model", default="all",
                         choices=["mlp", "cnn", "attention", "all"])
+    parser.add_argument("--loss", default="focal",
+                        choices=["focal", "cross_entropy"],
+                        help="Loss function: focal (default) or cross_entropy")
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -232,11 +283,13 @@ def main():
     C_actual   = sample_ctx.shape[0]
     log.info(f"Context dim C = {C_actual}")
 
-    # Compute class weights for Model 3 from training targets
+    # Compute class weights from training targets — applied to ALL models (Item 2)
     all_targets = train_ds.tensors[3]
     class_weights = compute_class_weights(all_targets)
+    log.info(f"Class weights: {class_weights.numpy().round(3)}")
     log.info(f"Class distribution — H:{(all_targets==0).sum()} "
              f"D:{(all_targets==1).sum()} A:{(all_targets==2).sum()}")
+    log.info(f"Loss function: {args.loss}")
 
     all_histories = {}
 
@@ -248,6 +301,8 @@ def main():
             train_loader, val_loader, device,
             patience=config.EARLY_STOP_PATIENCE,
             max_epochs=100,
+            class_weights=class_weights,   # Item 2: was None
+            loss_type=args.loss,
         )
         all_histories["baseline_mlp"] = hist
 
@@ -259,6 +314,8 @@ def main():
             train_loader, val_loader, device,
             patience=config.CNN_PATIENCE,
             max_epochs=150,
+            class_weights=class_weights,   # Item 2: was None
+            loss_type=args.loss,
         )
         all_histories["tactical_cnn"] = hist
 
@@ -272,6 +329,7 @@ def main():
             max_epochs=200,
             use_lr_scheduler=True,
             class_weights=class_weights,
+            loss_type=args.loss,
         )
         all_histories["attention_cnn"] = hist
 

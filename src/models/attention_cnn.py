@@ -138,7 +138,7 @@ class AttentionCNN(nn.Module):
         self.match_head = nn.Sequential(
             nn.Linear(match_input_dim, 128),
             nn.ReLU(),
-            nn.Dropout(0.4),
+            nn.Dropout(dropout),   # was hardcoded 0.4 — now uses dropout param
 
             nn.Linear(128, 64),
             nn.ReLU(),

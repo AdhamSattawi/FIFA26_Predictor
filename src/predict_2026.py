@@ -143,10 +143,8 @@ def load_trained_model(model_class, name: str, C: int) -> torch.nn.Module | None
 
 
 @torch.no_grad()
-def predict_match(models: dict,
-                  home_players: np.ndarray,
-                  away_players: np.ndarray,
-                  context: np.ndarray) -> dict:
+def predict_match(models: dict, xgb_model, home_players: np.ndarray,
+                  away_players: np.ndarray, context: np.ndarray) -> dict:
     """Run all models on a single match. Returns dict of probabilities."""
     home_t = torch.from_numpy(home_players).float().unsqueeze(0)   # (1, 11, F)
     away_t = torch.from_numpy(away_players).float().unsqueeze(0)
@@ -159,6 +157,10 @@ def predict_match(models: dict,
         logits = model(home_t, away_t, ctx_t)
         p      = torch.softmax(logits, dim=1).squeeze(0).numpy()
         probs[model_name] = p
+
+    if xgb_model is not None:
+        p = xgb_model.predict_proba(context.reshape(1, -1))[0]
+        probs["xgboost"] = p
 
     return probs
 
@@ -217,11 +219,19 @@ def main():
         "attention": load_trained_model(AttentionCNN, "attention_cnn", C_actual),
     }
     loaded = {k: v for k, v in models.items() if v is not None}
-    log.info(f"Loaded models: {list(loaded.keys())}")
+    
+    # Load XGBoost model if it exists
+    xgb_model = None
+    xgb_path = config.OUTPUTS_MODELS / "xgboost_best.pkl"
+    if xgb_path.exists():
+        with open(xgb_path, "rb") as f:
+            xgb_model = pickle.load(f)
+        log.info(f"Loaded xgboost from {xgb_path}")
 
-    if not loaded:
-        log.error("No trained models found. Run src/train.py first.")
+    if not loaded and xgb_model is None:
+        log.error("No trained models found. Run src/train.py or src/train_xgb.py first.")
         return
+
 
     # ── 6. Generate predictions ───────────────────────────────────────────────
     results = []
@@ -241,13 +251,18 @@ def main():
             hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
             ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
 
+        # Apply scaling and clipping to prediction features (Item 5)
         if scalers:
             hp = scalers["player"].transform(hp.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
             ap = scalers["player"].transform(ap.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
-
+            hp = np.clip(hp, -3.0, 3.0)
+            ap = np.clip(ap, -3.0, 3.0)
+        
         ctx = ctx_array[i]
+        ctx = np.clip(ctx, -3.0, 3.0)
 
-        probs = predict_match(loaded, hp, ap, ctx)
+        probs = predict_match(loaded, xgb_model, hp, ap, ctx)
+
 
         # Build output row
         match_row = {

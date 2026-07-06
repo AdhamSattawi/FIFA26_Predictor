@@ -32,6 +32,7 @@ PLAYER_STATS_CSV = PLAYER_STATS_DIR / "all_player_stats.csv"
 FULL_DATASET_CSV = DATA_PROCESSED / "full_dataset.csv"
 TRAIN_NPZ        = DATA_FEATURES / "train_features.npz"
 VAL_NPZ          = DATA_FEATURES / "val_features.npz"
+TEST_NPZ         = DATA_FEATURES / "test_features.npz"
 SCALER_PKL       = OUTPUTS_MODELS / "scalers.pkl"
 
 # ── Transfermarkt Competition IDs ─────────────────────────────────────────────
@@ -150,10 +151,11 @@ POSITION_ORDER = [
 ]
 N_PLAYERS = len(POSITION_ORDER)  # 11
 
-# ── Training / validation split ───────────────────────────────────────────────
-# Temporal: train on 2014+2018 cycles, validate on 2022 cycle
-TRAIN_CYCLES = [2014, 2018]
-VAL_CYCLES   = [2022]
+# ── Training / validation / testing split ───────────────────────────────────────
+# Temporal: train on 2014, validate on 2018, test on 2022
+TRAIN_CYCLES = [2014]
+VAL_CYCLES   = [2018]
+TEST_CYCLES  = [2022]
 # Friendly window: only include friendlies within 12 months before each WC
 FRIENDLY_WINDOW_MONTHS = 12
 
