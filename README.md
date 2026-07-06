@@ -15,13 +15,15 @@ Match Input
 └── context (C,)          ← 102 pre-computed features: Elo, rolling form (L5/L10/L20), H2H, fatigue, penalty composure
 ```
 
-Three progressive model architectures are trained and compared:
+Three progressive neural architectures and a gradient-boosted tree baseline are trained and compared:
 
 | # | Model | Key Idea |
 |---|---|---|
 | 1 | **Baseline MLP** | Average 11 player vectors → simple team representation |
 | 2 | **Tactical CNN** | 1D convolutions scan adjacent positions, learning tactical synergies |
-| 3 | **Attention CNN** | Self-attention assigns learned weights to each player; class-weighted loss for draw prediction |
+| 3 | **Attention CNN** | Self-attention learns which positions carry predictive signal, with Focal Loss + class weights |
+| 4 | **XGBoost baseline**| Gradient-boosted trees trained on context features (highly optimized tabular benchmark) |
+
 
 ---
 
@@ -29,40 +31,44 @@ Three progressive model architectures are trained and compared:
 
 ```
 FIFA26_Predictor/
-├── world_cup_features_dataset.csv     # 49K+ matches with 102 ML features (Gulati dataset)
+├── world_cup_features_dataset.csv     # 49K+ matches with 100 ML features (Gulati dataset)
 ├── config.py                          # All paths, constants, feature lists, hyperparams
 ├── requirements.txt
 │
 ├── data/
 │   ├── raw/
-│   │   ├── lineups/                   # Scraped starting XIs (all_lineups.csv)
+│   │   ├── lineups/                   # Scraped starting XIs (all_lineups.csv, scrape_progress.csv)
 │   │   ├── player_stats/              # Scraped player club stats (all_player_stats.csv)
 │   │   └── player_elo/               # PlayerElo snapshot (players.csv, coaches.csv)
 │   ├── processed/                     # Merged datasets + player matrices
-│   └── features/                      # Normalized train/val tensors (.npz)
+│   └── features/                      # Normalized train/val/test tensors (.npz)
 │
 ├── src/
 │   ├── scraping/
-│   │   ├── scrape_lineups.py          # Scrape starting XIs from Transfermarkt
-│   │   ├── scrape_player_stats.py     # Scrape player club stats from Transfermarkt
-│   │   └── utils.py                   # Shared scraping utilities + team name mapping
+│   │   ├── scrape_lineups.py          # Scrape starting XIs (WC only)
+│   │   ├── scrape_lineups_full.py     # Full-coverage resume-safe scraper (WC + Qualifiers + Friendlies)
+│   │   ├── scrape_player_stats.py     # Scrape player club stats
+│   │   └── utils.py                   # Shared scraping utilities + name mapping
 │   ├── processing/
 │   │   ├── position_mapping.py        # Canonical 11-slot position ordering
 │   │   ├── merge_data.py             # Join Gulati + lineups + player stats
-│   │   └── feature_engineering.py    # Build tensors, normalize, augment
+│   │   └── feature_engineering.py    # Build tensors, clip outliers, temporal split
 │   ├── models/
 │   │   ├── baseline_mlp.py           # Model 1: Naive Average MLP
 │   │   ├── tactical_cnn.py           # Model 2: 1D Tactical CNN
-│   │   └── attention_cnn.py          # Model 3: Attention CNN + class weights
-│   ├── train.py                       # Training loop (all 3 models)
-│   ├── evaluate.py                    # Metrics, confusion matrices, plots
-│   ├── predict_2026.py               # Generate WC 2026 predictions
+│   │   └── attention_cnn.py          # Model 3: Attention CNN
+│   ├── train.py                       # Training loop with Focal Loss, mixup, and weighted loss
+│   ├── train_xgb.py                   # Train XGBoost baseline model
+│   ├── train_ensemble.py              # Optimizes blending weights via SLSQP Log Loss minimization
+│   ├── evaluate.py                    # Metrics, confusion matrices, plots (supports test split)
+│   ├── predict_2026.py               # Generate WC 2026 predictions using optimal blend
 │   └── ensemble_2026.py              # PlayerElo ensemble for 2026
 │
 └── outputs/
-    ├── models/                        # Saved model checkpoints (.pt)
-    ├── plots/                         # Confusion matrices, loss curves, attention maps
-    └── predictions/                   # Match probability CSVs
+    ├── models/                        # Saved checkpoints (.pt, .json, .pkl) and ensemble weights
+    ├── plots/                         # Confusion matrices, loss curves, comparison plots
+    └── predictions/                   # Match probability CSVs (test, 2026 predictions)
+
 ```
 
 ---
@@ -122,8 +128,8 @@ python run_pipeline.py --only-train
 Alternatively, you can run each step manually:
 
 ```bash
-# 1. Scrape lineups from Transfermarkt
-python src/scraping/scrape_lineups.py
+# 1. Scrape lineups (Choose full-coverage version for training dataset coverage)
+python src/scraping/scrape_lineups_full.py
 
 # 2. Scrape player club stats
 python src/scraping/scrape_player_stats.py
@@ -134,18 +140,25 @@ python src/processing/merge_data.py
 # 4. Feature engineering and scaling
 python src/processing/feature_engineering.py
 
-# 5. Train MLP, CNN, and Attention models
-python src/train.py --model all
+# 5. Train MLP, CNN, and Attention models (neural networks)
+python src/train.py --loss focal --mixup-alpha 0.2 --noise-std 0.05
 
-# 6. Evaluate and save plots
+# 6. Train XGBoost baseline
+python src/train_xgb.py
+
+# 7. Learn optimal ensemble stacking weights
+python src/train_ensemble.py
+
+# 8. Evaluate and save plots
 python src/evaluate.py
 
-# 7. Generate 2026 predictions
+# 9. Generate 2026 predictions (runs weighted ensemble)
 python src/predict_2026.py
 
-# 8. Run PlayerElo ensemble (requires player_elo data downloaded)
+# 10. Run PlayerElo ensemble (requires player_elo data downloaded)
 python src/ensemble_2026.py
 ```
+
 
 ---
 
@@ -163,11 +176,13 @@ python src/ensemble_2026.py
 
 | Model | Accuracy | Log Loss | F1-Draw | Macro F1 |
 |---|---|---|---|---|
-| Baseline MLP | — | — | — | — |
-| Tactical CNN | — | — | — | — |
-| Attention CNN | — | — | — | — |
+| **XGBoost Baseline** | **60.10%** | **0.8543** | 0.2759 | **0.5414** |
+| **Attention CNN** | 51.66% | 0.9705 | 0.3307 | 0.5070 |
+| **Baseline MLP** | 49.95% | 0.9863 | **0.3672** | 0.4721 |
+| **Tactical CNN** | 49.75% | 0.9552 | 0.3413 | 0.4981 |
 
-*(Populated after training on 2014+2018 cycles, validated on 2022 cycle)*
+*(Evaluated on unbiased 2022 World Cup cycle test split. Neural network performance is context-dominated due to current 0.3% player matrix coverage; expected to rise significantly once the full-coverage lineup scraping concludes.)*
+
 
 ---
 
