@@ -78,47 +78,22 @@ WC_COMP = {
 
 # WC Qualifiers: confederation → {wc_year → (competition_id, saison)}
 # Sources verified against transfermarkt.com competition pages
+# Sources verified against transfermarkt.com competition pages
 QUALIFIER_COMPS = {
-    "UEFA": {
-        2014: ("WMQE", 2012),
-        2018: ("WMQE", 2016),
-        2022: ("WMQE", 2020),
-    },
-    "CONMEBOL": {
-        2014: ("SA1Q", 2011),
-        2018: ("SA1Q", 2015),
-        2022: ("SA1Q", 2019),
-    },
-    "CONCACAF": {
-        2014: ("CONC", 2012),
-        2018: ("CONC", 2016),
-        2022: ("CONC", 2019),
-    },
-    "AFC": {
-        2014: ("AS1Q", 2011),
-        2018: ("AS1Q", 2015),
-        2022: ("AS1Q", 2019),
-    },
-    "CAF": {
-        2014: ("AF1Q", 2011),
-        2018: ("AF1Q", 2015),
-        2022: ("AF1Q", 2019),
-    },
-    "OFC": {
-        2014: ("OC1Q", 2011),
-        2018: ("OC1Q", 2015),
-        2022: ("OC1Q", 2019),
-    },
-    # Inter-confederation playoffs (different IDs per cycle)
-    "Playoffs": {
-        2014: ("WMQ2", 2013),
-        2018: ("WMQ2", 2017),
-        2022: ("WMQ2", 2021),
-    },
+    "UEFA":     {"slug": "world-cup-qualification-europe",        "id": "WMQ6"},
+    "CONMEBOL": {"slug": "world-cup-qualification-south-america", "id": "WMQ4"},
+    "CONCACAF": {"slug": "world-cup-qualification-concacaf",     "id": "WMQ3"},
+    "AFC":      {"slug": "world-cup-qualification-asia",          "id": "WMQ1"},
+    "CAF":      {"slug": "world-cup-qualification-africa",        "id": "WMQ2"},
+    "OFC":      {"slug": "world-cup-qualification-oceania",       "id": "WMQ5"},
 }
 
-# Friendly competition ID (international friendlies)
-FRIENDLY_COMP_ID = "ISL"
+QUALIFIER_SEASONS = {
+    2014: {"UEFA": 2012, "CONMEBOL": 2011, "CONCACAF": 2012, "AFC": 2011, "CAF": 2011, "OFC": 2011},
+    2018: {"UEFA": 2016, "CONMEBOL": 2015, "CONCACAF": 2016, "AFC": 2015, "CAF": 2015, "OFC": 2015},
+    2022: {"UEFA": 2020, "CONMEBOL": 2019, "CONCACAF": 2019, "AFC": 2019, "CAF": 2019, "OFC": 2019},
+}
+
 
 # Checkpoint: save player records every N matches processed
 SAVE_EVERY_N = 50
@@ -157,7 +132,7 @@ def get_full_match_scope(df: pd.DataFrame) -> pd.DataFrame:
             (df["date"] < wc_date)
         ].copy()
         # Only include known confederations that map to TM WC qualifier pages
-        known_confeds = set(QUALIFIER_COMPS.keys()) - {"Playoffs"}
+        known_confeds = set(QUALIFIER_COMPS.keys())
         qual = qual[
             qual["home_confed"].isin(known_confeds) |
             qual["away_confed"].isin(known_confeds)
@@ -230,14 +205,14 @@ def build_wc_schedule_cache(page, wc_year: int) -> dict:
     return _build_cache_from_spielplan(page, url, is_wc=True)
 
 
-def build_qualifier_schedule_cache(page, comp_id: str, saison: int) -> dict:
+def build_qualifier_schedule_cache(page, slug: str, comp_id: str, saison: int) -> dict:
     """
     Build match ID cache for a WC qualifier competition.
     Returns {(home_norm, away_norm, date_str): match_id}.
     """
     url = (
-        f"https://www.transfermarkt.com/x/spielplan/wettbewerb/{comp_id}"
-        f"/plus/?saison_id={saison}"
+        f"https://www.transfermarkt.com/{slug}/gesamtspielplan/pokalwettbewerb/{comp_id}"
+        f"/saison_id/{saison}"
     )
     return _build_cache_from_spielplan(page, url, is_wc=False)
 
@@ -248,8 +223,8 @@ def build_friendly_schedule_cache(page, saison: int) -> dict:
     Returns {(home_norm, away_norm, date_str): match_id}.
     """
     url = (
-        f"https://www.transfermarkt.com/x/spielplan/wettbewerb/{FRIENDLY_COMP_ID}"
-        f"/plus/?saison_id={saison}"
+        f"https://www.transfermarkt.com/international-friendlies/gesamtspielplan/wettbewerb/FS"
+        f"/saison_id/{saison}"
     )
     return _build_cache_from_spielplan(page, url, is_wc=False)
 
@@ -257,7 +232,7 @@ def build_friendly_schedule_cache(page, saison: int) -> dict:
 def _build_cache_from_spielplan(page, url: str, is_wc: bool) -> dict:
     """
     Internal helper: load a schedule page and extract (team_pair, date) → match_id.
-    Handles both WC-style spielplan and qualifier/friendly spielplan layouts.
+    Handles both WC-style spielplan and qualifier/friendly spielplan layouts with date propagation.
     """
     cache = {}
     log.info(f"  Loading schedule cache: {url}")
@@ -279,14 +254,21 @@ def _build_cache_from_spielplan(page, url: str, is_wc: bool) -> dict:
 
     log.info(f"  → {len(rows)} match rows found.")
 
+    last_date = None
     for row in rows:
         try:
-            # Extract date
+            # Extract date cell and propagate if empty (standard Transfermarkt table layout)
             date_cell = row.locator("td").first
-            date_str_raw = safe_inner_text(date_cell)
-            try:
-                match_date = pd.to_datetime(date_str_raw, dayfirst=True)
-            except Exception:
+            date_str_raw = safe_inner_text(date_cell).strip()
+            if date_str_raw:
+                try:
+                    clean_date_str = date_str_raw.split(",")[-1].strip()
+                    match_date = pd.to_datetime(clean_date_str, dayfirst=True)
+                    last_date = match_date
+                except Exception:
+                    pass
+
+            if not last_date:
                 continue
 
             # Extract teams from title attributes on anchor tags
@@ -301,15 +283,16 @@ def _build_cache_from_spielplan(page, url: str, is_wc: bool) -> dict:
             # Extract match ID
             link = row.locator("a[href*='spielbericht']").first
             href = safe_get_attribute(link, "href")
-            mid = re.search(r"/spielbericht/(\d+)", href)
+            mid = re.search(r"/spielbericht/(?:index/spielbericht/)?(\d+)", href)
             if mid:
                 match_id = mid.group(1)
-                key = (home_norm, away_norm, match_date.strftime("%Y-%m-%d"))
+                key = (home_norm, away_norm, last_date.strftime("%Y-%m-%d"))
                 cache[key] = match_id
         except Exception:
             continue
 
     return cache
+
 
 
 # ── Match ID lookup ───────────────────────────────────────────────────────────
@@ -543,23 +526,20 @@ def main():
 
             # ── Qualifiers per confederation ───────────────────────────────────
             qual_df = cycle_df[cycle_df["competition_group"] == "qualifier"]
-            for confed, cycle_map in QUALIFIER_COMPS.items():
-                if wc_year not in cycle_map:
+            for confed, info in QUALIFIER_COMPS.items():
+                if wc_year not in QUALIFIER_SEASONS:
                     continue
-                comp_id, saison = cycle_map[wc_year]
+                saison = QUALIFIER_SEASONS[wc_year].get(confed)
+                if not saison:
+                    continue
+                comp_slug = info["slug"]
+                comp_id = info["id"]
 
                 # Match qualifier rows to this confederation
-                if confed == "Playoffs":
-                    # Inter-confederation playoff matches are any qualifier
-                    # not belonging to a single confederation
-                    conf_mask = qual_df["tournament"].str.contains(
-                        "playoff|Playoff|intercontinental", case=False, na=False
-                    )
-                else:
-                    conf_mask = (
-                        (qual_df["home_confed"] == confed) |
-                        (qual_df["away_confed"] == confed)
-                    )
+                conf_mask = (
+                    (qual_df["home_confed"] == confed) |
+                    (qual_df["away_confed"] == confed)
+                )
 
                 conf_df = qual_df[conf_mask]
                 if len(conf_df) == 0:
@@ -567,7 +547,7 @@ def main():
 
                 log.info(f"\n--- {confed} Qualifiers {wc_year} ({len(conf_df)} matches) ---")
                 maybe_refresh_browser()
-                cache = build_qualifier_schedule_cache(page, comp_id, saison)
+                cache = build_qualifier_schedule_cache(page, comp_slug, comp_id, saison)
                 polite_sleep(1, 2)
                 if cache:
                     scrape_matches_with_cache(
@@ -575,6 +555,7 @@ def main():
                         f"QUAL_{confed}_{wc_year}"
                     )
                     matches_since_refresh += len(conf_df)
+
 
             # ── Friendlies ─────────────────────────────────────────────────────
             fr_df = cycle_df[cycle_df["competition_group"] == "friendly"]
