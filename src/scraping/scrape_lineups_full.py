@@ -161,14 +161,28 @@ def get_full_match_scope(df: pd.DataFrame) -> pd.DataFrame:
 # ── Progress tracking ──────────────────────────────────────────────────────────
 
 def load_progress() -> set:
-    """Load set of already-processed match keys: '{date}|{home}|{away}'."""
+    """
+    Load set of already-processed match keys: '{date}|{home}|{away}'.
+    Filters out failed or empty matches to allow retrying them.
+    Synchronizes the progress CSV with successful matches.
+    """
     if not PROGRESS_CSV.exists():
         return set()
     try:
         prog = pd.read_csv(PROGRESS_CSV)
-        return set(prog["match_key"].tolist())
-    except Exception:
+        # Keep only rows that have a valid match_id and n_players > 0
+        # (Allows retrying failed schedule pages or lineup page timeouts)
+        valid_mask = prog["match_id"].notna() & (prog["match_id"].astype(str).str.strip() != "") & (prog["n_players"] > 0)
+        valid_prog = prog[valid_mask].copy()
+        
+        # Overwrite progress CSV with clean rows
+        valid_prog.to_csv(PROGRESS_CSV, index=False)
+        
+        return set(valid_prog["match_key"].tolist())
+    except Exception as e:
+        log.warning(f"Error loading/cleaning progress CSV: {e}")
         return set()
+
 
 
 def log_progress(match_key: str, match_id: str | None, n_players: int):
