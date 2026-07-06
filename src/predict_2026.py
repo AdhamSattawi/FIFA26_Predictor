@@ -232,6 +232,15 @@ def main():
         log.error("No trained models found. Run src/train.py or src/train_xgb.py first.")
         return
 
+    # Load optimal ensemble weights (Item 7)
+    ensemble_weights = None
+    weights_path = config.OUTPUTS_MODELS / "ensemble_weights.pkl"
+    if weights_path.exists():
+        with open(weights_path, "rb") as f:
+            ensemble_weights = pickle.load(f)
+        log.info(f"Loaded optimal blend weights: {ensemble_weights}")
+
+
 
     # ── 6. Generate predictions ───────────────────────────────────────────────
     results = []
@@ -278,14 +287,42 @@ def main():
             match_row[f"{mname}_draw%"] = round(p[1] * 100, 1)
             match_row[f"{mname}_away%"] = round(p[2] * 100, 1)
 
-        # Ensemble: simple average of available models
+        # Ensemble: weighted average of available models if weights exist, else simple average (Item 7)
         if probs:
-            prob_stack = np.array(list(probs.values()))
-            ens = prob_stack.mean(axis=0)
+            if ensemble_weights is not None:
+                name_map = {
+                    "mlp":       "baseline_mlp",
+                    "cnn":       "tactical_cnn",
+                    "attention": "attention_cnn",
+                    "xgboost":   "xgboost",
+                }
+                # Filter weights to active models
+                active_weights = {}
+                for mkey, pkey in name_map.items():
+                    if mkey in probs and pkey in ensemble_weights:
+                        active_weights[mkey] = ensemble_weights[pkey]
+                
+                # Renormalize active weights to sum to 1
+                total_w = sum(active_weights.values())
+                if total_w > 0:
+                    for mkey in active_weights:
+                        active_weights[mkey] /= total_w
+                    
+                    # Compute weighted combination
+                    ens = np.zeros(3)
+                    for mkey, w in active_weights.items():
+                        ens += probs[mkey] * w
+                else:
+                    ens = np.array(list(probs.values())).mean(axis=0)
+            else:
+                prob_stack = np.array(list(probs.values()))
+                ens = prob_stack.mean(axis=0)
+
             match_row["ensemble_home%"] = round(ens[0] * 100, 1)
             match_row["ensemble_draw%"] = round(ens[1] * 100, 1)
             match_row["ensemble_away%"] = round(ens[2] * 100, 1)
             match_row["predicted_outcome"] = config.RESULT_NAMES[ens.argmax()]
+
 
         results.append(match_row)
 

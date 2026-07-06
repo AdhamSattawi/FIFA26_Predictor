@@ -162,6 +162,24 @@ def load_gulati_state(gulati_path: Path):
     """
     print("Loading Gulati dataset ...")
     df = pd.read_csv(gulati_path, parse_dates=["date"])
+
+    # Item 9: Compute is_knockout for historical Gulati matches
+    def check_knockout(row):
+        if row["is_world_cup"] != 1:
+            return 0
+        dt = row["date"]
+        y = dt.year
+        if y == 2014 and dt >= pd.Timestamp("2014-06-28"):
+            return 1
+        elif y == 2018 and dt >= pd.Timestamp("2018-06-30"):
+            return 1
+        elif y == 2022 and dt >= pd.Timestamp("2022-12-03"):
+            return 1
+        elif y == 2026 and dt >= pd.Timestamp("2026-07-04"):
+            return 1
+        return 0
+    df["is_knockout"] = df.apply(check_knockout, axis=1)
+
     df = df.sort_values("date").reset_index(drop=True)
     print(f"  {len(df)} rows, last date: {df['date'].max().date()}")
 
@@ -320,6 +338,18 @@ def build_feature_row(
     if not neutral and is_wc and home in WC2026_HOSTS:
         true_home_adv = 1
 
+    is_ko = 0
+    if is_wc == 1:
+        y = date.year
+        if y == 2014 and date >= pd.Timestamp("2014-06-28"):
+            is_ko = 1
+        elif y == 2018 and date >= pd.Timestamp("2018-06-30"):
+            is_ko = 1
+        elif y == 2022 and date >= pd.Timestamp("2022-12-03"):
+            is_ko = 1
+        elif y == 2026 and date >= pd.Timestamp("2026-07-04"):
+            is_ko = 1
+
     result = np.nan
     if pd.notna(home_score) and pd.notna(away_score):
         hs, as_ = int(home_score), int(away_score)
@@ -436,6 +466,7 @@ def build_feature_row(
         "home_shootout_win_rate":      state["shootout"].get(home, 0.5),
         "away_shootout_win_rate":      state["shootout"].get(away, 0.5),
         "true_home_advantage":  true_home_adv,
+        "is_knockout": is_ko,
         # Labels (NaN for upcoming matches)
         "home_score": home_score,
         "away_score": away_score,

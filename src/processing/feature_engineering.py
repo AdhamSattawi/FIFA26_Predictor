@@ -32,6 +32,24 @@ def load_dataset():
     log.info(f"Loading full dataset from {config.FULL_DATASET_CSV} …")
     df = pd.read_csv(config.FULL_DATASET_CSV, parse_dates=["date"])
 
+    # Item 9: Compute is_knockout
+    def check_knockout(row):
+        if row["is_world_cup"] != 1:
+            return 0
+        dt = row["date"]
+        y = dt.year
+        if y == 2014 and dt >= pd.Timestamp("2014-06-28"):
+            return 1
+        elif y == 2018 and dt >= pd.Timestamp("2018-06-30"):
+            return 1
+        elif y == 2022 and dt >= pd.Timestamp("2022-12-03"):
+            return 1
+        elif y == 2026 and dt >= pd.Timestamp("2026-07-04"):
+            return 1
+        return 0
+
+    df["is_knockout"] = df.apply(check_knockout, axis=1)
+
     matrices_path = config.DATA_PROCESSED / "player_matrices.pkl"
     player_matrices = None
     if matrices_path.exists():
@@ -43,6 +61,7 @@ def load_dataset():
         log.warning("Player matrices not found — using zero-filled player features.")
 
     return df, player_matrices
+
 
 
 def get_split_mask(df: pd.DataFrame) -> tuple[pd.Series, pd.Series, pd.Series]:
@@ -131,7 +150,7 @@ def build_player_features(df: pd.DataFrame,
 
 def augment_with_swap(home_arr: np.ndarray, away_arr: np.ndarray,
                        context: np.ndarray, targets: np.ndarray,
-                       is_neutral: np.ndarray,
+                       weights: np.ndarray, is_neutral: np.ndarray,
                        context_cols: list[str]) -> tuple:
     """
     Data augmentation: for neutral-venue matches, swap home↔away and invert label.
@@ -174,14 +193,19 @@ def augment_with_swap(home_arr: np.ndarray, away_arr: np.ndarray,
         elif col == "elo_expected_home":
             aug_context[:, j] = 1.0 - context[neutral_mask, j]
 
+    # Augment sample weights
+    aug_weights = weights[neutral_mask]
+
     # Concatenate original + augmented
     all_home    = np.concatenate([home_arr, aug_home],    axis=0)
     all_away    = np.concatenate([away_arr, aug_away],    axis=0)
     all_context = np.concatenate([context, aug_context],  axis=0)
     all_targets = np.concatenate([targets, aug_targets],  axis=0)
+    all_weights = np.concatenate([weights, aug_weights],  axis=0)
 
     log.info(f"  → Added {n_neutral} augmented samples. Total: {len(all_targets)}.")
-    return all_home, all_away, all_context, all_targets
+    return all_home, all_away, all_context, all_targets, all_weights
+
 
 
 def fit_scalers(home_train: np.ndarray,
@@ -228,7 +252,7 @@ def apply_scalers(home: np.ndarray, away: np.ndarray,
 
 
 def save_split(path: Path, home: np.ndarray, away: np.ndarray,
-               context: np.ndarray, targets: np.ndarray) -> None:
+               context: np.ndarray, targets: np.ndarray, weights: np.ndarray) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
         path,
@@ -236,8 +260,10 @@ def save_split(path: Path, home: np.ndarray, away: np.ndarray,
         away_players=away,
         context=context,
         targets=targets,
+        weights=weights,
     )
     log.info(f"Saved → {path} ({len(targets)} samples)")
+
 
 
 def main():
@@ -251,9 +277,10 @@ def main():
     # ── 3. Build player matrices ──────────────────────────────────────────────
     home_all, away_all = build_player_features(df, player_matrices)
 
-    # ── 4. Targets ────────────────────────────────────────────────────────────
+    # ── 4. Targets & Weights (Item 12) ────────────────────────────────────────
     df["result_encoded"] = df["result"].map(config.RESULT_MAP)
     targets_all = df["result_encoded"].fillna(1).values.astype(np.int64)
+    weights_all = df["tourn_weight"].values.astype(np.float32)
 
     # ── 5. Train / val / test split ───────────────────────────────────────────
     train_mask, val_mask, test_mask = get_split_mask(df)
@@ -265,13 +292,15 @@ def main():
     home_train, away_train = home_all[train_idx], away_all[train_idx]
     home_val,   away_val   = home_all[val_idx],   away_all[val_idx]
     home_test,  away_test  = home_all[test_idx],  away_all[test_idx]
+    
     ctx_train, ctx_val, ctx_test = context_all[train_idx], context_all[val_idx], context_all[test_idx]
     tgt_train, tgt_val, tgt_test = targets_all[train_idx], targets_all[val_idx], targets_all[test_idx]
+    w_train,   w_val,   w_test   = weights_all[train_idx], weights_all[val_idx], weights_all[test_idx]
 
     # ── 6. Augmentation (train set only) ─────────────────────────────────────
     is_neutral_train = df["neutral"].values[train_idx]
-    home_train, away_train, ctx_train, tgt_train = augment_with_swap(
-        home_train, away_train, ctx_train, tgt_train,
+    home_train, away_train, ctx_train, tgt_train, w_train = augment_with_swap(
+        home_train, away_train, ctx_train, tgt_train, w_train,
         is_neutral_train, context_cols
     )
 
@@ -282,9 +311,10 @@ def main():
     home_test,  away_test,  ctx_test  = apply_scalers(home_test,  away_test,  ctx_test,  scalers)
 
     # ── 8. Save ───────────────────────────────────────────────────────────────
-    save_split(config.TRAIN_NPZ, home_train, away_train, ctx_train, tgt_train)
-    save_split(config.VAL_NPZ,   home_val,   away_val,   ctx_val,   tgt_val)
-    save_split(config.TEST_NPZ,  home_test,  away_test,  ctx_test,  tgt_test)
+    save_split(config.TRAIN_NPZ, home_train, away_train, ctx_train, tgt_train, w_train)
+    save_split(config.VAL_NPZ,   home_val,   away_val,   ctx_val,   tgt_val,   w_val)
+    save_split(config.TEST_NPZ,  home_test,  away_test,  ctx_test,  tgt_test,  w_test)
+
 
     config.OUTPUTS_MODELS.mkdir(parents=True, exist_ok=True)
     with open(config.SCALER_PKL, "wb") as f:

@@ -58,7 +58,8 @@ class FocalLoss(nn.Module):
             else torch.ones(3)
         )
 
-    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor,
+                 weights: torch.Tensor | None = None) -> torch.Tensor:
         # Standard cross-entropy with class weights gives log(p_t)
         ce = nn.functional.cross_entropy(
             logits, targets,
@@ -68,24 +69,49 @@ class FocalLoss(nn.Module):
         # p_t = exp(-ce) — probability assigned to the correct class
         pt = torch.exp(-ce)
         focal_weight = (1.0 - pt) ** self.gamma
-        return (focal_weight * ce).mean()
+        loss = focal_weight * ce
+        if weights is not None:
+            loss = loss * weights
+        return loss.mean()
+
 
 
 # ── Dataset helper ────────────────────────────────────────────────────────────
 
 def load_split(path: Path) -> TensorDataset:
-    """Load an .npz split into a TensorDataset."""
+    """Load an .npz split into a TensorDataset (Item 12: handles tournament weights)."""
     if not path.exists():
         raise FileNotFoundError(
             f"{path} not found. Run src/processing/feature_engineering.py first."
         )
     data = np.load(path)
-    return TensorDataset(
+    tensors = [
         torch.from_numpy(data["home_players"]).float(),
         torch.from_numpy(data["away_players"]).float(),
         torch.from_numpy(data["context"]).float(),
         torch.from_numpy(data["targets"]).long(),
+    ]
+    if "weights" in data:
+        tensors.append(torch.from_numpy(data["weights"]).float())
+    return TensorDataset(*tensors)
+
+
+def compute_loss(logits: torch.Tensor, targets: torch.Tensor,
+                 weights: torch.Tensor | None, criterion: nn.Module) -> torch.Tensor:
+    """Helper to compute sample-weighted loss (Item 12)."""
+    if isinstance(criterion, FocalLoss):
+        return criterion(logits, targets, weights)
+    
+    # Fallback for CrossEntropyLoss
+    ce = nn.functional.cross_entropy(
+        logits, targets,
+        weight=criterion.weight,
+        reduction="none"
     )
+    if weights is not None:
+        ce = ce * weights
+    return ce.mean()
+
 
 
 # ── Training loop ─────────────────────────────────────────────────────────────
@@ -95,33 +121,70 @@ def train_one_epoch(model: nn.Module,
                     optimizer: torch.optim.Optimizer,
                     criterion: nn.Module,
                     device: torch.device,
-                    scaler=None) -> float:
+                    scaler=None,
+                    mixup_alpha: float = 0.0,
+                    noise_std: float = 0.0) -> float:
     """Run one training epoch. Returns average loss."""
     model.train()
     total_loss = 0.0
 
-    for home, away, ctx, targets in loader:
-        home, away, ctx, targets = (
-            home.to(device), away.to(device), ctx.to(device), targets.to(device)
-        )
-        optimizer.zero_grad()
+    for batch in loader:
+        home, away, ctx, targets = batch[0].to(device), batch[1].to(device), batch[2].to(device), batch[3].to(device)
+        weights = batch[4].to(device) if len(batch) > 4 else None
 
-        if scaler is not None:
-            with torch.amp.autocast("cuda"):
-                logits = model(home, away, ctx)
-                loss   = criterion(logits, targets)
-            scaler.scale(loss).backward()
-            scaler.step(optimizer)
-            scaler.update()
+        # Add Gaussian noise to context features during training (Item 8)
+        if noise_std > 0.0:
+            noise = torch.randn_like(ctx) * noise_std
+            ctx = ctx + noise
+
+        # Apply Mixup data augmentation during training (Item 8)
+        if mixup_alpha > 0.0 and np.random.rand() < 0.5:
+            lam = np.random.beta(mixup_alpha, mixup_alpha)
+            batch_size = home.size(0)
+            index = torch.randperm(batch_size).to(device)
+            
+            home_mixed = lam * home + (1.0 - lam) * home[index]
+            away_mixed = lam * away + (1.0 - lam) * away[index]
+            ctx_mixed  = lam * ctx + (1.0 - lam) * ctx[index]
+            
+            targets_a, targets_b = targets, targets[index]
+            weights_b = weights[index] if weights is not None else None
+            
+            optimizer.zero_grad()
+            if scaler is not None:
+                with torch.amp.autocast("cuda"):
+                    logits = model(home_mixed, away_mixed, ctx_mixed)
+                    loss = lam * compute_loss(logits, targets_a, weights, criterion) + \
+                           (1.0 - lam) * compute_loss(logits, targets_b, weights_b, criterion)
+                scaler.scale(loss).backward()
+                scaler.step(optimizer)
+                scaler.update()
+            else:
+                logits = model(home_mixed, away_mixed, ctx_mixed)
+                loss = lam * compute_loss(logits, targets_a, weights, criterion) + \
+                       (1.0 - lam) * compute_loss(logits, targets_b, weights_b, criterion)
+                loss.backward()
+                optimizer.step()
         else:
-            logits = model(home, away, ctx)
-            loss   = criterion(logits, targets)
-            loss.backward()
-            optimizer.step()
+            optimizer.zero_grad()
+            if scaler is not None:
+                with torch.amp.autocast("cuda"):
+                    logits = model(home, away, ctx)
+                    loss   = compute_loss(logits, targets, weights, criterion)
+                scaler.scale(loss).backward()
+                scaler.step(optimizer)
+                scaler.update()
+            else:
+                logits = model(home, away, ctx)
+                loss   = compute_loss(logits, targets, weights, criterion)
+                loss.backward()
+                optimizer.step()
 
         total_loss += loss.item() * len(targets)
 
     return total_loss / len(loader.dataset)
+
+
 
 
 @torch.no_grad()
@@ -135,18 +198,20 @@ def evaluate(model: nn.Module,
     correct    = 0
     total      = 0
 
-    for home, away, ctx, targets in loader:
-        home, away, ctx, targets = (
-            home.to(device), away.to(device), ctx.to(device), targets.to(device)
-        )
+    for batch in loader:
+        home, away, ctx, targets = batch[0].to(device), batch[1].to(device), batch[2].to(device), batch[3].to(device)
+        weights = batch[4].to(device) if len(batch) > 4 else None
+        
         logits = model(home, away, ctx)
-        loss   = criterion(logits, targets)
+        loss   = compute_loss(logits, targets, weights, criterion)
+        
         total_loss += loss.item() * len(targets)
         preds   = logits.argmax(dim=1)
         correct += (preds == targets).sum().item()
         total   += len(targets)
 
     return total_loss / total, correct / total
+
 
 
 def train_model(model: nn.Module,
@@ -158,11 +223,14 @@ def train_model(model: nn.Module,
                 max_epochs: int,
                 use_lr_scheduler: bool = False,
                 class_weights: torch.Tensor | None = None,
-                loss_type: str = "focal") -> tuple:
+                loss_type: str = "focal",
+                mixup_alpha: float = 0.0,
+                noise_std: float = 0.0) -> tuple:
     """
     Full training loop with early stopping and checkpointing.
     Returns (model, history) tuple.
     """
+
     log.info(f"\n{'='*60}")
     log.info(f"Training: {model_name}")
     log.info(f"{'='*60}")
@@ -207,9 +275,12 @@ def train_model(model: nn.Module,
 
     for epoch in range(1, max_epochs + 1):
         t0 = time.time()
-        train_loss = train_one_epoch(model, train_loader, optimizer, criterion,
-                                     device, scaler=amp_scaler)
+        train_loss = train_one_epoch(
+            model, train_loader, optimizer, criterion, device,
+            scaler=amp_scaler, mixup_alpha=mixup_alpha, noise_std=noise_std
+        )
         val_loss, val_acc = evaluate(model, val_loader, criterion, device)
+
 
         history["train_loss"].append(train_loss)
         history["val_loss"].append(val_loss)
@@ -261,7 +332,12 @@ def main():
     parser.add_argument("--loss", default="focal",
                         choices=["focal", "cross_entropy"],
                         help="Loss function: focal (default) or cross_entropy")
+    parser.add_argument("--mixup-alpha", default=0.2, type=float,
+                        help="Beta distribution alpha parameter for Mixup data augmentation (Item 8)")
+    parser.add_argument("--noise-std", default=0.05, type=float,
+                        help="Standard deviation of Gaussian noise added to context features (Item 8)")
     args = parser.parse_args()
+
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     log.info(f"Device: {device}")
@@ -303,6 +379,8 @@ def main():
             max_epochs=100,
             class_weights=class_weights,   # Item 2: was None
             loss_type=args.loss,
+            mixup_alpha=args.mixup_alpha,
+            noise_std=args.noise_std,
         )
         all_histories["baseline_mlp"] = hist
 
@@ -316,6 +394,8 @@ def main():
             max_epochs=150,
             class_weights=class_weights,   # Item 2: was None
             loss_type=args.loss,
+            mixup_alpha=args.mixup_alpha,
+            noise_std=args.noise_std,
         )
         all_histories["tactical_cnn"] = hist
 
@@ -330,8 +410,11 @@ def main():
             use_lr_scheduler=True,
             class_weights=class_weights,
             loss_type=args.loss,
+            mixup_alpha=args.mixup_alpha,
+            noise_std=args.noise_std,
         )
         all_histories["attention_cnn"] = hist
+
 
     # ── Save histories ────────────────────────────────────────────────────────
     hist_path = config.OUTPUTS_MODELS / "training_histories.pkl"
