@@ -73,7 +73,7 @@ WC_DATES = {
 WC_COMP = {
     2014: {"id": "FIWC", "saison": 2013, "url_name": "world-cup"},
     2018: {"id": "FIWC", "saison": 2017, "url_name": "world-cup"},
-    2022: {"id": "FIWC", "saison": 2022, "url_name": "world-cup"},
+    2022: {"id": "FIWC", "saison": 2021, "url_name": "world-cup"},
 }
 
 # WC Qualifiers: confederation → {wc_year → (competition_id, saison)}
