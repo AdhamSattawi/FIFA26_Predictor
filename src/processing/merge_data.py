@@ -204,28 +204,68 @@ def build_player_matrix(match_lineups: pd.DataFrame,
     return matrix
 
 
-def compute_position_medians(player_stats: pd.DataFrame) -> dict:
+def compute_position_medians(player_stats: pd.DataFrame, lineups: pd.DataFrame) -> dict:
     """
     Compute per-position median feature values as fallback for missing players.
-    (Very basic — uses all players regardless of position for now.)
+    Uses the positions recorded in lineups to group players by their canonical position.
     """
-    log.info("Computing position fallback medians …")
-    # Use global medians as a simple fallback
+    log.info("Computing position-specific fallback medians …")
+    from src.processing.position_mapping import map_position
+    
+    # 1. Map player_id to their most common position in lineups
+    player_positions = {}
+    if len(lineups) > 0:
+        df_lineups = lineups.copy()
+        df_lineups["mapped_pos"] = df_lineups["position"].fillna("CM").apply(lambda p: map_position(str(p)))
+        # Find most common position per player
+        player_pos_df = df_lineups.groupby("player_id")["mapped_pos"].agg(lambda x: x.mode()[0] if not x.mode().empty else "CM")
+        player_positions = player_pos_df.to_dict()
+    
+    # 2. Add position column to player stats
+    stats = player_stats.copy()
+    stats["mapped_pos"] = stats["player_id"].map(player_positions).fillna("CM")
+    
+    # 3. Compute medians per position group
+    medians = {}
+    
+    # Pre-calculate global median as a general fallback
     global_median = np.zeros(config.F, dtype=np.float32)
-    if len(player_stats) > 0:
-        stats = player_stats.copy()
+    if len(stats) > 0:
         stats["apps"] = stats["appearances"].fillna(0).clip(lower=1)
         global_median[0] = (stats["goals"] / stats["minutes_played"] * 90).replace([np.inf, -np.inf], 0).median()
         global_median[1] = (stats["assists"] / stats["minutes_played"] * 90).replace([np.inf, -np.inf], 0).median()
         global_median[2] = (stats["minutes_played"] / (38 * 90)).clip(0, 1).median()
         global_median[3] = stats["appearances"].median()
-        global_median[4] = 27.0  # average age
+        global_median[4] = 27.0
         global_median[5] = stats["goals"].median()
         global_median[6] = stats["assists"].median()
         global_median[7] = ((stats["yellow_cards"] + 3 * stats["red_cards"]) / stats["apps"]).replace([np.inf, -np.inf], 0).median()
 
-    # Return same median for all positions (can be made position-specific later)
-    return {pos: global_median.copy() for pos in config.POSITION_ORDER + ["GK", "CB", "CB1", "CB2"]}
+    # Calculate medians for each canonical position
+    all_positions = config.POSITION_ORDER + ["GK", "CB", "CB1", "CB2"]
+    for pos in all_positions:
+        # Group similar positions or map CB1/CB2/CB to CB
+        group_pos = "CB" if pos in ("CB1", "CB2") else pos
+        
+        pos_stats = stats[stats["mapped_pos"] == group_pos]
+        if len(pos_stats) >= 5: # Require at least 5 players to compute a stable median
+            pos_median = np.zeros(config.F, dtype=np.float32)
+            pos_stats = pos_stats.copy()
+            pos_stats["apps"] = pos_stats["appearances"].fillna(0).clip(lower=1)
+            pos_median[0] = (pos_stats["goals"] / pos_stats["minutes_played"] * 90).replace([np.inf, -np.inf], 0).median()
+            pos_median[1] = (pos_stats["assists"] / pos_stats["minutes_played"] * 90).replace([np.inf, -np.inf], 0).median()
+            pos_median[2] = (pos_stats["minutes_played"] / (38 * 90)).clip(0, 1).median()
+            pos_median[3] = pos_stats["appearances"].median()
+            pos_median[4] = 27.0
+            pos_median[5] = pos_stats["goals"].median()
+            pos_median[6] = pos_stats["assists"].median()
+            pos_median[7] = ((pos_stats["yellow_cards"] + 3 * pos_stats["red_cards"]) / pos_stats["apps"]).replace([np.inf, -np.inf], 0).median()
+            medians[pos] = pos_median
+        else:
+            # Fallback to global median
+            medians[pos] = global_median.copy()
+            
+    return medians
 
 
 def main():
@@ -248,7 +288,7 @@ def main():
     gulati, lineups_matched = join_lineups_to_gulati(gulati, lineups)
 
     # ── 3. Compute position medians (for missing player fallback) ─────────────
-    position_medians = compute_position_medians(p_stats)
+    position_medians = compute_position_medians(p_stats, lineups)
 
     # ── 4. Build player matrices per match ────────────────────────────────────
     log.info("Building player matrices …")
