@@ -265,6 +265,14 @@ def main():
         out_row["final_prediction"] = config.RESULT_NAMES[final.argmax()]
         out_row["elo_diff"]         = round(elo_home_val - elo_away_val, 1)
 
+        # Redistribute draw probability for knockout stage (To Progress)
+        total_win = final[0] + final[2]
+        prog_home = final[0] / total_win if total_win > 0 else 0.5
+        prog_away = final[2] / total_win if total_win > 0 else 0.5
+        out_row["to_progress_home%"] = round(prog_home * 100, 1)
+        out_row["to_progress_away%"] = round(prog_away * 100, 1)
+        out_row["progress_prediction"] = home_team if prog_home > prog_away else away_team
+
         ensemble_rows.append(out_row)
 
     # ── 4. Save ───────────────────────────────────────────────────────────────
@@ -273,16 +281,13 @@ def main():
     out_df.to_csv(out_csv, index=False)
     log.info(f"\n✓ Saved {len(out_df)} ensemble predictions → {out_csv}")
 
-    # Print top matches by confidence
-    log.info("\nTop 10 most confident predictions:")
-    out_df["confidence"] = out_df[
-        ["ensemble_final_home%", "ensemble_final_draw%", "ensemble_final_away%"]
-    ].max(axis=1)
-    top10 = out_df.nlargest(10, "confidence")[
-        ["home_team", "away_team", "final_prediction",
-         "ensemble_final_home%", "ensemble_final_draw%", "ensemble_final_away%"]
+    # Print predictions with progress probabilities
+    log.info("\nEnsemble Predictions & Knockout Progression Probability:")
+    print_cols = [
+        "home_team", "away_team", "ensemble_final_home%", "ensemble_final_draw%", 
+        "ensemble_final_away%", "to_progress_home%", "to_progress_away%", "progress_prediction"
     ]
-    print(top10.to_string(index=False))
+    print(out_df[print_cols].to_string(index=False))
 
 
 if __name__ == "__main__":
