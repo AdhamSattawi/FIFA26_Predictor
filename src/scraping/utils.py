@@ -104,6 +104,7 @@ TM_TO_GULATI: dict[str, str] = {
     "Guinea Bissau":        "Guinea-Bissau",
     "São Tomé e Príncipe":  "Sao Tome and Principe",
     "Türkiye":              "Turkey",
+    "Turkiye":              "Turkey",
     "Trinidad & Tobago":    "Trinidad and Tobago",
     "St. Kitts & Nevis":    "Saint Kitts and Nevis",
     "St. Vincent & Grenadines": "Saint Vincent and the Grenadines",

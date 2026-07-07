@@ -89,10 +89,11 @@ QUALIFIER_COMPS = {
 }
 
 QUALIFIER_SEASONS = {
-    2014: {"UEFA": 2012, "CONMEBOL": 2011, "CONCACAF": 2012, "AFC": 2011, "CAF": 2011, "OFC": 2011},
-    2018: {"UEFA": 2016, "CONMEBOL": 2015, "CONCACAF": 2016, "AFC": 2015, "CAF": 2015, "OFC": 2015},
-    2022: {"UEFA": 2020, "CONMEBOL": 2019, "CONCACAF": 2019, "AFC": 2019, "CAF": 2019, "OFC": 2019},
+    2014: {"UEFA": 2012, "CONMEBOL": 2011, "CONCACAF": 2011, "AFC": 2011, "CAF": 2011, "OFC": 2011},
+    2018: {"UEFA": 2016, "CONMEBOL": 2015, "CONCACAF": 2016, "AFC": 2016, "CAF": 2016, "OFC": 2015},
+    2022: {"UEFA": 2020, "CONMEBOL": 2020, "CONCACAF": 2020, "AFC": 2019, "CAF": 2019, "OFC": 2021},
 }
+
 
 
 # Checkpoint: save player records every N matches processed
@@ -128,6 +129,7 @@ def get_full_match_scope(df: pd.DataFrame) -> pd.DataFrame:
         # ── Qualifiers (skip "Other" confederation — not on TM WC qual pages) ──
         qual = df[
             (df["is_qualifier"] == 1) &
+            (df["tournament"] == "FIFA World Cup qualification") &
             (df["date"] >= prev_wc_date) &
             (df["date"] < wc_date)
         ].copy()
@@ -312,7 +314,7 @@ def _build_cache_from_spielplan(page, url: str, is_wc: bool) -> dict:
 # ── Match ID lookup ───────────────────────────────────────────────────────────
 
 def lookup_match_id(cache: dict, home: str, away: str, date: pd.Timestamp) -> str | None:
-    """Find a match ID using flexible team name and ±1-day date matching."""
+    """Find a match ID using flexible team name and ±1-day date matching (supports swapped home/away)."""
     home_norm = normalize_team_name(home).lower()
     away_norm = normalize_team_name(away).lower()
 
@@ -323,6 +325,8 @@ def lookup_match_id(cache: dict, home: str, away: str, date: pd.Timestamp) -> st
             continue
 
         date_ok = abs((cached_date - date).days) <= 1
+        
+        # Standard order matching
         teams_ok = (
             (cached_home in home_norm or home_norm in cached_home or
              _token_match(cached_home, home_norm))
@@ -330,9 +334,20 @@ def lookup_match_id(cache: dict, home: str, away: str, date: pd.Timestamp) -> st
             (cached_away in away_norm or away_norm in cached_away or
              _token_match(cached_away, away_norm))
         )
-        if date_ok and teams_ok:
+        
+        # Swapped order matching (very common for neutral venues like WC final rounds)
+        teams_swapped = (
+            (cached_home in away_norm or away_norm in cached_home or
+             _token_match(cached_home, away_norm))
+            and
+            (cached_away in home_norm or home_norm in cached_away or
+             _token_match(cached_away, home_norm))
+        )
+        
+        if date_ok and (teams_ok or teams_swapped):
             return match_id
     return None
+
 
 
 def _token_match(a: str, b: str) -> bool:
