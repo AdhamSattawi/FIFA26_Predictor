@@ -86,12 +86,37 @@ QUALIFIER_COMPS = {
     "AFC":      {"slug": "world-cup-qualification-asia",          "id": "WMQ1"},
     "CAF":      {"slug": "world-cup-qualification-africa",        "id": "WMQ2"},
     "OFC":      {"slug": "world-cup-qualification-oceania",       "id": "WMQ5"},
+    "Playoffs": {"slug": "world-cup-qualification-playoffs",      "id": "POWM"},
 }
 
 QUALIFIER_SEASONS = {
-    2014: {"UEFA": 2012, "CONMEBOL": 2011, "CONCACAF": 2011, "AFC": 2011, "CAF": 2011, "OFC": 2011},
-    2018: {"UEFA": 2016, "CONMEBOL": 2015, "CONCACAF": 2016, "AFC": 2016, "CAF": 2016, "OFC": 2015},
-    2022: {"UEFA": 2020, "CONMEBOL": 2020, "CONCACAF": 2020, "AFC": 2019, "CAF": 2019, "OFC": 2021},
+    2014: {
+        "UEFA": [2012],
+        "CONMEBOL": [2011, 2012],
+        "CONCACAF": [2011, 2012],
+        "AFC": [2011, 2012],
+        "CAF": [2011, 2012],
+        "OFC": [2011, 2012],
+        "Playoffs": [2013],
+    },
+    2018: {
+        "UEFA": [2016],
+        "CONMEBOL": [2015, 2016],
+        "CONCACAF": [2014, 2016],
+        "AFC": [2014, 2016],
+        "CAF": [2015, 2016],
+        "OFC": [2015, 2016],
+        "Playoffs": [2017],
+    },
+    2022: {
+        "UEFA": [2020],
+        "CONMEBOL": [2020],
+        "CONCACAF": [2020],
+        "AFC": [2019, 2020],
+        "CAF": [2019, 2020],
+        "OFC": [2021],
+        "Playoffs": [2021],
+    },
 }
 
 
@@ -553,37 +578,30 @@ def main():
                     scrape_matches_with_cache(wc_df, cache, page, already_done, f"WC{wc_year}")
                     matches_since_refresh += len(wc_df)
 
-            # ── Qualifiers per confederation ───────────────────────────────────
+            # ── Qualifiers (Combined Confederation and Playoffs Cache) ─────────
             qual_df = cycle_df[cycle_df["competition_group"] == "qualifier"]
-            for confed, info in QUALIFIER_COMPS.items():
-                if wc_year not in QUALIFIER_SEASONS:
-                    continue
-                saison = QUALIFIER_SEASONS[wc_year].get(confed)
-                if not saison:
-                    continue
-                comp_slug = info["slug"]
-                comp_id = info["id"]
-
-                # Match qualifier rows to this confederation
-                conf_mask = (
-                    (qual_df["home_confed"] == confed) |
-                    (qual_df["away_confed"] == confed)
+            if len(qual_df) > 0:
+                log.info(f"\nBuilding combined qualifier cache for cycle {wc_year} ...")
+                qual_cache = {}
+                for confed, info in QUALIFIER_COMPS.items():
+                    seasons = QUALIFIER_SEASONS[wc_year].get(confed, [])
+                    comp_slug = info["slug"]
+                    comp_id = info["id"]
+                    for s_year in seasons:
+                        log.info(f"  Loading schedule cache: {comp_slug} (saison_id/{s_year})")
+                        maybe_refresh_browser()
+                        s_cache = build_qualifier_schedule_cache(page, comp_slug, comp_id, s_year)
+                        polite_sleep(1, 2)
+                        if s_cache:
+                            qual_cache.update(s_cache)
+                
+                # Scrape all qualifier matches using the combined cache
+                log.info(f"\n--- Qualifier Matches {wc_year} ({len(qual_df)} matches) ---")
+                scrape_matches_with_cache(
+                    qual_df, qual_cache, page, already_done,
+                    f"QUAL_{wc_year}"
                 )
-
-                conf_df = qual_df[conf_mask]
-                if len(conf_df) == 0:
-                    continue
-
-                log.info(f"\n--- {confed} Qualifiers {wc_year} ({len(conf_df)} matches) ---")
-                maybe_refresh_browser()
-                cache = build_qualifier_schedule_cache(page, comp_slug, comp_id, saison)
-                polite_sleep(1, 2)
-                if cache:
-                    scrape_matches_with_cache(
-                        conf_df, cache, page, already_done,
-                        f"QUAL_{confed}_{wc_year}"
-                    )
-                    matches_since_refresh += len(conf_df)
+                matches_since_refresh += len(qual_df)
 
 
             # ── Friendlies ─────────────────────────────────────────────────────
