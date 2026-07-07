@@ -468,13 +468,23 @@ def scrape_matches_with_cache(
             already_done.add(match_key)
             continue
 
-        lineup_url = f"https://www.transfermarkt.com/x/aufstellung/spielbericht/{match_id}"
+        lineup_url = f"https://www.transfermarkt.com/spielbericht/aufstellung/spielbericht/{match_id}"
         try:
             page.goto(lineup_url, timeout=30000)
             dismiss_consent(page)
-            page.wait_for_selector("table.items", timeout=10000)
+            # Try waiting for the table with a very short timeout (1.5 seconds)
+            # Since page.goto has already finished, if the table exists, it will resolve instantly.
+            # If it doesn't exist, it will time out in 1.5s instead of 10s.
+            try:
+                page.wait_for_selector("table.items", timeout=1500)
+            except Exception:
+                log.info(f"    → Lineup table not available on page, skipping.")
+                log_progress(match_key, match_id, 0)
+                already_done.add(match_key)
+                polite_sleep(1.0, 2.0)
+                continue
         except (PWTimeout, Exception) as e:
-            log.warning(f"    → Lineup page failed ({e}), skipping.")
+            log.warning(f"    → Lineup page failed to load ({e}), skipping.")
             log_progress(match_key, match_id, 0)
             already_done.add(match_key)
             polite_sleep(2.0, 4.0)
