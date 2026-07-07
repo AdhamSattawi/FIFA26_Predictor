@@ -99,7 +99,7 @@ def load_2026_player_matrices(lineups_path: Path, player_stats_path: Path) -> di
         p_stats["player_id"] = p_stats["player_id"].astype(str)
         # Filter to 2026 cycle only
         lineups = lineups[lineups["match_date"] >= WC2026_DATE_START]
-        medians = compute_position_medians(p_stats)
+        medians = compute_position_medians(p_stats, lineups)
         # Build a dummy gulati DataFrame for joining
         fixtures_df = load_2026_fixtures(config.GULATI_CSV)
         _, lineups_matched = join_lineups_to_gulati(fixtures_df, lineups)
