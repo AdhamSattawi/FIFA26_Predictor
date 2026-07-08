@@ -209,7 +209,10 @@ def main():
     results: list[dict] = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage"]
+        )
         context = browser.new_context(user_agent=USER_AGENT)
         page = context.new_page()
         page.set_default_timeout(15000)
@@ -236,7 +239,10 @@ def main():
                 except Exception:
                     pass
                 polite_sleep(2.0, 3.0)
-                browser = p.chromium.launch(headless=True)
+                browser = p.chromium.launch(
+                    headless=True,
+                    args=["--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage"]
+                )
                 context = browser.new_context(user_agent=USER_AGENT)
                 page = context.new_page()
                 page.set_default_timeout(15000)
