@@ -225,14 +225,17 @@ def main():
             if key in existing_ids:
                 continue
 
-            # Recreate context every 40 players to avoid browser crashes and memory leaks
-            if scraped_since_refresh >= 40:
-                log.info("  Refreshing browser context to prevent memory leaks...")
+            # Relaunch the entire browser process every 50 players to prevent memory leaks and hangs
+            if scraped_since_refresh >= 50:
+                log.info("  Relaunching browser process to prevent memory leaks and hangs...")
                 try:
                     page.close()
                     context.close()
+                    browser.close()
                 except Exception:
                     pass
+                polite_sleep(2.0, 3.0)
+                browser = p.chromium.launch(headless=True)
                 context = browser.new_context(user_agent=USER_AGENT)
                 page = context.new_page()
                 scraped_since_refresh = 0
