@@ -212,6 +212,7 @@ def main():
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(user_agent=USER_AGENT)
         page = context.new_page()
+        page.set_default_timeout(15000)
 
         scraped_since_refresh = 0
 
@@ -238,6 +239,7 @@ def main():
                 browser = p.chromium.launch(headless=True)
                 context = browser.new_context(user_agent=USER_AGENT)
                 page = context.new_page()
+                page.set_default_timeout(15000)
                 scraped_since_refresh = 0
 
             log.info(f"[{i+1}/{len(unique_pairs)}] {name} (ID: {pid}) — saison {saison}")
