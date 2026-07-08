@@ -152,8 +152,7 @@ def scrape_player(page, player_id: str, player_name: str,
 
     # Scroll to load the Svelte grids and wait for elements to render
     try:
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight/4);")
-        page.wait_for_selector("div.grid-row", timeout=6000)
+        page.locator("div.grid-row").first.scroll_into_view_if_needed(timeout=5000)
     except Exception:
         try:
             page.wait_for_timeout(1500)
