@@ -377,6 +377,7 @@ def main():
             train_loader, val_loader, device,
             patience=config.EARLY_STOP_PATIENCE,
             max_epochs=100,
+            use_lr_scheduler=True,
             class_weights=class_weights,   # Item 2: was None
             loss_type=args.loss,
             mixup_alpha=args.mixup_alpha,
@@ -392,6 +393,7 @@ def main():
             train_loader, val_loader, device,
             patience=config.CNN_PATIENCE,
             max_epochs=150,
+            use_lr_scheduler=True,
             class_weights=class_weights,   # Item 2: was None
             loss_type=args.loss,
             mixup_alpha=args.mixup_alpha,

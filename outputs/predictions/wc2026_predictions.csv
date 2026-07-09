@@ -1,8 +1,8 @@
 date,home_team,away_team,stage,mlp_home%,mlp_draw%,mlp_away%,cnn_home%,cnn_draw%,cnn_away%,attention_home%,attention_draw%,attention_away%,xgboost_home%,xgboost_draw%,xgboost_away%,ensemble_home%,ensemble_draw%,ensemble_away%,predicted_outcome
-2026-07-09,France,Morocco,Group Stage,34.4,39.6,25.9,35.5,32.5,32.0,30.5,36.9,32.6,61.6,15.9,22.5,61.4,16.0,22.6,Home Win
-2026-07-10,Spain,Belgium,Group Stage,36.6,32.5,30.8,34.4,36.7,28.9,33.0,40.9,26.1,60.6,25.4,14.0,60.5,25.5,14.0,Home Win
-2026-07-11,Norway,England,Group Stage,17.2,38.1,44.7,16.9,32.8,50.3,15.2,33.7,51.1,24.2,20.2,55.7,24.1,20.2,55.6,Away Win
-2026-07-11,Argentina,Switzerland,Group Stage,44.3,34.8,20.9,38.3,34.6,27.0,36.5,39.3,24.2,61.5,25.3,13.3,61.3,25.3,13.3,Home Win
-2026-07-14,France,Spain,Group Stage,26.0,41.4,32.6,31.4,32.8,35.8,25.3,38.5,36.2,46.3,13.0,40.6,46.2,13.2,40.6,Home Win
-2026-07-15,England,Argentina,Group Stage,32.5,27.3,40.3,23.7,28.2,48.1,22.0,37.0,40.9,38.1,16.6,45.3,38.0,16.7,45.2,Away Win
-2026-07-19,France,England,Group Stage,28.5,38.0,33.5,31.7,31.6,36.7,25.6,35.9,38.6,65.1,14.9,19.9,64.9,15.1,20.0,Home Win
+2026-07-09,France,Morocco,Group Stage,30.7,41.3,28.0,42.1,40.4,17.6,32.3,41.2,26.5,58.3,15.3,26.4,56.6,16.9,26.5,Home Win
+2026-07-10,Spain,Belgium,Group Stage,26.9,34.2,38.8,40.4,42.2,17.5,32.0,40.9,27.1,62.5,22.5,15.0,60.4,23.2,16.4,Home Win
+2026-07-11,Norway,England,Group Stage,17.6,41.8,40.6,14.8,36.1,49.2,13.1,41.1,45.8,26.7,20.4,52.8,26.2,21.7,52.1,Away Win
+2026-07-11,Argentina,Switzerland,Group Stage,35.5,40.2,24.2,43.7,42.0,14.3,34.0,42.1,23.9,65.1,21.7,13.2,63.3,22.8,13.8,Home Win
+2026-07-14,France,Spain,Group Stage,26.5,40.7,32.8,32.3,46.9,20.7,22.5,45.4,32.0,46.8,16.5,36.7,45.6,18.0,36.5,Home Win
+2026-07-15,England,Argentina,Group Stage,23.5,34.7,41.8,21.8,40.2,38.0,15.8,40.1,44.1,39.9,16.0,44.1,39.0,17.1,44.0,Away Win
+2026-07-19,France,England,Group Stage,28.0,40.4,31.5,36.4,44.2,19.4,24.4,43.3,32.3,57.0,13.5,29.5,55.3,15.1,29.7,Home Win

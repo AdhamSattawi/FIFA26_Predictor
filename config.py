@@ -152,10 +152,12 @@ POSITION_ORDER = [
 N_PLAYERS = len(POSITION_ORDER)  # 11
 
 # ── Training / validation / testing split ───────────────────────────────────────
-# Temporal: train on 2014, validate on 2018, test on 2022
-TRAIN_CYCLES = [2014]
-VAL_CYCLES   = [2018]
+# Temporal: train on 2014+2018, test on 2022.
+# Validation is a 15% random holdout from the training pool (not a full cycle).
+TRAIN_CYCLES = [2014, 2018]
+VAL_CYCLES   = []          # unused — validation done via VAL_HOLDOUT_FRAC
 TEST_CYCLES  = [2022]
+VAL_HOLDOUT_FRAC = 0.15   # fraction of training pool held out for early stopping
 # Friendly window: only include friendlies within 12 months before each WC
 FRIENDLY_WINDOW_MONTHS = 12
 
@@ -163,7 +165,8 @@ FRIENDLY_WINDOW_MONTHS = 12
 BATCH_SIZE           = 32
 LEARNING_RATE        = 1e-3
 WEIGHT_DECAY         = 1e-4
-EARLY_STOP_PATIENCE  = 15    # Model 1
-CNN_PATIENCE         = 20    # Model 2
-ATT_PATIENCE         = 25    # Model 3
+EARLY_STOP_PATIENCE  = 25    # Model 1 (MLP)
+CNN_PATIENCE         = 35    # Model 2 (Tactical CNN)
+ATT_PATIENCE         = 40    # Model 3 (Attention CNN)
 SEED                 = 42
+
