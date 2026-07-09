@@ -205,6 +205,49 @@ def main():
     )
 
     # ── 4. Build context array ────────────────────────────────────────────────
+    # Compute squad aggregates for upcoming 2026 fixtures
+    log.info("Computing squad aggregates for 2026 prediction fixtures...")
+    squad_data = []
+    for row_idx, row in fixtures.iterrows():
+        if player_mats and row_idx in player_mats["home"]:
+            hp = player_mats["home"][row_idx]
+            ap = player_mats["away"].get(row_idx, np.zeros((config.N_PLAYERS, config.F), dtype=np.float32))
+        else:
+            hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+            ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+            
+        home_elo = hp[:, 7].sum()
+        away_elo = ap[:, 7].sum()
+        elo_diff = home_elo - away_elo
+
+        home_goals = hp[:, 0].mean()
+        away_goals = ap[:, 0].mean()
+        goals_diff = home_goals - away_goals
+
+        home_assists = hp[:, 1].mean()
+        away_assists = ap[:, 1].mean()
+        assists_diff = home_assists - away_assists
+
+        home_age = hp[:, 4].mean()
+        away_age = ap[:, 4].mean()
+        age_diff = home_age - away_age
+
+        squad_data.append([
+            home_elo, away_elo, elo_diff,
+            home_goals, away_goals, goals_diff,
+            home_assists, away_assists, assists_diff,
+            home_age, away_age, age_diff
+        ])
+    
+    squad_cols = [
+        "squad_home_elo_sum", "squad_away_elo_sum", "squad_elo_diff",
+        "squad_home_goals90_mean", "squad_away_goals90_mean", "squad_goals90_diff",
+        "squad_home_assists90_mean", "squad_away_assists90_mean", "squad_assists90_diff",
+        "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff"
+    ]
+    squad_df = pd.DataFrame(squad_data, columns=squad_cols, index=fixtures.index)
+    fixtures = pd.concat([fixtures, squad_df], axis=1)
+
     available_cols = [c for c in context_cols if c in fixtures.columns]
     ctx_array = fixtures[available_cols].fillna(0).values.astype(np.float32)
     if scalers:

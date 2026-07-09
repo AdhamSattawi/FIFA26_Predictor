@@ -73,16 +73,17 @@ def main():
     merge_step = ("src/processing/merge_data.py", [])
     feat_step = ("src/processing/feature_engineering.py", [])
     train_step = ("src/train.py", ["--model", "all"])
+    train_xgb_step = ("src/train_xgb.py", [])
     eval_step = ("src/evaluate.py", [])
     predict_step = ("src/predict_2026.py", [])
     ensemble_step = ("src/ensemble_2026.py", [])
 
     if args.only_train:
         print("[START] Starting pipeline (TRAINING ONLY mode)...")
-        pipeline = [train_step, eval_step]
+        pipeline = [train_step, train_xgb_step, eval_step]
     elif args.skip_scraping:
         print("[START] Starting pipeline (SKIPPING SCRAPING mode)...")
-        pipeline = [merge_step, feat_step, train_step, eval_step, predict_step, ensemble_step]
+        pipeline = [merge_step, feat_step, train_step, train_xgb_step, eval_step, predict_step, ensemble_step]
     else:
         print("[START] Starting FULL pipeline (including web scraping)...")
         pipeline = [
@@ -91,6 +92,7 @@ def main():
             merge_step,
             feat_step,
             train_step,
+            train_xgb_step,
             eval_step,
             predict_step,
             ensemble_step

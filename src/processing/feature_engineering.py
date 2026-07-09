@@ -280,6 +280,42 @@ def main():
     # ── 3. Build player matrices ──────────────────────────────────────────────
     home_all, away_all = build_player_features(df, player_matrices)
 
+    # Compute squad-level player aggregates to enrich context features
+    log.info("Computing squad-level player aggregates (Elo, Goals, Assists, Age)...")
+    home_elo = home_all[:, :, 7].sum(axis=1, keepdims=True)
+    away_elo = away_all[:, :, 7].sum(axis=1, keepdims=True)
+    elo_diff = home_elo - away_elo
+
+    home_goals = home_all[:, :, 0].mean(axis=1, keepdims=True)
+    away_goals = away_all[:, :, 0].mean(axis=1, keepdims=True)
+    goals_diff = home_goals - away_goals
+
+    home_assists = home_all[:, :, 1].mean(axis=1, keepdims=True)
+    away_assists = away_all[:, :, 1].mean(axis=1, keepdims=True)
+    assists_diff = home_assists - away_assists
+
+    home_age = home_all[:, :, 4].mean(axis=1, keepdims=True)
+    away_age = away_all[:, :, 4].mean(axis=1, keepdims=True)
+    age_diff = home_age - away_age
+
+    squad_feats = np.hstack([
+        home_elo, away_elo, elo_diff,
+        home_goals, away_goals, goals_diff,
+        home_assists, away_assists, assists_diff,
+        home_age, away_age, age_diff
+    ])
+
+    squad_cols = [
+        "squad_home_elo_sum", "squad_away_elo_sum", "squad_elo_diff",
+        "squad_home_goals90_mean", "squad_away_goals90_mean", "squad_goals90_diff",
+        "squad_home_assists90_mean", "squad_away_assists90_mean", "squad_assists90_diff",
+        "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff"
+    ]
+
+    context_all = np.hstack([context_all, squad_feats]).astype(np.float32)
+    context_cols = list(context_cols) + squad_cols
+    log.info(f"Context features after squad aggregates: {context_all.shape[1]} columns.")
+
     # ── 4. Targets & Weights (Item 12) ────────────────────────────────────────
     df["result_encoded"] = df["result"].map(config.RESULT_MAP)
     targets_all = df["result_encoded"].fillna(1).values.astype(np.int64)
