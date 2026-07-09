@@ -81,9 +81,9 @@ RESULT_NAMES = ["Home Win", "Draw", "Away Win"]
 CONTEXT_FEATURE_COLS = [
     # Elo (4)
     "elo_home", "elo_away", "elo_diff", "elo_expected_home",
-    # Match context (7)
+    # Match context (8)
     "neutral", "tourn_weight", "same_confederation",
-    "true_home_advantage",
+    "true_home_advantage", "is_knockout",
     # Fatigue & experience (6)
     "home_days_since_last", "away_days_since_last", "days_since_last_diff",
     "home_total_matches", "away_total_matches", "experience_diff",

@@ -1,0 +1,3223 @@
+match_key,match_id,n_players
+2014-06-12|Brazil|Croatia,2384328.0,22
+2014-06-13|Chile|Australia,2384331.0,22
+2014-06-13|Mexico|Cameroon,2384329.0,22
+2014-06-13|Spain|Netherlands,2384330.0,22
+2014-06-14|Côte d'Ivoire|Japan,2384333.0,22
+2014-06-14|Uruguay|Costa Rica,2384334.0,22
+2014-06-14|Colombia|Greece,2384332.0,22
+2014-06-14|England|Italy,2384335.0,22
+2014-06-15|Argentina|Bosnia and Herzegovina,2384338.0,22
+2014-06-15|Switzerland|Ecuador,2384336.0,22
+2014-06-16|Germany|Portugal,2384340.0,22
+2014-06-16|Ghana|United States,2384341.0,22
+2014-06-17|Belgium|Algeria,2384342.0,22
+2014-06-17|Brazil|Mexico,2384344.0,22
+2014-06-17|Russia|South Korea,2384343.0,22
+2014-06-18|Australia|Netherlands,2384347.0,22
+2014-06-18|Cameroon|Croatia,2384345.0,22
+2014-06-19|Colombia|Côte d'Ivoire,2384348.0,22
+2014-06-19|Japan|Greece,2384349.0,22
+2014-06-19|Uruguay|England,2384350.0,22
+2014-06-20|Honduras|Ecuador,2384353.0,22
+2014-06-20|Italy|Costa Rica,2384351.0,22
+2014-06-20|Switzerland|France,2384352.0,22
+2014-06-21|Argentina|Iran,2384354.0,22
+2014-06-21|Germany|Ghana,2384356.0,22
+2014-06-21|Nigeria|Bosnia and Herzegovina,2384355.0,22
+2014-06-22|Belgium|Russia,2384358.0,22
+2014-06-22|United States|Portugal,2384357.0,22
+2014-06-23|Australia|Spain,2384314.0,22
+2014-06-24|Italy|Uruguay,2384318.0,22
+2014-06-24|Japan|Colombia,2384316.0,22
+2014-06-25|Honduras|Switzerland,2384320.0,22
+2014-06-25|Nigeria|Argentina,2384322.0,22
+2014-06-26|South Korea|Belgium,2384326.0,22
+2014-06-26|United States|Germany,2384324.0,22
+2014-06-28|Brazil|Chile,2462528.0,22
+2014-06-29|Netherlands|Mexico,2462530.0,22
+2014-06-30|France|Nigeria,2462532.0,22
+2014-07-01|Argentina|Switzerland,2462533.0,22
+2014-07-04|France|Germany,2463274.0,22
+2014-07-05|Argentina|Belgium,2463354.0,22
+2014-07-08|Brazil|Germany,2464545.0,22
+2014-07-09|Netherlands|Argentina,2464610.0,22
+2014-07-12|Brazil|Netherlands,2466306.0,22
+2014-07-13|Germany|Argentina,2466308.0,22
+2018-06-14|Russia|Saudi Arabia,2977683.0,22
+2018-06-15|Egypt|Uruguay,2977684.0,22
+2018-06-15|Morocco|Iran,2977689.0,22
+2018-06-16|France|Australia,2977695.0,22
+2018-06-16|Argentina|Iceland,2977701.0,22
+2018-06-17|Costa Rica|Serbia,2977707.0,22
+2018-06-17|Germany|Mexico,2977713.0,22
+2018-06-18|Sweden|South Korea,2977714.0,22
+2018-06-18|Belgium|Panama,2977719.0,22
+2018-06-19|Colombia|Japan,2977726.0,22
+2018-06-19|Russia|Egypt,2977685.0,22
+2018-06-20|Portugal|Morocco,2977691.0,22
+2018-06-20|Uruguay|Saudi Arabia,2977686.0,22
+2018-06-21|Denmark|Australia,2977698.0,22
+2018-06-21|Argentina|Croatia,2977703.0,22
+2018-06-22|Brazil|Costa Rica,2977709.0,22
+2018-06-22|Nigeria|Iceland,2977704.0,22
+2018-06-23|Belgium|Tunisia,2977721.0,22
+2018-06-23|South Korea|Mexico,2977716.0,22
+2018-06-24|England|Panama,2977722.0,22
+2018-06-24|Japan|Senegal,2977727.0,22
+2018-06-25|Iran|Portugal,2977693.0,22
+2018-06-26|Denmark|France,2977699.0,22
+2018-06-26|Nigeria|Argentina,2977705.0,22
+2018-06-27|South Korea|Germany,2977717.0,22
+2018-06-27|Serbia|Brazil,2977711.0,22
+2018-06-28|Senegal|Colombia,2977730.0,22
+2018-06-28|England|Belgium,2977723.0,22
+2018-06-30|France|Argentina,3057974.0,22
+2018-07-02|Brazil|Mexico,3057978.0,22
+2018-07-03|Sweden|Switzerland,3057979.0,22
+2018-07-06|Uruguay|France,3061407.0,22
+2018-07-07|Sweden|England,3062884.0,22
+2018-07-10|France|Belgium,3066436.0,22
+2018-07-11|Croatia|England,3067926.0,22
+2018-07-14|Belgium|England,3072772.0,22
+2018-07-15|France|Croatia,3072773.0,22
+2012-09-07|Estonia|Romania,2262088.0,22
+2012-09-07|Croatia|North Macedonia,2258891.0,22
+2012-09-07|Andorra|Hungary,2262087.0,22
+2012-09-07|Finland|France,2262026.0,22
+2012-09-07|Germany|Faroe Islands,2259207.0,22
+2012-09-07|Bulgaria|Italy,2262578.0,22
+2012-09-07|Iceland|Norway,2259203.0,22
+2012-09-07|Slovenia|Switzerland,2259204.0,22
+2012-09-07|Latvia|Greece,2261864.0,22
+2012-09-07|Liechtenstein|Bosnia and Herzegovina,2262659.0,22
+2012-09-07|Lithuania|Slovakia,2262660.0,22
+2012-09-07|Luxembourg|Portugal,2262614.0,22
+2012-09-07|Montenegro|Poland,2262053.0,22
+2012-09-07|Moldova|England,2262052.0,22
+2012-09-07|Russia|Northern Ireland,2262613.0,22
+2012-09-07|Wales|Belgium,2258890.0,22
+2012-09-07|Kazakhstan|Republic of Ireland,2259206.0,22
+2012-09-08|Denmark|Czechia,2262579.0,22
+2012-09-08|Scotland|Serbia,2258892.0,22
+2012-09-11|France|Belarus,2262027.0,22
+2012-09-11|England|Ukraine,2262054.0,22
+2012-09-11|Austria|Germany,2261116.0,22
+2012-09-11|Belgium|Croatia,2261876.0,22
+2012-09-11|Cyprus|Iceland,2261090.0,22
+2012-09-11|Greece|Lithuania,2261865.0,22
+2012-09-11|Georgia|Spain,2262028.0,22
+2012-09-11|Italy|Malta,2262581.0,22
+2012-09-11|Israel|Russia,2262615.0,22
+2012-09-11|Hungary|Netherlands,2262089.0,22
+2012-09-11|Bosnia and Herzegovina|Latvia,2262662.0,22
+2012-09-11|Romania|Andorra,2262090.0,22
+2012-09-11|Poland|Moldova,2262055.0,22
+2012-09-11|Norway|Slovenia,2261088.0,22
+2012-09-11|Scotland|North Macedonia,2261466.0,22
+2012-09-11|Serbia|Wales,2261875.0,22
+2012-09-11|Portugal|Azerbaijan,2262617.0,22
+2012-09-11|Slovakia|Liechtenstein,2262661.0,22
+2012-09-11|Northern Ireland|Luxembourg,2262616.0,22
+2012-09-11|Switzerland|Albania,2261089.0,22
+2012-09-11|Sweden|Kazakhstan,2261115.0,22
+2012-10-12|Greece|Bosnia and Herzegovina,2261866.0,22
+2012-10-12|Albania|Iceland,2261093.0,22
+2012-10-12|Belarus|Spain,2262029.0,22
+2012-10-12|Bulgaria|Denmark,2262583.0,22
+2012-10-12|England|San Marino,2262057.0,22
+2012-10-12|Estonia|Hungary,2262093.0,22
+2012-10-12|Faroe Islands|Sweden,2261117.0,22
+2012-10-12|Finland|Georgia,2262030.0,22
+2012-10-12|Czechia|Malta,2262584.0,22
+2012-10-12|Armenia|Italy,2262582.0,22
+2012-10-12|Russia|Portugal,2262618.0,22
+2012-10-12|Kazakhstan|Austria,2261118.0,22
+2012-10-12|Wales|Scotland,2261467.0,22
+2012-10-12|North Macedonia|Croatia,2261878.0,22
+2012-10-12|Moldova|Ukraine,2262058.0,22
+2012-10-12|Netherlands|Andorra,2262094.0,22
+2012-10-12|Republic of Ireland|Germany,2261119.0,22
+2012-10-12|Serbia|Belgium,2261877.0,22
+2012-10-12|Slovakia|Latvia,2262664.0,22
+2012-10-12|Slovenia|Cyprus,2261092.0,22
+2012-10-12|Switzerland|Norway,2261091.0,22
+2012-10-16|Albania|Slovenia,2261095.0,22
+2012-10-16|Austria|Kazakhstan,2261121.0,22
+2012-10-16|Belgium|Scotland,2261468.0,22
+2012-10-16|Bosnia and Herzegovina|Lithuania,2262665.0,22
+2012-10-16|Italy|Denmark,2262585.0,22
+2012-10-16|Croatia|Wales,2261880.0,22
+2012-10-16|Cyprus|Norway,2261094.0,22
+2012-10-16|Czechia|Bulgaria,2262586.0,22
+2012-10-16|Iceland|Switzerland,2261096.0,22
+2012-10-16|Germany|Sweden,2261122.0,22
+2012-10-16|Faroe Islands|Republic of Ireland,2261120.0,22
+2012-10-16|North Macedonia|Serbia,2261879.0,22
+2012-10-16|Portugal|Northern Ireland,2262620.0,22
+2012-10-16|Russia|Azerbaijan,2262621.0,22
+2012-10-16|Romania|Netherlands,2262097.0,22
+2012-10-16|Spain|France,2262031.0,22
+2012-10-16|Slovakia|Greece,2261867.0,22
+2012-10-16|Ukraine|Montenegro,2262059.0,22
+2012-10-17|Poland|England,2262060.0,22
+2012-11-14|Northern Ireland|Azerbaijan,2262623.0,22
+2013-03-22|Bosnia and Herzegovina|Greece,2261868.0,22
+2013-03-22|Austria|Faroe Islands,2261125.0,22
+2013-03-22|Croatia|Serbia,2261881.0,22
+2013-03-22|Kazakhstan|Germany,2261123.0,22
+2013-03-22|France|Georgia,2262033.0,22
+2013-03-22|Hungary|Romania,2262099.0,22
+2013-03-22|Israel|Portugal,2262624.0,22
+2013-03-22|Czechia|Denmark,2262587.0,22
+2013-03-22|Scotland|Wales,2261469.0,22
+2013-03-22|Norway|Albania,2261097.0,22
+2013-03-22|Poland|Ukraine,2262068.0,22
+2013-03-22|Netherlands|Estonia,2262100.0,22
+2013-03-22|San Marino|England,2262067.0,22
+2013-03-22|North Macedonia|Belgium,2261882.0,22
+2013-03-22|Slovakia|Lithuania,2262668.0,22
+2013-03-22|Slovenia|Iceland,2261099.0,22
+2013-03-22|Spain|Finland,2262034.0,22
+2013-03-22|Sweden|Republic of Ireland,2261124.0,22
+2013-03-23|Cyprus|Switzerland,2261102.0,22
+2013-03-26|Armenia|Czechia,2262590.0,22
+2013-03-26|Azerbaijan|Portugal,2262627.0,22
+2013-03-26|Belgium|North Macedonia,2261884.0,22
+2013-03-26|France|Spain,2262035.0,22
+2013-03-26|Denmark|Bulgaria,2262591.0,22
+2013-03-26|Republic of Ireland|Austria,2261126.0,22
+2013-03-26|Germany|Kazakhstan,2261127.0,22
+2013-03-26|Malta|Italy,2262589.0,22
+2013-03-26|Montenegro|England,2262070.0,22
+2013-03-26|Netherlands|Romania,2262102.0,22
+2013-03-26|Wales|Croatia,2261883.0,22
+2013-03-26|Northern Ireland|Israel,2262628.0,22
+2013-03-26|Serbia|Scotland,2261470.0,22
+2013-03-26|Poland|San Marino,2262072.0,22
+2013-03-26|Ukraine|Moldova,2262071.0,22
+2013-06-07|Finland|Belarus,2262036.0,22
+2013-06-07|Czechia|Italy,2262593.0,22
+2013-06-07|Croatia|Scotland,2261471.0,22
+2013-06-07|Albania|Norway,2261100.0,22
+2013-06-07|Republic of Ireland|Faroe Islands,2261129.0,22
+2013-06-07|Belgium|Serbia,2261885.0,22
+2013-06-07|Iceland|Slovenia,2319402.0,22
+2013-06-07|Austria|Sweden,2261128.0,22
+2013-06-07|Portugal|Russia,2262629.0,22
+2013-06-07|Moldova|Poland,2262074.0,22
+2013-06-07|Lithuania|Greece,2261870.0,22
+2013-06-07|Liechtenstein|Slovakia,2262669.0,22
+2013-06-07|Latvia|Bosnia and Herzegovina,2262670.0,22
+2013-06-07|Montenegro|Ukraine,2262073.0,22
+2013-06-08|Switzerland|Cyprus,2261098.0,22
+2013-06-11|Denmark|Armenia,2262594.0,22
+2013-06-11|Belarus|Finland,2262037.0,22
+2013-06-11|Sweden|Faroe Islands,2261130.0,22
+2013-08-14|Northern Ireland|Russia,2262625.0,22
+2013-09-06|England|Moldova,2262076.0,22
+2013-09-06|Bosnia and Herzegovina|Slovakia,2262671.0,22
+2013-09-06|Czechia|Armenia,2262597.0,22
+2013-09-06|Georgia|France,2262038.0,22
+2013-09-06|Germany|Austria,2261132.0,22
+2013-09-06|Republic of Ireland|Sweden,2261131.0,22
+2013-09-06|Italy|Bulgaria,2262596.0,22
+2013-09-06|Estonia|Netherlands,2262656.0,22
+2013-09-06|Finland|Spain,2262039.0,22
+2013-09-06|Slovenia|Albania,2261103.0,22
+2013-09-06|Liechtenstein|Greece,2261871.0,22
+2013-09-06|North Macedonia|Wales,2261886.0,22
+2013-09-06|Malta|Denmark,2262595.0,22
+2013-09-06|Northern Ireland|Portugal,2262631.0,22
+2013-09-06|Norway|Cyprus,2261104.0,22
+2013-09-06|Russia|Luxembourg,2262633.0,22
+2013-09-06|Scotland|Belgium,2261472.0,22
+2013-09-06|Serbia|Croatia,2261887.0,22
+2013-09-06|Switzerland|Iceland,2261105.0,22
+2013-09-06|Ukraine|San Marino,2262075.0,22
+2013-09-06|Poland|Montenegro,2262077.0,22
+2013-09-06|Romania|Hungary,2262657.0,22
+2013-09-10|Andorra|Netherlands,2262104.0,22
+2013-09-10|Armenia|Denmark,2262598.0,22
+2013-09-10|Austria|Republic of Ireland,2261136.0,22
+2013-09-10|Belarus|France,2262040.0,22
+2013-09-10|Cyprus|Slovenia,2261106.0,22
+2013-09-10|Faroe Islands|Germany,2261134.0,22
+2013-09-10|Georgia|Finland,2262041.0,22
+2013-09-10|Greece|Latvia,2261872.0,22
+2013-09-10|Hungary|Estonia,2262105.0,22
+2013-09-10|Iceland|Albania,2261108.0,22
+2013-09-10|Italy|Czechia,2262599.0,22
+2013-09-10|San Marino|Poland,2262079.0,22
+2013-09-10|Luxembourg|Northern Ireland,2262635.0,22
+2013-09-10|North Macedonia|Scotland,2261473.0,22
+2013-09-10|Norway|Switzerland,2261107.0,22
+2013-09-10|Kazakhstan|Sweden,2261135.0,22
+2013-09-10|Russia|Israel,2262634.0,22
+2013-09-10|Wales|Serbia,2261888.0,22
+2013-09-10|Slovakia|Bosnia and Herzegovina,2262673.0,22
+2013-10-11|Albania|Switzerland,2261110.0,22
+2013-10-11|Andorra|Romania,2262109.0,22
+2013-10-11|Azerbaijan|Northern Ireland,2262638.0,22
+2013-10-11|Denmark|Italy,2262601.0,22
+2013-10-11|Greece|Slovakia,2261873.0,22
+2013-10-11|England|Montenegro,2262082.0,22
+2013-10-11|Germany|Republic of Ireland,2261137.0,22
+2013-10-11|Croatia|Belgium,2261890.0,22
+2013-10-11|Bosnia and Herzegovina|Liechtenstein,2262676.0,22
+2013-10-11|Ukraine|Poland,2262081.0,22
+2013-10-11|Portugal|Israel,2262637.0,22
+2013-10-11|Luxembourg|Russia,2262636.0,22
+2013-10-11|Malta|Czechia,2262602.0,22
+2013-10-11|Iceland|Cyprus,2261111.0,22
+2013-10-11|Netherlands|Hungary,2262108.0,22
+2013-10-11|Slovenia|Norway,2261109.0,22
+2013-10-11|Spain|Belarus,2262042.0,22
+2013-10-11|Sweden|Austria,2261138.0,22
+2013-10-11|Wales|North Macedonia,2261889.0,22
+2013-10-15|Belgium|Wales,2261891.0,22
+2013-10-15|Bulgaria|Czechia,2262604.0,22
+2013-10-15|Denmark|Malta,2262606.0,22
+2013-10-15|England|Poland,2262083.0,22
+2013-10-15|Faroe Islands|Austria,2261141.0,22
+2013-10-15|Greece|Liechtenstein,2261874.0,22
+2013-10-15|Hungary|Andorra,2262110.0,22
+2013-10-15|Republic of Ireland|Kazakhstan,2261142.0,22
+2013-10-15|Israel|Northern Ireland,2262640.0,22
+2013-10-15|France|Finland,2262044.0,22
+2013-10-15|Italy|Armenia,2262605.0,22
+2013-10-15|Latvia|Slovakia,2262677.0,22
+2013-10-15|Lithuania|Bosnia and Herzegovina,2262678.0,22
+2013-10-15|Norway|Iceland,2261114.0,22
+2013-10-15|Portugal|Luxembourg,2262641.0,22
+2013-10-15|Romania|Estonia,2262111.0,22
+2013-10-15|Scotland|Croatia,2261475.0,22
+2013-10-15|Serbia|North Macedonia,2261892.0,22
+2013-10-15|Spain|Georgia,2262043.0,22
+2013-10-15|Sweden|Germany,2261140.0,22
+2013-10-15|Switzerland|Slovenia,2261112.0,22
+2013-10-15|San Marino|Ukraine,2262084.0,22
+2013-10-15|Azerbaijan|Russia,2262639.0,22
+2011-10-07|Argentina|Chile,1154327.0,22
+2011-10-07|Ecuador|Venezuela,2220056.0,22
+2011-10-07|Peru|Paraguay,1154328.0,22
+2011-10-07|Uruguay|Bolivia,1154326.0,22
+2011-10-11|Bolivia|Colombia,1154329.0,22
+2011-10-11|Chile|Peru,1154331.0,22
+2011-10-11|Paraguay|Uruguay,1154330.0,22
+2011-10-11|Venezuela|Argentina,1154332.0,22
+2011-11-11|Argentina|Bolivia,1154336.0,22
+2011-11-11|Colombia|Venezuela,1154333.0,22
+2011-11-11|Paraguay|Ecuador,1154334.0,22
+2011-11-11|Uruguay|Chile,1154335.0,22
+2011-11-15|Colombia|Argentina,1154338.0,22
+2011-11-15|Ecuador|Peru,1154339.0,22
+2011-11-15|Chile|Paraguay,1154337.0,22
+2011-11-15|Venezuela|Bolivia,1154340.0,22
+2012-06-02|Argentina|Ecuador,2217964.0,22
+2012-06-02|Bolivia|Chile,2217963.0,22
+2012-06-02|Uruguay|Venezuela,2217962.0,22
+2012-06-03|Peru|Colombia,2217965.0,22
+2012-06-09|Bolivia|Paraguay,2218043.0,22
+2012-06-09|Venezuela|Chile,2218044.0,22
+2012-06-10|Ecuador|Colombia,2218046.0,22
+2012-06-10|Uruguay|Peru,2218045.0,22
+2012-09-07|Argentina|Paraguay,2264921.0,22
+2012-09-07|Colombia|Uruguay,2264919.0,22
+2012-09-07|Ecuador|Bolivia,2264920.0,22
+2012-09-07|Peru|Venezuela,2264922.0,22
+2012-09-11|Chile|Colombia,2264923.0,22
+2012-09-11|Paraguay|Venezuela,2264925.0,22
+2012-09-11|Peru|Argentina,2264926.0,22
+2012-09-11|Uruguay|Ecuador,2264924.0,22
+2012-10-12|Argentina|Uruguay,2268954.0,22
+2012-10-12|Colombia|Paraguay,2268952.0,22
+2012-10-12|Bolivia|Peru,2268951.0,22
+2012-10-12|Ecuador|Chile,2268953.0,22
+2012-10-16|Bolivia|Uruguay,2268956.0,22
+2012-10-16|Chile|Argentina,2268955.0,22
+2012-10-16|Paraguay|Peru,2268958.0,22
+2012-10-16|Venezuela|Ecuador,2268957.0,22
+2013-03-22|Colombia|Bolivia,2268962.0,22
+2013-03-22|Argentina|Venezuela,2268959.0,22
+2013-03-22|Uruguay|Paraguay,2268960.0,22
+2013-03-22|Peru|Chile,2268961.0,22
+2013-03-26|Chile|Uruguay,2268965.0,22
+2013-03-26|Ecuador|Paraguay,2268964.0,22
+2013-03-26|Bolivia|Argentina,2268963.0,22
+2013-03-26|Venezuela|Colombia,2268966.0,22
+2013-06-07|Bolivia|Venezuela,2303483.0,22
+2013-06-07|Argentina|Colombia,2303482.0,22
+2013-06-07|Peru|Ecuador,2303485.0,22
+2013-06-07|Paraguay|Chile,2303484.0,22
+2013-06-11|Ecuador|Argentina,2303486.0,22
+2013-06-11|Chile|Bolivia,2303487.0,22
+2013-06-11|Colombia|Peru,2303488.0,22
+2013-06-11|Venezuela|Uruguay,2303489.0,22
+2013-09-06|Chile|Venezuela,2303491.0,22
+2013-09-06|Colombia|Ecuador,2303493.0,22
+2013-09-06|Paraguay|Bolivia,2303490.0,22
+2013-09-06|Peru|Uruguay,2303492.0,22
+2013-09-10|Bolivia|Ecuador,2303495.0,22
+2013-09-10|Paraguay|Argentina,2303496.0,22
+2013-09-10|Uruguay|Colombia,2303494.0,22
+2013-09-10|Venezuela|Peru,2303497.0,22
+2013-10-11|Argentina|Peru,2303498.0,22
+2013-10-11|Colombia|Chile,2303500.0,22
+2013-10-11|Ecuador|Uruguay,2303499.0,22
+2013-10-11|Venezuela|Paraguay,2303501.0,22
+2013-10-15|Chile|Ecuador,2303504.0,22
+2013-10-15|Peru|Bolivia,2303505.0,22
+2013-10-15|Uruguay|Argentina,2303502.0,22
+2011-06-29|Vietnam|Macau,1121906.0,22
+2011-07-03|Macau|Vietnam,1121914.0,22
+2011-07-23|Kuwait|Philippines,1125673.0,22
+2011-07-23|United Arab Emirates|India,1125682.0,22
+2011-07-23|Qatar|Vietnam,1125678.0,22
+2011-07-23|Oman|Myanmar,1125674.0,22
+2011-07-23|Iraq|Yemen,1125679.0,22
+2011-07-23|Thailand|Palestine,1125669.0,22
+2011-07-23|Saudi Arabia|Hong Kong,1125675.0,22
+2011-07-23|Uzbekistan|Kyrgyzstan,1125681.0,22
+2011-07-23|Jordan|Nepal,1125683.0,22
+2011-07-23|Iran|Maldives,1125676.0,22
+2011-07-28|India|United Arab Emirates,1125697.0,22
+2011-07-28|Kyrgyzstan|Uzbekistan,1125696.0,22
+2011-07-28|Myanmar|Oman,1125689.0,22
+2011-07-28|Hong Kong|Saudi Arabia,1125690.0,22
+2011-07-28|Yemen|Iraq,1125694.0,22
+2011-07-28|Philippines|Kuwait,1125688.0,22
+2011-07-28|Vietnam|Qatar,1125693.0,22
+2011-07-28|Maldives|Iran,1125691.0,22
+2011-07-28|Palestine|Thailand,1125684.0,22
+2011-07-28|Nepal|Jordan,1125698.0,22
+2011-09-02|Iraq|Jordan,1135450.0,22
+2011-09-02|Australia|Thailand,1135455.0,22
+2011-09-02|Bahrain|Qatar,1135458.0,22
+2011-09-02|Iran|Indonesia,1135457.0,22
+2011-09-02|South Korea|Lebanon,1135451.0,22
+2011-09-02|Oman|Saudi Arabia,1135456.0,22
+2011-09-02|Japan|North Korea,1135453.0,22
+2011-09-02|United Arab Emirates|Kuwait,1135452.0,22
+2011-09-02|Tajikistan|Uzbekistan,1140481.0,22
+2011-09-06|Indonesia|Bahrain,1135468.0,22
+2011-09-06|Jordan|China,1135459.0,22
+2011-09-06|Kuwait|South Korea,1135461.0,22
+2011-09-06|Saudi Arabia|Australia,1135465.0,22
+2011-09-06|Thailand|Oman,1135466.0,22
+2011-09-06|Uzbekistan|Japan,1135463.0,22
+2011-09-06|Singapore|Iraq,1135460.0,22
+2011-09-06|Qatar|Iran,1135467.0,22
+2011-10-11|Australia|Oman,1135487.0,22
+2011-10-11|China|Iraq,1135481.0,22
+2011-10-11|Indonesia|Qatar,1135490.0,22
+2011-10-11|Iran|Bahrain,1135489.0,14
+2011-10-11|South Korea|United Arab Emirates,1135483.0,21
+2011-10-11|Lebanon|Kuwait,1135484.0,22
+2011-10-11|North Korea|Uzbekistan,1135486.0,22
+2011-10-11|Japan|Tajikistan,1140483.0,22
+2011-10-11|Thailand|Saudi Arabia,1135488.0,22
+2011-10-11|Singapore|Jordan,1135482.0,22
+2011-11-11|Bahrain|Iran,1135500.0,22
+2011-11-11|Kuwait|Lebanon,1135493.0,22
+2011-11-11|Oman|Australia,1135498.0,22
+2011-11-11|Qatar|Indonesia,1135499.0,22
+2011-11-11|Saudi Arabia|Thailand,1135497.0,22
+2011-11-11|Uzbekistan|North Korea,1135495.0,22
+2011-11-11|Jordan|Singapore,1135491.0,22
+2011-11-11|United Arab Emirates|South Korea,1135494.0,22
+2011-11-11|Tajikistan|Japan,1140484.0,22
+2011-11-11|Iraq|China,1135492.0,22
+2011-11-15|Jordan|Iraq,1135513.0,22
+2011-11-15|Indonesia|Iran,1135522.0,22
+2011-11-15|North Korea|Japan,1135518.0,22
+2011-11-15|Kuwait|United Arab Emirates,1135515.0,22
+2011-11-15|Lebanon|South Korea,1135516.0,22
+2011-11-15|Qatar|Bahrain,1135521.0,22
+2011-11-15|Saudi Arabia|Oman,1135519.0,22
+2011-11-15|Uzbekistan|Tajikistan,1140485.0,22
+2011-11-15|Thailand|Australia,1135520.0,22
+2012-02-29|China|Jordan,1135535.0,22
+2012-02-29|Bahrain|Indonesia,1135544.0,22
+2012-02-29|Australia|Saudi Arabia,1135541.0,22
+2012-02-29|Iran|Qatar,1135543.0,22
+2012-02-29|Iraq|Singapore,1135536.0,22
+2012-02-29|South Korea|Kuwait,1135537.0,22
+2012-02-29|Japan|Uzbekistan,1135539.0,22
+2012-02-29|Oman|Thailand,1135542.0,22
+2012-06-03|Lebanon|Qatar,1191717.0,22
+2012-06-03|Jordan|Iraq,1191718.0,22
+2012-06-03|Japan|Oman,1191719.0,22
+2012-06-03|Uzbekistan|Iran,1191716.0,22
+2012-06-08|Japan|Jordan,1191723.0,22
+2012-06-08|Lebanon|Uzbekistan,1191721.0,22
+2012-06-08|Qatar|South Korea,1191720.0,22
+2012-06-08|Oman|Australia,1191722.0,22
+2012-06-12|Australia|Japan,1191726.0,22
+2012-06-12|Iran|Qatar,1191725.0,22
+2012-06-12|Iraq|Oman,1191727.0,22
+2012-06-12|South Korea|Lebanon,1191724.0,22
+2012-09-11|Japan|Iraq,2261970.0,22
+2012-09-11|Jordan|Australia,2261969.0,21
+2012-09-11|Lebanon|Iran,2261967.0,22
+2012-09-11|Uzbekistan|South Korea,2261968.0,22
+2012-10-16|Iran|South Korea,2261972.0,22
+2012-10-16|Iraq|Australia,2261984.0,22
+2012-10-16|Qatar|Uzbekistan,2261971.0,22
+2012-10-16|Oman|Jordan,2261983.0,22
+2012-11-14|Iran|Uzbekistan,2261974.0,22
+2012-11-14|Oman|Japan,2261985.0,22
+2012-11-14|Qatar|Lebanon,2261973.0,22
+2013-03-26|Australia|Oman,2261987.0,22
+2013-03-26|Jordan|Japan,2261988.0,22
+2013-03-26|South Korea|Qatar,2261975.0,22
+2013-03-26|Uzbekistan|Lebanon,2261976.0,22
+2013-06-04|Japan|Australia,2261989.0,22
+2013-06-04|Lebanon|South Korea,2261977.0,22
+2013-06-04|Oman|Iraq,2261990.0,22
+2013-06-04|Qatar|Iran,2261978.0,22
+2013-06-11|Iran|Lebanon,2261980.0,22
+2013-06-11|Australia|Jordan,2261991.0,22
+2013-06-11|South Korea|Uzbekistan,2261979.0,22
+2013-06-11|Iraq|Japan,2261992.0,22
+2013-06-18|Australia|Iraq,2261993.0,22
+2013-06-18|Jordan|Oman,2261994.0,22
+2013-06-18|South Korea|Iran,2261981.0,22
+2013-06-18|Uzbekistan|Qatar,2261982.0,22
+2013-09-06|Jordan|Uzbekistan,2367152.0,22
+2013-09-10|Uzbekistan|Jordan,2367153.0,22
+2011-11-11|Chad|Tanzania,1133997.0,22
+2011-11-11|Seychelles|Kenya,1133986.0,22
+2011-11-15|Kenya|Seychelles,1164933.0,22
+2011-11-15|Tanzania|Chad,1164931.0,22
+2012-06-01|Ghana|Lesotho,1167393.0,22
+2012-06-01|Egypt|Mozambique,1167400.0,22
+2012-06-02|Cameroon|DR Congo,1167403.0,22
+2012-06-02|Algeria|Rwanda,1167401.0,22
+2012-06-02|Côte d'Ivoire|Tanzania,1167391.0,22
+2012-06-02|Gambia|Morocco,1167392.0,22
+2012-06-02|Kenya|Malawi,1167398.0,22
+2012-06-02|Sudan|Zambia,1167394.0,22
+2012-06-02|Tunisia|Equatorial Guinea,1167389.0,22
+2012-06-02|Senegal|Liberia,1167405.0,22
+2012-06-02|Sierra Leone|Cabo Verde,1167390.0,22
+2012-06-03|Benin|Mali,1167402.0,22
+2012-06-03|Nigeria|Namibia,1167397.0,22
+2012-06-03|Zimbabwe|Guinea,1167399.0,22
+2012-06-03|South Africa|Ethiopia,1167387.0,22
+2012-06-09|Botswana|South Africa,2212021.0,22
+2012-06-09|Cabo Verde|Tunisia,2212026.0,22
+2012-06-09|Malawi|Nigeria,2212020.0,22
+2012-06-09|Morocco|Côte d'Ivoire,2212029.0,22
+2012-06-09|Uganda|Senegal,2212025.0,22
+2012-06-09|Namibia|Kenya,2212028.0,22
+2012-06-09|Zambia|Ghana,2212022.0,22
+2012-06-10|DR Congo|Togo,2212033.0,22
+2012-06-10|Guinea|Egypt,2212037.0,22
+2012-06-10|Libya|Cameroon,2212038.0,22
+2012-06-10|Mali|Algeria,2212019.0,22
+2012-06-10|Tanzania|Gambia,2212035.0,22
+2012-06-10|Mozambique|Zimbabwe,2212031.0,22
+2013-03-23|Cameroon|Togo,2258773.0,22
+2013-03-23|Tunisia|Sierra Leone,2258759.0,22
+2013-03-23|Nigeria|Kenya,2258766.0,22
+2013-03-23|Senegal|Angola,2258775.0,22
+2013-03-23|South Africa|Central African Republic,2258757.0,22
+2013-03-23|Côte d'Ivoire|Gambia,2258760.0,22
+2013-03-24|Ghana|Sudan,2258763.0,22
+2013-03-24|DR Congo|Libya,2258772.0,18
+2013-03-24|Equatorial Guinea|Cabo Verde,2258758.0,22
+2013-03-24|Rwanda|Mali,2258771.0,22
+2013-03-24|Tanzania|Morocco,2258761.0,22
+2013-03-24|Lesotho|Zambia,2258762.0,22
+2013-03-26|Algeria|Benin,2258770.0,22
+2013-03-26|Egypt|Zimbabwe,2258769.0,22
+2013-06-05|Kenya|Nigeria,2315524.0,22
+2013-06-07|Sudan|Ghana,2315526.0,22
+2013-06-07|Libya|DR Congo,2315525.0,22
+2013-06-08|Central African Republic|South Africa,2315528.0,22
+2013-06-08|Cabo Verde|Equatorial Guinea,2315534.0,22
+2013-06-08|Gambia|Côte d'Ivoire,2315535.0,22
+2013-06-08|Morocco|Tanzania,2315536.0,22
+2013-06-08|Zambia|Lesotho,2315529.0,22
+2013-06-08|Sierra Leone|Tunisia,2315533.0,22
+2013-06-08|Angola|Senegal,2315531.0,22
+2013-06-09|Benin|Algeria,2315540.0,22
+2013-06-09|Zimbabwe|Egypt,2315537.0,22
+2013-06-09|Togo|Cameroon,2315538.0,22
+2013-06-09|Mali|Rwanda,2315542.0,22
+2013-06-12|Malawi|Kenya,2315543.0,22
+2013-06-12|Namibia|Nigeria,2315544.0,22
+2013-06-15|Cabo Verde|Sierra Leone,2315552.0,22
+2013-06-15|Zambia|Sudan,2315547.0,22
+2013-06-15|Morocco|Gambia,2315553.0,22
+2013-06-16|DR Congo|Cameroon,2315558.0,22
+2013-06-16|Equatorial Guinea|Tunisia,2315560.0,22
+2013-06-16|Ethiopia|South Africa,2315559.0,22
+2013-06-16|Guinea|Zimbabwe,2315561.0,22
+2013-06-16|Lesotho|Ghana,2315555.0,22
+2013-06-16|Liberia|Senegal,2315551.0,22
+2013-06-16|Mali|Benin,2315562.0,22
+2013-06-16|Mozambique|Egypt,2315556.0,22
+2013-06-16|Rwanda|Algeria,2315557.0,21
+2013-06-16|Tanzania|Côte d'Ivoire,2315554.0,22
+2013-09-06|Ghana|Zambia,2367823.0,22
+2013-09-07|Gambia|Tanzania,2367867.0,19
+2013-09-07|Nigeria|Malawi,2367849.0,22
+2013-09-07|Senegal|Uganda,2367856.0,22
+2013-09-07|South Africa|Botswana,2367851.0,22
+2013-09-07|Côte d'Ivoire|Morocco,2367853.0,22
+2013-09-08|Cameroon|Libya,2367858.0,22
+2013-09-08|Kenya|Namibia,2367855.0,22
+2013-09-08|Togo|DR Congo,2367859.0,22
+2013-09-08|Zimbabwe|Mozambique,2367857.0,22
+2013-09-10|Egypt|Guinea,2367861.0,22
+2013-09-10|Algeria|Mali,2367862.0,22
+2013-10-12|Côte d'Ivoire|Senegal,2369432.0,22
+2013-10-12|Burkina Faso|Algeria,2369435.0,22
+2013-10-13|Ethiopia|Nigeria,2369431.0,22
+2013-10-13|Tunisia|Cameroon,2369433.0,22
+2013-10-15|Ghana|Egypt,2369434.0,22
+2013-11-16|Senegal|Côte d'Ivoire,2369439.0,22
+2013-11-16|Nigeria|Ethiopia,2369440.0,22
+2013-11-17|Cameroon|Tunisia,2369438.0,22
+2013-11-19|Egypt|Ghana,2369436.0,22
+2013-11-19|Algeria|Burkina Faso,2369437.0,22
+2012-09-07|New Caledonia|New Zealand,2232014.0,22
+2012-09-07|Solomon Islands|Tahiti,2232013.0,22
+2012-09-11|New Zealand|Solomon Islands,2232016.0,22
+2012-09-11|Tahiti|New Caledonia,2232015.0,22
+2012-10-12|Solomon Islands|New Caledonia,2232018.0,22
+2012-10-12|Tahiti|New Zealand,2232017.0,22
+2012-10-16|New Zealand|Tahiti,2232019.0,22
+2012-10-16|New Caledonia|Solomon Islands,2232020.0,22
+2013-03-22|New Zealand|New Caledonia,2232022.0,22
+2013-03-22|Tahiti|Solomon Islands,2232021.0,22
+2013-03-26|New Caledonia|Tahiti,2232024.0,22
+2013-03-26|Solomon Islands|New Zealand,2232023.0,22
+2013-06-14|Moldova|Kyrgyzstan,2344696.0,22
+2013-08-14|Colombia|Serbia,2361938.0,22
+2013-08-14|Albania|Armenia,2361385.0,22
+2013-08-14|Algeria|Guinea,2327321.0,22
+2013-08-14|Austria|Greece,2358315.0,22
+2013-08-14|Azerbaijan|Malta,2361411.0,22
+2013-08-14|Belarus|Montenegro,2361410.0,22
+2013-08-14|Kazakhstan|Georgia,2361395.0,22
+2013-08-14|Bosnia and Herzegovina|United States,2357580.0,22
+2013-08-14|Chile|Iraq,2361412.0,22
+2013-08-14|Dominican Republic|Costa Rica,4340809.0,22
+2013-08-14|Germany|Paraguay,2302490.0,22
+2013-08-14|England|Scotland,2219315.0,22
+2013-08-14|Estonia|Latvia,2351094.0,22
+2013-08-14|Finland|Slovenia,2361384.0,22
+2013-08-14|Gabon|Cabo Verde,2361390.0,22
+2013-08-14|Japan|Uruguay,2361332.0,22
+2013-08-14|Hungary|Czechia,2361421.0,22
+2013-08-14|Iceland|Faroe Islands,2356789.0,22
+2013-08-14|Indonesia|Philippines,2361394.0,22
+2013-08-14|Italy|Argentina,2346490.0,22
+2013-08-14|Ecuador|Spain,2361941.0,22
+2013-08-14|Egypt|Uganda,2361331.0,22
+2013-08-14|Belgium|France,2361939.0,22
+2013-08-14|South Korea|Peru,2361125.0,22
+2013-08-14|Romania|Slovakia,2361415.0,22
+2013-08-14|Luxembourg|Lithuania,2364035.0,22
+2013-08-14|North Macedonia|Bulgaria,2361696.0,22
+2013-08-14|Mexico|Côte d'Ivoire,2361943.0,22
+2013-08-14|Moldova|Andorra,2361413.0,22
+2013-08-14|Morocco|Burkina Faso,2361396.0,22
+2013-08-14|Liechtenstein|Croatia,2361417.0,22
+2013-08-14|Poland|Denmark,2361422.0,22
+2013-08-14|Portugal|Netherlands,2361418.0,22
+2013-08-14|South Africa|Nigeria,2361420.0,22
+2013-08-14|Sweden|Norway,2318752.0,22
+2013-08-14|Switzerland|Brazil,2354948.0,22
+2013-08-14|Tajikistan|India,2361392.0,22
+2013-08-14|Venezuela|Bolivia,2361942.0,22
+2013-08-14|Wales|Republic of Ireland,2361423.0,22
+2013-08-14|Tunisia|Congo,2361062.0,22
+2013-08-17|South Africa|Burkina Faso,2361944.0,18
+2013-08-20|Afghanistan|Pakistan,2361945.0,22
+2013-09-06|Belarus|Kyrgyzstan,2357871.0,22
+2013-09-06|Japan|Guatemala,2367822.0,22
+2013-09-06|South Korea|Haiti,2367825.0,22
+2013-09-06|Lebanon|Syria,2367832.0,21
+2013-09-07|Brazil|Australia,2365556.0,22
+2013-09-08|Canada|Mauritania,2381739.0,22
+2013-09-09|Qatar|Lebanon,2367959.0,22
+2013-09-10|China|Malaysia,2367828.0,22
+2013-09-10|Brazil|Portugal,2365557.0,22
+2013-09-10|Japan|Ghana,2369965.0,22
+2013-09-10|Hong Kong|Singapore,2358083.0,22
+2013-09-10|Canada|Mauritania,2381740.0,22
+2013-09-10|South Africa|Zimbabwe,3408807.0,22
+2013-09-10|Spain|Chile,2447600.0,22
+2013-09-10|South Korea|Croatia,2367964.0,22
+2013-10-08|Lebanon|Iraq,4333442.0,22
+2013-10-11|France|Australia,2372351.0,22
+2013-10-11|Morocco|South Africa,2445496.0,22
+2013-10-11|Serbia|Japan,2372280.0,22
+2013-10-12|South Korea|Brazil,2370934.0,22
+2013-10-15|Belarus|Japan,2319113.0,22
+2013-10-15|Brazil|Zambia,2372780.0,22
+2013-10-15|Trinidad and Tobago|New Zealand,2371443.0,22
+2013-10-15|South Korea|Mali,2370935.0,22
+2013-11-01|Indonesia|Kyrgyzstan,3836866.0,22
+2013-11-09|United Arab Emirates|Philippines,2410106.0,22
+2013-11-14|Belgium|Colombia,2379650.0,22
+2013-11-15|Belarus|Albania,2378387.0,22
+2013-11-15|Czechia|Canada,2379649.0,22
+2013-11-15|South Korea|Switzerland,2381603.0,22
+2013-11-15|India|Philippines,2410105.0,22
+2013-11-15|Estonia|Azerbaijan,2378946.0,22
+2013-11-15|Jamaica|Trinidad and Tobago,2379656.0,22
+2013-11-15|Italy|Germany,2372660.0,22
+2013-11-15|England|Chile,2372790.0,22
+2013-11-15|Denmark|Norway,2372632.0,22
+2013-11-15|Republic of Ireland|Latvia,2381896.0,22
+2013-11-15|Poland|Slovakia,2378410.0,22
+2013-11-15|Russia|Serbia,2381607.0,22
+2013-11-15|Scotland|United States,2368775.0,22
+2013-11-16|Equatorial Guinea|Spain,2381738.0,22
+2013-11-16|Honduras|Brazil,2379651.0,22
+2013-11-16|Wales|Finland,2380390.0,22
+2013-11-17|Luxembourg|Montenegro,2380345.0,22
+2013-11-18|Argentina|Bosnia and Herzegovina,2379653.0,22
+2013-11-18|Italy|Nigeria,2372447.0,22
+2013-11-18|Moldova|Lithuania,2381870.0,22
+2013-11-19|Australia|Costa Rica,2378450.0,22
+2013-11-19|Austria|United States,2372897.0,22
+2013-11-19|Belgium|Japan,2382179.0,22
+2013-11-19|Brazil|Chile,2379655.0,22
+2013-11-19|Kyrgyzstan|Azerbaijan,3703415.0,22
+2013-11-19|England|Germany,2372661.0,22
+2013-11-19|Gibraltar|Slovakia,2375519.0,22
+2013-11-19|Honduras|Ecuador,2378616.0,22
+2013-11-19|Malta|Faroe Islands,2373011.0,22
+2013-11-19|Netherlands|Colombia,2379654.0,22
+2013-11-19|Norway|Scotland,2372633.0,22
+2013-11-19|Poland|Republic of Ireland,2378411.0,22
+2013-11-19|South Africa|Spain,2437468.0,22
+2013-11-19|Liechtenstein|Estonia,2378947.0,22
+2013-11-19|Tanzania|Zimbabwe,3571627.0,22
+2013-11-19|Trinidad and Tobago|Jamaica,2379657.0,22
+2013-11-19|Russia|South Korea,2381604.0,22
+2013-11-19|Slovenia|Canada,2379652.0,22
+2013-11-30|Dominica|Saint Lucia,2384186.0,22
+2013-12-01|Dominica|Saint Lucia,2384186.0,22
+2014-05-27|Uzbekistan|Oman,3943142.0,22
+2014-05-29|Uzbekistan|Oman,3943154.0,22
+2016-09-04|Kazakhstan|Poland,2644345.0,22
+2016-09-04|Denmark|Armenia,2758543.0,22
+2016-09-04|Czechia|Northern Ireland,2643523.0,22
+2016-09-04|Lithuania|Slovenia,2643845.0,22
+2016-09-04|Slovakia|England,2643844.0,22
+2016-09-04|Romania|Montenegro,2644346.0,22
+2016-09-04|Norway|Germany,2643522.0,22
+2016-09-04|Malta|Scotland,2643846.0,22
+2016-09-05|Israel|Italy,2643843.0,22
+2016-09-05|Albania|North Macedonia,2643842.0,22
+2016-09-05|Georgia|Austria,2643555.0,22
+2016-09-05|Finland|Kosovo,2697326.0,22
+2016-09-05|Spain|Liechtenstein,2643841.0,22
+2016-09-05|Serbia|Republic of Ireland,2643556.0,22
+2016-09-05|Ukraine|Iceland,2643551.0,22
+2016-09-05|Wales|Moldova,2643557.0,22
+2016-09-06|Belarus|France,2643461.0,22
+2016-09-06|Bosnia and Herzegovina|Estonia,2643553.0,22
+2016-09-06|Cyprus|Belgium,2643554.0,22
+2016-09-06|Faroe Islands|Hungary,2643492.0,22
+2016-09-06|Gibraltar|Greece,2700940.0,22
+2016-09-06|Sweden|Netherlands,2643463.0,22
+2016-09-06|Switzerland|Portugal,2643493.0,22
+2016-10-06|Italy|Spain,2644409.0,22
+2016-10-06|Republic of Ireland|Georgia,2643558.0,22
+2016-10-06|Iceland|Finland,2643847.0,22
+2016-10-06|Kosovo|Croatia,2697327.0,22
+2016-10-06|Austria|Wales,2643560.0,22
+2016-10-06|North Macedonia|Israel,2644408.0,22
+2016-10-06|Moldova|Serbia,2643559.0,22
+2016-10-07|Hungary|Switzerland,2643496.0,22
+2016-10-07|Greece|Cyprus,2644375.0,22
+2016-10-07|Belgium|Bosnia and Herzegovina,2644374.0,22
+2016-10-07|France|Bulgaria,2643464.0,22
+2016-10-07|Portugal|Andorra,2643495.0,22
+2016-10-07|Luxembourg|Sweden,2643465.0,22
+2016-10-07|Netherlands|Belarus,2643466.0,22
+2016-10-08|Armenia|Romania,2644347.0,22
+2016-10-08|Azerbaijan|Norway,2643524.0,22
+2016-10-08|Germany|Czechia,2643525.0,22
+2016-10-08|England|Malta,2758582.0,22
+2016-10-08|Slovenia|Slovakia,2758583.0,22
+2016-10-08|Poland|Denmark,2644349.0,22
+2016-10-08|Northern Ireland|San Marino,2643526.0,22
+2016-10-08|Scotland|Lithuania,2758584.0,22
+2016-10-09|North Macedonia|Italy,2644413.0,22
+2016-10-09|Albania|Spain,2644412.0,22
+2016-10-09|Finland|Croatia,2643941.0,22
+2016-10-09|Moldova|Republic of Ireland,2643562.0,22
+2016-10-09|Serbia|Austria,2643563.0,22
+2016-10-09|Ukraine|Kosovo,2697328.0,22
+2016-10-09|Wales|Georgia,2643561.0,22
+2016-10-10|Faroe Islands|Portugal,2643498.0,22
+2016-10-10|Andorra|Switzerland,2643497.0,22
+2016-10-10|Estonia|Greece,2644377.0,22
+2016-10-10|Latvia|Hungary,2643499.0,22
+2016-10-10|Gibraltar|Belgium,2700942.0,22
+2016-10-10|Netherlands|France,2643468.0,22
+2016-10-10|Sweden|Bulgaria,2643469.0,22
+2016-10-10|Bosnia and Herzegovina|Cyprus,2644376.0,22
+2016-10-11|Czechia|Azerbaijan,2643529.0,22
+2016-10-11|Denmark|Montenegro,2644351.0,22
+2016-10-11|Germany|Northern Ireland,2643527.0,22
+2016-10-11|Kazakhstan|Romania,2644350.0,22
+2016-10-11|Norway|San Marino,2643528.0,22
+2016-10-11|Poland|Armenia,2644352.0,22
+2016-10-11|Slovakia|Scotland,2758586.0,22
+2016-10-11|Slovenia|England,2758587.0,22
+2016-11-11|Czechia|Norway,2643532.0,22
+2016-11-11|Denmark|Kazakhstan,2644354.0,22
+2016-11-11|England|Scotland,2758588.0,22
+2016-11-11|France|Sweden,2643472.0,22
+2016-11-11|Northern Ireland|Azerbaijan,2643530.0,22
+2016-11-11|Malta|Slovenia,2758589.0,22
+2016-11-11|Romania|Poland,2644355.0,22
+2016-11-11|San Marino|Germany,2643531.0,22
+2016-11-11|Slovakia|Lithuania,2758590.0,22
+2016-11-12|Croatia|Iceland,2643942.0,22
+2016-11-12|Austria|Republic of Ireland,2643565.0,22
+2016-11-12|Liechtenstein|Italy,2644416.0,22
+2016-11-12|Ukraine|Finland,2643943.0,22
+2016-11-12|Wales|Serbia,2643566.0,22
+2016-11-12|Spain|North Macedonia,2644414.0,22
+2016-11-13|Belgium|Estonia,2644378.0,22
+2016-11-13|Greece|Bosnia and Herzegovina,2644379.0,22
+2016-11-13|Hungary|Andorra,2643500.0,22
+2016-11-13|Luxembourg|Netherlands,2643471.0,22
+2016-11-13|Portugal|Latvia,2643501.0,22
+2016-11-13|Switzerland|Faroe Islands,2643502.0,22
+2017-03-24|Republic of Ireland|Wales,2643568.0,22
+2017-03-24|Georgia|Serbia,2643567.0,22
+2017-03-24|Liechtenstein|North Macedonia,2644417.0,22
+2017-03-24|Austria|Moldova,2643569.0,22
+2017-03-24|Italy|Albania,2644419.0,22
+2017-03-24|Croatia|Ukraine,2643945.0,22
+2017-03-24|Kosovo|Iceland,2697841.0,22
+2017-03-24|Spain|Israel,2644418.0,22
+2017-03-25|Bosnia and Herzegovina|Gibraltar,2700944.0,22
+2017-03-25|Bulgaria|Netherlands,2643474.0,22
+2017-03-25|Luxembourg|France,2643475.0,22
+2017-03-25|Belgium|Greece,2644380.0,22
+2017-03-25|Portugal|Hungary,2643505.0,22
+2017-03-25|Sweden|Belarus,2643473.0,22
+2017-03-25|Switzerland|Latvia,2643504.0,22
+2017-03-26|Azerbaijan|Germany,2643533.0,22
+2017-03-26|Malta|Slovakia,2758593.0,22
+2017-03-26|England|Lithuania,2758591.0,22
+2017-03-26|Romania|Denmark,2644358.0,22
+2017-03-26|San Marino|Czechia,2643534.0,22
+2017-03-26|Scotland|Slovenia,2758592.0,22
+2017-03-26|Montenegro|Poland,2644357.0,22
+2017-03-26|Northern Ireland|Norway,2643535.0,22
+2017-06-09|Latvia|Portugal,2643507.0,22
+2017-06-09|Andorra|Hungary,2643506.0,22
+2017-06-09|Bosnia and Herzegovina|Greece,2644382.0,22
+2017-06-09|Estonia|Belgium,2644381.0,22
+2017-06-09|Faroe Islands|Switzerland,2643508.0,22
+2017-06-09|Sweden|France,2643478.0,22
+2017-06-09|Netherlands|Luxembourg,2643477.0,22
+2017-06-10|Germany|San Marino,2643537.0,22
+2017-06-10|Lithuania|Slovakia,2758596.0,22
+2017-06-10|Kazakhstan|Denmark,2644359.0,22
+2017-06-10|Azerbaijan|Northern Ireland,2643536.0,22
+2017-06-10|Norway|Czechia,2643538.0,22
+2017-06-10|Poland|Romania,2644361.0,22
+2017-06-10|Scotland|England,2758595.0,22
+2017-06-10|Slovenia|Malta,2758594.0,22
+2017-06-11|Iceland|Croatia,2644319.0,22
+2017-06-11|Finland|Ukraine,2644318.0,22
+2017-06-11|Republic of Ireland|Austria,2643570.0,22
+2017-06-11|Serbia|Wales,2643572.0,22
+2017-06-11|North Macedonia|Spain,2644421.0,22
+2017-08-31|Belgium|Gibraltar,2700946.0,22
+2017-08-31|Bulgaria|Sweden,2643479.0,22
+2017-08-31|Hungary|Latvia,2643511.0,22
+2017-09-02|Croatia|Kosovo,2697843.0,22
+2017-09-02|Serbia|Moldova,2643574.0,22
+2017-09-02|Wales|Austria,2643575.0,22
+2017-09-02|Israel|North Macedonia,2644424.0,22
+2017-09-03|Belarus|Sweden,2643482.0,22
+2017-09-03|France|Luxembourg,2643484.0,22
+2017-09-03|Gibraltar|Bosnia and Herzegovina,2700947.0,22
+2017-09-03|Hungary|Portugal,2643514.0,22
+2017-09-03|Latvia|Switzerland,2643513.0,22
+2017-09-03|Netherlands|Bulgaria,2643483.0,22
+2017-09-03|Greece|Belgium,2644386.0,22
+2017-09-04|Germany|Norway,2643543.0,22
+2017-09-04|Armenia|Denmark,2644365.0,22
+2017-09-04|England|Slovakia,2758600.0,22
+2017-09-04|Northern Ireland|Czechia,2643544.0,22
+2017-09-04|Poland|Kazakhstan,2644367.0,22
+2017-09-04|Scotland|Malta,2758602.0,22
+2017-09-04|Slovenia|Lithuania,2758601.0,22
+2017-09-04|Montenegro|Romania,2644366.0,22
+2017-09-05|Austria|Georgia,2643578.0,22
+2017-09-05|Iceland|Ukraine,2644331.0,22
+2017-09-05|Republic of Ireland|Serbia,2643576.0,22
+2017-09-05|Italy|Israel,2644426.0,22
+2017-09-05|Kosovo|Finland,2697844.0,22
+2017-09-05|Liechtenstein|Spain,2644427.0,22
+2017-09-05|North Macedonia|Albania,2644428.0,22
+2017-09-05|Moldova|Wales,2643577.0,22
+2017-10-05|Armenia|Poland,2644368.0,22
+2017-10-05|Azerbaijan|Czechia,2643545.0,22
+2017-10-05|England|Slovenia,2758605.0,22
+2017-10-05|Montenegro|Denmark,2644369.0,22
+2017-10-05|Northern Ireland|Germany,2643546.0,22
+2017-10-05|Romania|Kazakhstan,2644370.0,22
+2017-10-05|San Marino|Norway,2643547.0,22
+2017-10-05|Scotland|Slovakia,2758603.0,22
+2017-10-06|Kosovo|Ukraine,2697845.0,22
+2017-10-06|Austria|Serbia,2643581.0,22
+2017-10-06|Croatia|Finland,2644332.0,22
+2017-10-06|Georgia|Wales,2643579.0,22
+2017-10-06|Republic of Ireland|Moldova,2643580.0,22
+2017-10-06|Italy|North Macedonia,2644429.0,22
+2017-10-06|Spain|Albania,2644431.0,22
+2017-10-07|Belarus|Netherlands,2643486.0,22
+2017-10-07|Bosnia and Herzegovina|Belgium,2644387.0,22
+2017-10-07|Bulgaria|France,2643487.0,22
+2017-10-07|Cyprus|Greece,2644388.0,22
+2017-10-07|Andorra|Portugal,2643516.0,22
+2017-10-07|Switzerland|Hungary,2643517.0,22
+2017-10-07|Sweden|Luxembourg,2643485.0,22
+2017-10-08|Czechia|San Marino,2643550.0,22
+2017-10-08|Denmark|Romania,2644371.0,22
+2017-10-08|Germany|Azerbaijan,2643548.0,22
+2017-10-08|Lithuania|England,2758607.0,22
+2017-10-08|Norway|Northern Ireland,2643549.0,22
+2017-10-08|Poland|Montenegro,2644373.0,22
+2017-10-08|Slovakia|Malta,2758608.0,22
+2017-10-08|Slovenia|Scotland,2758606.0,22
+2017-10-09|Israel|Spain,2644432.0,22
+2017-10-09|Albania|Italy,2644434.0,22
+2017-10-09|Iceland|Kosovo,2697846.0,22
+2017-10-09|Moldova|Austria,2643582.0,22
+2017-10-09|Serbia|Georgia,2643583.0,22
+2017-10-09|Ukraine|Croatia,2644342.0,22
+2017-10-09|Wales|Republic of Ireland,2643584.0,22
+2017-10-09|North Macedonia|Liechtenstein,2644433.0,22
+2017-10-10|Belgium|Cyprus,2644390.0,22
+2017-10-10|Estonia|Bosnia and Herzegovina,2644389.0,22
+2017-10-10|Hungary|Faroe Islands,2643520.0,22
+2017-10-10|France|Belarus,2643488.0,22
+2017-10-10|Greece|Gibraltar,2700957.0,22
+2017-10-10|Netherlands|Sweden,2643490.0,22
+2017-10-10|Portugal|Switzerland,2643519.0,22
+2015-10-08|Argentina|Ecuador,2626888.0,22
+2015-10-08|Bolivia|Uruguay,2626884.0,22
+2015-10-08|Colombia|Peru,2626885.0,22
+2015-10-08|Chile|Brazil,2626887.0,22
+2015-10-08|Venezuela|Paraguay,2626886.0,22
+2015-10-13|Brazil|Venezuela,2626892.0,22
+2015-10-13|Ecuador|Bolivia,2626889.0,22
+2015-10-13|Peru|Chile,2626893.0,22
+2015-10-13|Paraguay|Argentina,2626891.0,22
+2015-10-13|Uruguay|Colombia,2626890.0,22
+2015-11-12|Bolivia|Venezuela,2626894.0,22
+2015-11-12|Ecuador|Uruguay,2626895.0,22
+2015-11-12|Chile|Colombia,2626896.0,22
+2015-11-13|Argentina|Brazil,2626897.0,22
+2015-11-13|Peru|Paraguay,2626898.0,22
+2015-11-17|Brazil|Peru,2626902.0,22
+2015-11-17|Colombia|Argentina,2626899.0,22
+2015-11-17|Paraguay|Bolivia,2626901.0,22
+2015-11-17|Uruguay|Chile,2626903.0,22
+2015-11-17|Venezuela|Ecuador,2626900.0,22
+2016-03-24|Chile|Argentina,2643077.0,22
+2016-03-24|Ecuador|Paraguay,2643079.0,22
+2016-03-24|Bolivia|Colombia,2643080.0,22
+2016-03-24|Peru|Venezuela,2643081.0,22
+2016-03-25|Brazil|Uruguay,2643078.0,22
+2016-03-29|Argentina|Bolivia,2643084.0,22
+2016-03-29|Colombia|Ecuador,2643082.0,22
+2016-03-29|Paraguay|Brazil,2643083.0,22
+2016-03-29|Venezuela|Chile,2643085.0,22
+2016-03-29|Uruguay|Peru,2643086.0,22
+2016-09-01|Argentina|Uruguay,2757659.0,22
+2016-09-01|Bolivia|Peru,2757656.0,22
+2016-09-01|Colombia|Venezuela,2757657.0,22
+2016-09-01|Ecuador|Brazil,2757658.0,22
+2016-09-01|Paraguay|Chile,2757660.0,22
+2016-09-06|Brazil|Colombia,2757664.0,22
+2016-09-06|Chile|Bolivia,2757663.0,22
+2016-09-06|Peru|Ecuador,2757665.0,22
+2016-09-06|Uruguay|Paraguay,2757662.0,22
+2016-09-06|Venezuela|Argentina,2757661.0,22
+2016-10-06|Brazil|Bolivia,2764253.0,22
+2016-10-06|Ecuador|Chile,2764250.0,22
+2016-10-06|Paraguay|Colombia,2764252.0,22
+2016-10-06|Uruguay|Venezuela,2764251.0,22
+2016-10-06|Peru|Argentina,2764254.0,22
+2016-10-11|Bolivia|Ecuador,2764255.0,22
+2016-10-11|Colombia|Uruguay,2764256.0,22
+2016-10-11|Argentina|Paraguay,2764258.0,22
+2016-10-11|Chile|Peru,2764257.0,22
+2016-10-11|Venezuela|Brazil,2764259.0,22
+2016-11-10|Brazil|Argentina,2778775.0,22
+2016-11-10|Colombia|Chile,2778771.0,22
+2016-11-10|Uruguay|Ecuador,2778772.0,22
+2016-11-10|Venezuela|Bolivia,2778774.0,22
+2016-11-10|Paraguay|Peru,2778773.0,22
+2016-11-15|Bolivia|Paraguay,2778776.0,22
+2016-11-15|Chile|Uruguay,2778779.0,22
+2016-11-15|Ecuador|Venezuela,2778777.0,22
+2016-11-15|Argentina|Colombia,2778778.0,22
+2016-11-15|Peru|Brazil,2778780.0,22
+2017-03-23|Colombia|Bolivia,2838785.0,22
+2017-03-23|Argentina|Chile,2838788.0,22
+2017-03-23|Uruguay|Brazil,2838787.0,22
+2017-03-23|Venezuela|Peru,2838789.0,22
+2017-03-23|Paraguay|Ecuador,2838786.0,22
+2017-03-28|Bolivia|Argentina,2838790.0,22
+2017-03-28|Brazil|Paraguay,2838793.0,22
+2017-03-28|Chile|Venezuela,2838792.0,22
+2017-03-28|Ecuador|Colombia,2838791.0,22
+2017-03-28|Peru|Uruguay,2838794.0,22
+2017-08-31|Chile|Paraguay,2838795.0,22
+2017-08-31|Brazil|Ecuador,2838796.0,22
+2017-08-31|Uruguay|Argentina,2838799.0,22
+2017-08-31|Peru|Bolivia,2838798.0,22
+2017-08-31|Venezuela|Colombia,2838797.0,22
+2017-09-05|Argentina|Venezuela,2838802.0,22
+2017-09-05|Bolivia|Chile,2838804.0,22
+2017-09-05|Colombia|Brazil,2838800.0,22
+2017-09-05|Ecuador|Peru,2838803.0,22
+2017-09-05|Paraguay|Uruguay,2838801.0,22
+2017-10-05|Argentina|Peru,2838807.0,22
+2017-10-05|Bolivia|Brazil,2838809.0,22
+2017-10-05|Chile|Ecuador,2838806.0,22
+2017-10-05|Colombia|Paraguay,2838805.0,22
+2017-10-05|Venezuela|Uruguay,2838808.0,22
+2017-10-10|Brazil|Chile,2838811.0,22
+2017-10-10|Ecuador|Argentina,2838812.0,22
+2017-10-10|Paraguay|Venezuela,2838810.0,22
+2017-10-10|Peru|Colombia,2838813.0,22
+2017-10-10|Uruguay|Bolivia,2838814.0,22
+2015-03-27|Curaçao|Montserrat,2528370.0,22
+2015-03-31|Montserrat|Curaçao,2528377.0,22
+2015-06-10|Curaçao|Cuba,2549829.0,22
+2015-06-11|Dominica|Canada,2549723.0,22
+2015-06-14|Cuba|Curaçao,2549830.0,22
+2015-06-16|Canada|Dominica,2549720.0,22
+2015-09-04|Grenada|Haiti,2606977.0,22
+2015-09-04|Curaçao|El Salvador,2606975.0,22
+2015-09-04|Canada|Belize,2606976.0,22
+2015-09-04|Jamaica|Nicaragua,2606978.0,22
+2015-09-08|El Salvador|Curaçao,2606981.0,22
+2015-09-08|Belize|Canada,2606982.0,22
+2015-09-08|Haiti|Grenada,2606983.0,22
+2015-09-08|Nicaragua|Jamaica,2606984.0,22
+2015-11-13|Costa Rica|Haiti,2634385.0,22
+2015-11-13|Jamaica|Panama,2634386.0,22
+2015-11-13|Canada|Honduras,2634374.0,22
+2015-11-13|Guatemala|Trinidad and Tobago,2634398.0,22
+2015-11-13|United States|Saint Vincent and the Grenadines,2634397.0,22
+2015-11-13|Mexico|El Salvador,2634373.0,22
+2015-11-17|Honduras|Mexico,2634375.0,22
+2015-11-17|Panama|Costa Rica,2634388.0,22
+2015-11-17|Haiti|Jamaica,2634387.0,22
+2016-03-25|Canada|Mexico,2634377.0,22
+2016-03-25|Haiti|Panama,2634390.0,22
+2016-03-25|Guatemala|United States,2634401.0,22
+2016-03-25|El Salvador|Honduras,2634378.0,22
+2016-03-25|Saint Vincent and the Grenadines|Trinidad and Tobago,2634402.0,22
+2016-03-25|Jamaica|Costa Rica,2634389.0,22
+2016-03-29|Costa Rica|Jamaica,2634391.0,22
+2016-03-29|Honduras|El Salvador,2634380.0,22
+2016-03-29|Panama|Haiti,2634392.0,22
+2016-03-29|Mexico|Canada,2634379.0,22
+2016-03-29|Trinidad and Tobago|Saint Vincent and the Grenadines,2634404.0,22
+2016-03-29|United States|Guatemala,2634403.0,22
+2016-09-02|El Salvador|Mexico,2634381.0,22
+2016-09-02|Haiti|Costa Rica,2634393.0,22
+2016-09-02|Honduras|Canada,2634382.0,22
+2016-09-02|Panama|Jamaica,2634394.0,22
+2016-09-02|Saint Vincent and the Grenadines|United States,2634405.0,22
+2016-09-02|Trinidad and Tobago|Guatemala,2634406.0,22
+2016-09-06|Jamaica|Haiti,2634396.0,22
+2016-09-06|Canada|El Salvador,2634384.0,22
+2016-09-06|Costa Rica|Panama,2634395.0,22
+2016-09-06|Mexico|Honduras,2634383.0,22
+2016-09-06|United States|Trinidad and Tobago,2634407.0,22
+2016-11-11|Honduras|Panama,2764262.0,22
+2016-11-11|Trinidad and Tobago|Costa Rica,2764260.0,22
+2016-11-11|United States|Mexico,2764261.0,22
+2016-11-15|Costa Rica|United States,2764263.0,22
+2016-11-15|Honduras|Trinidad and Tobago,2764264.0,22
+2016-11-15|Panama|Mexico,2764265.0,22
+2017-03-24|Trinidad and Tobago|Panama,2806837.0,22
+2017-03-24|Mexico|Costa Rica,2806838.0,22
+2017-03-24|United States|Honduras,2806836.0,22
+2017-03-28|Honduras|Costa Rica,2806840.0,22
+2017-03-28|Panama|United States,2806839.0,22
+2017-03-28|Trinidad and Tobago|Mexico,2806841.0,22
+2017-06-08|Costa Rica|Panama,2806843.0,22
+2017-06-08|Mexico|Honduras,2806844.0,22
+2017-06-08|United States|Trinidad and Tobago,2806842.0,22
+2017-06-11|Mexico|United States,2806845.0,22
+2017-06-13|Costa Rica|Trinidad and Tobago,2806847.0,22
+2017-06-13|Panama|Honduras,2806846.0,22
+2017-09-01|Mexico|Panama,2806849.0,22
+2017-09-01|United States|Costa Rica,2806848.0,22
+2017-09-01|Trinidad and Tobago|Honduras,2806850.0,22
+2017-09-05|Costa Rica|Mexico,2806853.0,22
+2017-09-05|Honduras|United States,2806851.0,22
+2017-09-05|Panama|Trinidad and Tobago,2806852.0,22
+2017-10-06|Mexico|Trinidad and Tobago,2806856.0,22
+2017-10-06|United States|Panama,2806854.0,22
+2017-10-07|Costa Rica|Honduras,2806855.0,22
+2017-10-10|Honduras|Mexico,2806859.0,22
+2017-10-10|Panama|Costa Rica,2806858.0,22
+2017-10-10|Trinidad and Tobago|United States,2806857.0,22
+2016-11-07|Tahiti|Solomon Islands,2725723.0,22
+2016-11-12|New Zealand|New Caledonia,2725722.0,22
+2016-11-13|Solomon Islands|Tahiti,2725725.0,22
+2016-11-15|New Caledonia|New Zealand,2725724.0,22
+2017-03-23|Papua New Guinea|Tahiti,2725727.0,22
+2017-03-28|New Zealand|Fiji,2725735.0,22
+2017-03-28|Tahiti|Papua New Guinea,2725736.0,22
+2017-06-07|Fiji|New Caledonia,2725737.0,22
+2017-06-09|Solomon Islands|Papua New Guinea,2725738.0,22
+2017-06-11|New Caledonia|Fiji,2725739.0,22
+2017-06-13|Papua New Guinea|Solomon Islands,2725740.0,22
+2017-09-01|New Zealand|Solomon Islands,2911798.0,22
+2017-09-05|Solomon Islands|New Zealand,2911799.0,22
+2017-07-01|Mexico|Paraguay,2874866.0,22
+2017-07-01|United States|Ghana,2861638.0,22
+2017-07-03|Grenada|Saint Vincent and the Grenadines,2865999.0,22
+2017-07-04|Saint Vincent and the Grenadines|Barbados,2866000.0,22
+2017-08-05|Zambia|Ethiopia,3374246.0,22
+2017-08-16|Andorra|Qatar,3040127.0,22
+2017-08-19|India|Mauritius,4198521.0,22
+2017-08-22|Mauritius|Saint Kitts and Nevis,4198522.0,22
+2017-08-24|Trinidad and Tobago|Jamaica,2905813.0,22
+2017-08-30|Oman|Afghanistan,2928760.0,22
+2017-08-31|Niger|Togo,3468190.0,22
+2017-08-31|Singapore|Hong Kong,3269602.0,22
+2017-09-02|Indonesia|Fiji,2921988.0,22
+2017-09-02|Canada|Jamaica,2864900.0,22
+2017-09-02|Mozambique|Kenya,3547824.0,22
+2017-10-02|Macau|Laos,3525973.0,22
+2017-10-05|Myanmar|Thailand,2901747.0,22
+2017-10-05|Iran|Togo,2930317.0,22
+2017-10-05|Hong Kong|Laos,2931863.0,20
+2017-10-06|Mauritania|Comoros,2988456.0,22
+2017-10-07|Russia|South Korea,2929543.0,22
+2017-10-24|Grenada|Panama,2863299.0,22
+2017-10-28|Bermuda|Barbados,2928483.0,22
+2017-11-08|Iceland|Czechia,2951012.0,22
+2017-11-08|Congo|Benin,3541502.0,22
+2017-11-09|Finland|Estonia,2932449.0,22
+2017-11-09|Hong Kong|Bahrain,3525258.0,22
+2017-11-09|Luxembourg|Hungary,2929668.0,22
+2017-11-09|Scotland|Netherlands,2950828.0,22
+2017-11-09|Singapore|Lebanon,3269604.0,22
+2017-11-10|China|Serbia,2950180.0,22
+2017-11-10|Belgium|Mexico,2951014.0,22
+2017-11-10|Georgia|Cyprus,2934745.0,22
+2017-11-10|England|Germany,2958155.0,22
+2017-11-10|France|Wales,2969572.0,22
+2017-11-10|South Korea|Colombia,2969999.0,22
+2017-11-10|Portugal|Saudi Arabia,2969738.0,22
+2017-11-10|Ukraine|Slovakia,2969589.0,22
+2017-11-10|Poland|Uruguay,2958217.0,22
+2017-11-10|Japan|Brazil,2931574.0,22
+2017-11-11|Comoros|Madagascar,2988457.0,22
+2017-11-11|North Macedonia|Norway,2951017.0,22
+2017-11-11|Namibia|Zimbabwe,3571378.0,22
+2017-11-11|Qatar|Czechia,2951013.0,22
+2017-11-11|Russia|Argentina,2943550.0,22
+2017-11-11|Spain|Costa Rica,2933542.0,22
+2017-11-11|Trinidad and Tobago|Grenada,3625978.0,22
+2017-11-12|Togo|Mauritius,2970707.0,22
+2017-11-12|Malta|Estonia,2932837.0,22
+2017-11-13|Iraq|Syria,4333431.0,22
+2017-11-13|Armenia|Cyprus,2970868.0,22
+2017-11-13|Bulgaria|Saudi Arabia,2971246.0,22
+2017-11-13|Georgia|Belarus,2969654.0,22
+2017-11-13|Poland|Mexico,2958218.0,22
+2017-11-13|Kosovo|Latvia,2933450.0,22
+2017-11-14|Algeria|Central African Republic,2950971.0,22
+2017-11-14|South Korea|Serbia,2983621.0,22
+2017-11-14|Argentina|Nigeria,2970870.0,22
+2017-11-14|Austria|Uruguay,2957329.0,22
+2017-11-14|Belgium|Japan,2931575.0,22
+2017-11-14|England|Brazil,2959067.0,22
+2017-11-14|Gabon|Botswana,3541559.0,22
+2017-11-14|Germany|France,2959081.0,22
+2017-11-14|Hungary|Costa Rica,2959002.0,22
+2017-11-14|Wales|Panama,2943075.0,22
+2017-11-14|Portugal|United States,2969446.0,22
+2017-11-14|Qatar|Iceland,2958652.0,22
+2017-11-14|Russia|Spain,2933543.0,22
+2017-11-14|Romania|Netherlands,2950829.0,22
+2017-11-14|Slovakia|Norway,2951018.0,22
+2017-11-14|United Arab Emirates|Uzbekistan,2942983.0,21
+2017-11-18|Fiji|Estonia,2932838.0,22
+2017-11-22|Vanuatu|Estonia,2932839.0,22
+2017-11-25|Indonesia|Guyana,2943553.0,22
+2017-11-26|New Caledonia|Estonia,2951204.0,22
+2017-12-03|Saint Kitts and Nevis|Grenada,2976496.0,22
+2017-12-04|Taiwan|Timor-Leste,3190298.0,22
+2017-12-05|Taiwan|Laos,3190296.0,22
+2017-12-14|Qatar|Liechtenstein,2926947.0,22
+2021-03-24|Portugal|Azerbaijan,3495170.0,22
+2021-03-24|Serbia|Republic of Ireland,3495171.0,22
+2021-03-24|France|Ukraine,3495173.0,22
+2021-03-24|Belgium|Wales,3495174.0,22
+2021-03-24|Estonia|Czechia,3495175.0,22
+2021-03-24|Gibraltar|Norway,3495176.0,22
+2021-03-24|Malta|Russia,3495179.0,22
+2021-03-24|Slovenia|Croatia,3495180.0,22
+2021-03-24|Cyprus|Slovakia,3495178.0,22
+2021-03-25|Scotland|Austria,3495187.0,22
+2021-03-25|Italy|Northern Ireland,3495184.0,22
+2021-03-25|Spain|Greece,3495181.0,22
+2021-03-25|Sweden|Georgia,3495182.0,22
+2021-03-25|Bulgaria|Switzerland,3495183.0,22
+2021-03-25|Israel|Denmark,3495185.0,22
+2021-03-25|Romania|North Macedonia,3495193.0,22
+2021-03-25|Hungary|Poland,3495190.0,22
+2021-03-25|Germany|Iceland,3495191.0,22
+2021-03-25|England|San Marino,3495189.0,22
+2021-03-27|Republic of Ireland|Luxembourg,3495199.0,22
+2021-03-27|Serbia|Portugal,3495200.0,22
+2021-03-27|Czechia|Belgium,3495201.0,22
+2021-03-27|Netherlands|Latvia,3495202.0,22
+2021-03-27|Russia|Slovenia,3495195.0,22
+2021-03-27|Croatia|Cyprus,3495198.0,22
+2021-03-27|Slovakia|Malta,3495203.0,22
+2021-03-28|Austria|Faroe Islands,3495213.0,22
+2021-03-28|Kazakhstan|France,3495204.0,22
+2021-03-28|Kosovo|Sweden,3495209.0,22
+2021-03-28|Switzerland|Lithuania,3495211.0,22
+2021-03-28|Bulgaria|Italy,3495210.0,22
+2021-03-28|Georgia|Spain,3495205.0,22
+2021-03-28|Denmark|Moldova,3495206.0,22
+2021-03-28|Israel|Scotland,3495214.0,22
+2021-03-28|Poland|Andorra,3495215.0,22
+2021-03-28|San Marino|Hungary,3495216.0,22
+2021-03-28|Armenia|Iceland,3495208.0,22
+2021-03-28|Ukraine|Finland,3495212.0,22
+2021-03-28|Romania|Germany,3495218.0,22
+2021-03-28|North Macedonia|Liechtenstein,3495217.0,22
+2021-03-28|Albania|England,3495207.0,22
+2021-03-30|Wales|Czechia,3495222.0,22
+2021-03-30|Luxembourg|Portugal,3495220.0,22
+2021-03-30|Azerbaijan|Serbia,3495219.0,22
+2021-03-30|Gibraltar|Netherlands,3495223.0,22
+2021-03-30|Belgium|Belarus,3495221.0,22
+2021-03-30|Montenegro|Norway,3495224.0,22
+2021-03-30|Slovakia|Russia,3495228.0,22
+2021-03-30|Croatia|Malta,3495226.0,22
+2021-03-30|Cyprus|Slovenia,3495227.0,22
+2021-03-31|Spain|Kosovo,3495231.0,22
+2021-03-31|Bosnia and Herzegovina|France,3495234.0,22
+2021-03-31|Northern Ireland|Bulgaria,3495233.0,22
+2021-03-31|Lithuania|Italy,3495232.0,22
+2021-03-31|Greece|Georgia,3495230.0,22
+2021-03-31|Ukraine|Kazakhstan,3495235.0,22
+2021-03-31|Armenia|Romania,3495229.0,22
+2021-03-31|England|Poland,3495240.0,22
+2021-03-31|Andorra|Hungary,3495239.0,22
+2021-03-31|Scotland|Faroe Islands,3495238.0,22
+2021-03-31|Austria|Denmark,3495236.0,22
+2021-03-31|Germany|North Macedonia,3495242.0,22
+2021-03-31|Liechtenstein|Iceland,3495243.0,22
+2021-09-01|Portugal|Republic of Ireland,3495246.0,22
+2021-09-01|Moldova|Austria,3495250.0,22
+2021-09-01|Kazakhstan|Ukraine,3495244.0,22
+2021-09-01|Russia|Croatia,3495255.0,22
+2021-09-01|France|Bosnia and Herzegovina,3495247.0,22
+2021-09-01|Slovenia|Slovakia,3495256.0,22
+2021-09-01|Norway|Netherlands,3495252.0,22
+2021-09-01|Denmark|Scotland,3495248.0,22
+2021-09-02|Italy|Bulgaria,3495259.0,22
+2021-09-02|Sweden|Spain,3495258.0,22
+2021-09-02|Lithuania|Northern Ireland,3495260.0,22
+2021-09-02|Liechtenstein|Germany,3495267.0,22
+2021-09-02|Hungary|England,3495264.0,22
+2021-09-02|Poland|Albania,3495265.0,22
+2021-09-02|Iceland|Romania,3495266.0,22
+2021-09-02|North Macedonia|Armenia,3495268.0,22
+2021-09-02|Estonia|Belgium,3495262.0,22
+2021-09-02|Czechia|Belarus,3495261.0,22
+2021-09-04|Finland|Kazakhstan,3495273.0,22
+2021-09-04|Faroe Islands|Denmark,3495277.0,22
+2021-09-04|Republic of Ireland|Azerbaijan,3495271.0,22
+2021-09-04|Serbia|Luxembourg,3495272.0,22
+2021-09-04|Ukraine|France,3495276.0,22
+2021-09-04|Slovenia|Malta,3495275.0,22
+2021-09-04|Scotland|Moldova,3495279.0,22
+2021-09-04|Latvia|Norway,3495274.0,22
+2021-09-04|Netherlands|Montenegro,3495281.0,22
+2021-09-04|Slovakia|Croatia,3495282.0,22
+2021-09-04|Cyprus|Russia,3495270.0,22
+2021-09-04|Israel|Austria,3495278.0,22
+2021-09-05|Switzerland|Italy,3495290.0,22
+2021-09-05|Spain|Georgia,3495289.0,22
+2021-09-05|Kosovo|Greece,3495288.0,22
+2021-09-05|Belgium|Czechia,3495291.0,22
+2021-09-05|Belarus|Wales,3495283.0,22
+2021-09-05|Albania|Hungary,3495285.0,22
+2021-09-05|Romania|Liechtenstein,3495294.0,22
+2021-09-05|Germany|Armenia,3495293.0,22
+2021-09-05|Iceland|North Macedonia,3495287.0,22
+2021-09-05|San Marino|Poland,3495292.0,22
+2021-09-05|England|Andorra,3495286.0,22
+2021-09-07|Slovakia|Cyprus,3495394.0,22
+2021-09-07|Denmark|Israel,3495387.0,22
+2021-09-07|Azerbaijan|Portugal,3495382.0,22
+2021-09-07|Bosnia and Herzegovina|Kazakhstan,3495384.0,22
+2021-09-07|France|Finland,3495385.0,22
+2021-09-07|Republic of Ireland|Serbia,3495383.0,22
+2021-09-07|Norway|Gibraltar,3495391.0,22
+2021-09-07|Croatia|Slovenia,3495392.0,22
+2021-09-07|Russia|Malta,3495393.0,22
+2021-09-07|Austria|Scotland,3495386.0,22
+2021-09-08|Wales|Estonia,3495401.0,22
+2021-09-08|Kosovo|Spain,3495397.0,22
+2021-09-08|Italy|Lithuania,3495398.0,22
+2021-09-08|Greece|Sweden,3495396.0,22
+2021-09-08|Belarus|Belgium,3495400.0,22
+2021-09-08|Northern Ireland|Switzerland,3495399.0,22
+2021-09-08|Poland|England,3495404.0,22
+2021-09-08|Hungary|Andorra,3495403.0,22
+2021-09-08|North Macedonia|Romania,3495406.0,22
+2021-09-08|Iceland|Germany,3495405.0,22
+2021-10-08|Malta|Slovenia,3495474.0,22
+2021-10-08|Iceland|Armenia,3495477.0,22
+2021-10-08|Czechia|Wales,3495468.0,22
+2021-10-08|Latvia|Netherlands,3495471.0,22
+2021-10-08|Cyprus|Croatia,3495473.0,22
+2021-10-08|Germany|Romania,3495476.0,22
+2021-10-08|Liechtenstein|North Macedonia,3495478.0,22
+2021-10-08|Russia|Slovakia,3495475.0,22
+2021-10-09|Moldova|Denmark,3495489.0,22
+2021-10-09|Faroe Islands|Austria,3495488.0,22
+2021-10-09|Scotland|Israel,3495485.0,22
+2021-10-09|Kazakhstan|Bosnia and Herzegovina,3495480.0,22
+2021-10-09|Finland|Ukraine,3495484.0,22
+2021-10-09|Luxembourg|Serbia,3495486.0,22
+2021-10-09|Georgia|Greece,3495482.0,22
+2021-10-09|Sweden|Kosovo,3495483.0,22
+2021-10-09|Hungary|Albania,3495491.0,22
+2021-10-09|Switzerland|Northern Ireland,3495487.0,22
+2021-10-09|Azerbaijan|Republic of Ireland,3495481.0,22
+2021-10-09|Poland|San Marino,3495492.0,22
+2021-10-09|Andorra|England,3495490.0,22
+2021-10-11|Estonia|Wales,3495494.0,22
+2021-10-11|Belarus|Czechia,3495493.0,22
+2021-10-11|Netherlands|Gibraltar,3495496.0,22
+2021-10-11|Croatia|Slovakia,3495498.0,22
+2021-10-11|Norway|Montenegro,3495497.0,22
+2021-10-11|Slovenia|Russia,3495500.0,22
+2021-10-11|Romania|Armenia,3495503.0,22
+2021-10-11|Iceland|Liechtenstein,3495501.0,22
+2021-10-11|North Macedonia|Germany,3495502.0,22
+2021-10-12|Faroe Islands|Scotland,3495513.0,22
+2021-10-12|Serbia|Azerbaijan,3495506.0,22
+2021-10-12|Ukraine|Bosnia and Herzegovina,3495511.0,22
+2021-10-12|Bulgaria|Northern Ireland,3495509.0,22
+2021-10-12|Lithuania|Switzerland,3495510.0,22
+2021-10-12|Kazakhstan|Finland,3495504.0,22
+2021-10-12|Portugal|Luxembourg,3495505.0,22
+2021-10-12|Sweden|Greece,3495508.0,22
+2021-10-12|Denmark|Austria,3495512.0,22
+2021-10-12|England|Hungary,3495516.0,22
+2021-10-12|Albania|Poland,3495515.0,22
+2021-11-11|Romania|Iceland,3495649.0,22
+2021-11-11|Republic of Ireland|Portugal,3495644.0,22
+2021-11-11|Slovakia|Slovenia,3495647.0,22
+2021-11-11|Georgia|Sweden,3495641.0,22
+2021-11-11|Greece|Spain,3495645.0,22
+2021-11-11|Russia|Cyprus,3495642.0,22
+2021-11-11|Armenia|North Macedonia,3495643.0,22
+2021-11-11|Germany|Liechtenstein,3495648.0,22
+2021-11-11|Malta|Croatia,3495646.0,22
+2021-11-12|Italy|Switzerland,3495650.0,22
+2021-11-12|Moldova|Scotland,3495654.0,22
+2021-11-12|Hungary|San Marino,3495657.0,22
+2021-11-12|Andorra|Poland,3495655.0,22
+2021-11-12|Northern Ireland|Lithuania,3495651.0,22
+2021-11-12|Austria|Israel,3495652.0,22
+2021-11-12|Denmark|Faroe Islands,3495653.0,22
+2021-11-12|England|Albania,3495656.0,22
+2021-11-13|Bosnia and Herzegovina|Finland,3495658.0,22
+2021-11-13|France|Kazakhstan,3495661.0,22
+2021-11-13|Wales|Belarus,3495663.0,22
+2021-11-13|Belgium|Estonia,3495662.0,22
+2021-11-13|Norway|Latvia,3495659.0,22
+2021-11-13|Montenegro|Netherlands,3495664.0,22
+2021-11-14|Portugal|Serbia,3495790.0,22
+2021-11-14|Luxembourg|Republic of Ireland,3495789.0,22
+2021-11-14|Spain|Sweden,3495792.0,22
+2021-11-14|Croatia|Russia,3495783.0,22
+2021-11-14|Malta|Slovakia,3495784.0,22
+2021-11-14|Slovenia|Cyprus,3495785.0,22
+2021-11-14|Liechtenstein|Romania,3495787.0,22
+2021-11-14|North Macedonia|Iceland,3495788.0,22
+2021-11-14|Armenia|Germany,3495786.0,22
+2021-11-14|Greece|Kosovo,3495791.0,22
+2021-11-15|Northern Ireland|Italy,3495793.0,22
+2021-11-15|Switzerland|Bulgaria,3495794.0,22
+2021-11-15|Scotland|Denmark,3495797.0,22
+2021-11-15|Austria|Moldova,3495795.0,22
+2021-11-15|Poland|Hungary,3495799.0,22
+2021-11-15|San Marino|England,3495800.0,22
+2021-11-16|Wales|Belgium,3495804.0,22
+2021-11-16|Bosnia and Herzegovina|Ukraine,3495801.0,22
+2021-11-16|Finland|France,3495802.0,22
+2021-11-16|Czechia|Estonia,3495803.0,22
+2021-11-16|Netherlands|Norway,3495807.0,22
+2019-09-05|Thailand|Vietnam,3234775.0,22
+2019-09-05|India|Oman,3234771.0,22
+2019-09-05|Palestine|Uzbekistan,3234769.0,22
+2019-09-05|Bahrain|Iraq,3234768.0,22
+2019-09-05|Taiwan|Jordan,3234766.0,22
+2019-09-05|Qatar|Afghanistan,3234772.0,22
+2019-09-10|Cambodia|Bahrain,3234783.0,22
+2019-09-10|Hong Kong|Iran,3234784.0,22
+2019-09-10|Myanmar|Japan,3234790.0,22
+2019-09-10|Yemen|Saudi Arabia,3234785.0,22
+2019-09-10|Turkmenistan|South Korea,3234793.0,22
+2019-09-10|Kuwait|Australia,3234782.0,22
+2019-10-10|Iraq|Hong Kong,3234827.0,22
+2019-10-10|Jordan|Kuwait,3234812.0,22
+2019-10-10|Australia|Nepal,3234811.0,22
+2019-10-10|Uzbekistan|Yemen,3234844.0,22
+2019-10-10|Japan|Mongolia,3234875.0,22
+2019-10-10|Iran|Cambodia,3234828.0,22
+2019-10-10|Oman|Afghanistan,3234859.0,22
+2019-10-10|Vietnam|Malaysia,3234892.0,22
+2019-10-10|South Korea|Sri Lanka,3234908.0,22
+2019-10-10|Saudi Arabia|Singapore,3234843.0,22
+2019-10-10|Bangladesh|Qatar,3234860.0,22
+2019-10-15|Bahrain|Iran,3234830.0,22
+2019-10-15|Jordan|Nepal,3234813.0,22
+2019-10-15|Taiwan|Australia,3234814.0,22
+2019-10-15|Cambodia|Iraq,3234829.0,22
+2019-10-15|Palestine|Saudi Arabia,3234845.0,22
+2019-10-15|Qatar|Oman,3234862.0,22
+2019-10-15|Tajikistan|Japan,3234878.0,22
+2019-10-15|Thailand|United Arab Emirates,3234893.0,22
+2019-10-15|Indonesia|Vietnam,3234894.0,22
+2019-10-15|North Korea|South Korea,3234909.0,22
+2019-10-15|Singapore|Uzbekistan,3234846.0,22
+2019-10-15|India|Bangladesh,3234861.0,22
+2019-11-14|Jordan|Australia,3234816.0,22
+2019-11-14|Uzbekistan|Saudi Arabia,3234848.0,22
+2019-11-14|Hong Kong|Bahrain,3234831.0,22
+2019-11-14|Afghanistan|India,3234863.0,22
+2019-11-14|Oman|Bangladesh,3234864.0,22
+2019-11-14|Kyrgyzstan|Japan,3234880.0,22
+2019-11-14|Vietnam|United Arab Emirates,3234896.0,22
+2019-11-14|Lebanon|South Korea,3234912.0,22
+2019-11-19|Nepal|Kuwait,3234765.0,22
+2019-11-19|Jordan|Taiwan,3234817.0,22
+2019-11-19|Iraq|Bahrain,3234833.0,22
+2019-11-19|Afghanistan|Qatar,3234866.0,22
+2019-11-19|Oman|India,3234865.0,22
+2020-12-04|Qatar|Bangladesh,3234869.0,22
+2021-05-28|Japan|Myanmar,3234883.0,22
+2021-06-03|Bahrain|Cambodia,3234836.0,22
+2021-06-03|Iran|Hong Kong,3234835.0,22
+2021-06-03|Thailand|Indonesia,3234900.0,22
+2021-06-07|Australia|Taiwan,3234824.0,22
+2021-06-07|Bangladesh|India,3234872.0,22
+2021-06-07|Iraq|Cambodia,3234839.0,22
+2021-06-07|Vietnam|Indonesia,3234903.0,22
+2021-06-11|Nepal|Australia,3234821.0,22
+2021-06-11|Kuwait|Jordan,3234822.0,22
+2021-06-11|Cambodia|Iran,3234837.0,22
+2021-06-11|Yemen|Uzbekistan,3234854.0,22
+2021-06-13|South Korea|Lebanon,3234922.0,22
+2021-06-15|Australia|Jordan,3234826.0,22
+2021-06-15|Bahrain|Hong Kong,3234841.0,22
+2021-06-15|United Arab Emirates|Vietnam,3234906.0,22
+2021-06-15|Thailand|Malaysia,3234905.0,22
+2021-09-02|Australia|China,3625684.0,22
+2021-09-02|South Korea|Iraq,3625681.0,22
+2021-09-02|Iran|Syria,3625680.0,22
+2021-09-02|Japan|Oman,3625683.0,22
+2021-09-07|Iraq|Iran,3625686.0,22
+2021-09-07|Vietnam|Australia,3625690.0,22
+2021-09-07|Oman|Saudi Arabia,3625689.0,22
+2021-09-07|China|Japan,3625691.0,22
+2021-10-07|South Korea|Syria,3625692.0,22
+2021-10-07|Saudi Arabia|Japan,3625696.0,22
+2021-10-07|China|Vietnam,3625697.0,22
+2021-10-07|Australia|Oman,3625695.0,22
+2021-10-07|United Arab Emirates|Iran,3625693.0,22
+2021-10-12|Iran|South Korea,3625698.0,22
+2021-10-12|Japan|Australia,3625701.0,22
+2021-10-12|Oman|Vietnam,3625703.0,22
+2021-10-12|Saudi Arabia|China,3625702.0,22
+2021-10-12|United Arab Emirates|Iraq,3625699.0,22
+2021-11-11|South Korea|United Arab Emirates,3625710.0,22
+2021-11-11|China|Oman,3625714.0,22
+2021-11-11|Lebanon|Iran,3625712.0,22
+2021-11-11|Australia|Saudi Arabia,3625713.0,22
+2021-11-11|Vietnam|Japan,3625715.0,22
+2021-11-16|Iraq|South Korea,3625716.0,22
+2021-11-16|Vietnam|Saudi Arabia,3625721.0,22
+2021-11-16|Oman|Japan,3625720.0,22
+2021-11-16|Syria|Iran,3625717.0,22
+2021-11-16|China|Australia,3625719.0,22
+2022-01-27|Lebanon|South Korea,3625688.0,22
+2022-01-27|Iran|Iraq,3625722.0,22
+2022-01-27|Japan|China,3625725.0,22
+2022-01-27|Australia|Vietnam,3625726.0,22
+2022-02-01|Lebanon|Iraq,3625730.0,22
+2022-02-01|Iran|United Arab Emirates,3625728.0,22
+2022-02-01|Syria|South Korea,3625729.0,22
+2022-02-01|Oman|Australia,3625732.0,22
+2022-02-01|Japan|Saudi Arabia,3625731.0,22
+2022-02-01|Vietnam|China,3625733.0,22
+2022-03-24|Iraq|United Arab Emirates,3625735.0,22
+2022-03-24|South Korea|Iran,3625734.0,22
+2022-03-24|Vietnam|Oman,3625739.0,22
+2022-03-24|Australia|Japan,3625737.0,22
+2022-03-24|China|Saudi Arabia,3625738.0,22
+2022-03-29|Saudi Arabia|Australia,3625744.0,22
+2022-03-29|Oman|China,3625745.0,22
+2022-03-29|United Arab Emirates|South Korea,3625741.0,22
+2022-03-29|Syria|Iraq,3625742.0,22
+2022-03-29|Japan|Vietnam,3625743.0,22
+2022-03-29|Iran|Lebanon,3625740.0,22
+2022-06-07|United Arab Emirates|Australia,3780515.0,22
+2019-09-04|Burundi|Tanzania,3253623.0,22
+2019-09-05|Somalia|Zimbabwe,3253632.0,22
+2019-09-08|Tanzania|Burundi,3253637.0,22
+2019-09-10|Zimbabwe|Somalia,3253646.0,22
+2021-09-01|Senegal|Togo,3570493.0,22
+2021-09-01|Central African Republic|Cabo Verde,3570484.0,22
+2021-09-01|Mali|Rwanda,3570487.0,22
+2021-09-01|Egypt|Angola,3570489.0,22
+2021-09-02|Morocco|Sudan,3570495.0,22
+2021-09-02|Algeria|Djibouti,3570500.0,22
+2021-09-02|Kenya|Uganda,3570488.0,22
+2021-09-02|DR Congo|Tanzania,3570499.0,22
+2021-09-03|Nigeria|Liberia,3570483.0,22
+2021-09-03|Mauritania|Zambia,3570482.0,22
+2021-09-03|Tunisia|Equatorial Guinea,3653085.0,22
+2021-09-03|Mozambique|Côte d'Ivoire,3570486.0,22
+2021-09-03|Zimbabwe|South Africa,3570492.0,22
+2021-09-03|Ghana|Ethiopia,3570491.0,22
+2021-09-03|Cameroon|Malawi,3570485.0,22
+2021-09-05|Gabon|Egypt,3570512.0,22
+2021-09-05|Rwanda|Kenya,3570511.0,22
+2021-09-06|Côte d'Ivoire|Cameroon,3570508.0,22
+2021-09-06|Uganda|Mali,3570510.0,22
+2021-09-06|Benin|DR Congo,3570520.0,22
+2021-09-06|South Africa|Ghana,3570514.0,22
+2021-09-07|Burkina Faso|Algeria,3570502.0,22
+2021-09-07|Zambia|Tunisia,3570504.0,22
+2021-09-07|Ethiopia|Zimbabwe,3570515.0,22
+2021-09-07|Congo|Senegal,3570516.0,22
+2021-09-07|Cabo Verde|Nigeria,3570506.0,22
+2021-09-07|Tanzania|Madagascar,3570521.0,22
+2021-10-06|Morocco|Guinea-Bissau,3667608.0,22
+2021-10-07|Equatorial Guinea|Zambia,3667613.0,22
+2021-10-07|Nigeria|Central African Republic,3667615.0,22
+2021-10-07|Liberia|Cabo Verde,3667612.0,22
+2021-10-07|Mali|Kenya,3667617.0,22
+2021-10-07|Tanzania|Benin,3667611.0,22
+2021-10-07|Tunisia|Mauritania,3667616.0,22
+2021-10-08|Algeria|Niger,3667621.0,22
+2021-10-08|Malawi|Côte d'Ivoire,3667618.0,22
+2021-10-08|Cameroon|Mozambique,3667619.0,22
+2021-10-08|Egypt|Libya,3667622.0,22
+2021-10-09|Ethiopia|South Africa,3667623.0,22
+2021-10-09|Senegal|Namibia,3667625.0,22
+2021-10-09|Ghana|Zimbabwe,3667626.0,22
+2021-10-10|Cabo Verde|Liberia,3667635.0,22
+2021-10-10|Central African Republic|Nigeria,3667631.0,22
+2021-10-10|Zambia|Equatorial Guinea,3667634.0,22
+2021-10-10|Benin|Tanzania,3667630.0,22
+2021-10-10|Mauritania|Tunisia,3667637.0,22
+2021-10-10|Kenya|Mali,3667633.0,22
+2021-10-10|Madagascar|DR Congo,3667636.0,22
+2021-10-11|Libya|Egypt,3667642.0,22
+2021-10-11|Côte d'Ivoire|Malawi,3667641.0,22
+2021-10-11|Mozambique|Cameroon,3667638.0,22
+2021-10-12|Namibia|Senegal,3667643.0,22
+2021-10-12|Niger|Algeria,3667646.0,22
+2021-10-12|Zimbabwe|Ghana,3667644.0,22
+2021-10-12|South Africa|Ethiopia,3667647.0,22
+2021-11-11|Uganda|Kenya,3698845.0,22
+2021-11-11|Rwanda|Mali,3698846.0,22
+2021-11-11|South Africa|Zimbabwe,3698850.0,22
+2021-11-11|Ethiopia|Ghana,3698849.0,22
+2021-11-11|Tanzania|DR Congo,3698855.0,22
+2021-11-11|Togo|Senegal,3698852.0,22
+2021-11-12|Angola|Egypt,3698848.0,22
+2021-11-12|Djibouti|Algeria,3698837.0,22
+2021-11-13|Cabo Verde|Central African Republic,3698841.0,22
+2021-11-13|Zambia|Mauritania,3698839.0,22
+2021-11-13|Equatorial Guinea|Tunisia,3698840.0,22
+2021-11-13|Liberia|Nigeria,3698842.0,22
+2021-11-13|Malawi|Cameroon,3698843.0,22
+2021-11-13|Côte d'Ivoire|Mozambique,3698844.0,22
+2021-11-14|Mali|Uganda,3699725.0,22
+2021-11-14|Zimbabwe|Ethiopia,3699729.0,22
+2021-11-14|Ghana|South Africa,3699730.0,22
+2021-11-14|DR Congo|Benin,3699736.0,22
+2021-11-14|Madagascar|Tanzania,3699735.0,22
+2021-11-14|Senegal|Congo,3699731.0,22
+2021-11-15|Kenya|Rwanda,3699726.0,22
+2021-11-16|Algeria|Burkina Faso,3699718.0,22
+2021-11-16|Tunisia|Zambia,3699719.0,22
+2021-11-16|Morocco|Guinea,3699734.0,22
+2021-11-16|Egypt|Gabon,3699727.0,22
+2021-11-16|Cameroon|Côte d'Ivoire,3699724.0,22
+2021-11-16|Nigeria|Cabo Verde,3699721.0,22
+2022-03-25|DR Congo|Morocco,3736284.0,22
+2022-03-25|Egypt|Senegal,3736281.0,22
+2022-03-25|Ghana|Nigeria,3736283.0,22
+2022-03-25|Mali|Tunisia,3736285.0,22
+2022-03-25|Cameroon|Algeria,3736282.0,22
+2022-03-29|Senegal|Egypt,3736286.0,22
+2022-03-29|Tunisia|Mali,3736290.0,22
+2022-03-29|Nigeria|Ghana,3736288.0,22
+2022-03-29|Morocco|DR Congo,3736289.0,22
+2022-03-29|Algeria|Cameroon,3736287.0,22
+2021-11-25|Indonesia|Myanmar,3703844.0,22
+2021-12-04|El Salvador|Ecuador,3703074.0,22
+2021-12-11|El Salvador|Chile,3703075.0,22
+2021-12-30|Mauritania|Burkina Faso,3723481.0,22
+2021-12-31|Malawi|Comoros,3723480.0,22
+2022-08-31|Mexico|Paraguay,3926902.0,22
+2022-09-21|Brunei|Maldives,3928948.0,22
+2022-09-21|Hong Kong|Myanmar,3926454.0,22
+2022-09-21|Libya|Uganda,3926455.0,22
+2022-09-21|San Marino|Seychelles,3926456.0,22
+2022-09-22|Australia|New Zealand,3926400.0,22
+2022-09-22|Cambodia|Bangladesh,3903361.0,22
+2022-09-22|Suriname|Nicaragua,3926465.0,22
+2022-09-23|Algeria|Guinea,3926411.0,22
+2022-09-23|Argentina|Honduras,3926402.0,22
+2022-09-23|Bahrain|Cabo Verde,3926478.0,22
+2022-09-23|Brazil|Ghana,3926409.0,22
+2022-09-23|Egypt|Niger,3926404.0,22
+2022-09-23|Iran|Uruguay,3926405.0,22
+2022-09-23|Morocco|Chile,3926410.0,22
+2022-09-23|Paraguay|United Arab Emirates,3926407.0,22
+2022-09-23|Saudi Arabia|Ecuador,3926408.0,22
+2022-09-23|South Korea|Costa Rica,3911514.0,22
+2022-09-23|Mali|Zambia,3926403.0,22
+2022-09-24|Mexico|Peru,3926416.0,22
+2022-09-24|Colombia|Guatemala,3926397.0,22
+2022-09-24|Grenada|Saint Vincent and the Grenadines,3931245.0,22
+2022-09-24|Hong Kong|Myanmar,3926540.0,22
+2022-09-24|Côte d'Ivoire|Togo,3926413.0,22
+2022-09-24|Laos|Maldives,3926541.0,22
+2022-09-24|Indonesia|Curaçao,3912761.0,22
+2022-09-24|Bolivia|Senegal,3926414.0,22
+2022-09-24|South Africa|Sierra Leone,3926412.0,22
+2022-09-24|Kyrgyzstan|Russia,3919951.0,22
+2022-09-25|New Zealand|Australia,3926417.0,22
+2022-09-25|Niger|Liberia,3931620.0,22
+2022-09-27|Bahrain|Panama,3926424.0,22
+2022-09-27|Brazil|Tunisia,3926428.0,22
+2022-09-27|Libya|Tanzania,3926583.0,22
+2022-09-27|Canada|Uruguay,3926423.0,22
+2014-06-15|France|Honduras,2384337.0,22
+2014-06-16|Iran|Nigeria,2384339.0,22
+2014-06-18|Spain|Chile,2384346.0,22
+2014-06-22|South Korea|Algeria,2384359.0,22
+2014-06-23|Netherlands|Chile,2384315.0,22
+2014-06-24|Costa Rica|England,2384319.0,22
+2014-06-24|Greece|Côte d'Ivoire,2384317.0,22
+2014-06-25|Bosnia and Herzegovina|Iran,2384323.0,22
+2014-06-25|Ecuador|France,2384321.0,22
+2014-06-26|Algeria|Russia,2384327.0,22
+2014-06-26|Portugal|Ghana,2384325.0,22
+2014-06-28|Colombia|Uruguay,2462529.0,22
+2014-06-29|Costa Rica|Greece,2462531.0,22
+2014-06-30|Germany|Algeria,2462534.0,22
+2014-07-01|Belgium|United States,2462535.0,22
+2014-07-04|Brazil|Colombia,2462650.0,22
+2014-07-05|Netherlands|Costa Rica,2462864.0,22
+2013-09-10|Ukraine|England,2262078.0,22
+2013-10-15|Paraguay|Colombia,2303503.0,22
+2012-11-14|Iraq|Jordan,2261986.0,22
+2013-09-07|Tunisia|Cabo Verde,2367854.0,22
+2013-09-06|China|Singapore,2367826.0,22
+2018-06-15|Portugal|Spain,2977690.0,22
+2018-06-16|Peru|Denmark,2977696.0,22
+2018-06-16|Croatia|Nigeria,2977702.0,22
+2018-06-17|Brazil|Switzerland,2977708.0,22
+2018-06-18|Tunisia|England,2977720.0,22
+2018-06-20|Iran|Spain,2977692.0,22
+2018-06-21|France|Peru,2977697.0,22
+2018-06-22|Serbia|Switzerland,2977710.0,22
+2018-06-23|Germany|Sweden,2977715.0,22
+2018-06-24|Poland|Colombia,2977728.0,22
+2018-06-25|Saudi Arabia|Egypt,2977688.0,22
+2018-06-25|Spain|Morocco,2977694.0,22
+2018-06-26|Australia|Peru,2977700.0,22
+2018-06-26|Iceland|Croatia,2977706.0,22
+2018-06-27|Mexico|Sweden,2977718.0,22
+2018-06-27|Switzerland|Costa Rica,2977712.0,22
+2018-06-28|Japan|Poland,2977731.0,22
+2018-06-28|Panama|Tunisia,2977724.0,22
+2018-06-30|Uruguay|Portugal,3057975.0,22
+2018-07-01|Croatia|Denmark,3057977.0,22
+2018-07-02|Belgium|Japan,3058403.0,22
+2018-07-03|Colombia|England,3058404.0,22
+2018-07-06|Brazil|Belgium,3062384.0,22
+2018-07-07|Russia|Croatia,3061408.0,22
+2017-06-11|Italy|Liechtenstein,2644420.0,22
+2017-08-31|France|Netherlands,2643480.0,22
+2017-08-31|Greece|Estonia,2644383.0,22
+2017-08-31|Cyprus|Bosnia and Herzegovina,2644384.0,22
+2017-08-31|Portugal|Faroe Islands,2643509.0,22
+2017-08-31|Switzerland|Andorra,2643510.0,22
+2017-09-01|Czechia|Germany,2643541.0,22
+2017-09-01|Denmark|Poland,2644363.0,22
+2017-09-01|Lithuania|Scotland,2758597.0,22
+2017-09-01|Malta|England,2758598.0,22
+2017-09-01|Norway|Azerbaijan,2643539.0,22
+2017-09-01|Romania|Armenia,2644364.0,22
+2017-09-01|San Marino|Northern Ireland,2643540.0,22
+2017-09-01|Slovakia|Slovenia,2758599.0,22
+2017-09-02|Finland|Iceland,2644320.0,22
+2017-09-02|Georgia|Republic of Ireland,2643573.0,22
+2017-09-02|Spain|Italy,2644425.0,22
+2017-03-25|Fiji|New Zealand,2725726.0,22
+2017-10-05|Qatar|Singapore,3269603.0,22
+2017-10-05|Taiwan|Mongolia,3190295.0,22
+2017-10-05|Iraq|Kenya,3571793.0,22
+2017-10-07|Tanzania|Malawi,3363732.0,22
+2017-10-08|Thailand|Kenya,2928578.0,22
+2017-10-10|Qatar|Curaçao,2928484.0,22
+2017-10-10|Russia|Iran,2929544.0,22
+2021-03-24|Finland|Bosnia and Herzegovina,3495172.0,22
+2019-09-05|Kuwait|Nepal,3234818.0,22
+2019-09-10|Qatar|India,3234788.0,22
+2019-09-10|Indonesia|Thailand,3234791.0,22
+2019-11-14|Kuwait|Taiwan,3234815.0,22
+2019-11-14|Iraq|Iran,3234832.0,22
+2019-11-14|Malaysia|Thailand,3234895.0,22
+2019-11-19|Uzbekistan|Palestine,3234849.0,22
+2019-11-19|Vietnam|Thailand,3234897.0,22
+2021-03-30|Saudi Arabia|Palestine,3234856.0,22
+2021-06-05|South Korea|Turkmenistan,3234915.0,22
+2021-06-05|Saudi Arabia|Yemen,3234851.0,22
+2021-06-07|Nepal|Jordan,3234823.0,22
+2021-06-07|Uzbekistan|Singapore,3234855.0,22
+2021-06-07|Japan|Tajikistan,3234888.0,22
+2021-06-07|United Arab Emirates|Thailand,3234904.0,22
+2021-06-11|Afghanistan|Oman,3234870.0,22
+2021-06-11|Malaysia|Vietnam,3234902.0,22
+2021-06-11|Hong Kong|Iraq,3234838.0,22
+2021-06-15|Japan|Kyrgyzstan,3234890.0,22
+2021-06-15|Iran|Iraq,3234842.0,22
+2021-06-15|Saudi Arabia|Uzbekistan,3234858.0,22
+2021-06-15|India|Afghanistan,3234873.0,22
+2021-06-15|Bangladesh|Oman,3234874.0,22
+2021-09-02|Saudi Arabia|Vietnam,3625685.0,22
+2021-09-07|South Korea|Lebanon,3625723.0,22
+2021-10-07|Iraq|Lebanon,3625694.0,22
+2021-11-11|Iraq|Syria,3625711.0,22
+2022-01-27|Saudi Arabia|Oman,3625727.0,22
+2021-10-07|DR Congo|Madagascar,3667610.0,22
+2022-09-21|Vietnam|Singapore,3924781.0,22
+2022-09-24|Mauritania|Benin,3931207.0,22
+2022-09-26|Ethiopia|Sudan,3932065.0,22
+2022-09-27|Algeria|Nigeria,3926430.0,22
+2022-09-27|Brunei|Laos,3926584.0,22
+2022-09-27|Egypt|Liberia,3926420.0,22
+2022-09-27|Equatorial Guinea|Togo,3933168.0,22
+2022-09-27|Honduras|Guatemala,3895022.0,22
+2022-09-27|Indonesia|Curaçao,3912762.0,22
+2022-09-27|Côte d'Ivoire|Guinea,3926427.0,22
+2022-09-27|Burkina Faso|Comoros,3932898.0,22
+2022-09-27|Malta|Israel,3926585.0,22
+2022-09-27|South Korea|Cameroon,3911849.0,22
+2022-09-27|Vietnam|India,3926582.0,22
+2022-09-27|Mauritania|Congo,3933170.0,21
+2022-09-27|Mexico|Colombia,3926432.0,22
+2022-09-27|Nepal|Bangladesh,3902962.0,22
+2022-09-27|Paraguay|Morocco,3926429.0,22
+2022-09-27|Peru|El Salvador,3926433.0,22
+2022-09-27|Qatar|Chile,3926425.0,22
+2022-09-27|Madagascar|Benin,3933169.0,22
+2022-09-27|South Africa|Botswana,3932851.0,22
+2022-09-27|United Arab Emirates|Venezuela,3926421.0,22
+2022-09-27|Saudi Arabia|United States,3926426.0,22
+2022-10-01|Saint Vincent and the Grenadines|Grenada,3936979.0,22
+2022-10-22|Saudi Arabia|North Macedonia,4497172.0,20
+2022-11-09|Cameroon|Jamaica,3958474.0,22
+2022-11-09|Costa Rica|Nigeria,3958473.0,22
+2022-11-09|Mexico|Iraq,3849027.0,22
+2022-11-10|Iran|Nicaragua,3958639.0,22
+2022-11-11|Bahrain|Canada,3958492.0,22
+2022-11-11|South Korea|Iceland,3958491.0,22
+2022-11-15|Venezuela|Panama,3964127.0,22
+2022-11-16|Dominican Republic|Cuba,3958514.0,22
+2022-11-16|Iran|Tunisia,3958509.0,22
+2022-11-16|Gibraltar|Liechtenstein,3947427.0,22
+2022-11-16|Albania|Italy,3958510.0,22
+2022-11-16|Czechia|Faroe Islands,3926439.0,22
+2022-11-16|Cyprus|Bulgaria,3926441.0,22
+2022-11-16|Andorra|Austria,3928313.0,22
+2022-11-16|Algeria|Mali,3964552.0,22
+2022-11-16|Moldova|Azerbaijan,3928233.0,22
+2022-11-16|Mexico|Sweden,3926438.0,22
+2022-11-16|Oman|Germany,3931935.0,22
+2022-11-16|Nepal|Pakistan,3953159.0,21
+2022-11-16|Côte d'Ivoire|Burundi,3958512.0,22
+2022-11-16|Uzbekistan|Kazakhstan,3952620.0,22
+2022-11-16|United Arab Emirates|Argentina,3926440.0,22
+2022-11-16|Poland|Chile,3933467.0,22
+2022-11-16|Peru|Paraguay,3958518.0,22
+2022-11-16|Nicaragua|El Salvador,3958519.0,22
+2022-11-16|Saudi Arabia|Croatia,3964562.0,22
+2022-11-17|Montenegro|Slovakia,3926446.0,22
+2022-11-17|Angola|Botswana,3966009.0,19
+2022-11-17|Israel|Zambia,3950365.0,22
+2022-11-17|Jordan|Spain,3958524.0,22
+2022-11-17|Luxembourg|Hungary,3926445.0,22
+2022-11-17|Malta|Greece,3958520.0,22
+2022-11-17|Morocco|Georgia,3958523.0,22
+2022-11-17|Republic of Ireland|Norway,3958526.0,22
+2022-11-17|Romania|Slovenia,3926443.0,22
+2022-11-17|South Africa|Mozambique,3958525.0,22
+2022-11-17|Saint Lucia|San Marino,3958527.0,22
+2022-11-17|Syria|Belarus,3953271.0,22
+2022-11-17|Tajikistan|Russia,3951355.0,22
+2022-11-17|Portugal|Nigeria,3926444.0,22
+2022-11-17|North Macedonia|Finland,3948273.0,22
+2022-11-18|Bahrain|Serbia,3926448.0,22
+2022-11-18|Cameroon|Panama,3958528.0,22
+2022-11-19|Colombia|Paraguay,3958535.0,22
+2022-11-19|Guatemala|Nicaragua,3958536.0,22
+2022-11-19|Kuwait|Lebanon,3958629.0,22
+2022-11-19|Kosovo|Faroe Islands,3958533.0,22
+2022-11-19|Albania|Armenia,3969166.0,22
+2022-11-19|Sweden|Algeria,3958532.0,22
+2022-11-19|United Arab Emirates|Kazakhstan,3952621.0,22
+2014-06-23|Croatia|Mexico,2384313.0,22
+2014-06-23|Brazil|Cameroon,2384312.0,22
+2012-09-07|Netherlands|Turkey,2262086.0,22
+2012-09-11|Turkey|Estonia,2262091.0,22
+2012-10-12|Turkey|Romania,2262092.0,22
+2012-10-16|Hungary|Turkey,2262096.0,22
+2013-03-22|Andorra|Turkey,2262098.0,22
+2013-09-06|Turkey|Andorra,2262658.0,22
+2013-09-10|Romania|Turkey,2262106.0,22
+2013-10-11|Estonia|Turkey,2262107.0,22
+2013-10-15|Turkey|Netherlands,2262112.0,22
+2011-09-02|Canada|Saint Lucia,1153034.0,22
+2011-09-02|Haiti|United States Virgin Islands,1153028.0,22
+2011-09-02|Antigua and Barbuda|Curaçao,1153031.0,22
+2011-09-02|Trinidad and Tobago|Bermuda,1153027.0,22
+2011-09-06|Barbados|Trinidad and Tobago,1153039.0,22
+2011-09-06|Curaçao|Haiti,1153043.0,22
+2011-09-06|Nicaragua|Panama,1153045.0,22
+2011-09-06|Puerto Rico|Canada,1153042.0,22
+2011-10-07|Bermuda|Trinidad and Tobago,1159256.0,22
+2011-10-07|Dominica|Panama,1167689.0,22
+2011-10-07|United States Virgin Islands|Haiti,1159253.0,22
+2011-10-07|Curaçao|Antigua and Barbuda,1159258.0,22
+2011-10-07|Saint Lucia|Canada,1159255.0,22
+2011-10-11|Canada|Puerto Rico,1161020.0,22
+2011-10-11|Haiti|Curaçao,1161017.0,22
+2011-10-11|Panama|Nicaragua,1161023.0,22
+2011-10-11|Trinidad and Tobago|Barbados,1161019.0,22
+2011-11-11|Antigua and Barbuda|Haiti,1167695.0,22
+2011-11-11|Guyana|Trinidad and Tobago,1167696.0,22
+2011-11-11|United States Virgin Islands|Curaçao,1167692.0,22
+2011-11-11|Saint Kitts and Nevis|Canada,1167697.0,22
+2011-11-15|Curaçao|United States Virgin Islands,1167707.0,22
+2011-11-15|Canada|Saint Kitts and Nevis,1167708.0,22
+2011-11-15|Haiti|Antigua and Barbuda,1167705.0,22
+2011-11-15|Panama|Dominica,1167709.0,22
+2011-11-15|Trinidad and Tobago|Guyana,1167706.0,22
+2012-06-08|Costa Rica|El Salvador,1168643.0,22
+2012-06-08|Cuba|Canada,1168645.0,22
+2012-06-08|Honduras|Panama,1168644.0,22
+2012-06-08|Jamaica|Guatemala,1168641.0,22
+2012-06-08|Mexico|Guyana,1168642.0,22
+2012-06-08|United States|Antigua and Barbuda,1168640.0,22
+2012-06-12|Antigua and Barbuda|Jamaica,1168656.0,22
+2012-06-12|Canada|Honduras,1168659.0,22
+2012-06-12|El Salvador|Mexico,1168657.0,22
+2012-06-12|Guatemala|United States,1168655.0,22
+2012-06-12|Panama|Cuba,1168660.0,22
+2012-06-12|Guyana|Costa Rica,1168658.0,22
+2012-09-07|Canada|Panama,1168666.0,22
+2012-09-07|Cuba|Honduras,1168665.0,22
+2012-09-07|Costa Rica|Mexico,1168663.0,22
+2012-09-07|Jamaica|United States,1168661.0,22
+2012-09-11|Honduras|Cuba,1168671.0,22
+2012-09-11|Panama|Canada,1168672.0,22
+2012-09-11|Mexico|Costa Rica,1168669.0,22
+2012-09-11|United States|Jamaica,1168667.0,22
+2012-10-12|Canada|Cuba,1168677.0,22
+2012-10-12|Antigua and Barbuda|United States,1168674.0,22
+2012-10-12|El Salvador|Costa Rica,1168675.0,22
+2012-10-12|Guatemala|Jamaica,1168673.0,22
+2012-10-12|Guyana|Mexico,1168676.0,22
+2012-10-12|Panama|Honduras,1168678.0,22
+2012-10-16|Costa Rica|Guyana,1168682.0,22
+2012-10-16|Cuba|Panama,1168684.0,22
+2012-10-16|Honduras|Canada,1168683.0,22
+2012-10-16|Mexico|El Salvador,1168681.0,22
+2012-10-16|Jamaica|Antigua and Barbuda,1168680.0,22
+2012-10-16|United States|Guatemala,1168679.0,22
+2013-02-06|Honduras|United States,2272838.0,22
+2013-02-06|Mexico|Jamaica,2272837.0,22
+2013-02-06|Panama|Costa Rica,2272839.0,22
+2013-03-22|Honduras|Mexico,2272841.0,22
+2013-03-22|Jamaica|Panama,2272840.0,22
+2013-03-22|United States|Costa Rica,2272842.0,22
+2013-03-26|Costa Rica|Jamaica,2272845.0,22
+2013-03-26|Panama|Honduras,2272844.0,22
+2013-03-26|Mexico|United States,2272843.0,22
+2013-06-04|Jamaica|Mexico,2272852.0,22
+2013-06-07|Jamaica|United States,2272846.0,22
+2013-06-07|Panama|Mexico,2272847.0,22
+2013-06-07|Costa Rica|Honduras,2272848.0,22
+2013-06-11|Honduras|Jamaica,2272850.0,22
+2013-06-11|United States|Panama,2272851.0,22
+2013-06-11|Mexico|Costa Rica,2272849.0,22
+2013-06-18|Costa Rica|Panama,2272854.0,22
+2013-06-18|United States|Honduras,2272853.0,22
+2013-09-06|Costa Rica|United States,2272857.0,22
+2013-09-06|Mexico|Honduras,2272855.0,22
+2013-09-06|Panama|Jamaica,2272856.0,22
+2013-09-10|Honduras|Panama,2272859.0,22
+2013-09-10|Jamaica|Costa Rica,2272858.0,22
+2013-09-10|United States|Mexico,2272860.0,22
+2013-10-11|Honduras|Costa Rica,2272862.0,22
+2013-10-11|Mexico|Panama,2272861.0,22
+2013-10-11|United States|Jamaica,2272863.0,22
+2013-10-15|Costa Rica|Mexico,2272866.0,22
+2013-10-15|Jamaica|Honduras,2272864.0,22
+2013-10-15|Panama|United States,2272865.0,22
+2013-08-14|Turkey|Ghana,2359214.0,22
+2013-08-14|Ukraine|Israel,2361940.0,22
+2013-10-15|Australia|Canada,2372418.0,22
+2013-11-15|Argentina|Ecuador,2378615.0,22
+2013-11-15|Turkey|Northern Ireland,2375517.0,22
+2013-11-16|Netherlands|Japan,2381602.0,22
+2013-11-19|Turkey|Belarus,2375518.0,22
+2014-05-30|North Macedonia|Qatar,3794336.0,22
+2018-06-19|Poland|Senegal,2977725.0,22
+2018-06-25|Russia|Uruguay,2977687.0,22
+2018-07-01|Russia|Spain,3057976.0,22
+2016-09-05|Croatia|Turkey,2643552.0,22
+2016-10-06|Turkey|Ukraine,2643848.0,22
+2016-10-09|Iceland|Turkey,2643940.0,22
+2016-11-12|Turkey|Kosovo,2697329.0,22
+2017-03-24|Turkey|Finland,2643944.0,22
+2017-06-11|Kosovo|Turkey,2697842.0,22
+2017-09-02|Ukraine|Turkey,2644321.0,22
+2017-09-05|Turkey|Croatia,2644330.0,22
+2017-10-06|Turkey|Iceland,2644333.0,22
+2017-10-09|Finland|Turkey,2644343.0,22
+2016-09-01|Iran|Qatar,2696969.0,22
+2016-09-01|Australia|Iraq,2696972.0,22
+2016-09-01|Japan|United Arab Emirates,2696973.0,22
+2016-09-01|South Korea|China,2696970.0,22
+2016-09-01|Saudi Arabia|Thailand,2696974.0,22
+2016-09-01|Uzbekistan|Syria,2696971.0,22
+2016-09-06|China|Iran,2696977.0,22
+2016-09-06|Iraq|Saudi Arabia,2696978.0,22
+2016-09-06|Qatar|Uzbekistan,2696975.0,22
+2016-09-06|Syria|South Korea,2696976.0,22
+2016-09-06|Thailand|Japan,2696979.0,22
+2016-09-06|United Arab Emirates|Australia,2696980.0,22
+2016-10-06|South Korea|Qatar,2696983.0,22
+2016-10-06|Japan|Iraq,2696986.0,22
+2016-10-06|Uzbekistan|Iran,2696981.0,22
+2016-10-06|United Arab Emirates|Thailand,2696985.0,22
+2016-10-06|Saudi Arabia|Australia,2696984.0,22
+2016-10-11|Australia|Japan,2696992.0,22
+2016-10-11|Iran|South Korea,2696989.0,22
+2016-10-11|Iraq|Thailand,2696990.0,22
+2016-10-11|Qatar|Syria,2696987.0,22
+2016-10-11|Uzbekistan|China,2696988.0,22
+2016-10-11|Saudi Arabia|United Arab Emirates,2696991.0,22
+2016-11-15|Japan|Saudi Arabia,2696998.0,22
+2016-11-15|China|Qatar,2696993.0,22
+2016-11-15|Thailand|Australia,2696997.0,22
+2016-11-15|United Arab Emirates|Iraq,2696996.0,22
+2016-11-15|South Korea|Uzbekistan,2696995.0,22
+2016-11-15|Syria|Iran,2696994.0,22
+2017-03-23|Iraq|Australia,2697002.0,22
+2017-03-23|China|South Korea,2697000.0,22
+2017-03-23|Thailand|Saudi Arabia,2697004.0,22
+2017-03-23|United Arab Emirates|Japan,2697003.0,22
+2017-03-23|Syria|Uzbekistan,2697001.0,22
+2017-03-23|Qatar|Iran,2696999.0,22
+2017-03-28|Australia|United Arab Emirates,2697010.0,22
+2017-03-28|Iran|China,2697007.0,22
+2017-03-28|Japan|Thailand,2697009.0,22
+2017-03-28|South Korea|Syria,2697006.0,22
+2017-03-28|Saudi Arabia|Iraq,2697008.0,22
+2017-03-28|Uzbekistan|Qatar,2697005.0,22
+2017-06-08|Australia|Saudi Arabia,2697014.0,22
+2017-06-12|Iran|Uzbekistan,2697011.0,22
+2017-06-13|Iraq|Japan,2697016.0,22
+2017-06-13|Qatar|South Korea,2697013.0,22
+2017-06-13|Thailand|United Arab Emirates,2697015.0,22
+2017-08-29|United Arab Emirates|Saudi Arabia,2697021.0,22
+2017-08-31|South Korea|Iran,2697019.0,22
+2017-08-31|China|Uzbekistan,2697018.0,22
+2017-08-31|Japan|Australia,2697022.0,22
+2017-08-31|Thailand|Iraq,2697020.0,22
+2017-08-31|Syria|Qatar,2697017.0,22
+2017-09-05|Australia|Thailand,2697027.0,22
+2017-09-05|Iran|Syria,2697024.0,22
+2017-09-05|Iraq|United Arab Emirates,2697026.0,22
+2017-09-05|Qatar|China,2697023.0,22
+2017-09-05|Saudi Arabia|Japan,2697028.0,22
+2017-09-05|Uzbekistan|South Korea,2697025.0,22
+2017-10-05|Syria|Australia,2931610.0,22
+2017-10-10|Australia|Syria,2931755.0,22
+2015-10-07|Mauritius|Kenya,2604393.0,22
+2015-10-07|Tanzania|Malawi,2604394.0,22
+2015-10-11|Kenya|Mauritius,2604406.0,22
+2015-10-11|Malawi|Tanzania,2604407.0,22
+2015-11-11|Sudan|Zambia,2604408.0,22
+2015-11-12|Burundi|DR Congo,2633487.0,22
+2015-11-12|Morocco|Equatorial Guinea,2604410.0,22
+2015-11-13|Comoros|Ghana,2633485.0,22
+2015-11-13|Mauritania|Tunisia,2633481.0,22
+2015-11-13|Kenya|Cabo Verde,2633490.0,22
+2015-11-13|Liberia|Côte d'Ivoire,2633488.0,22
+2015-11-13|Angola|South Africa,2604414.0,22
+2015-11-13|Madagascar|Senegal,2633489.0,22
+2015-11-13|Niger|Cameroon,2633480.0,22
+2015-11-14|Botswana|Mali,2633486.0,22
+2015-11-14|Chad|Egypt,2633484.0,22
+2015-11-14|Tanzania|Algeria,2633491.0,22
+2015-11-15|DR Congo|Burundi,2633499.0,22
+2015-11-15|Equatorial Guinea|Morocco,2604417.0,22
+2015-11-15|Zambia|Sudan,2604415.0,22
+2015-11-17|Cabo Verde|Kenya,2633502.0,22
+2015-11-17|Cameroon|Niger,2633492.0,22
+2015-11-17|Côte d'Ivoire|Liberia,2633500.0,22
+2015-11-17|Egypt|Chad,2633496.0,22
+2015-11-17|Algeria|Tanzania,2633503.0,22
+2015-11-17|Mali|Botswana,2633498.0,22
+2015-11-17|Ghana|Comoros,2633497.0,22
+2015-11-17|Senegal|Madagascar,2633501.0,22
+2015-11-17|South Africa|Angola,2604421.0,22
+2015-11-17|Tunisia|Mauritania,2633493.0,22
+2016-10-07|Ghana|Uganda,2703501.0,22
+2016-10-08|DR Congo|Libya,2703494.0,22
+2016-10-08|Burkina Faso|South Africa,2703500.0,22
+2016-10-08|Gabon|Morocco,2703497.0,22
+2016-10-08|Côte d'Ivoire|Mali,2703498.0,22
+2016-10-08|Senegal|Cabo Verde,2703499.0,22
+2016-10-09|Algeria|Cameroon,2703496.0,22
+2016-10-09|Congo|Egypt,2703502.0,22
+2016-10-09|Tunisia|Guinea,2703493.0,22
+2016-10-09|Zambia|Nigeria,2703495.0,22
+2016-11-11|Libya|Tunisia,2766245.0,22
+2016-11-12|Cameroon|Zambia,2766246.0,22
+2016-11-12|Cabo Verde|Burkina Faso,2766251.0,22
+2016-11-12|Morocco|Côte d'Ivoire,2766249.0,22
+2016-11-12|Mali|Gabon,2766248.0,22
+2016-11-12|Nigeria|Algeria,2766247.0,22
+2016-11-13|Egypt|Ghana,2766252.0,22
+2016-11-13|Guinea|DR Congo,2766244.0,22
+2017-08-31|Uganda|Egypt,2852237.0,22
+2017-09-01|Morocco|Mali,2852233.0,22
+2017-09-01|Ghana|Congo,2852236.0,22
+2017-09-01|Cabo Verde|South Africa,2852235.0,22
+2017-09-01|Nigeria|Cameroon,2852231.0,22
+2017-09-01|Tunisia|DR Congo,2852229.0,22
+2017-09-02|Gabon|Côte d'Ivoire,2852232.0,22
+2017-09-02|Senegal|Burkina Faso,2852234.0,22
+2017-09-02|Zambia|Algeria,2852230.0,22
+2017-09-04|Cameroon|Nigeria,2852241.0,22
+2017-09-05|Côte d'Ivoire|Gabon,2852243.0,22
+2017-09-05|Burkina Faso|Senegal,2852245.0,22
+2017-09-05|DR Congo|Tunisia,2852239.0,22
+2017-09-05|Algeria|Zambia,2852240.0,22
+2017-09-05|Egypt|Uganda,2852246.0,22
+2017-09-05|Congo|Ghana,2852247.0,22
+2017-09-05|Mali|Morocco,2852242.0,22
+2017-09-05|South Africa|Cabo Verde,2852244.0,22
+2017-10-06|Mali|Côte d'Ivoire,2923444.0,22
+2017-10-07|Cameroon|Algeria,2923443.0,22
+2017-10-07|Cabo Verde|Senegal,2923447.0,22
+2017-10-07|Morocco|Gabon,2923445.0,22
+2017-10-07|South Africa|Burkina Faso,2923446.0,22
+2017-10-07|Nigeria|Zambia,2923442.0,22
+2017-10-07|Guinea|Tunisia,2923440.0,22
+2017-10-07|Uganda|Ghana,2923448.0,22
+2017-10-07|Libya|DR Congo,2923441.0,22
+2017-10-08|Egypt|Congo,2923449.0,22
+2017-11-10|Algeria|Nigeria,2923453.0,22
+2017-11-10|South Africa|Senegal,2923711.0,22
+2017-11-11|DR Congo|Guinea,2923451.0,22
+2017-11-11|Gabon|Mali,2923455.0,22
+2017-11-11|Côte d'Ivoire|Morocco,2923454.0,22
+2017-11-11|Tunisia|Libya,2923450.0,22
+2017-11-11|Zambia|Cameroon,2923452.0,22
+2017-11-12|Ghana|Egypt,2923459.0,22
+2017-11-14|Burkina Faso|Cabo Verde,2923456.0,22
+2017-11-14|Senegal|South Africa,2923457.0,22
+2017-08-24|India|Saint Kitts and Nevis,4198523.0,22
+2017-08-26|Iraq|Syria,4333430.0,22
+2017-09-04|Malawi|Togo,3363728.0,22
+2017-09-05|Mauritania|Niger,3468191.0,22
+2017-10-08|El Salvador|Canada,2924705.0,22
+2017-10-10|Benin|Gabon,3541501.0,22
+2017-11-09|Iran|Panama,2943074.0,22
+2017-11-09|Romania|Turkey,2958229.0,22
+2017-11-13|Iran|Venezuela,2973386.0,22
+2017-11-13|Turkey|Albania,2969998.0,22
+2017-12-03|Laos|Timor-Leste,3486260.0,22
+2013-03-26|Turkey|Hungary,2262103.0,22
+2013-11-13|Jordan|Uruguay,2378586.0,22
+2013-11-13|Mexico|New Zealand,2378587.0,22
+2013-11-15|Greece|Romania,2372904.0,22
+2013-11-15|Iceland|Croatia,2372905.0,22
+2013-11-15|Portugal|Sweden,2372902.0,22
+2013-11-15|Ukraine|France,2372903.0,22
+2013-11-19|France|Ukraine,2372907.0,22
+2013-11-19|Croatia|Iceland,2372909.0,22
+2013-11-19|Sweden|Portugal,2372906.0,22
+2013-11-19|Romania|Greece,2372908.0,22
+2013-11-20|New Zealand|Mexico,2378589.0,22
+2013-11-20|Uruguay|Jordan,2378588.0,22
+2015-03-12|India|Nepal,2546008.0,22
+2015-03-17|Nepal|India,2546011.0,22
+2015-05-24|Thailand|Vietnam,2576558.0,22
+2015-06-11|India|Oman,2576540.0,22
+2015-06-11|Tajikistan|Jordan,2576536.0,22
+2015-06-11|Philippines|Bahrain,2576546.0,22
+2015-06-11|Maldives|Qatar,2576538.0,22
+2015-06-11|Lebanon|Kuwait,2576545.0,22
+2015-06-11|Saudi Arabia|Palestine,2576534.0,22
+2015-06-16|Japan|Singapore,2576577.0,22
+2015-06-16|Guam|India,2576575.0,22
+2015-06-16|Myanmar|South Korea,2576579.0,22
+2015-06-16|Kyrgyzstan|Australia,2576572.0,22
+2015-06-16|Taiwan|Thailand,2576543.0,22
+2015-06-16|North Korea|Uzbekistan,2576581.0,22
+2015-06-16|Turkmenistan|Iran,2576576.0,22
+2015-09-03|Japan|Cambodia,2578628.0,22
+2015-09-03|Bahrain|North Korea,2578633.0,22
+2015-09-03|Australia|Bangladesh,2578622.0,22
+2015-09-03|Iran|Guam,2578626.0,22
+2015-09-03|Iraq|Taiwan,2576559.0,22
+2015-09-03|Saudi Arabia|Timor-Leste,2578621.0,22
+2015-09-03|South Korea|Laos,2578630.0,22
+2015-09-03|Jordan|Kyrgyzstan,2578623.0,22
+2015-09-03|Oman|Turkmenistan,2578627.0,22
+2015-09-03|Qatar|Bhutan,2578625.0,22
+2015-09-03|Kuwait|Myanmar,2578631.0,22
+2015-09-03|Uzbekistan|Yemen,2578632.0,23
+2015-09-08|Afghanistan|Japan,2578644.0,22
+2015-09-08|Bangladesh|Jordan,2578636.0,22
+2015-09-08|Hong Kong|Qatar,2578638.0,22
+2015-09-08|India|Iran,2578641.0,22
+2015-09-08|Laos|Kuwait,2578642.0,22
+2015-09-08|Lebanon|South Korea,2578645.0,22
+2015-09-08|Guam|Oman,2578640.0,22
+2015-09-08|Malaysia|Saudi Arabia,2578634.0,22
+2015-09-08|Philippines|Uzbekistan,2578646.0,22
+2015-09-08|Tajikistan|Australia,2578637.0,22
+2015-09-08|Thailand|Iraq,2576561.0,22
+2015-09-08|Yemen|Bahrain,2578647.0,22
+2015-09-08|Taiwan|Vietnam,2576560.0,22
+2015-10-08|Kuwait|South Korea,2630764.0,22
+2015-10-08|Bahrain|Uzbekistan,2630765.0,22
+2015-10-08|Jordan|Australia,2630762.0,22
+2015-10-08|Saudi Arabia|United Arab Emirates,2630767.0,22
+2015-10-08|Oman|Iran,2630763.0,22
+2015-10-08|Qatar|China,2630766.0,22
+2015-10-08|Turkmenistan|India,2630760.0,22
+2015-10-08|Vietnam|Iraq,2630758.0,22
+2015-10-08|Syria|Japan,2630759.0,22
+2015-10-13|Kuwait|Lebanon,2630780.0,22
+2015-10-13|Bahrain|Philippines,2630776.0,22
+2015-10-13|Jordan|Tajikistan,2630778.0,22
+2015-10-13|Oman|India,2630775.0,22
+2015-10-13|Vietnam|Thailand,2576563.0,22
+2015-10-13|Qatar|Maldives,2630777.0,22
+2015-11-09|Palestine|Saudi Arabia,2576562.0,22
+2015-11-12|Iran|Turkmenistan,2636028.0,22
+2015-11-12|India|Guam,2636030.0,22
+2015-11-12|South Korea|Myanmar,2636022.0,22
+2015-11-12|Australia|Kyrgyzstan,2636020.0,22
+2015-11-12|Thailand|Taiwan,2576564.0,22
+2015-11-12|Uzbekistan|North Korea,2636029.0,22
+2015-11-12|Singapore|Japan,2636023.0,22
+2015-11-17|Bangladesh|Australia,2636039.0,22
+2015-11-17|Bhutan|Qatar,2636044.0,22
+2015-11-17|Kyrgyzstan|Jordan,2636047.0,22
+2015-11-17|Cambodia|Japan,2636038.0,22
+2015-11-17|Guam|Iran,2636035.0,22
+2015-11-17|Timor-Leste|Saudi Arabia,2636026.0,22
+2015-11-17|North Korea|Bahrain,2636036.0,22
+2015-11-17|Yemen|Uzbekistan,2636037.0,22
+2015-11-17|Laos|South Korea,2636041.0,22
+2015-11-17|Taiwan|Iraq,2576565.0,22
+2015-11-17|Turkmenistan|Oman,2636046.0,22
+2016-03-24|Australia|Tajikistan,2676313.0,22
+2016-03-24|Bahrain|Yemen,2676322.0,22
+2016-03-24|Iran|India,2676317.0,22
+2016-03-24|Iraq|Thailand,2576567.0,22
+2016-03-24|Japan|Afghanistan,2676314.0,22
+2016-03-24|Jordan|Bangladesh,2676318.0,22
+2016-03-24|Qatar|Hong Kong,2676324.0,22
+2016-03-24|Saudi Arabia|Malaysia,2676325.0,22
+2016-03-24|Oman|Guam,2676321.0,22
+2016-03-24|South Korea|Lebanon,2676315.0,22
+2016-03-24|Uzbekistan|Philippines,2676319.0,22
+2016-03-24|Vietnam|Taiwan,2576566.0,22
+2016-03-29|China|Qatar,2676331.0,22
+2016-03-29|Australia|Jordan,2676326.0,22
+2016-03-29|Japan|Syria,2676328.0,22
+2016-03-29|Iran|Oman,2676336.0,22
+2016-03-29|Iraq|Vietnam,2576568.0,22
+2016-03-29|India|Turkmenistan,2676332.0,22
+2016-03-29|Uzbekistan|Bahrain,2676333.0,22
+2016-03-29|United Arab Emirates|Saudi Arabia,2676337.0,22
+2017-11-09|Croatia|Greece,2934806.0,22
+2017-11-09|Northern Ireland|Switzerland,2934805.0,22
+2017-11-10|Honduras|Australia,2943122.0,22
+2017-11-10|Sweden|Italy,2934808.0,22
+2017-11-11|Denmark|Republic of Ireland,2934807.0,22
+2017-11-11|New Zealand|Peru,2943124.0,22
+2017-11-12|Switzerland|Northern Ireland,2934810.0,22
+2017-11-12|Greece|Croatia,2934811.0,22
+2017-11-13|Italy|Sweden,2934809.0,22
+2017-11-14|Republic of Ireland|Denmark,2934812.0,22
+2017-11-15|Australia|Honduras,2943123.0,22
+2017-11-15|Peru|New Zealand,2943125.0,22
+2020-10-08|Argentina|Ecuador,3334201.0,22
+2020-10-08|Paraguay|Peru,3334203.0,22
+2020-10-08|Uruguay|Chile,3334202.0,22
+2020-10-09|Brazil|Bolivia,3334205.0,22
+2020-10-09|Colombia|Venezuela,3334204.0,22
+2020-10-13|Peru|Brazil,3457910.0,22
+2020-10-13|Venezuela|Paraguay,3457909.0,22
+2020-10-13|Bolivia|Argentina,3457907.0,22
+2020-10-13|Chile|Colombia,3457911.0,22
+2020-10-13|Ecuador|Uruguay,3457908.0,22
+2020-11-12|Bolivia|Ecuador,3466205.0,22
+2020-11-12|Argentina|Paraguay,3466206.0,22
+2020-11-13|Chile|Peru,3466207.0,22
+2020-11-13|Brazil|Venezuela,3466204.0,22
+2020-11-13|Colombia|Uruguay,3466203.0,22
+2020-11-17|Ecuador|Colombia,3466212.0,22
+2020-11-17|Venezuela|Chile,3466210.0,22
+2020-11-17|Paraguay|Bolivia,3466211.0,22
+2020-11-17|Uruguay|Brazil,3466208.0,22
+2020-11-17|Peru|Argentina,3466209.0,22
+2021-03-24|Turkey|Netherlands,3495269.0,22
+2021-03-25|Curaçao|Saint Vincent and the Grenadines,3421039.0,22
+2021-03-25|Haiti|Belize,3421049.0,22
+2021-03-25|Trinidad and Tobago|Guyana,3421054.0,22
+2021-03-25|Panama|Barbados,3421044.0,22
+2021-03-25|Canada|Bermuda,3421034.0,22
+2021-03-27|Norway|Turkey,3495197.0,22
+2021-03-28|Dominica|Panama,3421046.0,22
+2021-03-28|Puerto Rico|Trinidad and Tobago,3421056.0,22
+2021-03-28|Cuba|Curaçao,3421041.0,22
+2021-03-29|Cayman Islands|Canada,3421036.0,22
+2021-03-30|Turkey|Latvia,3495225.0,22
+2021-03-30|Japan|Mongolia,3234885.0,22
+2021-06-03|Uruguay|Paraguay,3557022.0,22
+2021-06-03|Bolivia|Venezuela,3557025.0,22
+2021-06-03|Kuwait|Australia,3234819.0,22
+2021-06-03|Qatar|India,3234868.0,22
+2021-06-03|Peru|Colombia,3557023.0,22
+2021-06-03|Argentina|Chile,3557026.0,22
+2021-06-04|Brazil|Ecuador,3557024.0,22
+2021-06-05|Bahamas|Trinidad and Tobago,3421060.0,22
+2021-06-05|Aruba|Canada,3421080.0,22
+2021-06-05|British Virgin Islands|Curaçao,3421075.0,22
+2021-06-05|Panama|Anguilla,3421070.0,22
+2021-06-05|Turks and Caicos Islands|Haiti,3421065.0,22
+2021-06-07|Bahrain|Iran,3234840.0,22
+2021-06-07|Qatar|Oman,3234871.0,22
+2021-06-08|Venezuela|Uruguay,3557028.0,22
+2021-06-08|Paraguay|Brazil,3557029.0,22
+2021-06-08|Ecuador|Peru,3557031.0,22
+2021-06-08|Trinidad and Tobago|Saint Kitts and Nevis,3421062.0,22
+2021-06-08|Colombia|Argentina,3557027.0,22
+2021-06-08|Haiti|Nicaragua,3421067.0,22
+2021-06-08|Panama|Dominican Republic,3421072.0,22
+2021-06-08|Chile|Bolivia,3557030.0,22
+2021-06-08|Curaçao|Guatemala,3421077.0,22
+2021-06-08|Canada|Suriname,3421082.0,22
+2021-06-09|South Korea|Sri Lanka,3234917.0,22
+2021-06-11|Saudi Arabia|Singapore,3234853.0,22
+2021-06-12|Haiti|Canada,3581025.0,22
+2021-06-12|Panama|Curaçao,3581026.0,22
+2021-06-15|Curaçao|Panama,3581029.0,22
+2021-06-15|Canada|Haiti,3581028.0,22
+2021-06-15|Kuwait|Taiwan,3234825.0,22
+2021-09-01|Turkey|Montenegro,3495253.0,22
+2021-09-02|Venezuela|Argentina,3653670.0,22
+2021-09-02|El Salvador|United States,3583563.0,22
+2021-09-02|Peru|Uruguay,3653673.0,22
+2021-09-02|Chile|Brazil,3653674.0,22
+2021-09-02|Bolivia|Colombia,3653671.0,22
+2021-09-02|Canada|Honduras,3583562.0,22
+2021-09-02|Panama|Costa Rica,3583564.0,22
+2021-09-02|Mexico|Jamaica,3583565.0,22
+2021-09-02|Ecuador|Paraguay,3653672.0,22
+2021-09-04|Gibraltar|Turkey,3495280.0,22
+2021-09-05|Uruguay|Bolivia,3486597.0,22
+2021-09-05|Paraguay|Colombia,3486600.0,22
+2021-09-05|Jamaica|Panama,3583569.0,22
+2021-09-05|El Salvador|Honduras,3583567.0,22
+2021-09-05|Peru|Venezuela,3486598.0,22
+2021-09-05|United States|Canada,3583566.0,22
+2021-09-05|Costa Rica|Mexico,3583568.0,22
+2021-09-05|Ecuador|Chile,3486601.0,22
+2021-09-07|Netherlands|Turkey,3495390.0,22
+2021-09-08|Panama|Mexico,3583572.0,22
+2021-09-08|Honduras|United States,3583571.0,22
+2021-09-08|Canada|El Salvador,3583570.0,22
+2021-09-08|Costa Rica|Jamaica,3583573.0,22
+2021-09-09|Colombia|Chile,3653677.0,22
+2021-09-09|Paraguay|Venezuela,3653675.0,22
+2021-09-09|Uruguay|Ecuador,3653676.0,22
+2021-09-09|Argentina|Bolivia,3653678.0,22
+2021-09-09|Brazil|Peru,3653679.0,22
+2021-10-07|El Salvador|Panama,3583576.0,22
+2021-10-07|Mexico|Canada,3583574.0,22
+2021-10-07|Honduras|Costa Rica,3583575.0,22
+2021-10-07|United States|Jamaica,3583577.0,22
+2021-10-07|Peru|Chile,3675144.0,22
+2021-10-07|Ecuador|Bolivia,3675143.0,22
+2021-10-07|Venezuela|Brazil,3675142.0,22
+2021-10-07|Paraguay|Argentina,3675141.0,22
+2021-10-07|Uruguay|Colombia,3675140.0,22
+2021-10-08|Turkey|Norway,3495472.0,22
+2021-10-09|Morocco|Guinea-Bissau,3667629.0,22
+2021-10-10|Mexico|Honduras,3583579.0,22
+2021-10-10|Bolivia|Peru,3486594.0,22
+2021-10-10|Jamaica|Canada,3583578.0,22
+2021-10-10|Costa Rica|El Salvador,3583580.0,22
+2021-10-10|Panama|United States,3583581.0,22
+2021-10-10|Chile|Paraguay,3486596.0,22
+2021-10-10|Argentina|Uruguay,3486595.0,22
+2021-10-10|Venezuela|Ecuador,3486593.0,22
+2021-10-10|Colombia|Brazil,3486592.0,22
+2021-10-11|Latvia|Turkey,3495495.0,22
+2021-10-12|Morocco|Guinea,3570518.0,22
+2021-10-13|Honduras|Jamaica,3583583.0,22
+2021-10-13|United States|Costa Rica,3583585.0,22
+2021-10-13|Canada|Panama,3583582.0,22
+2021-10-13|El Salvador|Mexico,3583584.0,22
+2021-10-14|Colombia|Ecuador,3675155.0,22
+2021-10-14|Brazil|Uruguay,3675158.0,22
+2021-10-14|Bolivia|Paraguay,3675154.0,22
+2021-10-14|Chile|Venezuela,3675157.0,22
+2021-10-14|Argentina|Peru,3675156.0,22
+2021-11-11|Peru|Bolivia,3675160.0,22
+2021-11-11|Brazil|Colombia,3675161.0,22
+2021-11-11|Ecuador|Venezuela,3675163.0,22
+2021-11-11|Paraguay|Chile,3675162.0,22
+2021-11-12|Honduras|Panama,3583755.0,22
+2021-11-12|El Salvador|Jamaica,3583756.0,22
+2021-11-12|Canada|Costa Rica,3583754.0,22
+2021-11-12|Morocco|Sudan,3698854.0,22
+2021-11-12|Uruguay|Argentina,3675159.0,22
+2021-11-12|United States|Mexico,3583757.0,22
+2021-11-13|Turkey|Gibraltar,3495660.0,22
+2021-11-16|Bolivia|Uruguay,3675165.0,22
+2021-11-16|Jamaica|United States,3583588.0,22
+2021-11-16|Canada|Mexico,3583798.0,22
+2021-11-16|Costa Rica|Honduras,3583586.0,22
+2021-11-16|Panama|El Salvador,3583587.0,22
+2021-11-16|Argentina|Brazil,3675166.0,22
+2021-11-16|Colombia|Paraguay,3675164.0,22
+2021-11-16|Montenegro|Turkey,3495806.0,22
+2021-11-16|Chile|Ecuador,3675167.0,22
+2021-11-16|Venezuela|Peru,3675168.0,22
+2022-01-27|United States|El Salvador,3583592.0,22
+2022-01-27|Jamaica|Mexico,3583594.0,22
+2022-01-27|Honduras|Canada,3583753.0,22
+2022-01-27|Costa Rica|Panama,3583593.0,22
+2022-01-27|Ecuador|Brazil,3675169.0,22
+2022-01-27|Chile|Argentina,3675171.0,22
+2022-01-27|Paraguay|Uruguay,3675170.0,22
+2022-01-28|Colombia|Peru,3675173.0,22
+2022-01-28|Venezuela|Bolivia,3675172.0,22
+2022-01-30|Panama|Jamaica,3583598.0,22
+2022-01-30|Honduras|El Salvador,3583596.0,22
+2022-01-30|Canada|United States,3583595.0,22
+2022-01-30|Mexico|Costa Rica,3583597.0,22
+2022-02-01|Argentina|Colombia,3675178.0,22
+2022-02-01|Brazil|Paraguay,3675176.0,22
+2022-02-01|Peru|Ecuador,3675175.0,22
+2022-02-01|Uruguay|Venezuela,3675177.0,22
+2022-02-01|Bolivia|Chile,3675174.0,22
+2022-02-02|Jamaica|Costa Rica,3583602.0,22
+2022-02-02|El Salvador|Canada,3583599.0,22
+2022-02-02|Mexico|Panama,3583601.0,22
+2022-02-02|United States|Honduras,3583600.0,22
+2022-03-17|Cook Islands|Solomon Islands,3741022.0,22
+2022-03-18|Papua New Guinea|New Zealand,3723774.0,22
+2022-03-18|New Caledonia|Fiji,3723775.0,22
+2022-03-21|Papua New Guinea|New Caledonia,3723806.0,22
+2022-03-21|New Zealand|Fiji,3723805.0,22
+2022-03-24|Jamaica|El Salvador,3583609.0,22
+2022-03-24|Mexico|United States,3583610.0,22
+2022-03-24|Paraguay|Ecuador,3675183.0,22
+2022-03-24|Costa Rica|Canada,3583607.0,22
+2022-03-24|Colombia|Bolivia,3675180.0,22
+2022-03-24|Solomon Islands|Tahiti,3723825.0,22
+2022-03-24|New Zealand|New Caledonia,3723826.0,22
+2022-03-24|Brazil|Chile,3675181.0,22
+2022-03-24|Panama|Honduras,3583608.0,22
+2022-03-24|Fiji|Papua New Guinea,3723827.0,22
+2022-03-24|Portugal|Turkey,3704058.0,22
+2022-03-24|Uruguay|Peru,3675179.0,22
+2022-03-24|Wales|Austria,3704054.0,22
+2022-03-24|Sweden|Czechia,3704056.0,22
+2022-03-24|Italy|North Macedonia,3704057.0,22
+2022-03-25|Argentina|Venezuela,3675182.0,22
+2022-03-27|Canada|Jamaica,3583611.0,22
+2022-03-27|United States|Panama,3583614.0,22
+2022-03-27|Honduras|Mexico,3583612.0,22
+2022-03-27|El Salvador|Costa Rica,3583613.0,22
+2022-03-27|New Zealand|Tahiti,3778996.0,22
+2022-03-27|Solomon Islands|Papua New Guinea,3778995.0,22
+2022-03-29|Ecuador|Argentina,3675185.0,22
+2022-03-29|Peru|Paraguay,3675186.0,22
+2022-03-29|Bolivia|Brazil,3675184.0,22
+2022-03-29|Portugal|North Macedonia,3777956.0,22
+2022-03-29|Poland|Sweden,3777955.0,22
+2022-03-29|Chile|Uruguay,3675187.0,22
+2022-03-29|Venezuela|Colombia,3675188.0,22
+2022-03-30|Mexico|El Salvador,3583617.0,22
+2022-03-30|Costa Rica|United States,3583618.0,22
+2022-03-30|Panama|Canada,3583615.0,22
+2022-03-30|Jamaica|Honduras,3583616.0,22
+2022-03-30|Solomon Islands|New Zealand,3779399.0,22
+2022-06-01|Scotland|Ukraine,3704053.0,22
+2022-06-05|Wales|Ukraine,3828193.0,22
+2022-06-13|Australia|Peru,3832425.0,22
+2022-06-14|Costa Rica|New Zealand,3781226.0,22
+2021-12-30|Sudan|Ethiopia,3723479.0,22
+2022-09-22|Comoros|Tunisia,3929807.0,22
+2022-09-22|Iceland|Venezuela,3926401.0,22
+2022-09-23|Canada|Qatar,3926406.0,22
+2022-09-23|Cameroon|Uzbekistan,3911848.0,22
+2022-09-23|DR Congo|Burkina Faso,3929320.0,22
+2022-09-23|Rwanda|Equatorial Guinea,3930929.0,21
+2022-09-24|Madagascar|Congo,3931205.0,22
+2022-09-24|India|Singapore,3924782.0,22
+2022-09-27|Argentina|Jamaica,3926431.0,22
+2022-09-27|Ghana|Nicaragua,3926419.0,22
+2022-09-27|Iran|Senegal,3926422.0,22
+2022-09-27|Costa Rica|Uzbekistan,3911850.0,22
+2022-11-06|Saudi Arabia|Iceland,3926435.0,22
+2022-11-09|Albania|Qatar,3958370.0,22
+2022-11-10|Saudi Arabia|Panama,3947990.0,22
+2022-11-12|Iraq|Ecuador,3938670.0,22
+2022-11-16|Turkey|Scotland,3941384.0,22
+2022-11-17|Gabon|Guinea-Bissau,3958522.0,22
+2022-11-17|Switzerland|Ghana,3909251.0,22
+2022-11-18|Egypt|Belgium,3926447.0,22
+2022-11-19|Côte d'Ivoire|Burkina Faso,3958530.0,22
+2022-11-19|Turkey|Czechia,3941385.0,22
+2022-11-19|Peru|Bolivia,3958529.0,22
+2011-11-11|Eswatini|DR Congo,,0
+2011-11-15|DR Congo|Eswatini,,0
+2013-06-12|Ghana|Côte d'Ivoire,,0
+2013-06-14|Ghana|Côte d'Ivoire,,0
+2013-06-14|Guatemala|Argentina,,0
+2013-06-15|China|Thailand,,0
+2013-06-22|Monaco|Vatican City,,0
+2013-06-29|Libya|Burkina Faso,,0
+2013-06-29|Saugeais|Raetia,,0
+2013-08-09|Jordan|Libya,2361388,0
+2013-08-14|Rwanda|Malawi,2361393,0
+2013-08-14|Libya|Central African Republic,2361391,0
+2013-08-14|Zambia|Senegal,,0
+2013-08-27|Libya|Mali,,0
+2013-08-30|Botswana|Uganda,3541567,0
+2013-08-30|Libya|Ghana,3547493,0
+2013-09-03|Botswana|Malawi,3541568,0
+2013-09-04|Equatorial Guinea|Libya,3544778,0
+2013-09-05|Qatar|Mauritius,,0
+2013-09-06|Myanmar|Hong Kong,,0
+2013-09-06|Kuwait|North Korea,,0
+2013-09-09|Kuwait|Bahrain,,0
+2013-09-10|Nigeria|Burkina Faso,,0
+2013-09-23|Abkhazia|South Ossetia,,0
+2013-09-30|Botswana|Burkina Faso,3541570,0
+2013-09-30|Egypt|Uganda,,0
+2013-10-06|Iraq|Yemen,,0
+2013-10-09|Jordan|Kuwait,,0
+2013-10-09|Oman|Mauritania,3571862,0
+2013-10-09|Qatar|Vietnam,,0
+2013-10-10|Singapore|Laos,,0
+2013-10-10|Thailand|Bahrain,,0
+2013-10-15|Kyrgyzstan|Tajikistan,,0
+2013-10-28|Jordan|Nigeria,,0
+2013-11-06|Jordan|Zambia,3548971,0
+2013-11-08|Kuwait|Malaysia,,0
+2013-11-09|Bahrain|Lebanon,,0
+2013-11-14|Egypt|Zambia,,0
+2013-11-15|Eswatini|South Africa,,0
+2013-11-15|Libya|Niger,,0
+2013-11-16|Uganda|Rwanda,3571688,0
+2013-11-19|Cambodia|Guam,,0
+2013-11-19|Namibia|Mozambique,3547831,0
+2013-11-19|India|Nepal,,0
+2013-11-24|Singapore|Cambodia,,0
+2013-11-27|Seychelles|Maldives,3575474,0
+2013-11-29|Seychelles|Maldives,3575475,0
+2013-12-14|Libya|Mali,,0
+2013-12-21|Qatar|Bahrain,,0
+2013-12-28|Basque Country|Peru,,0
+2013-12-28|Galicia|Occitania,,0
+2013-12-30|Catalonia|Cabo Verde,,0
+2014-01-04|Namibia|Ghana,,0
+2014-01-04|Nigeria|Ethiopia,,0
+2014-01-07|Zimbabwe|Gabon,,0
+2014-01-15|Moldova|Norway,,0
+2014-01-17|Moldova|Sweden,,0
+2014-01-18|Norway|Poland,,0
+2014-01-20|Moldova|Poland,,0
+2014-01-21|Iceland|Sweden,,0
+2014-01-22|Chile|Costa Rica,,0
+2014-01-24|Oman|Finland,,0
+2014-01-25|Costa Rica|South Korea,,0
+2014-01-29|Mexico|South Korea,,0
+2014-02-01|United States|South Korea,,0
+2014-02-19|Lebanon|Pakistan,,0
+2014-02-21|Iraq|North Korea,,0
+2014-02-23|Sealand|Chagos Islands,,0
+2014-03-01|Gibraltar|Faroe Islands,,0
+2014-03-01|Malaysia|Philippines,,0
+2014-03-05|Algeria|Slovenia,,0
+2014-03-05|Andorra|Moldova,,0
+2014-03-05|Australia|Ecuador,,0
+2014-03-05|Austria|Uruguay,,0
+2014-03-05|Belgium|Côte d'Ivoire,,0
+2014-03-05|Botswana|South Sudan,,0
+2014-03-05|Bulgaria|Belarus,,0
+2014-03-05|Burkina Faso|Comoros,,0
+2014-03-05|Burundi|Rwanda,,0
+2014-03-05|Colombia|Tunisia,,0
+2014-03-05|Cyprus|Northern Ireland,,0
+2014-03-05|Kosovo|Haiti,,0
+2014-03-05|Bosnia and Herzegovina|Egypt,,0
+2014-03-05|Georgia|Liechtenstein,,0
+2014-03-05|Germany|Chile,,0
+2014-03-05|Gibraltar|Estonia,,0
+2014-03-05|Greece|South Korea,,0
+2014-03-05|Hungary|Finland,,0
+2014-03-05|India|Bangladesh,,0
+2014-03-05|England|Denmark,,0
+2014-03-05|Iran|Guinea,,0
+2014-03-05|Albania|Malta,,0
+2014-03-05|Republic of Ireland|Serbia,,0
+2014-03-05|Israel|Slovakia,,0
+2014-03-05|Japan|New Zealand,,0
+2014-03-05|France|Netherlands,,0
+2014-03-05|Kazakhstan|Lithuania,,0
+2014-03-05|Luxembourg|Cabo Verde,,0
+2014-03-05|Malawi|Zimbabwe,,0
+2014-03-05|Mali|Senegal,,0
+2014-03-05|Mauritania|Niger,,0
+2014-03-05|Montenegro|Ghana,,0
+2014-03-05|Morocco|Gabon,,0
+2014-03-05|Mozambique|Angola,,0
+2014-03-05|Philippines|Azerbaijan,,0
+2014-03-05|Poland|Scotland,,0
+2014-03-05|Portugal|Cameroon,,0
+2014-03-05|Romania|Argentina,,0
+2014-03-05|Czechia|Norway,,0
+2014-03-05|Namibia|Tanzania,,0
+2014-03-05|South Africa|Brazil,,0
+2014-03-05|Spain|Italy,,0
+2014-03-05|Saint Lucia|Jamaica,,0
+2014-03-05|Switzerland|Croatia,,0
+2014-03-05|Turkey|Sweden,,0
+2014-03-05|Ukraine|United States,,0
+2014-03-05|North Macedonia|Latvia,,0
+2014-03-05|Wales|Iceland,,0
+2014-03-05|Zambia|Uganda,,0
+2014-03-05|Russia|Armenia,,0
+2014-03-07|Lesotho|Eswatini,,0
+2014-03-09|Lesotho|Eswatini,,0
+2014-03-19|Saint Lucia|Martinique,,0
+2014-03-25|Yemen|Nepal,,0
+2014-03-26|Andorra|Indonesia,,0
+2014-03-27|Aruba|Guam,,0
+2014-03-29|Cuba|Indonesia,,0
+2014-03-30|Aruba|Guam,,0
+2014-04-06|Ellan Vannin|Monaco,,0
+2014-04-13|Afghanistan|Kyrgyzstan,,0
+2014-04-15|Yemen|Chad,,0
+2014-04-17|Guadeloupe|French Guiana,,0
+2014-04-26|Tanzania|Burundi,,0
+2014-04-27|Philippines|Malaysia,,0
+2014-05-05|Sealand|Chagos Islands,,0
+2014-05-10|Vatican City|Monaco,,0
+2014-05-12|Afghanistan|Kyrgyzstan,,0
+2014-05-13|Germany|Poland,,0
+2014-05-14|Kuwait|Afghanistan,,0
+2014-05-16|Kuwait|Kyrgyzstan,,0
+2014-05-17|Netherlands|Ecuador,,0
+2014-05-17|Somaliland|Sealand,,0
+2014-05-18|Belarus|Iran,,0
+2014-05-20|French Guiana|Suriname,,0
+2014-05-21|Liechtenstein|Belarus,,0
+2014-05-21|Kosovo|Turkey,,0
+2014-05-21|Finland|Czechia,,0
+2014-05-21|Burkina Faso|Senegal,,0
+2014-05-22|Hungary|Denmark,,0
+2014-05-22|Ukraine|Niger,,0
+2014-05-23|Bulgaria|Canada,,0
+2014-05-23|Slovakia|Montenegro,,0
+2014-05-24|Moldova|Saudi Arabia,,0
+2014-05-25|Mali|Guinea,,0
+2014-05-25|Thailand|Kuwait,,0
+2014-05-25|Republic of Ireland|Turkey,,0
+2014-05-25|Kosovo|Senegal,,0
+2014-05-26|Russia|Slovakia,,0
+2014-05-26|Belgium|Luxembourg,,0
+2014-05-26|Australia|South Africa,,0
+2014-05-26|Montenegro|Iran,,0
+2014-05-26|North Macedonia|Cameroon,,0
+2014-05-26|Estonia|Gibraltar,,0
+2014-05-26|Jamaica|Serbia,,0
+2014-05-27|Armenia|United Arab Emirates,,0
+2014-05-27|Moldova|Canada,,0
+2014-05-27|France|Norway,,0
+2014-05-27|Suriname|French Guiana,,0
+2014-05-27|Tanzania|Malawi,,0
+2014-05-27|Japan|Cyprus,,0
+2014-05-28|Angola|Morocco,,0
+2014-05-28|Denmark|Sweden,,0
+2014-05-28|South Korea|Tunisia,,0
+2014-05-28|Nigeria|Scotland,,0
+2014-05-29|Cameroon|Paraguay,,0
+2014-05-29|Georgia|Saudi Arabia,,0
+2014-05-29|Franconia|Raetia,,0
+2014-05-30|Austria|Iceland,,0
+2014-05-30|Bosnia and Herzegovina|Côte d'Ivoire,,0
+2014-05-30|Angola|Iran,,0
+2014-05-30|England|Peru,,0
+2014-05-30|New Zealand|South Africa,,0
+2014-05-30|Switzerland|Jamaica,,0
+2014-05-30|Uruguay|Northern Ireland,,0
+2014-05-30|Spain|Bolivia,,0
+2014-05-31|Italy|Republic of Ireland,,0
+2014-05-31|Albania|Romania,,0
+2014-05-31|Armenia|Algeria,,0
+2014-05-31|Colombia|Senegal,,0
+2014-05-31|Croatia|Mali,,0
+2014-05-31|Mexico|Ecuador,,0
+2014-05-31|Netherlands|Ghana,,0
+2014-05-31|Norway|Russia,,0
+2014-05-31|Portugal|Greece,,0
+2014-06-01|Honduras|Israel,,0
+2014-06-01|Germany|Cameroon,,0
+2014-06-01|France|Paraguay,,0
+2014-06-01|United States|Turkey,,0
+2014-06-01|Sweden|Belgium,,0
+2014-06-02|Costa Rica|Japan,,0
+2014-06-03|Czechia|Austria,,0
+2014-06-03|Georgia|United Arab Emirates,,0
+2014-06-03|Greece|Nigeria,,0
+2014-06-03|Brazil|Panama,,0
+2014-06-03|Switzerland|Peru,,0
+2014-06-03|Mexico|Bosnia and Herzegovina,,0
+2014-06-04|Jamaica|Egypt,,0
+2014-06-04|Argentina|Trinidad and Tobago,,0
+2014-06-04|Ecuador|England,,0
+2014-06-04|El Salvador|Côte d'Ivoire,,0
+2014-06-04|Gibraltar|Malta,,0
+2014-06-04|Hungary|Albania,,0
+2014-06-04|Italy|Luxembourg,,0
+2014-06-04|Romania|Algeria,,0
+2014-06-04|Netherlands|Wales,,0
+2014-06-04|Uruguay|Slovenia,,0
+2014-06-04|Iceland|Estonia,,0
+2014-06-06|Japan|Zambia,,0
+2014-06-06|Mexico|Portugal,,0
+2014-06-06|Bolivia|Greece,,0
+2014-06-06|Brazil|Serbia,,0
+2014-06-06|Colombia|Jordan,,0
+2014-06-06|Costa Rica|Republic of Ireland,,0
+2014-06-06|Croatia|Australia,,0
+2014-06-06|Germany|Armenia,,0
+2014-06-06|Poland|Lithuania,,0
+2014-06-06|Russia|Morocco,,0
+2014-06-07|Honduras|England,,0
+2014-06-07|Belgium|Tunisia,,0
+2014-06-07|Cameroon|Moldova,,0
+2014-06-07|El Salvador|Spain,,0
+2014-06-07|Estonia|Tajikistan,,0
+2014-06-07|Argentina|Slovenia,,0
+2014-06-07|Hungary|Kazakhstan,,0
+2014-06-07|United States|Nigeria,,0
+2014-06-08|France|Jamaica,,0
+2014-06-08|Iran|Trinidad and Tobago,,0
+2014-06-08|San Marino|Albania,,0
+2014-06-09|Ghana|South Korea,,0
+2014-06-10|Republic of Ireland|Portugal,,0
+2015-11-13|Eswatini|Nigeria,,0
+2015-11-17|Myanmar|Kuwait,,0
+2015-11-17|Nigeria|Eswatini,,0
+2017-06-17|Curaçao|Nicaragua,,0
+2017-06-17|French Guiana|Barbados,,0
+2017-07-01|Gambia|Guinea-Bissau,,0
+2017-07-08|Guinea-Bissau|Gambia,,0
+2017-07-26|Ecuador|Trinidad and Tobago,,0
+2017-08-07|Rwanda|Sudan,,0
+2017-08-22|Malaysia|Syria,,0
+2017-08-23|Qatar|Turkmenistan,,0
+2017-08-29|Bahrain|Jordan,,0
+2017-08-29|Myanmar|Malaysia,,0
+2017-08-31|Kenya|Mauritania,,0
+2017-08-31|Abkhazia|Donetsk PR,,0
+2017-09-03|Equatorial Guinea|Benin,3544872,0
+2017-10-07|Grenada|Guyana,,0
+2017-10-07|Saudi Arabia|Jamaica,,0
+2017-10-09|Equatorial Guinea|Mauritius,3544873,0
+2017-10-10|South Korea|Morocco,,0
+2017-10-10|Saudi Arabia|Ghana,,0
+2017-11-08|Nicaragua|Dominican Republic,,0
+2017-11-09|Armenia|Belarus,2958723,0
+2017-11-09|Cambodia|Myanmar,3703818,0
+2017-11-11|Dominican Republic|Nicaragua,,0
+2017-11-11|Malawi|Lesotho,3548852,0
+2017-11-12|Benin|Tanzania,3541503,0
+2017-11-14|China|Colombia,,0
+2017-11-14|Trinidad and Tobago|Guyana,,0
+2017-12-01|Laos|Philippines,,0
+2017-12-02|Indonesia|Brunei,,0
+2017-12-02|Kyrgyzstan|Mongolia,,0
+2017-12-03|Taiwan|Philippines,,0
+2017-12-04|Indonesia|Mongolia,,0
+2017-12-04|Brunei|Kyrgyzstan,,0
+2017-12-05|Timor-Leste|Philippines,,0
+2017-12-06|Indonesia|Kyrgyzstan,,0
+2017-12-18|Bahrain|Kuwait,,0
+2017-12-25|Jordan|Libya,3575211,0
+2018-01-07|Estonia|Sweden,,0
+2018-01-11|Denmark|Sweden,,0
+2018-01-11|Indonesia|Iceland,,0
+2018-01-11|Jordan|Finland,,0
+2018-01-14|Indonesia|Iceland,,0
+2018-01-27|Moldova|South Korea,,0
+2018-01-28|United States|Bosnia and Herzegovina,,0
+2018-01-28|Yorkshire|Ellan Vannin,,0
+2018-01-30|Azerbaijan|Moldova,,0
+2018-01-30|Jamaica|South Korea,,0
+2018-01-31|Mexico|Bosnia and Herzegovina,,0
+2018-02-03|Latvia|South Korea,,0
+2018-02-26|Saudi Arabia|Moldova,,0
+2018-02-28|Iraq|Saudi Arabia,,0
+2018-03-17|Iran|Sierra Leone,,0
+2018-03-21|Madagascar|Togo,,0
+2018-03-21|Jordan|Kuwait,,0
+2018-03-21|Andorra|Liechtenstein,,0
+2018-03-21|Antigua and Barbuda|Bermuda,,0
+2018-03-21|Iraq|Qatar,,0
+2018-03-21|Tahiti|New Caledonia,,0
+2018-03-21|Zambia|Zimbabwe,,0
+2018-03-21|Laos|Cambodia,,0
+2018-03-21|South Africa|Angola,,0
+2018-03-22|Faroe Islands|Latvia,,0
+2018-03-22|Burkina Faso|Guinea-Bissau,,0
+2018-03-22|Denmark|Panama,,0
+2018-03-22|Bahrain|Palestine,,0
+2018-03-22|Algeria|Tanzania,,0
+2018-03-22|Belize|Grenada,,0
+2018-03-22|Dominican Republic|Turks and Caicos Islands,,0
+2018-03-22|China|Wales,,0
+2018-03-22|Nicaragua|Cuba,,0
+2018-03-22|Slovakia|United Arab Emirates,,0
+2018-03-22|Philippines|Fiji,,0
+2018-03-22|Macau|Mauritius,,0
+2018-03-22|Malta|Luxembourg,,0
+2018-03-22|Thailand|Gabon,,0
+2018-03-22|Malaysia|Mongolia,,0
+2018-03-23|Azerbaijan|Belarus,,0
+2018-03-23|Bulgaria|Bosnia and Herzegovina,,0
+2018-03-23|Cyprus|Montenegro,,0
+2018-03-23|Finland|North Macedonia,,0
+2018-03-23|France|Colombia,,0
+2018-03-23|Curaçao|Bolivia,,0
+2018-03-23|Hungary|Kazakhstan,,0
+2018-03-23|Greece|Switzerland,,0
+2018-03-23|Guadeloupe|Trinidad and Tobago,,0
+2018-03-23|Austria|Slovenia,,0
+2018-03-23|Italy|Argentina,,0
+2018-03-23|Gambia|Central African Republic,,0
+2018-03-23|Germany|Spain,,0
+2018-03-23|Japan|Mali,,0
+2018-03-23|Mexico|Iceland,,0
+2018-03-23|Netherlands|England,,0
+2018-03-23|Peru|Croatia,,0
+2018-03-23|Poland|Nigeria,,0
+2018-03-23|Portugal|Egypt,,0
+2018-03-23|Scotland|Costa Rica,,0
+2018-03-23|Senegal|Uzbekistan,,0
+2018-03-23|Turkey|Republic of Ireland,,0
+2018-03-23|Russia|Brazil,,0
+2018-03-23|Tunisia|Iran,,0
+2018-03-23|Norway|Australia,,0
+2018-03-23|Ukraine|Saudi Arabia,,0
+2018-03-23|Uruguay|Czechia,,0
+2018-03-23|Serbia|Morocco,,0
+2018-03-23|Singapore|Maldives,,0
+2018-03-24|Israel|Romania,,0
+2018-03-24|Angola|Zimbabwe,,0
+2018-03-24|Armenia|Estonia,,0
+2018-03-24|Botswana|Lesotho,,0
+2018-03-24|Canada|New Zealand,,0
+2018-03-24|Comoros|Kenya,,0
+2018-03-24|Côte d'Ivoire|Togo,,0
+2018-03-24|Northern Ireland|South Korea,,0
+2018-03-24|Georgia|Lithuania,,0
+2018-03-24|Qatar|Syria,,0
+2018-03-24|Sweden|Chile,,0
+2018-03-24|Tahiti|New Caledonia,,0
+2018-03-24|Uganda|São Tomé and Príncipe,,0
+2018-03-24|Zambia|South Africa,,0
+2018-03-24|Mauritania|Guinea,,0
+2018-03-24|Kosovo|Madagascar,,0
+2018-03-25|Jamaica|Antigua and Barbuda,,0
+2018-03-25|Barbados|Bermuda,,0
+2018-03-25|Dominican Republic|Saint Kitts and Nevis,,0
+2018-03-25|Gibraltar|Latvia,,0
+2018-03-25|Faroe Islands|Liechtenstein,,0
+2018-03-25|Nicaragua|Cuba,,0
+2018-03-25|Martinique|Trinidad and Tobago,,0
+2018-03-25|Thailand|Slovakia,,0
+2018-03-25|Yorkshire|Chagos Islands,,0
+2018-03-25|Kuwait|Cameroon,,0
+2018-03-26|Bulgaria|Kazakhstan,,0
+2018-03-26|Albania|Norway,,0
+2018-03-26|Wales|Uruguay,,0
+2018-03-26|China|Czechia,,0
+2018-03-26|Portugal|Netherlands,,0
+2018-03-26|Finland|Malta,,0
+2018-03-26|Curaçao|Bolivia,,0
+2018-03-27|Algeria|Iran,,0
+2018-03-27|Armenia|Lithuania,,0
+2018-03-27|Australia|Colombia,,0
+2018-03-27|Azerbaijan|North Macedonia,,0
+2018-03-27|Belgium|Saudi Arabia,,0
+2018-03-27|Bosnia and Herzegovina|Senegal,,0
+2018-03-27|Central African Republic|Kenya,,0
+2018-03-27|Denmark|Chile,,0
+2018-03-27|Luxembourg|Austria,,0
+2018-03-27|Germany|Brazil,,0
+2018-03-27|Greece|Egypt,,0
+2018-03-27|Hungary|Scotland,,0
+2018-03-27|Iraq|Syria,,0
+2018-03-27|Kosovo|Burkina Faso,,0
+2018-03-27|Laos|Bangladesh,,0
+2018-03-27|England|Italy,,0
+2018-03-27|Georgia|Estonia,,0
+2018-03-27|Mexico|Croatia,,0
+2018-03-27|Seychelles|Eswatini,,0
+2018-03-27|Moldova|Côte d'Ivoire,,0
+2018-03-27|Mongolia|Mauritius,,0
+2018-03-27|Montenegro|Turkey,,0
+2018-03-27|Morocco|Uzbekistan,,0
+2018-03-27|Namibia|Lesotho,,0
+2018-03-27|Peru|Iceland,,0
+2018-03-27|Poland|South Korea,,0
+2018-03-27|Romania|Sweden,,0
+2018-03-27|Russia|France,,0
+2018-03-27|Slovenia|Belarus,,0
+2018-03-27|Spain|Argentina,,0
+2018-03-27|Switzerland|Panama,,0
+2018-03-27|Tanzania|DR Congo,,0
+2018-03-27|Tunisia|Costa Rica,,0
+2018-03-27|Uganda|Malawi,,0
+2018-03-27|Ukraine|Japan,,0
+2018-03-27|United States|Paraguay,,0
+2018-03-27|Serbia|Nigeria,,0
+2018-04-01|Malaysia|Bhutan,,0
+2018-04-08|Barawa|Chagos Islands,,0
+2018-04-15|Barawa|Yorkshire,,0
+2018-04-18|Trinidad and Tobago|Panama,,0
+2018-04-18|Zimbabwe|Botswana,,0
+2018-04-26|Saint Kitts and Nevis|Jamaica,,0
+2018-04-29|Ellan Vannin|Panjab,,0
+2018-04-29|Saint Barthélemy|Saint Martin,,0
+2018-04-30|Antigua and Barbuda|Jamaica,,0
+2018-05-06|Barawa|Surrey,,0
+2018-05-08|Iraq|Palestine,,0
+2018-05-09|Algeria|Saudi Arabia,,0
+2018-05-11|Kuwait|Palestine,,0
+2018-05-15|Saudi Arabia|Greece,,0
+2018-05-19|Iran|Uzbekistan,,0
+2018-05-20|Jordan|Cyprus,,0
+2018-05-25|Kuwait|Egypt,,0
+2018-05-25|Kenya|Eswatini,,0
+2018-05-26|China|Myanmar,,0
+2018-05-26|Saint Barthélemy|Sint Maarten,,0
+2018-05-27|Cameroon|Burkina Faso,,0
+2018-05-27|Niger|Central African Republic,,0
+2018-05-28|France|Republic of Ireland,,0
+2018-05-28|Nigeria|DR Congo,,0
+2018-05-28|Kenya|Equatorial Guinea,,0
+2018-05-28|Portugal|Tunisia,,0
+2018-05-28|Italy|Saudi Arabia,,0
+2018-05-28|United States|Bolivia,,0
+2018-05-28|Mexico|Wales,,0
+2018-05-28|Turkey|Iran,,0
+2018-05-28|South Korea|Honduras,,0
+2018-05-28|Bosnia and Herzegovina|Montenegro,,0
+2018-05-29|Azerbaijan|Kyrgyzstan,,0
+2018-05-29|Argentina|Haiti,,0
+2018-05-29|Albania|Kosovo,,0
+2018-05-29|Armenia|Malta,,0
+2018-05-29|Panama|Northern Ireland,,0
+2018-05-29|Peru|Scotland,,0
+2018-05-30|Japan|Ghana,,0
+2018-05-30|Austria|Russia,,0
+2018-05-30|Central African Republic|Uganda,,0
+2018-05-31|Slovakia|Netherlands,,0
+2018-05-31|Ukraine|Morocco,,0
+2018-05-31|Romania|Chile,,0
+2018-05-31|Luxembourg|Senegal,,0
+2018-06-01|Turkey|Tunisia,,0
+2018-06-01|South Korea|Bosnia and Herzegovina,,0
+2018-06-01|France|Italy,,0
+2018-06-01|Czechia|Australia,,0
+2018-06-01|Algeria|Cabo Verde,,0
+2018-06-01|Colombia|Egypt,,0
+2018-06-01|Malta|Georgia,,0
+2018-06-02|El Salvador|Honduras,,0
+2018-06-02|Iceland|Norway,,0
+2018-06-02|England|Nigeria,,0
+2018-06-02|Montenegro|Slovenia,,0
+2018-06-02|Mexico|Scotland,,0
+2018-06-02|Sweden|Denmark,,0
+2018-06-02|Republic of Ireland|United States,,0
+2018-06-02|Belgium|Portugal,,0
+2018-06-02|Austria|Germany,,0
+2018-06-02|Niger|Uganda,,0
+2018-06-02|Thailand|China,,0
+2018-06-03|Barbados|Belize,,0
+2018-06-03|Costa Rica|Northern Ireland,,0
+2018-06-03|Croatia|Brazil,,0
+2018-06-03|Andorra|Cabo Verde,,0
+2018-06-03|Saudi Arabia|Peru,,0
+2018-06-03|Spain|Switzerland,,0
+2018-06-03|Albania|Ukraine,,0
+2018-06-04|Serbia|Chile,,0
+2018-06-04|Italy|Netherlands,,0
+2018-06-04|Slovakia|Morocco,,0
+2018-06-04|Armenia|Moldova,,0
+2018-06-05|Romania|Finland,,0
+2018-06-05|Luxembourg|Georgia,,0
+2018-06-05|Kazakhstan|Azerbaijan,,0
+2018-06-05|Martinique|French Guiana,,0
+2018-06-05|Russia|Turkey,,0
+2018-06-06|Czechia|Nigeria,,0
+2018-06-06|Norway|Panama,,0
+2018-06-06|Belgium|Egypt,,0
+2018-06-06|Belarus|Hungary,,0
+2018-06-07|England|Costa Rica,,0
+2018-06-07|Uruguay|Uzbekistan,,0
+2018-06-07|Portugal|Algeria,,0
+2018-06-07|South Korea|Bolivia,,0
+2018-06-07|Guadeloupe|French Guiana,,0
+2018-06-07|Iceland|Ghana,,0
+2018-06-08|Lithuania|Iran,,0
+2018-06-08|Germany|Saudi Arabia,,0
+2018-06-08|Croatia|Senegal,,0
+2018-06-08|Switzerland|Japan,,0
+2018-06-08|Poland|Chile,,0
+2018-06-09|Latvia|Azerbaijan,,0
+2018-06-09|Serbia|Bolivia,,0
+2018-06-09|Denmark|Mexico,,0
+2018-06-09|Sweden|Peru,,0
+2018-06-09|Tunisia|Spain,,0
+2018-06-09|Estonia|Morocco,,0
+2018-06-09|Finland|Belarus,,0
+2018-06-09|France|United States,,0
+2018-06-09|Hungary|Australia,,0
+2018-06-10|Austria|Brazil,,0
+2018-06-11|South Korea|Senegal,,0
+2018-06-11|Belgium|Costa Rica,,0
+2018-06-12|Japan|Paraguay,,0
+2018-06-12|Poland|Lithuania,,0
+2022-11-20|Qatar|Ecuador,3788834,22
+2022-11-21|England|Iran,3788836,22
+2022-11-21|United States|Wales,3788837,22
+2022-11-21|Senegal|Netherlands,3788835,22
+2022-11-22|Argentina|Saudi Arabia,3788838,22
+2022-11-22|Mexico|Poland,3788839,22
+2022-11-22|Denmark|Tunisia,3788841,22
+2022-11-22|France|Australia,3788840,22
+2022-11-23|Germany|Japan,3788843,22
+2022-11-23|Spain|Costa Rica,3788842,22
+2022-11-23|Morocco|Croatia,3788845,22
+2022-11-23|Belgium|Canada,3788844,22
+2022-11-24|Switzerland|Cameroon,3788847,22
+2022-11-24|Brazil|Serbia,3788846,22
+2022-11-24|Uruguay|South Korea,3788849,22
+2022-11-24|Portugal|Ghana,3788848,22
+2022-11-25|Qatar|Senegal,3788859,22
+2022-11-25|Netherlands|Ecuador,3788860,22
+2022-11-25|Wales|Iran,3788862,22
+2022-11-25|England|United States,3788861,22
+2022-11-26|Poland|Saudi Arabia,3788864,22
+2022-11-26|Argentina|Mexico,3788863,22
+2022-11-26|Tunisia|Australia,3788866,22
+2022-11-26|France|Denmark,3788865,22
+2022-11-27|Spain|Germany,3788867,22
+2022-11-27|Japan|Costa Rica,3788868,22
+2022-11-27|Croatia|Canada,3788870,22
+2022-11-27|Belgium|Morocco,3788869,22
+2022-11-28|Cameroon|Serbia,3788872,22
+2022-11-28|Brazil|Switzerland,3788871,22
+2022-11-28|South Korea|Ghana,3788874,22
+2022-11-28|Portugal|Uruguay,3788873,22
+2022-11-29|Ecuador|Senegal,3788884,22
+2022-11-29|Qatar|Netherlands,3788885,22
+2022-11-29|Wales|England,3788887,22
+2022-11-29|Iran|United States,3788886,22
+2022-11-30|Poland|Argentina,3788889,22
+2022-11-30|Saudi Arabia|Mexico,3788888,22
+2022-11-30|Australia|Denmark,3788890,22
+2022-11-30|Tunisia|France,3788891,22
+2022-12-01|Japan|Spain,3788893,22
+2022-12-01|Costa Rica|Germany,3788892,22
+2022-12-01|Croatia|Belgium,3788895,22
+2022-12-01|Canada|Morocco,3788894,22
+2022-12-02|Cameroon|Brazil,3788897,22
+2022-12-02|Ghana|Uruguay,3788898,22
+2022-12-02|Serbia|Switzerland,3788896,22
+2022-12-02|South Korea|Portugal,3788899,22
+2022-12-03|Netherlands|United States,3970160,22
+2022-12-03|Argentina|Australia,3970579,22
+2022-12-04|France|Poland,3970580,22
+2022-12-04|England|Senegal,3970161,22
+2022-12-05|Japan|Croatia,3970790,22
+2022-12-05|Brazil|South Korea,3970993,22
+2022-12-06|Morocco|Spain,3970791,22
+2022-12-06|Portugal|Switzerland,3970994,22
+2022-12-09|Croatia|Brazil,3972833,22
+2022-12-09|Netherlands|Argentina,3971598,22
+2022-12-10|Morocco|Portugal,3973427,22
+2022-12-10|England|France,3972029,22
+2022-12-13|Argentina|Croatia,3974501,22
+2022-12-14|France|Morocco,3974586,22
+2022-12-17|Croatia|Morocco,3975878,22
+2022-12-18|Argentina|France,3975879,22
+2021-12-08|Mexico|Chile,,0
+2021-12-09|Tanzania|Uganda,,0
+2021-12-18|United States|Bosnia and Herzegovina,,0
+2022-01-02|Gabon|Burkina Faso,,0
+2022-01-02|Sudan|Zimbabwe,,0
+2022-01-03|Rwanda|Guinea,,0
+2022-01-04|Mauritania|Gabon,,0
+2022-01-05|Algeria|Ghana,,0
+2022-01-06|Rwanda|Guinea,,0
+2022-01-12|Iceland|Uganda,,0
+2022-01-15|South Korea|Iceland,,0
+2022-01-16|Colombia|Honduras,,0
+2022-01-16|Peru|Panama,,0
+2022-01-18|Moldova|Uganda,,0
+2022-01-20|South Korea|Moldova,,0
+2022-01-20|Peru|Jamaica,,0
+2022-01-21|Bolivia|Trinidad and Tobago,,0
+2022-01-21|Iraq|Uganda,,0
+2022-01-27|Indonesia|Timor-Leste,,0
+2022-01-27|Bahrain|Uganda,,0
+2022-01-27|Uzbekistan|South Sudan,,0
+2022-01-28|Jordan|New Zealand,,0
+2022-01-28|Suriname|Barbados,,0
+2022-01-29|Nepal|Mauritius,,0
+2022-01-29|Kuwait|Libya,,0
+2022-01-29|Nicaragua|Belize,,0
+2022-01-30|Indonesia|Timor-Leste,,0
+2022-02-01|Suriname|Guyana,,0
+2022-02-01|Nicaragua|Belize,,0
+2022-02-01|Kuwait|Libya,,0
+2022-02-01|Nepal|Mauritius,,0
+2022-02-01|Bahrain|DR Congo,,0
+2022-03-18|Iraq|Zambia,,0
+2022-03-19|Mauritius|Seychelles,,0
+2022-03-23|Malaysia|Philippines,,0
+2022-03-23|Bahrain|India,,0
+2022-03-23|Gibraltar|Grenada,,0
+2022-03-23|Guinea-Bissau|Equatorial Guinea,,0
+2022-03-23|Laos|Mongolia,,0
+2022-03-23|Guadeloupe|Cabo Verde,,0
+2022-03-23|Mozambique|Niger,,0
+2022-03-23|Tanzania|Central African Republic,,0
+2022-03-24|Togo|Sierra Leone,,0
+2022-03-24|Liberia|Benin,,0
+2022-03-24|Hungary|Serbia,,0
+2022-03-24|Armenia|Montenegro,,0
+2022-03-24|Guatemala|Cuba,,0
+2022-03-24|Kosovo|Burkina Faso,,0
+2022-03-24|Maldives|Bangladesh,,0
+2022-03-24|Scotland|Poland,,0
+2022-03-24|Thailand|Nepal,,0
+2022-03-25|Congo|Zambia,,0
+2022-03-25|Bosnia and Herzegovina|Georgia,,0
+2022-03-25|Andorra|Saint Kitts and Nevis,,0
+2022-03-25|Cabo Verde|Liechtenstein,,0
+2022-03-25|Latvia|Kuwait,,0
+2022-03-25|Comoros|Ethiopia,,0
+2022-03-25|San Marino|Lithuania,,0
+2022-03-25|France|Côte d'Ivoire,,0
+2022-03-25|Malta|Azerbaijan,,0
+2022-03-25|Norway|Slovakia,,0
+2022-03-25|Romania|Greece,,0
+2022-03-25|Luxembourg|Northern Ireland,,0
+2022-03-25|South Africa|Guinea,,0
+2022-03-25|Trinidad and Tobago|Barbados,,0
+2022-03-26|Finland|Iceland,,0
+2022-03-26|Germany|Israel,,0
+2022-03-26|Angola|Guinea-Bissau,,0
+2022-03-26|Bahrain|Burundi,,0
+2022-03-26|Belarus|India,,0
+2022-03-26|Croatia|Slovenia,,0
+2022-03-26|England|Switzerland,,0
+2022-03-26|Central African Republic|Sudan,,0
+2022-03-26|Republic of Ireland|Belgium,,0
+2022-03-26|Mauritania|Mozambique,,0
+2022-03-26|Netherlands|Denmark,,0
+2022-03-26|Qatar|Bulgaria,,0
+2022-03-26|Singapore|Malaysia,,0
+2022-03-26|Spain|Albania,,0
+2022-03-26|Libya|Niger,,0
+2022-03-26|Gibraltar|Faroe Islands,,0
+2022-03-27|Barbados|Guyana,,0
+2022-03-27|Benin|Zambia,,0
+2022-03-27|Belize|Cuba,,0
+2022-03-27|Guatemala|Haiti,,0
+2022-03-27|Liberia|Sierra Leone,,0
+2022-03-27|Thailand|Suriname,,0
+2022-03-27|Laos|Brunei,,0
+2022-03-28|Andorra|Grenada,,0
+2022-03-28|Cabo Verde|San Marino,,0
+2022-03-28|Montenegro|Greece,,0
+2022-03-28|Vanuatu|Fiji,,0
+2022-03-29|Belgium|Burkina Faso,,0
+2022-03-29|Congo|Sierra Leone,,0
+2022-03-29|Bangladesh|Mongolia,,0
+2022-03-29|Bahrain|Belarus,,0
+2022-03-29|Azerbaijan|Latvia,,0
+2022-03-29|Austria|Scotland,,0
+2022-03-29|Israel|Romania,,0
+2022-03-29|Angola|Equatorial Guinea,,0
+2022-03-29|Albania|Georgia,,0
+2022-03-29|Bosnia and Herzegovina|Luxembourg,,0
+2022-03-29|Croatia|Bulgaria,,0
+2022-03-29|Mauritania|Libya,,0
+2022-03-29|Northern Ireland|Hungary,,0
+2022-03-29|Netherlands|Germany,,0
+2022-03-29|Malta|Kuwait,,0
+2022-03-29|Finland|Slovakia,,0
+2022-03-29|France|South Africa,,0
+2022-03-29|Qatar|Slovenia,,0
+2022-03-29|Faroe Islands|Liechtenstein,,0
+2022-03-29|England|Côte d'Ivoire,,0
+2022-03-29|Liberia|Burundi,,0
+2022-03-29|Republic of Ireland|Lithuania,,0
+2022-03-29|Switzerland|Kosovo,,0
+2022-03-29|Spain|Iceland,,0
+2022-03-29|Norway|Armenia,,0
+2022-03-29|Tanzania|Sudan,,0
+2022-03-29|Denmark|Serbia,,0
+2022-03-29|Singapore|Philippines,,0
+2022-03-29|Wales|Czechia,,0
+2022-03-29|Turkey|Italy,,0
+2022-03-29|Trinidad and Tobago|Guyana,,0
+2022-03-29|Togo|Benin,,0
+2022-04-22|Elba Island|Vatican City,,0
+2022-04-24|El Salvador|Guatemala,,0
+2022-04-27|Mexico|Guatemala,,0
+2022-05-12|Bahamas|Turks and Caicos Islands,,0
+2022-05-12|Dominica|Saint Vincent and the Grenadines,,0
+2022-05-14|Bahamas|Turks and Caicos Islands,,0
+2022-05-15|Dominica|Saint Vincent and the Grenadines,,0
+2022-05-24|Mozambique|Eswatini,,0
+2022-05-24|Thailand|Bahrain,,0
+2022-05-27|Bahrain|Myanmar,,0
+2022-05-27|Malaysia|Brunei,,0
+2022-05-27|Thailand|Turkmenistan,,0
+2022-05-28|Ethiopia|Lesotho,,0
+2022-05-28|India|Jordan,,0
+2022-05-28|Mexico|Nigeria,,0
+2022-05-29|United Arab Emirates|Gambia,,0
+2022-05-30|Ethiopia|Lesotho,,0
+2022-05-30|Trinidad and Tobago|Saint Lucia,,0
+2022-05-31|Thailand|Bahrain,,0
+2022-06-01|Australia|Jordan,,0
+2022-06-01|Indonesia|Bangladesh,,0
+2022-06-01|Malta|Venezuela,,0
+2022-06-01|Malaysia|Hong Kong,,0
+2022-06-01|Syria|Tajikistan,,0
+2022-06-01|United States|Morocco,,0
+2022-06-01|Vietnam|Afghanistan,,0
+2022-06-01|Kuwait|Singapore,,0
+2022-06-02|Japan|Paraguay,,0
+2022-06-02|Cambodia|Timor-Leste,,0
+2022-06-02|Mexico|Uruguay,,0
+2022-06-02|Ecuador|Nigeria,,0
+2022-06-02|South Korea|Brazil,,0
+2022-06-03|Nepal|Oman,,0
+2022-06-05|Argentina|Estonia,,0
+2022-06-05|United States|Uruguay,,0
+2022-06-05|Mexico|Ecuador,,0
+2022-06-05|Peru|New Zealand,,0
+2022-06-05|Saudi Arabia|Colombia,,0
+2022-06-06|South Korea|Chile,,0
+2022-06-06|Japan|Brazil,,0
+2022-06-09|Saudi Arabia|Venezuela,,0
+2022-06-09|New Zealand|Oman,,0
+2022-06-09|San Marino|Iceland,,0
+2022-06-10|South Korea|Paraguay,,0
+2022-06-11|Uruguay|Panama,,0
+2022-06-11|Ecuador|Cabo Verde,,0
+2022-06-12|Iran|Algeria,,0
+2022-06-13|Albania|Estonia,,0
+2022-06-14|South Korea|Egypt,,0
+2022-07-16|Elba Island|Raetia,,0
+2022-08-07|Raetia|Tibet,,0
+2022-09-24|Tanzania|Uganda,,0
+2022-09-27|DR Congo|Sierra Leone,,0
+2022-10-23|Qatar|Guatemala,,0
+2022-10-26|Saudi Arabia|Albania,,0
+2022-10-27|Qatar|Honduras,,0
+2022-10-30|Saudi Arabia|Honduras,,0
+2022-11-07|Qatar|Panama,,0
+2022-11-13|Syria|Algeria,,0
+2022-11-13|West Papua|Raetia,,0
+2022-11-16|Kosovo|Armenia,,0
+2022-11-17|Niger|Libya,3966446,0
+2022-11-17|Japan|Canada,,0
+2022-11-17|Rwanda|Sudan,3966018,0
+2022-11-18|Dominican Republic|Cuba,,0
+2022-11-19|Gibraltar|Andorra,,0
+2022-11-19|Rwanda|Sudan,3966939,0

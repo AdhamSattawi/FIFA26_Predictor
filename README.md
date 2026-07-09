@@ -174,14 +174,14 @@ python src/ensemble_2026.py
 
 ## 📈 Model Comparison
 
-| Model | Accuracy | Log Loss | F1-Draw | Macro F1 |
-|---|---|---|---|---|
-| **XGBoost Baseline** | **60.10%** | **0.8543** | 0.2759 | **0.5414** |
-| **Attention CNN** | 51.66% | 0.9705 | 0.3307 | 0.5070 |
-| **Baseline MLP** | 49.95% | 0.9863 | **0.3672** | 0.4721 |
-| **Tactical CNN** | 49.75% | 0.9552 | 0.3413 | 0.4981 |
+| Model | Accuracy | Log Loss | F1-Home | F1-Draw | F1-Away | Macro F1 |
+|---|---|---|---|---|---|---|
+| **XGBoost Baseline** | **60.10%** | **0.8543** | **0.7290** | 0.2759 | 0.6195 | **0.5414** |
+| **Tactical CNN** | 49.80% | 0.9572 | 0.5211 | 0.3563 | 0.6387 | 0.5054 |
+| **Attention CNN** | 43.27% | 0.9998 | 0.3391 | 0.3569 | 0.6310 | 0.4423 |
+| **Baseline MLP** | 43.72% | 0.9843 | 0.3997 | **0.3598** | 0.6004 | 0.4533 |
 
-*(Evaluated on unbiased 2022 World Cup cycle test split. Neural network performance is context-dominated due to current 0.3% player matrix coverage; expected to rise significantly once the full-coverage lineup scraping concludes.)*
+*(Evaluated on unbiased 2022 World Cup cycle test split. Player matrix coverage has been increased to 31.3% (1,852 matches). Neural network performance will reach its peak once the remaining player stats are scraped to replace the current zero-filled stats.)*
 
 
 ---

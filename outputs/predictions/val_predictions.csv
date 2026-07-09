@@ -1,0 +1,1991 @@
+true_result,baseline_mlp_pred,baseline_mlp_home%,baseline_mlp_draw%,baseline_mlp_away%,tactical_cnn_pred,tactical_cnn_home%,tactical_cnn_draw%,tactical_cnn_away%,attention_cnn_pred,attention_cnn_home%,attention_cnn_draw%,attention_cnn_away%
+Home Win,Away Win,40.6,11.2,48.2,Home Win,50.4,12.5,37.0,Away Win,36.0,18.9,45.1
+Away Win,Away Win,16.0,9.7,74.3,Away Win,26.4,12.7,60.9,Away Win,6.7,16.9,76.4
+Away Win,Home Win,46.1,16.3,37.6,Away Win,40.2,14.4,45.4,Away Win,20.5,26.1,53.3
+Draw,Away Win,30.2,31.5,38.3,Away Win,22.9,27.0,50.0,Away Win,14.0,30.7,55.2
+Away Win,Home Win,44.0,36.9,19.1,Home Win,53.3,32.5,14.2,Draw,26.2,44.5,29.3
+Home Win,Home Win,52.8,26.7,20.5,Home Win,49.5,28.1,22.4,Draw,33.8,35.9,30.4
+Home Win,Home Win,57.4,16.2,26.3,Home Win,52.9,14.7,32.3,Home Win,43.8,23.4,32.9
+Draw,Home Win,65.7,13.5,20.8,Home Win,58.9,13.4,27.6,Home Win,64.1,17.4,18.5
+Away Win,Away Win,33.8,13.8,52.4,Away Win,36.2,14.2,49.7,Away Win,22.0,20.2,57.8
+Away Win,Home Win,52.3,26.3,21.5,Home Win,58.5,22.1,19.4,Home Win,36.6,35.0,28.4
+Draw,Home Win,62.5,29.5,8.0,Home Win,74.1,22.4,3.5,Home Win,54.9,38.2,6.9
+Home Win,Home Win,40.6,31.0,28.4,Home Win,45.5,28.2,26.3,Draw,29.9,38.6,31.5
+Home Win,Home Win,71.7,18.5,9.8,Home Win,83.1,11.6,5.3,Home Win,68.1,25.1,6.8
+Away Win,Away Win,15.3,29.9,54.8,Away Win,15.1,24.9,60.0,Away Win,5.4,27.6,67.0
+Away Win,Home Win,52.6,27.6,19.7,Home Win,50.2,26.7,23.1,Draw,34.0,35.4,30.6
+Away Win,Away Win,33.7,31.3,35.0,Home Win,46.7,25.8,27.5,Away Win,30.1,34.8,35.1
+Home Win,Home Win,67.5,17.4,15.1,Home Win,66.7,19.3,14.0,Home Win,44.2,32.2,23.6
+Home Win,Home Win,57.1,26.3,16.6,Home Win,60.3,25.3,14.4,Away Win,33.2,32.7,34.0
+Home Win,Home Win,76.7,16.3,7.0,Home Win,83.5,12.8,3.8,Home Win,64.0,28.1,7.9
+Away Win,Away Win,24.7,26.4,48.9,Away Win,16.5,22.2,61.3,Away Win,10.9,27.6,61.5
+Draw,Home Win,43.2,35.4,21.4,Home Win,53.1,31.1,15.8,Home Win,41.5,40.4,18.2
+Home Win,Home Win,42.1,32.8,25.1,Home Win,42.1,33.8,24.1,Draw,27.3,39.4,33.3
+Away Win,Home Win,44.2,31.3,24.5,Home Win,47.1,30.6,22.2,Draw,35.3,37.6,27.1
+Home Win,Home Win,75.3,19.1,5.6,Home Win,84.9,12.6,2.5,Home Win,68.3,27.2,4.5
+Home Win,Away Win,37.1,25.7,37.2,Away Win,31.6,23.1,45.3,Away Win,24.5,27.1,48.4
+Away Win,Away Win,25.1,29.9,45.0,Away Win,26.4,29.3,44.3,Away Win,12.5,33.8,53.7
+Home Win,Home Win,78.4,16.8,4.9,Home Win,82.7,13.2,4.1,Home Win,66.3,26.8,7.0
+Away Win,Away Win,17.6,34.6,47.8,Away Win,19.8,29.8,50.4,Away Win,11.6,37.9,50.5
+Home Win,Home Win,62.7,22.3,15.0,Home Win,59.1,20.3,20.6,Home Win,38.6,35.8,25.6
+Home Win,Home Win,77.8,16.5,5.7,Home Win,81.9,14.5,3.6,Home Win,65.6,28.4,6.0
+Draw,Away Win,29.3,32.9,37.8,Away Win,30.6,31.6,37.8,Away Win,19.3,34.8,45.9
+Away Win,Away Win,26.8,28.1,45.0,Away Win,26.2,25.9,47.9,Away Win,18.7,30.2,51.1
+Home Win,Away Win,18.8,22.0,59.2,Away Win,18.9,21.1,60.0,Away Win,15.3,29.1,55.6
+Away Win,Away Win,29.4,31.5,39.1,Away Win,33.4,30.3,36.2,Away Win,16.3,37.9,45.7
+Draw,Away Win,26.4,30.5,43.1,Away Win,20.5,28.6,50.9,Away Win,12.8,33.0,54.3
+Draw,Home Win,74.4,19.0,6.6,Home Win,81.3,13.3,5.4,Home Win,61.4,28.0,10.6
+Away Win,Away Win,25.8,35.6,38.6,Away Win,29.2,27.9,43.0,Away Win,13.7,35.1,51.2
+Draw,Away Win,30.5,33.9,35.6,Away Win,21.2,25.8,53.1,Away Win,11.2,33.0,55.9
+Away Win,Away Win,16.3,24.2,59.5,Away Win,16.1,22.8,61.1,Away Win,8.6,28.6,62.8
+Away Win,Away Win,14.6,26.1,59.3,Away Win,15.9,23.0,61.1,Away Win,10.7,29.3,60.1
+Home Win,Away Win,11.0,20.2,68.7,Away Win,10.2,17.5,72.3,Away Win,6.2,24.1,69.8
+Away Win,Home Win,50.3,30.9,18.9,Home Win,57.3,29.2,13.5,Draw,32.0,44.0,24.0
+Away Win,Away Win,10.9,22.3,66.8,Away Win,9.2,18.0,72.8,Away Win,3.2,23.4,73.4
+Draw,Home Win,58.3,25.8,15.8,Home Win,68.4,20.9,10.7,Home Win,47.6,36.0,16.4
+Away Win,Away Win,36.5,24.3,39.2,Away Win,35.5,21.6,42.9,Away Win,22.7,29.5,47.8
+Away Win,Draw,27.7,37.0,35.2,Away Win,26.0,33.5,40.5,Away Win,15.2,35.1,49.7
+Away Win,Away Win,25.7,22.9,51.3,Away Win,20.1,19.6,60.3,Away Win,17.7,27.7,54.7
+Away Win,Home Win,47.5,31.4,21.1,Home Win,43.4,29.2,27.4,Draw,30.1,40.6,29.3
+Home Win,Home Win,51.8,30.4,17.8,Home Win,49.9,31.4,18.7,Draw,27.3,36.9,35.7
+Home Win,Home Win,45.2,33.6,21.2,Home Win,58.3,29.6,12.2,Draw,36.6,42.8,20.6
+Draw,Away Win,23.5,28.8,47.6,Away Win,21.7,23.9,54.4,Away Win,10.8,31.1,58.1
+Draw,Home Win,38.0,32.6,29.3,Home Win,47.4,32.9,19.7,Draw,29.1,44.8,26.2
+Home Win,Home Win,66.5,25.8,7.8,Home Win,76.1,20.0,3.9,Home Win,54.4,38.3,7.4
+Home Win,Home Win,63.5,22.7,13.8,Home Win,74.6,17.4,8.0,Home Win,58.5,32.0,9.5
+Home Win,Home Win,40.3,34.3,25.3,Home Win,46.9,31.8,21.3,Draw,23.4,39.7,37.0
+Draw,Away Win,29.1,35.2,35.7,Away Win,29.4,31.9,38.7,Away Win,11.2,33.9,54.9
+Away Win,Home Win,43.9,32.3,23.9,Home Win,48.0,30.6,21.5,Draw,31.1,40.8,28.2
+Away Win,Home Win,62.6,26.2,11.2,Home Win,64.0,24.0,12.0,Home Win,43.7,40.1,16.3
+Away Win,Away Win,32.8,32.5,34.7,Draw,33.3,35.9,30.8,Away Win,18.4,40.5,41.2
+Draw,Away Win,35.1,28.4,36.4,Home Win,37.0,27.8,35.2,Away Win,19.4,35.4,45.2
+Home Win,Home Win,44.5,28.2,27.3,Home Win,40.2,26.6,33.2,Draw,25.7,37.4,36.9
+Home Win,Away Win,28.2,32.0,39.8,Away Win,24.4,29.8,45.9,Away Win,11.0,33.1,55.9
+Home Win,Home Win,40.6,28.5,30.9,Away Win,34.7,30.5,34.8,Away Win,23.7,35.2,41.2
+Home Win,Home Win,65.1,25.2,9.7,Home Win,66.5,25.1,8.4,Home Win,52.8,35.4,11.8
+Home Win,Home Win,47.6,22.6,29.8,Home Win,43.0,19.2,37.7,Home Win,37.1,30.9,32.0
+Home Win,Home Win,64.6,18.7,16.7,Home Win,54.4,27.5,18.1,Home Win,41.6,35.4,23.0
+Draw,Away Win,21.5,31.0,47.5,Away Win,25.9,28.4,45.7,Away Win,13.9,31.1,55.0
+Home Win,Home Win,52.2,32.6,15.2,Home Win,42.5,32.9,24.6,Home Win,42.9,38.4,18.7
+Away Win,Home Win,69.3,18.3,12.4,Home Win,64.8,21.0,14.1,Home Win,49.1,31.8,19.1
+Away Win,Away Win,8.5,9.0,82.5,Away Win,8.3,15.4,76.3,Away Win,7.3,26.7,66.0
+Draw,Home Win,63.3,26.0,10.6,Home Win,63.7,27.8,8.5,Home Win,49.5,38.0,12.5
+Home Win,Home Win,61.1,21.1,17.9,Home Win,52.9,27.2,19.9,Home Win,38.2,36.6,25.2
+Home Win,Home Win,45.7,17.1,37.2,Home Win,52.8,15.4,31.9,Home Win,42.1,27.6,30.4
+Draw,Away Win,19.7,27.7,52.6,Away Win,15.8,23.2,61.0,Away Win,12.3,35.2,52.6
+Draw,Away Win,11.8,20.0,68.2,Away Win,12.2,19.5,68.3,Away Win,6.8,26.5,66.7
+Draw,Home Win,66.7,24.6,8.8,Home Win,76.2,15.8,8.0,Home Win,51.7,35.0,13.3
+Draw,Home Win,61.9,22.3,15.7,Home Win,60.4,25.2,14.4,Home Win,50.0,32.3,17.7
+Home Win,Home Win,69.6,16.2,14.2,Home Win,73.2,16.2,10.6,Home Win,63.2,26.9,10.0
+Draw,Away Win,32.0,32.9,35.1,Away Win,30.5,29.4,40.0,Away Win,18.2,39.4,42.4
+Draw,Home Win,66.0,22.7,11.3,Home Win,64.8,23.6,11.6,Home Win,49.2,36.1,14.7
+Home Win,Away Win,22.7,32.6,44.7,Away Win,27.8,30.2,41.9,Away Win,15.8,39.7,44.5
+Away Win,Away Win,38.1,19.3,42.6,Home Win,45.2,16.7,38.0,Home Win,37.1,29.8,33.1
+Away Win,Away Win,10.5,11.5,78.0,Away Win,15.0,19.4,65.5,Away Win,5.3,23.2,71.5
+Home Win,Home Win,79.5,16.1,4.4,Home Win,84.8,12.4,2.8,Home Win,64.9,28.6,6.5
+Home Win,Home Win,76.5,15.4,8.1,Home Win,85.6,10.1,4.3,Home Win,69.0,22.6,8.4
+Home Win,Away Win,23.8,33.0,43.2,Away Win,23.0,30.8,46.2,Away Win,14.8,37.2,47.9
+Away Win,Away Win,8.3,13.0,78.7,Away Win,9.3,15.6,75.1,Away Win,4.6,22.5,72.9
+Away Win,Away Win,20.0,28.7,51.3,Away Win,22.2,29.3,48.5,Away Win,11.7,32.9,55.3
+Draw,Home Win,46.8,23.7,29.5,Home Win,40.4,25.5,34.1,Away Win,22.0,34.5,43.6
+Draw,Home Win,40.0,27.9,32.1,Home Win,42.4,26.9,30.7,Draw,30.9,36.4,32.8
+Draw,Home Win,44.3,31.5,24.2,Home Win,52.3,26.3,21.4,Draw,30.6,40.2,29.2
+Draw,Away Win,17.1,32.0,50.9,Away Win,18.4,26.3,55.3,Away Win,7.9,32.8,59.3
+Home Win,Away Win,17.1,20.9,62.0,Away Win,17.5,25.0,57.5,Away Win,10.8,28.0,61.2
+Home Win,Home Win,69.8,18.1,12.1,Home Win,63.3,22.9,13.8,Home Win,53.0,31.2,15.7
+Away Win,Away Win,14.0,22.0,64.0,Away Win,19.5,19.7,60.8,Away Win,8.1,28.5,63.4
+Away Win,Away Win,2.0,3.7,94.3,Away Win,4.8,7.7,87.6,Away Win,1.8,12.5,85.7
+Home Win,Home Win,77.2,14.5,8.3,Home Win,81.2,14.5,4.3,Home Win,78.6,18.2,3.1
+Home Win,Home Win,47.2,31.0,21.8,Home Win,54.5,27.3,18.2,Draw,34.8,41.8,23.5
+Away Win,Away Win,13.8,23.3,63.0,Away Win,11.0,16.3,72.7,Away Win,9.2,29.3,61.6
+Away Win,Away Win,12.5,12.7,74.8,Away Win,15.5,17.5,67.0,Away Win,7.6,24.3,68.1
+Draw,Away Win,18.6,23.0,58.3,Away Win,15.4,17.7,66.9,Away Win,12.1,28.2,59.6
+Home Win,Home Win,73.8,15.0,11.2,Home Win,74.6,14.5,10.9,Home Win,59.7,23.5,16.8
+Home Win,Home Win,73.3,15.8,10.9,Home Win,68.3,18.2,13.5,Home Win,51.4,28.3,20.3
+Home Win,Home Win,74.4,14.5,11.1,Home Win,72.2,17.9,9.9,Home Win,57.8,28.2,14.0
+Away Win,Away Win,8.0,8.2,83.8,Away Win,12.1,8.9,79.0,Away Win,9.4,18.7,71.9
+Draw,Home Win,35.6,31.7,32.8,Away Win,35.1,29.3,35.6,Away Win,18.6,39.8,41.6
+Home Win,Home Win,74.0,17.9,8.2,Home Win,78.7,15.6,5.8,Home Win,62.8,28.2,9.0
+Away Win,Home Win,78.4,13.2,8.3,Home Win,82.3,11.3,6.5,Home Win,61.4,25.4,13.2
+Home Win,Home Win,70.6,13.0,16.4,Home Win,76.3,13.2,10.5,Home Win,54.5,26.3,19.2
+Home Win,Home Win,77.3,16.0,6.7,Home Win,80.8,14.0,5.2,Home Win,60.6,30.1,9.3
+Draw,Home Win,62.5,25.1,12.4,Home Win,73.1,19.3,7.6,Home Win,49.9,35.7,14.4
+Home Win,Home Win,77.5,15.1,7.4,Home Win,90.4,7.2,2.4,Home Win,75.5,19.3,5.2
+Home Win,Home Win,82.5,12.2,5.3,Home Win,86.1,9.8,4.0,Home Win,70.3,21.9,7.8
+Home Win,Home Win,81.4,12.3,6.3,Home Win,90.8,6.8,2.4,Home Win,77.5,18.4,4.1
+Home Win,Home Win,62.4,22.4,15.2,Home Win,60.2,23.0,16.8,Home Win,40.3,33.7,26.0
+Away Win,Away Win,2.4,2.1,95.5,Away Win,3.9,4.8,91.3,Away Win,1.7,10.2,88.1
+Draw,Home Win,75.0,19.3,5.7,Home Win,84.6,12.2,3.3,Home Win,63.5,28.5,8.0
+Home Win,Home Win,52.2,30.4,17.5,Home Win,53.0,31.5,15.4,Home Win,41.7,40.3,18.0
+Home Win,Home Win,80.5,9.4,10.1,Home Win,75.7,11.0,13.3,Home Win,60.6,22.3,17.1
+Away Win,Away Win,20.3,18.2,61.6,Away Win,27.6,20.9,51.5,Away Win,18.1,31.3,50.6
+Home Win,Home Win,71.5,17.9,10.6,Home Win,74.5,15.6,9.9,Home Win,50.2,29.6,20.2
+Home Win,Home Win,62.3,21.5,16.2,Home Win,66.5,19.4,14.1,Home Win,54.9,28.1,17.0
+Away Win,Away Win,24.1,20.5,55.4,Away Win,37.2,16.6,46.1,Away Win,28.0,31.3,40.7
+Home Win,Home Win,85.9,7.5,6.6,Home Win,92.5,5.8,1.7,Home Win,80.2,16.6,3.2
+Away Win,Home Win,54.3,24.2,21.5,Home Win,50.8,28.2,21.0,Draw,32.0,41.6,26.3
+Home Win,Home Win,69.5,22.2,8.2,Home Win,80.5,14.1,5.4,Home Win,59.1,30.7,10.2
+Home Win,Home Win,72.2,20.3,7.5,Home Win,77.0,17.1,5.8,Home Win,59.6,32.3,8.1
+Away Win,Away Win,8.8,7.8,83.5,Away Win,11.9,11.9,76.1,Away Win,8.1,22.3,69.6
+Home Win,Home Win,89.5,5.6,4.9,Home Win,94.0,3.8,2.2,Home Win,86.1,10.5,3.4
+Home Win,Home Win,76.5,15.2,8.3,Home Win,78.5,14.3,7.1,Home Win,58.0,29.7,12.3
+Home Win,Home Win,89.3,8.7,2.0,Home Win,95.3,4.1,0.6,Home Win,84.7,13.2,2.1
+Home Win,Home Win,87.8,8.7,3.6,Home Win,90.9,6.9,2.2,Home Win,79.3,16.3,4.4
+Home Win,Home Win,82.0,12.6,5.4,Home Win,87.7,9.5,2.8,Home Win,76.2,19.0,4.9
+Home Win,Home Win,68.0,21.9,10.1,Home Win,72.4,19.8,7.8,Home Win,56.6,33.0,10.4
+Away Win,Home Win,56.3,24.2,19.5,Home Win,57.1,25.3,17.7,Home Win,40.6,34.2,25.2
+Away Win,Away Win,17.0,28.4,54.6,Away Win,21.5,30.6,47.9,Away Win,12.3,35.2,52.5
+Home Win,Home Win,89.3,8.2,2.5,Home Win,95.4,3.9,0.7,Home Win,85.2,12.7,2.1
+Away Win,Home Win,65.9,19.9,14.2,Home Win,61.3,22.5,16.2,Home Win,42.9,31.6,25.5
+Away Win,Away Win,11.0,10.6,78.4,Away Win,17.0,14.1,68.9,Away Win,9.1,21.6,69.4
+Home Win,Home Win,67.6,24.1,8.2,Home Win,74.6,19.1,6.3,Home Win,55.4,34.1,10.5
+Away Win,Away Win,5.1,5.0,89.9,Away Win,8.2,7.7,84.1,Away Win,3.6,13.5,82.9
+Home Win,Away Win,24.1,19.7,56.2,Away Win,35.7,19.9,44.4,Away Win,15.5,27.7,56.8
+Home Win,Home Win,83.1,7.7,9.2,Home Win,89.6,6.1,4.3,Home Win,78.0,15.1,6.9
+Home Win,Away Win,28.5,26.7,44.8,Away Win,27.2,24.5,48.3,Away Win,12.2,33.5,54.3
+Home Win,Home Win,67.3,19.3,13.4,Home Win,58.9,24.2,16.9,Home Win,43.2,32.7,24.1
+Home Win,Home Win,54.7,24.4,21.0,Home Win,66.9,21.9,11.1,Home Win,50.8,35.1,14.1
+Home Win,Home Win,44.1,25.6,30.3,Home Win,50.5,22.4,27.1,Home Win,35.3,33.9,30.8
+Away Win,Away Win,9.9,13.1,77.0,Away Win,8.1,12.0,79.9,Away Win,5.4,22.8,71.8
+Home Win,Home Win,39.5,31.2,29.3,Home Win,49.1,28.9,22.0,Draw,22.2,41.1,36.7
+Draw,Away Win,13.3,14.9,71.8,Away Win,13.9,16.6,69.5,Away Win,8.0,25.0,67.0
+Home Win,Home Win,49.6,21.2,29.2,Home Win,39.8,21.6,38.6,Away Win,26.2,30.3,43.4
+Draw,Away Win,6.5,8.1,85.5,Away Win,7.8,11.6,80.6,Away Win,2.7,17.1,80.2
+Home Win,Away Win,29.8,29.5,40.7,Away Win,30.3,27.1,42.6,Away Win,17.5,35.5,47.0
+Away Win,Draw,26.4,37.2,36.4,Away Win,29.2,32.5,38.3,Away Win,14.9,40.7,44.5
+Home Win,Home Win,94.5,3.7,1.8,Home Win,97.8,1.9,0.3,Home Win,93.7,5.6,0.6
+Draw,Draw,29.5,37.9,32.6,Away Win,36.2,25.5,38.3,Away Win,15.2,36.8,47.9
+Home Win,Home Win,88.0,9.8,2.2,Home Win,92.9,5.9,1.2,Home Win,77.4,18.6,4.0
+Away Win,Away Win,12.1,17.8,70.1,Away Win,9.1,12.7,78.2,Away Win,6.8,21.8,71.3
+Away Win,Away Win,12.7,15.7,71.6,Away Win,12.1,18.7,69.2,Away Win,5.5,24.9,69.6
+Draw,Away Win,8.7,17.5,73.9,Away Win,7.8,15.7,76.5,Away Win,4.2,24.7,71.1
+Away Win,Away Win,13.6,19.2,67.2,Away Win,22.8,21.6,55.6,Away Win,10.4,32.9,56.8
+Away Win,Home Win,35.9,34.8,29.2,Home Win,48.2,27.6,24.1,Draw,24.2,40.2,35.6
+Away Win,Away Win,17.3,26.2,56.5,Away Win,9.7,15.6,74.7,Away Win,6.0,28.0,66.0
+Draw,Home Win,49.0,26.6,24.4,Home Win,47.6,24.7,27.7,Away Win,33.6,32.1,34.3
+Draw,Away Win,30.0,34.7,35.3,Home Win,34.4,32.1,33.5,Away Win,19.6,39.1,41.3
+Away Win,Away Win,10.9,13.0,76.1,Away Win,9.9,13.8,76.2,Away Win,6.5,23.7,69.7
+Draw,Away Win,21.2,29.2,49.7,Away Win,15.9,21.5,62.6,Away Win,11.4,36.0,52.6
+Draw,Away Win,28.1,31.7,40.2,Away Win,29.8,28.3,41.9,Away Win,19.1,35.2,45.7
+Draw,Home Win,74.6,14.0,11.4,Home Win,80.5,12.3,7.2,Home Win,61.2,24.2,14.6
+Home Win,Home Win,59.4,27.9,12.8,Home Win,61.3,27.8,10.9,Home Win,42.5,40.1,17.4
+Home Win,Home Win,48.0,30.5,21.5,Home Win,53.2,26.4,20.4,Draw,35.7,40.0,24.4
+Away Win,Away Win,21.7,20.0,58.2,Away Win,29.1,18.0,52.8,Away Win,19.2,32.4,48.4
+Home Win,Away Win,34.8,24.4,40.8,Home Win,38.4,24.7,36.9,Away Win,22.8,33.0,44.2
+Away Win,Home Win,64.9,18.3,16.8,Home Win,57.5,19.8,22.7,Home Win,40.2,29.1,30.7
+Home Win,Home Win,62.7,18.4,18.9,Home Win,59.1,23.1,17.8,Home Win,47.5,32.3,20.2
+Home Win,Home Win,72.7,10.4,16.9,Home Win,71.8,8.5,19.7,Home Win,65.9,17.2,16.9
+Draw,Away Win,34.9,21.0,44.1,Home Win,41.2,20.0,38.7,Away Win,28.1,34.0,38.0
+Home Win,Home Win,81.1,13.9,5.0,Home Win,78.4,15.5,6.1,Home Win,56.8,31.0,12.2
+Draw,Home Win,49.6,32.0,18.4,Home Win,49.6,28.8,21.6,Draw,26.5,41.8,31.7
+Away Win,Away Win,17.5,19.8,62.7,Away Win,21.2,22.3,56.5,Away Win,9.6,30.1,60.3
+Draw,Home Win,65.0,19.6,15.4,Home Win,63.8,22.9,13.3,Home Win,46.6,32.3,21.1
+Home Win,Home Win,71.5,18.0,10.5,Home Win,76.9,16.2,6.9,Home Win,59.5,29.1,11.4
+Away Win,Away Win,14.7,21.5,63.7,Away Win,14.4,20.9,64.7,Away Win,7.0,29.7,63.3
+Home Win,Away Win,33.5,30.9,35.6,Home Win,39.0,25.7,35.3,Away Win,21.2,37.2,41.6
+Away Win,Home Win,42.8,38.8,18.4,Home Win,52.4,31.7,15.9,Draw,31.3,46.0,22.7
+Home Win,Home Win,45.0,28.6,26.4,Home Win,65.1,19.0,15.9,Draw,38.4,40.7,20.9
+Away Win,Away Win,21.4,22.5,56.1,Away Win,16.3,14.9,68.9,Away Win,12.0,29.2,58.8
+Home Win,Home Win,43.2,26.9,29.9,Home Win,44.0,28.1,27.9,Draw,20.3,42.3,37.5
+Draw,Home Win,41.5,27.6,30.9,Away Win,37.3,25.1,37.6,Away Win,20.3,34.7,45.1
+Away Win,Away Win,13.8,25.6,60.6,Away Win,14.7,21.4,63.9,Away Win,7.6,28.6,63.8
+Draw,Away Win,24.4,29.7,45.9,Away Win,26.0,31.0,43.0,Away Win,15.9,35.6,48.4
+Home Win,Draw,34.5,39.0,26.5,Home Win,38.0,33.9,28.1,Draw,22.1,44.8,33.1
+Draw,Home Win,81.1,7.4,11.5,Home Win,92.0,3.8,4.2,Home Win,82.0,12.8,5.2
+Home Win,Home Win,38.5,36.1,25.4,Home Win,39.5,30.8,29.7,Draw,21.2,42.8,36.0
+Home Win,Away Win,27.5,27.3,45.2,Away Win,26.7,28.1,45.2,Away Win,15.5,33.1,51.3
+Draw,Home Win,70.5,15.2,14.3,Home Win,67.2,19.3,13.5,Home Win,47.3,30.5,22.2
+Home Win,Home Win,58.4,25.0,16.6,Home Win,57.4,27.7,14.9,Home Win,41.4,39.5,19.1
+Home Win,Away Win,11.8,7.1,81.1,Away Win,17.7,8.1,74.2,Away Win,10.6,18.4,71.0
+Away Win,Home Win,54.0,24.7,21.4,Home Win,60.0,21.5,18.5,Home Win,40.3,34.4,25.3
+Away Win,Away Win,32.8,31.0,36.2,Away Win,28.1,26.6,45.3,Away Win,23.0,35.9,41.1
+Away Win,Home Win,71.9,18.5,9.6,Home Win,74.2,18.1,7.7,Home Win,59.6,29.7,10.7
+Away Win,Away Win,21.9,27.6,50.4,Away Win,28.1,25.7,46.3,Away Win,14.1,33.6,52.4
+Home Win,Away Win,27.5,27.5,45.0,Away Win,25.5,24.5,50.0,Away Win,15.1,31.1,53.8
+Home Win,Home Win,88.0,5.9,6.1,Home Win,94.5,3.9,1.6,Home Win,85.6,10.9,3.5
+Home Win,Home Win,76.0,18.1,6.0,Home Win,76.0,18.9,5.1,Home Win,59.0,32.5,8.6
+Home Win,Home Win,59.0,22.4,18.6,Home Win,63.0,21.1,16.0,Home Win,43.9,34.8,21.3
+Away Win,Away Win,33.5,15.4,51.1,Away Win,43.8,11.9,44.3,Away Win,25.7,23.5,50.9
+Home Win,Home Win,58.9,26.2,14.9,Home Win,58.4,25.9,15.7,Draw,35.6,40.6,23.8
+Home Win,Home Win,61.5,23.7,14.8,Home Win,64.8,23.5,11.8,Home Win,43.9,38.8,17.3
+Home Win,Home Win,70.7,23.1,6.2,Home Win,84.6,13.2,2.2,Home Win,67.5,28.3,4.2
+Home Win,Home Win,83.3,11.0,5.7,Home Win,84.7,10.8,4.6,Home Win,68.0,23.3,8.7
+Home Win,Home Win,52.6,25.5,21.9,Home Win,53.4,25.5,21.1,Draw,32.3,34.2,33.5
+Away Win,Home Win,52.0,28.4,19.6,Home Win,51.0,29.1,19.9,Draw,34.9,39.8,25.3
+Home Win,Home Win,76.9,16.8,6.3,Home Win,82.3,14.2,3.4,Home Win,63.2,30.1,6.8
+Draw,Home Win,50.1,22.7,27.2,Home Win,57.2,23.2,19.6,Home Win,40.2,31.5,28.3
+Home Win,Home Win,89.3,4.6,6.1,Home Win,96.3,2.6,1.1,Home Win,90.4,7.6,2.0
+Home Win,Home Win,67.3,21.9,10.7,Home Win,66.0,23.2,10.8,Home Win,53.3,33.4,13.3
+Home Win,Away Win,16.9,21.1,62.1,Away Win,18.6,23.4,58.0,Away Win,9.0,28.2,62.8
+Draw,Away Win,13.9,7.5,78.6,Away Win,25.1,7.7,67.3,Away Win,17.2,24.2,58.5
+Home Win,Home Win,50.0,22.4,27.6,Home Win,61.3,22.3,16.4,Home Win,50.7,29.9,19.4
+Home Win,Home Win,72.9,20.5,6.5,Home Win,77.5,17.7,4.8,Home Win,63.1,29.9,7.0
+Draw,Home Win,62.2,25.9,11.8,Home Win,66.9,23.7,9.4,Home Win,51.1,35.7,13.2
+Away Win,Away Win,9.8,16.4,73.8,Away Win,7.1,12.6,80.4,Away Win,5.6,25.6,68.8
+Draw,Home Win,57.4,25.4,17.1,Home Win,61.6,23.6,14.8,Home Win,47.4,32.2,20.4
+Away Win,Away Win,25.4,31.8,42.8,Away Win,26.2,28.3,45.5,Away Win,18.2,40.4,41.4
+Away Win,Away Win,7.0,15.1,77.8,Away Win,5.8,11.7,82.5,Away Win,2.5,20.1,77.5
+Away Win,Home Win,57.7,14.8,27.5,Home Win,83.0,8.2,8.8,Home Win,68.7,21.8,9.5
+Home Win,Home Win,77.8,9.9,12.3,Home Win,72.8,10.4,16.8,Home Win,61.0,20.5,18.6
+Away Win,Home Win,57.5,20.7,21.8,Home Win,66.8,14.2,19.0,Home Win,47.0,30.5,22.5
+Home Win,Home Win,39.6,29.2,31.2,Home Win,47.9,28.2,23.8,Draw,32.9,34.5,32.5
+Home Win,Home Win,60.0,27.7,12.4,Home Win,70.5,21.6,7.9,Home Win,51.4,37.7,10.9
+Away Win,Home Win,45.5,27.3,27.3,Home Win,54.5,26.7,18.7,Draw,38.2,38.8,23.0
+Home Win,Home Win,93.4,4.8,1.8,Home Win,97.2,2.4,0.5,Home Win,90.8,7.9,1.2
+Away Win,Home Win,41.4,33.2,25.4,Home Win,46.7,31.2,22.2,Draw,27.2,44.3,28.5
+Home Win,Home Win,85.3,10.1,4.6,Home Win,91.2,6.4,2.4,Home Win,80.1,15.9,4.0
+Draw,Away Win,14.0,33.6,52.4,Away Win,12.5,20.1,67.4,Away Win,6.9,37.2,55.9
+Draw,Home Win,81.6,13.8,4.7,Home Win,82.0,14.3,3.8,Home Win,64.2,28.0,7.8
+Home Win,Home Win,84.3,11.8,4.0,Home Win,92.9,6.0,1.2,Home Win,85.0,13.0,2.0
+Away Win,Away Win,6.1,7.4,86.5,Away Win,12.2,13.1,74.7,Away Win,4.8,22.8,72.4
+Home Win,Home Win,79.7,16.7,3.6,Home Win,83.9,13.5,2.6,Home Win,68.4,27.4,4.3
+Home Win,Home Win,51.9,35.0,13.1,Home Win,56.5,30.5,13.0,Draw,37.4,44.4,18.2
+Home Win,Home Win,74.5,18.9,6.6,Home Win,76.6,17.8,5.6,Home Win,58.3,33.0,8.7
+Home Win,Home Win,76.2,18.5,5.3,Home Win,83.8,12.6,3.6,Home Win,64.7,27.7,7.6
+Home Win,Home Win,64.2,27.3,8.5,Home Win,73.8,21.0,5.3,Home Win,58.0,34.8,7.2
+Home Win,Home Win,84.0,12.4,3.6,Home Win,91.0,7.2,1.7,Home Win,76.3,19.0,4.7
+Home Win,Home Win,54.1,21.0,24.9,Home Win,51.5,25.2,23.3,Home Win,35.9,35.9,28.2
+Away Win,Away Win,29.0,26.6,44.5,Away Win,24.4,26.7,48.8,Away Win,11.9,31.7,56.4
+Away Win,Away Win,7.3,9.1,83.6,Away Win,12.3,19.0,68.8,Away Win,4.4,23.6,72.0
+Draw,Away Win,9.4,9.3,81.3,Away Win,9.0,11.9,79.1,Away Win,5.9,22.0,72.1
+Home Win,Home Win,52.3,26.2,21.5,Home Win,47.2,29.6,23.2,Draw,31.7,36.2,32.0
+Home Win,Away Win,22.1,24.7,53.1,Away Win,37.5,23.2,39.3,Away Win,14.3,33.8,51.9
+Home Win,Home Win,63.4,23.2,13.4,Home Win,65.9,23.0,11.1,Home Win,48.5,34.8,16.6
+Home Win,Home Win,67.2,16.0,16.7,Home Win,65.1,17.2,17.7,Home Win,51.8,27.5,20.7
+Home Win,Home Win,56.9,30.8,12.3,Home Win,63.0,29.0,8.0,Home Win,48.7,40.1,11.3
+Home Win,Home Win,56.0,21.7,22.3,Home Win,53.9,29.2,17.0,Draw,35.0,37.7,27.3
+Home Win,Home Win,69.3,9.1,21.6,Home Win,59.5,6.9,33.6,Home Win,53.1,17.5,29.4
+Away Win,Draw,28.6,36.7,34.7,Home Win,37.2,29.3,33.5,Draw,18.3,43.2,38.5
+Draw,Home Win,40.0,29.9,30.1,Home Win,42.4,33.9,23.7,Draw,23.8,43.6,32.6
+Home Win,Home Win,75.7,17.6,6.7,Home Win,80.9,14.8,4.3,Home Win,65.9,26.7,7.4
+Draw,Home Win,50.5,25.3,24.2,Home Win,46.6,26.7,26.7,Draw,28.7,38.9,32.4
+Home Win,Home Win,58.3,29.4,12.3,Home Win,76.2,17.3,6.5,Home Win,55.7,33.8,10.5
+Home Win,Home Win,57.2,26.4,16.4,Home Win,60.1,26.4,13.5,Home Win,43.7,36.5,19.8
+Away Win,Home Win,55.6,28.3,16.1,Home Win,58.9,26.7,14.4,Home Win,40.6,38.0,21.4
+Home Win,Home Win,49.1,25.8,25.1,Home Win,46.8,26.9,26.2,Home Win,38.2,34.6,27.2
+Draw,Home Win,48.2,27.5,24.3,Home Win,61.3,21.6,17.1,Draw,31.2,37.0,31.8
+Away Win,Away Win,1.5,1.3,97.2,Away Win,2.1,3.1,94.8,Away Win,0.8,7.4,91.8
+Away Win,Away Win,19.4,25.7,54.9,Away Win,27.0,28.3,44.7,Away Win,12.1,31.6,56.3
+Home Win,Away Win,26.0,30.8,43.2,Away Win,33.8,29.3,36.9,Away Win,16.0,36.7,47.2
+Home Win,Home Win,87.4,9.0,3.6,Home Win,92.6,5.9,1.4,Home Win,78.8,17.6,3.6
+Away Win,Away Win,7.1,12.0,80.9,Away Win,6.6,12.1,81.3,Away Win,3.2,18.7,78.0
+Home Win,Away Win,27.1,27.3,45.6,Away Win,28.8,28.1,43.0,Away Win,19.4,34.3,46.3
+Away Win,Away Win,20.2,36.1,43.6,Away Win,22.1,26.2,51.6,Away Win,11.5,34.0,54.5
+Home Win,Home Win,76.9,17.9,5.2,Home Win,81.1,14.3,4.6,Home Win,60.1,32.0,8.0
+Home Win,Draw,21.9,43.1,35.0,Draw,33.0,34.5,32.5,Draw,13.5,46.4,40.1
+Away Win,Away Win,13.3,8.7,77.9,Away Win,13.2,7.0,79.8,Away Win,15.1,19.6,65.2
+Away Win,Home Win,58.6,25.5,15.9,Home Win,61.7,22.7,15.6,Home Win,34.2,32.8,33.0
+Away Win,Home Win,65.9,19.2,14.9,Home Win,58.2,22.8,19.1,Home Win,42.8,33.9,23.3
+Away Win,Home Win,68.5,14.7,16.8,Home Win,69.0,15.8,15.1,Home Win,56.0,26.3,17.6
+Draw,Away Win,24.9,27.7,47.3,Away Win,31.9,26.1,42.0,Away Win,14.5,31.8,53.7
+Home Win,Home Win,71.9,16.6,11.6,Home Win,81.2,12.2,6.5,Home Win,57.7,25.9,16.4
+Draw,Home Win,65.1,24.8,10.1,Home Win,69.6,20.8,9.6,Home Win,48.7,35.3,16.0
+Home Win,Home Win,55.0,24.4,20.6,Home Win,60.1,23.8,16.1,Home Win,41.4,31.7,26.9
+Home Win,Home Win,48.3,32.7,19.0,Home Win,61.0,26.5,12.5,Draw,32.9,42.0,25.1
+Home Win,Away Win,33.6,31.7,34.6,Home Win,38.8,28.2,32.9,Draw,23.1,38.5,38.3
+Draw,Home Win,44.7,28.2,27.2,Home Win,51.3,25.0,23.7,Away Win,26.1,29.9,44.0
+Away Win,Away Win,13.2,22.5,64.3,Away Win,11.2,16.8,72.0,Away Win,4.2,25.1,70.6
+Away Win,Away Win,11.4,23.3,65.3,Away Win,12.6,20.7,66.7,Away Win,8.0,27.3,64.7
+Home Win,Home Win,82.7,13.3,4.0,Home Win,92.0,6.6,1.4,Home Win,80.1,17.2,2.7
+Away Win,Away Win,16.8,23.4,59.8,Away Win,18.3,26.1,55.6,Away Win,13.2,42.1,44.8
+Home Win,Home Win,85.9,10.6,3.5,Home Win,87.4,10.1,2.5,Home Win,73.9,21.6,4.4
+Draw,Home Win,67.0,23.6,9.4,Home Win,73.3,19.0,7.8,Home Win,50.4,34.5,15.1
+Away Win,Away Win,25.6,25.8,48.6,Home Win,37.2,25.7,37.1,Away Win,15.6,34.5,49.9
+Away Win,Away Win,3.1,5.4,91.5,Away Win,2.8,6.5,90.7,Away Win,1.4,12.8,85.8
+Home Win,Home Win,63.6,28.0,8.4,Home Win,79.6,16.0,4.5,Home Win,54.6,36.5,8.9
+Draw,Home Win,53.2,29.9,16.9,Home Win,59.4,27.4,13.2,Draw,39.7,41.0,19.3
+Home Win,Home Win,87.6,10.4,2.0,Home Win,94.2,5.1,0.6,Home Win,84.5,13.8,1.7
+Draw,Draw,39.3,39.8,20.9,Home Win,50.4,35.7,13.8,Draw,36.9,46.9,16.2
+Home Win,Home Win,93.0,5.9,1.2,Home Win,97.5,2.2,0.2,Home Win,92.3,7.1,0.6
+Draw,Home Win,36.2,36.2,27.6,Draw,35.3,40.1,24.6,Draw,20.6,43.4,36.0
+Home Win,Home Win,42.6,26.0,31.4,Home Win,47.7,24.3,28.0,Home Win,35.3,33.1,31.6
+Away Win,Home Win,38.5,23.5,38.0,Home Win,43.8,23.9,32.3,Draw,26.3,37.2,36.5
+Home Win,Home Win,50.4,20.6,28.9,Home Win,54.9,17.5,27.7,Home Win,44.3,27.6,28.2
+Home Win,Home Win,75.9,11.0,13.1,Home Win,75.0,12.7,12.3,Home Win,60.0,21.7,18.3
+Home Win,Away Win,4.5,4.8,90.6,Away Win,10.3,14.1,75.6,Away Win,6.3,32.7,61.0
+Away Win,Away Win,22.3,22.4,55.3,Away Win,24.0,19.4,56.6,Away Win,13.4,31.3,55.4
+Draw,Home Win,65.0,19.2,15.8,Home Win,64.6,19.3,16.2,Home Win,38.7,32.1,29.2
+Draw,Home Win,59.0,19.3,21.6,Home Win,59.0,20.1,20.9,Home Win,41.6,32.4,26.0
+Home Win,Home Win,58.8,27.3,13.9,Home Win,56.0,29.0,15.0,Home Win,43.1,36.2,20.7
+Home Win,Home Win,83.8,9.3,6.9,Home Win,89.9,7.5,2.6,Home Win,78.7,16.9,4.4
+Home Win,Home Win,72.4,18.4,9.2,Home Win,76.4,16.5,7.1,Home Win,53.7,31.2,15.1
+Draw,Home Win,44.5,34.5,21.0,Home Win,41.6,35.9,22.5,Draw,26.8,40.0,33.2
+Home Win,Home Win,90.4,7.5,2.1,Home Win,95.3,4.1,0.6,Home Win,86.3,12.0,1.7
+Draw,Home Win,45.5,38.2,16.4,Home Win,48.8,37.9,13.3,Draw,36.9,48.3,14.8
+Away Win,Away Win,24.9,30.7,44.4,Away Win,24.3,32.3,43.4,Away Win,12.5,34.7,52.7
+Home Win,Home Win,71.3,18.0,10.7,Home Win,59.3,19.6,21.1,Home Win,43.4,30.7,25.8
+Away Win,Away Win,3.8,6.8,89.5,Away Win,3.2,7.0,89.9,Away Win,1.6,13.6,84.9
+Home Win,Home Win,90.6,6.8,2.6,Home Win,95.3,3.8,0.9,Home Win,88.2,9.8,2.0
+Home Win,Home Win,80.1,13.8,6.1,Home Win,82.9,12.1,5.0,Home Win,67.9,24.1,8.1
+Away Win,Away Win,33.3,33.1,33.6,Away Win,32.9,33.4,33.7,Draw,20.3,43.3,36.4
+Away Win,Away Win,12.6,19.2,68.2,Away Win,10.8,15.7,73.5,Away Win,4.8,23.8,71.5
+Home Win,Home Win,45.5,31.8,22.7,Home Win,46.0,29.5,24.5,Draw,30.9,39.3,29.8
+Home Win,Home Win,89.6,8.7,1.7,Home Win,94.8,4.5,0.8,Home Win,85.7,12.4,1.9
+Home Win,Home Win,54.9,21.5,23.6,Home Win,64.1,19.9,15.9,Home Win,48.6,33.5,17.9
+Home Win,Home Win,74.9,16.6,8.4,Home Win,80.5,14.5,5.0,Home Win,63.9,29.4,6.7
+Home Win,Away Win,21.5,29.4,49.1,Away Win,22.4,23.6,54.0,Away Win,12.6,34.8,52.7
+Home Win,Home Win,95.7,2.3,2.0,Home Win,99.1,0.7,0.1,Home Win,96.9,2.9,0.3
+Away Win,Away Win,19.2,22.7,58.2,Away Win,16.4,19.7,63.9,Away Win,8.1,28.2,63.7
+Away Win,Draw,21.0,43.0,35.9,Away Win,24.2,35.0,40.7,Away Win,11.9,42.2,45.9
+Home Win,Home Win,85.1,7.2,7.7,Home Win,88.2,7.8,4.0,Home Win,72.6,19.7,7.7
+Home Win,Home Win,47.5,30.4,22.1,Home Win,48.9,31.8,19.3,Draw,33.0,40.8,26.2
+Home Win,Home Win,67.8,23.4,8.8,Home Win,81.1,14.0,4.9,Home Win,60.6,30.4,9.0
+Home Win,Home Win,78.6,13.0,8.4,Home Win,76.0,14.3,9.7,Home Win,60.7,25.3,13.9
+Away Win,Home Win,59.5,22.9,17.6,Home Win,73.5,15.6,10.9,Home Win,48.6,27.6,23.7
+Home Win,Home Win,84.1,8.9,7.1,Home Win,88.6,8.3,3.1,Home Win,76.0,18.3,5.7
+Home Win,Home Win,90.1,8.6,1.3,Home Win,93.4,5.8,0.8,Home Win,79.2,17.6,3.1
+Home Win,Home Win,88.8,7.7,3.5,Home Win,96.2,3.2,0.6,Home Win,89.7,9.1,1.1
+Away Win,Away Win,6.6,9.2,84.2,Away Win,7.6,12.1,80.4,Away Win,3.5,17.4,79.1
+Home Win,Home Win,78.5,16.1,5.4,Home Win,74.1,19.0,6.8,Home Win,57.0,33.4,9.6
+Away Win,Away Win,31.9,30.0,38.1,Away Win,31.7,29.4,38.9,Away Win,18.9,37.0,44.1
+Home Win,Home Win,78.1,16.1,5.8,Home Win,78.8,16.1,5.1,Home Win,59.9,30.4,9.7
+Away Win,Away Win,18.1,24.1,57.9,Away Win,18.5,19.4,62.0,Away Win,15.0,31.8,53.2
+Away Win,Away Win,6.1,7.9,86.0,Away Win,6.6,12.5,80.9,Away Win,2.8,18.3,78.9
+Home Win,Home Win,86.7,10.4,3.0,Home Win,90.4,7.9,1.7,Home Win,77.2,19.6,3.3
+Home Win,Home Win,72.5,19.4,8.1,Home Win,81.0,14.0,5.0,Home Win,60.9,30.6,8.5
+Away Win,Away Win,13.3,20.5,66.2,Away Win,12.5,19.1,68.3,Away Win,8.8,27.3,63.9
+Home Win,Home Win,38.4,32.4,29.2,Home Win,46.7,31.0,22.3,Draw,33.5,40.2,26.3
+Away Win,Away Win,25.2,28.0,46.7,Away Win,23.8,24.5,51.8,Away Win,15.0,35.2,49.8
+Home Win,Home Win,93.8,4.5,1.7,Home Win,97.0,2.4,0.6,Home Win,90.5,8.0,1.4
+Home Win,Home Win,77.1,18.1,4.7,Home Win,79.1,17.1,3.8,Home Win,64.6,29.7,5.7
+Home Win,Home Win,86.2,9.8,4.0,Home Win,91.6,6.6,1.8,Home Win,78.6,17.3,4.1
+Home Win,Home Win,76.1,19.4,4.5,Home Win,85.6,12.4,2.0,Home Win,67.0,28.7,4.4
+Away Win,Home Win,76.5,15.9,7.7,Home Win,76.5,16.0,7.6,Home Win,58.8,28.8,12.4
+Away Win,Away Win,2.3,4.8,92.9,Away Win,1.8,5.3,92.9,Away Win,0.7,11.5,87.8
+Home Win,Home Win,91.4,3.7,4.8,Home Win,97.9,1.4,0.7,Home Win,93.0,5.6,1.4
+Home Win,Away Win,28.8,33.1,38.2,Home Win,38.9,26.0,35.1,Away Win,17.8,39.9,42.3
+Draw,Home Win,74.7,16.5,8.8,Home Win,72.8,18.1,9.1,Home Win,58.0,29.5,12.6
+Home Win,Away Win,30.9,16.2,52.9,Away Win,34.6,16.0,49.4,Away Win,25.0,26.4,48.6
+Home Win,Home Win,85.4,7.5,7.0,Home Win,93.6,4.9,1.5,Home Win,84.1,13.0,3.0
+Away Win,Home Win,54.1,19.7,26.2,Home Win,51.5,23.4,25.1,Away Win,32.8,31.1,36.1
+Home Win,Home Win,58.4,19.5,22.1,Home Win,60.0,18.4,21.6,Home Win,41.6,29.3,29.1
+Away Win,Away Win,5.3,5.6,89.1,Away Win,7.9,13.5,78.6,Away Win,2.7,19.4,78.0
+Away Win,Away Win,18.5,25.9,55.6,Away Win,22.1,29.2,48.7,Away Win,16.3,38.4,45.3
+Draw,Home Win,56.3,22.1,21.5,Home Win,60.6,22.9,16.5,Draw,37.5,37.8,24.7
+Home Win,Home Win,40.3,35.6,24.1,Home Win,40.4,35.4,24.2,Draw,28.9,45.7,25.4
+Home Win,Away Win,8.5,9.2,82.3,Away Win,14.2,10.0,75.7,Away Win,9.0,21.9,69.0
+Away Win,Away Win,34.1,29.9,36.0,Home Win,35.9,30.0,34.1,Away Win,22.3,36.8,41.0
+Away Win,Away Win,28.8,24.7,46.5,Home Win,38.6,25.6,35.9,Away Win,25.8,34.9,39.4
+Draw,Away Win,12.1,13.5,74.4,Away Win,14.5,15.1,70.3,Away Win,13.3,26.2,60.5
+Draw,Home Win,47.0,30.7,22.3,Home Win,61.3,23.2,15.6,Home Win,44.1,37.1,18.8
+Draw,Draw,36.6,37.2,26.2,Home Win,38.9,35.8,25.3,Draw,21.8,44.0,34.2
+Away Win,Away Win,4.1,4.6,91.3,Away Win,5.6,7.1,87.3,Away Win,2.0,13.5,84.5
+Home Win,Home Win,89.4,8.1,2.5,Home Win,94.2,5.0,0.8,Home Win,86.0,12.2,1.8
+Away Win,Away Win,27.7,33.0,39.3,Away Win,21.2,24.7,54.1,Away Win,13.6,35.0,51.5
+Draw,Home Win,68.4,19.5,12.1,Home Win,63.1,22.8,14.1,Home Win,46.5,30.6,22.9
+Away Win,Away Win,5.9,7.4,86.7,Away Win,6.4,10.9,82.6,Away Win,2.4,16.1,81.5
+Home Win,Home Win,89.3,6.3,4.3,Home Win,94.6,4.2,1.2,Home Win,87.2,10.6,2.3
+Home Win,Home Win,64.1,25.1,10.9,Home Win,63.7,26.6,9.7,Home Win,48.4,39.9,11.7
+Draw,Home Win,47.0,31.9,21.1,Home Win,50.1,29.9,20.1,Home Win,44.7,36.1,19.3
+Away Win,Away Win,8.3,10.8,80.9,Away Win,10.4,15.9,73.7,Away Win,4.0,22.1,73.8
+Away Win,Away Win,22.7,31.4,45.9,Away Win,26.2,32.9,40.9,Away Win,18.1,35.2,46.7
+Home Win,Away Win,23.3,30.7,46.1,Away Win,25.1,30.5,44.4,Away Win,13.7,38.3,48.0
+Away Win,Home Win,60.6,20.6,18.8,Home Win,57.6,22.8,19.6,Home Win,47.0,31.0,22.0
+Away Win,Away Win,26.0,20.8,53.2,Away Win,34.4,23.5,42.1,Away Win,20.7,29.7,49.6
+Home Win,Home Win,79.7,16.1,4.3,Home Win,88.8,9.4,1.7,Home Win,77.0,19.7,3.3
+Draw,Away Win,19.4,22.1,58.5,Away Win,23.6,24.8,51.6,Away Win,15.3,32.3,52.4
+Draw,Home Win,43.4,34.9,21.7,Home Win,54.8,31.7,13.5,Draw,39.4,43.5,17.1
+Draw,Home Win,45.3,19.2,35.5,Home Win,56.3,22.3,21.4,Home Win,45.2,27.5,27.2
+Away Win,Away Win,12.8,24.1,63.1,Away Win,14.0,22.0,64.0,Away Win,8.8,29.9,61.3
+Home Win,Home Win,86.4,10.5,3.0,Home Win,92.5,6.0,1.5,Home Win,79.0,16.4,4.7
+Home Win,Away Win,34.2,18.4,47.4,Away Win,36.7,18.1,45.2,Away Win,27.4,25.3,47.3
+Home Win,Home Win,64.3,19.6,16.1,Home Win,59.4,22.8,17.8,Home Win,43.2,32.7,24.1
+Home Win,Away Win,1.7,3.4,94.9,Away Win,4.4,7.0,88.6,Away Win,1.6,14.1,84.3
+Away Win,Home Win,75.0,18.2,6.8,Home Win,67.3,21.2,11.5,Home Win,40.5,33.5,26.0
+Home Win,Away Win,34.5,26.7,38.8,Home Win,38.3,25.1,36.6,Draw,27.9,36.1,36.0
+Away Win,Draw,32.6,34.5,32.9,Draw,36.3,37.7,26.0,Draw,25.0,44.3,30.6
+Away Win,Away Win,21.6,27.1,51.3,Away Win,24.0,21.2,54.8,Away Win,17.8,32.0,50.2
+Away Win,Away Win,21.3,27.5,51.3,Away Win,23.8,24.0,52.2,Away Win,17.7,29.6,52.7
+Home Win,Home Win,84.8,11.7,3.5,Home Win,88.4,9.3,2.3,Home Win,75.0,20.6,4.5
+Away Win,Home Win,64.2,23.7,12.1,Home Win,64.9,24.7,10.5,Home Win,44.0,36.6,19.4
+Away Win,Home Win,40.2,29.8,30.0,Home Win,52.8,27.8,19.4,Home Win,43.4,37.9,18.7
+Home Win,Home Win,89.1,8.0,2.9,Home Win,91.7,6.9,1.4,Home Win,79.0,18.2,2.8
+Away Win,Away Win,32.0,29.1,38.9,Home Win,41.1,28.8,30.1,Away Win,29.4,33.6,37.1
+Draw,Home Win,60.8,22.1,17.2,Home Win,63.5,21.0,15.5,Home Win,46.3,31.8,21.9
+Draw,Away Win,35.3,28.3,36.4,Away Win,32.1,31.7,36.1,Away Win,22.8,38.1,39.1
+Away Win,Home Win,41.6,33.6,24.8,Home Win,44.7,32.9,22.4,Draw,26.3,44.2,29.5
+Away Win,Away Win,0.3,0.3,99.3,Away Win,0.4,1.0,98.6,Away Win,0.1,2.8,97.1
+Away Win,Away Win,19.9,30.5,49.6,Away Win,20.8,26.4,52.8,Away Win,15.0,35.6,49.3
+Home Win,Away Win,25.2,32.5,42.3,Away Win,25.9,26.8,47.3,Away Win,10.9,35.2,53.9
+Away Win,Away Win,25.2,35.1,39.7,Away Win,26.2,30.6,43.2,Away Win,14.3,33.8,52.0
+Home Win,Away Win,32.5,28.5,38.9,Away Win,34.4,27.0,38.6,Away Win,18.8,32.7,48.5
+Home Win,Home Win,84.7,12.6,2.6,Home Win,90.3,8.3,1.4,Home Win,71.9,22.7,5.4
+Home Win,Home Win,80.5,15.4,4.1,Home Win,88.6,10.0,1.5,Home Win,75.6,21.7,2.7
+Home Win,Home Win,82.9,12.4,4.7,Home Win,88.8,8.8,2.4,Home Win,75.3,20.6,4.1
+Away Win,Away Win,8.2,13.2,78.6,Away Win,11.1,18.6,70.3,Away Win,5.2,27.1,67.7
+Home Win,Home Win,91.7,5.9,2.4,Home Win,96.4,3.2,0.4,Home Win,90.5,8.9,0.6
+Draw,Home Win,43.9,29.2,27.0,Home Win,46.8,28.4,24.8,Draw,26.9,41.2,31.9
+Draw,Away Win,14.9,21.2,63.9,Away Win,10.9,15.4,73.7,Away Win,6.4,24.3,69.3
+Home Win,Home Win,91.4,5.5,3.2,Home Win,95.7,3.4,0.9,Home Win,87.8,10.1,2.1
+Home Win,Home Win,95.3,3.4,1.3,Home Win,97.4,2.1,0.4,Home Win,91.6,7.6,0.9
+Draw,Home Win,68.8,23.6,7.6,Home Win,66.4,25.1,8.5,Home Win,46.5,38.6,14.9
+Home Win,Away Win,15.7,19.6,64.6,Away Win,17.3,21.5,61.2,Away Win,11.6,26.2,62.3
+Away Win,Away Win,22.5,26.8,50.7,Away Win,22.0,27.0,51.0,Draw,17.7,46.7,35.6
+Draw,Home Win,90.5,5.1,4.3,Home Win,95.6,3.4,1.0,Home Win,87.8,9.9,2.2
+Home Win,Home Win,92.0,4.1,3.9,Home Win,97.3,2.1,0.6,Home Win,91.6,7.1,1.3
+Home Win,Home Win,52.6,25.8,21.6,Home Win,49.7,29.7,20.7,Draw,34.6,40.7,24.7
+Home Win,Home Win,60.7,22.1,17.2,Home Win,76.7,17.0,6.2,Home Win,46.9,39.2,13.9
+Draw,Home Win,47.7,31.9,20.4,Home Win,55.8,26.8,17.4,Draw,33.1,42.0,24.9
+Draw,Home Win,55.0,22.6,22.4,Home Win,55.5,25.7,18.8,Home Win,44.0,35.0,21.0
+Draw,Away Win,9.2,14.6,76.1,Away Win,10.0,15.2,74.8,Away Win,6.4,23.2,70.4
+Away Win,Away Win,6.6,9.5,83.9,Away Win,6.2,10.9,82.9,Away Win,3.2,18.7,78.2
+Away Win,Away Win,20.8,27.5,51.7,Away Win,19.1,24.4,56.5,Away Win,12.7,33.8,53.5
+Away Win,Away Win,34.5,29.4,36.2,Home Win,39.0,27.9,33.1,Away Win,33.3,31.1,35.6
+Home Win,Home Win,62.0,22.3,15.7,Home Win,66.4,20.2,13.5,Home Win,42.6,33.7,23.7
+Draw,Home Win,55.6,31.0,13.4,Home Win,56.6,30.7,12.7,Draw,38.9,43.0,18.1
+Home Win,Home Win,90.4,7.8,1.8,Home Win,93.1,5.9,1.0,Home Win,79.0,18.2,2.7
+Away Win,Away Win,13.9,15.9,70.2,Away Win,17.4,18.1,64.5,Away Win,12.8,29.3,57.9
+Away Win,Away Win,12.0,16.0,72.1,Away Win,11.8,18.4,69.8,Away Win,6.9,27.8,65.3
+Away Win,Away Win,3.3,3.0,93.7,Away Win,4.3,4.3,91.4,Away Win,2.8,11.6,85.6
+Away Win,Away Win,32.5,25.7,41.8,Away Win,33.4,21.6,45.0,Away Win,26.4,32.3,41.3
+Home Win,Home Win,90.0,8.9,1.2,Home Win,94.3,5.0,0.6,Home Win,78.1,18.7,3.2
+Away Win,Away Win,23.5,23.9,52.6,Away Win,27.8,25.0,47.2,Away Win,16.7,30.0,53.3
+Away Win,Away Win,12.6,20.0,67.5,Away Win,11.1,15.9,73.0,Away Win,8.9,24.8,66.3
+Away Win,Away Win,5.3,7.0,87.7,Away Win,5.4,9.6,84.9,Away Win,2.1,15.4,82.5
+Home Win,Away Win,24.8,27.0,48.1,Away Win,28.2,23.7,48.1,Away Win,17.3,37.7,45.0
+Home Win,Home Win,96.4,2.8,0.8,Home Win,98.7,1.2,0.1,Home Win,95.5,4.3,0.2
+Away Win,Away Win,8.1,13.1,78.7,Away Win,8.1,14.6,77.3,Away Win,3.9,23.6,72.4
+Draw,Home Win,56.9,20.8,22.3,Home Win,55.6,22.7,21.8,Home Win,46.6,32.2,21.2
+Away Win,Away Win,9.7,11.3,79.0,Away Win,12.1,15.1,72.8,Away Win,6.7,22.7,70.6
+Away Win,Away Win,18.8,21.9,59.4,Away Win,25.7,22.7,51.6,Away Win,16.8,29.3,53.9
+Draw,Home Win,84.9,11.8,3.4,Home Win,89.9,8.1,2.1,Home Win,70.7,21.9,7.4
+Home Win,Home Win,48.8,25.1,26.1,Home Win,53.9,23.7,22.3,Draw,29.1,39.9,31.0
+Home Win,Away Win,27.0,30.1,42.8,Away Win,25.1,28.4,46.5,Away Win,20.0,32.0,48.0
+Away Win,Away Win,8.8,17.8,73.4,Away Win,13.7,20.3,66.0,Away Win,5.5,25.2,69.3
+Away Win,Away Win,9.2,19.6,71.2,Away Win,9.7,17.5,72.8,Away Win,4.5,26.0,69.5
+Home Win,Home Win,85.9,7.0,7.1,Home Win,95.5,3.5,1.0,Home Win,88.1,9.9,2.0
+Away Win,Home Win,74.6,15.7,9.7,Home Win,76.9,15.2,7.9,Home Win,63.1,25.4,11.5
+Away Win,Away Win,6.7,12.7,80.6,Away Win,9.4,17.1,73.5,Away Win,4.4,24.0,71.5
+Draw,Away Win,10.3,16.7,72.9,Away Win,10.9,15.4,73.6,Away Win,6.1,24.4,69.5
+Away Win,Home Win,35.0,30.2,34.9,Home Win,38.3,28.0,33.7,Away Win,21.7,33.7,44.6
+Away Win,Away Win,9.3,15.0,75.8,Away Win,12.5,18.9,68.6,Away Win,4.4,21.8,73.8
+Away Win,Away Win,16.0,13.3,70.8,Away Win,16.5,15.6,67.9,Away Win,9.3,24.8,65.9
+Home Win,Home Win,55.1,31.4,13.5,Home Win,66.6,24.3,9.1,Home Win,51.0,36.7,12.3
+Home Win,Home Win,71.8,16.8,11.4,Home Win,79.3,14.1,6.6,Home Win,64.5,25.4,10.1
+Home Win,Home Win,52.7,29.6,17.7,Home Win,60.5,26.9,12.5,Draw,40.4,40.4,19.2
+Home Win,Home Win,75.2,15.9,8.9,Home Win,77.7,15.7,6.6,Home Win,58.4,28.9,12.7
+Home Win,Home Win,75.9,12.8,11.2,Home Win,80.6,11.7,7.6,Home Win,67.3,21.4,11.3
+Home Win,Home Win,83.2,8.8,8.0,Home Win,89.7,6.7,3.6,Home Win,76.6,17.1,6.3
+Draw,Home Win,81.2,8.1,10.7,Home Win,90.0,5.5,4.5,Home Win,75.1,16.3,8.6
+Home Win,Home Win,68.0,18.3,13.7,Home Win,70.0,17.9,12.0,Home Win,57.8,27.6,14.6
+Away Win,Away Win,25.4,30.5,44.1,Away Win,21.6,30.3,48.0,Away Win,17.5,34.9,47.6
+Away Win,Draw,29.4,37.5,33.1,Draw,34.3,35.4,30.3,Draw,21.0,41.9,37.2
+Draw,Away Win,11.0,12.9,76.1,Away Win,12.8,13.3,73.9,Away Win,8.0,23.6,68.4
+Home Win,Home Win,69.1,18.5,12.3,Home Win,69.9,18.9,11.2,Home Win,54.2,30.0,15.8
+Away Win,Home Win,59.2,19.4,21.4,Home Win,69.0,18.1,12.9,Home Win,54.6,25.7,19.7
+Home Win,Home Win,74.7,16.3,9.0,Home Win,85.5,9.6,4.9,Home Win,71.7,19.9,8.4
+Home Win,Home Win,77.0,17.2,5.7,Home Win,82.6,14.0,3.5,Home Win,61.8,31.8,6.4
+Home Win,Home Win,78.7,15.5,5.8,Home Win,83.5,12.9,3.6,Home Win,63.0,29.9,7.1
+Home Win,Home Win,64.7,22.1,13.2,Home Win,67.5,20.1,12.4,Home Win,42.2,32.8,25.0
+Draw,Away Win,32.0,33.8,34.2,Home Win,41.0,30.6,28.4,Away Win,25.2,34.3,40.5
+Home Win,Home Win,40.6,29.4,30.0,Home Win,40.7,27.3,32.0,Draw,26.4,36.9,36.6
+Away Win,Away Win,6.8,11.2,82.0,Away Win,8.0,15.3,76.7,Away Win,3.2,23.4,73.4
+Home Win,Home Win,98.9,0.8,0.3,Home Win,99.8,0.2,0.0,Home Win,99.1,0.8,0.0
+Away Win,Home Win,47.3,22.6,30.1,Home Win,50.4,24.5,25.1,Home Win,36.2,31.0,32.8
+Draw,Home Win,56.4,23.1,20.6,Home Win,62.0,23.0,14.9,Home Win,45.1,36.2,18.8
+Home Win,Home Win,83.1,12.9,3.9,Home Win,91.0,7.6,1.4,Home Win,82.1,16.1,1.7
+Home Win,Home Win,73.5,18.8,7.7,Home Win,82.7,12.7,4.6,Home Win,64.3,26.7,9.0
+Home Win,Home Win,80.8,10.5,8.7,Home Win,80.5,11.8,7.7,Home Win,63.3,23.9,12.8
+Draw,Home Win,52.1,28.9,19.0,Home Win,50.4,31.1,18.5,Draw,34.0,42.3,23.7
+Home Win,Home Win,87.6,9.9,2.5,Home Win,95.3,4.1,0.6,Home Win,85.2,13.1,1.8
+Home Win,Home Win,79.8,15.7,4.4,Home Win,81.4,14.7,3.9,Home Win,60.6,30.1,9.3
+Home Win,Home Win,83.0,12.6,4.4,Home Win,90.2,7.9,2.0,Home Win,69.7,24.4,5.9
+Home Win,Home Win,90.7,7.6,1.6,Home Win,95.7,3.7,0.6,Home Win,87.8,10.6,1.5
+Home Win,Home Win,90.5,7.9,1.5,Home Win,95.6,4.0,0.4,Home Win,86.6,12.1,1.3
+Home Win,Home Win,84.5,11.3,4.3,Home Win,86.5,10.1,3.4,Home Win,74.3,20.4,5.3
+Home Win,Home Win,72.5,13.8,13.7,Home Win,73.0,14.1,12.9,Home Win,54.8,25.4,19.8
+Home Win,Home Win,78.1,16.3,5.6,Home Win,77.5,17.2,5.3,Home Win,57.1,32.7,10.2
+Home Win,Home Win,69.7,20.6,9.6,Home Win,68.4,19.4,12.1,Home Win,37.0,34.7,28.3
+Home Win,Home Win,69.0,18.7,12.3,Home Win,71.2,17.7,11.1,Home Win,57.3,27.9,14.7
+Home Win,Home Win,94.2,4.8,1.0,Home Win,98.1,1.7,0.2,Home Win,93.8,5.7,0.5
+Home Win,Home Win,80.3,13.5,6.2,Home Win,83.0,11.2,5.8,Home Win,62.3,23.9,13.7
+Away Win,Away Win,7.8,15.9,76.3,Away Win,9.2,17.2,73.6,Away Win,4.6,24.0,71.5
+Home Win,Home Win,87.4,9.7,2.9,Home Win,92.5,6.5,1.0,Home Win,82.0,15.8,2.2
+Home Win,Home Win,75.2,18.4,6.4,Home Win,79.2,17.2,3.6,Home Win,63.2,30.7,6.1
+Home Win,Away Win,18.0,21.8,60.2,Away Win,16.6,20.8,62.6,Away Win,9.1,26.6,64.3
+Draw,Home Win,43.1,24.6,32.3,Away Win,38.5,22.2,39.2,Away Win,30.3,32.0,37.6
+Home Win,Home Win,93.6,5.2,1.1,Home Win,95.5,4.0,0.6,Home Win,84.2,14.0,1.8
+Away Win,Away Win,13.3,21.1,65.7,Away Win,14.8,22.1,63.1,Away Win,6.2,28.9,64.9
+Home Win,Away Win,21.0,25.1,53.9,Home Win,36.8,28.1,35.0,Draw,24.5,48.2,27.3
+Draw,Away Win,24.1,27.7,48.1,Away Win,15.2,19.0,65.8,Away Win,9.8,29.4,60.8
+Draw,Away Win,19.6,29.2,51.1,Away Win,19.8,27.7,52.5,Away Win,10.4,33.6,56.0
+Home Win,Home Win,49.7,31.8,18.5,Home Win,52.2,29.0,18.7,Draw,31.1,39.2,29.7
+Away Win,Away Win,4.5,5.5,90.0,Away Win,5.3,9.6,85.1,Away Win,2.1,15.4,82.5
+Away Win,Away Win,4.0,5.6,90.4,Away Win,5.0,9.9,85.1,Away Win,1.8,15.5,82.7
+Home Win,Home Win,44.4,31.7,23.9,Home Win,49.3,28.9,21.8,Away Win,23.0,38.2,38.8
+Home Win,Home Win,88.8,8.9,2.3,Home Win,90.6,8.2,1.2,Home Win,74.3,23.0,2.7
+Draw,Away Win,12.2,11.6,76.2,Away Win,14.3,13.5,72.1,Away Win,9.3,25.1,65.6
+Away Win,Away Win,32.5,29.1,38.4,Away Win,27.4,32.1,40.5,Away Win,13.7,34.0,52.3
+Away Win,Away Win,9.2,15.2,75.6,Away Win,6.5,10.9,82.6,Away Win,4.2,23.5,72.3
+Away Win,Away Win,5.7,8.0,86.4,Away Win,3.9,7.0,89.0,Away Win,1.8,13.8,84.3
+Home Win,Home Win,76.5,19.5,4.0,Home Win,83.0,14.3,2.8,Home Win,65.6,29.1,5.3
+Draw,Away Win,30.3,27.9,41.8,Away Win,27.5,27.2,45.3,Away Win,19.7,35.0,45.3
+Home Win,Home Win,81.6,13.3,5.2,Home Win,85.4,10.7,3.9,Home Win,74.3,19.0,6.8
+Away Win,Away Win,5.5,8.1,86.4,Away Win,4.0,7.6,88.4,Away Win,1.7,15.2,83.1
+Draw,Home Win,86.8,6.7,6.5,Home Win,94.3,4.1,1.6,Home Win,81.3,13.9,4.8
+Home Win,Home Win,38.5,28.8,32.7,Home Win,47.1,27.4,25.6,Draw,24.9,37.7,37.4
+Home Win,Home Win,56.8,14.7,28.5,Home Win,57.4,19.5,23.1,Home Win,42.0,28.8,29.2
+Home Win,Home Win,96.4,1.8,1.9,Home Win,99.2,0.6,0.2,Home Win,97.3,2.4,0.3
+Away Win,Away Win,20.9,13.2,65.9,Home Win,38.1,27.0,34.9,Draw,17.6,43.6,38.8
+Away Win,Away Win,10.3,12.3,77.4,Away Win,10.3,15.3,74.4,Away Win,4.9,25.5,69.6
+Home Win,Home Win,84.7,8.9,6.4,Home Win,92.5,6.1,1.3,Home Win,81.9,16.1,2.0
+Home Win,Home Win,56.3,21.7,22.0,Home Win,57.7,22.8,19.6,Home Win,47.8,30.4,21.8
+Away Win,Away Win,9.9,19.3,70.9,Away Win,10.4,19.4,70.2,Away Win,4.8,24.9,70.3
+Away Win,Away Win,10.2,11.3,78.5,Away Win,9.6,13.6,76.8,Away Win,6.4,22.8,70.8
+Home Win,Home Win,36.5,30.7,32.8,Home Win,39.1,30.1,30.8,Draw,22.5,40.4,37.0
+Away Win,Away Win,17.7,22.7,59.7,Away Win,21.4,24.7,53.9,Away Win,15.8,37.9,46.3
+Draw,Home Win,72.1,22.1,5.8,Home Win,77.5,19.1,3.4,Home Win,61.7,33.3,5.0
+Draw,Home Win,62.6,28.3,9.1,Home Win,66.4,26.1,7.5,Home Win,45.1,39.3,15.6
+Home Win,Home Win,62.8,25.1,12.1,Home Win,68.8,22.1,9.1,Home Win,45.9,37.6,16.4
+Home Win,Home Win,48.1,17.2,34.7,Home Win,65.6,15.3,19.1,Home Win,55.2,27.7,17.1
+Draw,Away Win,34.4,30.3,35.3,Away Win,30.4,31.3,38.3,Away Win,16.0,32.9,51.1
+Home Win,Home Win,80.1,15.1,4.7,Home Win,76.7,16.7,6.6,Home Win,59.5,29.3,11.2
+Away Win,Away Win,2.4,2.2,95.5,Away Win,2.4,4.5,93.1,Away Win,0.8,9.1,90.1
+Home Win,Home Win,39.9,25.2,34.9,Home Win,40.2,28.7,31.1,Draw,29.0,37.1,33.8
+Away Win,Away Win,9.8,9.4,80.9,Away Win,17.7,16.2,66.0,Away Win,9.5,28.0,62.5
+Home Win,Home Win,79.8,9.5,10.7,Home Win,87.2,7.0,5.8,Home Win,77.0,16.0,6.9
+Home Win,Away Win,16.3,33.7,49.9,Away Win,18.4,30.6,51.0,Away Win,12.4,36.9,50.7
+Home Win,Home Win,88.1,8.3,3.5,Home Win,94.1,4.7,1.2,Home Win,82.1,14.9,3.0
+Away Win,Away Win,6.6,16.8,76.6,Away Win,8.2,18.1,73.7,Away Win,4.1,25.0,70.8
+Away Win,Away Win,4.3,6.6,89.1,Away Win,8.2,11.6,80.1,Away Win,3.7,17.7,78.5
+Draw,Away Win,33.7,29.9,36.4,Away Win,31.0,29.5,39.5,Away Win,17.6,36.9,45.4
+Draw,Away Win,10.5,10.9,78.6,Away Win,15.5,17.6,66.9,Away Win,6.9,26.9,66.2
+Home Win,Home Win,54.7,32.4,12.8,Home Win,60.7,30.6,8.7,Draw,43.3,43.5,13.2
+Away Win,Away Win,18.4,16.5,65.1,Away Win,22.3,19.3,58.5,Away Win,14.7,26.0,59.3
+Away Win,Away Win,10.7,15.8,73.5,Away Win,10.9,16.8,72.3,Away Win,5.1,26.7,68.2
+Home Win,Away Win,26.5,33.8,39.8,Away Win,29.6,26.4,43.9,Away Win,16.5,37.0,46.5
+Home Win,Home Win,77.9,12.2,9.9,Home Win,79.8,13.0,7.2,Home Win,61.9,26.0,12.0
+Away Win,Away Win,24.7,30.0,45.3,Away Win,28.5,30.3,41.3,Away Win,21.2,35.8,43.1
+Draw,Away Win,17.3,20.3,62.4,Away Win,17.7,21.8,60.5,Away Win,6.5,30.5,63.0
+Away Win,Away Win,6.0,7.5,86.5,Away Win,10.3,12.5,77.2,Away Win,7.0,21.0,72.0
+Away Win,Away Win,11.8,21.5,66.7,Away Win,12.9,22.2,64.9,Away Win,7.9,28.6,63.4
+Draw,Home Win,72.6,14.6,12.8,Home Win,81.4,12.4,6.1,Home Win,64.3,26.3,9.4
+Home Win,Home Win,62.3,22.0,15.7,Home Win,60.2,24.9,14.9,Home Win,45.2,33.1,21.6
+Home Win,Home Win,62.3,20.1,17.6,Home Win,62.6,21.7,15.6,Home Win,51.2,30.7,18.1
+Draw,Home Win,54.8,33.2,12.0,Home Win,62.2,26.7,11.1,Draw,40.4,42.6,17.0
+Home Win,Home Win,62.4,18.5,19.0,Home Win,70.2,16.0,13.8,Home Win,52.6,27.1,20.3
+Away Win,Home Win,67.4,22.9,9.7,Home Win,71.7,21.3,6.9,Home Win,57.0,32.5,10.5
+Home Win,Home Win,74.8,18.2,7.1,Home Win,78.5,15.6,5.9,Home Win,62.1,28.2,9.7
+Draw,Home Win,65.0,22.3,12.6,Home Win,78.2,15.9,5.9,Home Win,60.6,29.8,9.6
+Home Win,Home Win,76.1,16.1,7.8,Home Win,76.8,16.4,6.7,Home Win,55.9,31.1,13.0
+Home Win,Home Win,82.5,14.2,3.3,Home Win,87.4,10.7,1.9,Home Win,69.6,25.3,5.1
+Draw,Home Win,68.6,21.0,10.4,Home Win,72.5,19.2,8.3,Home Win,49.8,33.2,17.0
+Home Win,Home Win,58.2,31.6,10.2,Home Win,73.7,21.4,4.9,Home Win,52.1,38.1,9.8
+Draw,Home Win,58.7,20.5,20.8,Home Win,62.7,21.4,15.9,Home Win,47.1,33.2,19.7
+Home Win,Home Win,49.5,36.7,13.8,Home Win,61.8,28.1,10.2,Draw,40.5,43.9,15.6
+Draw,Home Win,55.7,23.8,20.5,Home Win,55.8,27.1,17.1,Draw,34.7,40.4,24.9
+Home Win,Home Win,65.1,23.1,11.8,Home Win,57.7,28.6,13.8,Home Win,45.9,37.4,16.7
+Home Win,Home Win,76.2,19.5,4.3,Home Win,77.3,19.0,3.7,Home Win,56.5,35.0,8.5
+Home Win,Home Win,89.2,8.1,2.7,Home Win,94.9,4.3,0.7,Home Win,85.8,12.5,1.7
+Home Win,Home Win,74.7,18.1,7.2,Home Win,72.6,19.1,8.3,Home Win,46.8,31.8,21.4
+Home Win,Home Win,92.4,5.3,2.3,Home Win,96.5,3.0,0.6,Home Win,89.3,9.3,1.4
+Draw,Home Win,83.0,10.8,6.2,Home Win,89.2,8.9,1.9,Home Win,75.6,21.3,3.1
+Draw,Home Win,64.0,25.4,10.7,Home Win,68.0,24.7,7.4,Home Win,51.7,36.7,11.6
+Home Win,Home Win,93.4,5.2,1.5,Home Win,98.1,1.7,0.2,Home Win,93.7,5.9,0.4
+Home Win,Home Win,91.2,5.9,2.9,Home Win,91.9,5.9,2.3,Home Win,77.7,17.6,4.7
+Draw,Home Win,81.1,15.6,3.3,Home Win,87.4,10.5,2.1,Home Win,69.3,26.3,4.4
+Away Win,Home Win,63.6,20.4,16.0,Home Win,69.8,18.4,11.8,Home Win,56.7,29.1,14.2
+Away Win,Away Win,27.7,34.1,38.2,Away Win,28.0,29.4,42.6,Away Win,18.4,38.1,43.5
+Away Win,Home Win,56.5,27.3,16.1,Home Win,58.5,30.2,11.3,Home Win,41.5,41.3,17.3
+Away Win,Away Win,23.6,19.5,56.9,Away Win,33.5,17.7,48.8,Away Win,25.0,28.3,46.7
+Home Win,Home Win,82.4,13.6,4.0,Home Win,90.9,7.5,1.6,Home Win,77.4,18.3,4.4
+Home Win,Away Win,14.7,35.4,49.9,Away Win,16.6,27.0,56.4,Away Win,9.7,32.8,57.5
+Draw,Away Win,15.2,27.0,57.8,Away Win,17.3,23.3,59.4,Away Win,9.0,32.4,58.6
+Draw,Away Win,16.7,24.3,59.0,Away Win,18.3,18.4,63.4,Away Win,11.5,27.7,60.8
+Home Win,Away Win,20.2,33.8,46.0,Away Win,23.1,31.4,45.5,Away Win,11.8,32.6,55.6
+Home Win,Home Win,82.8,13.3,3.9,Home Win,90.3,8.0,1.7,Home Win,77.2,19.0,3.8
+Home Win,Away Win,33.7,32.6,33.8,Home Win,41.1,30.6,28.3,Draw,19.4,40.8,39.8
+Home Win,Away Win,21.1,26.2,52.7,Away Win,29.5,26.2,44.3,Away Win,24.5,34.7,40.8
+Away Win,Away Win,8.7,12.9,78.4,Away Win,9.4,15.7,75.0,Away Win,4.3,22.6,73.1
+Home Win,Away Win,25.0,29.7,45.2,Away Win,24.0,28.0,48.0,Away Win,14.3,33.5,52.2
+Home Win,Away Win,28.3,27.0,44.7,Away Win,29.3,29.0,41.7,Away Win,18.4,34.5,47.1
+Draw,Away Win,12.5,22.5,65.0,Away Win,14.8,22.2,62.9,Away Win,5.9,28.9,65.2
+Home Win,Away Win,17.7,24.0,58.3,Away Win,21.3,23.7,55.0,Away Win,11.3,29.5,59.1
+Home Win,Home Win,92.3,5.8,1.9,Home Win,96.0,3.3,0.7,Home Win,89.1,9.5,1.4
+Draw,Home Win,67.6,20.8,11.5,Home Win,68.4,21.7,9.9,Home Win,53.1,34.5,12.4
+Home Win,Home Win,61.0,19.9,19.1,Home Win,67.3,17.0,15.7,Home Win,45.9,30.2,23.9
+Home Win,Home Win,65.7,25.0,9.3,Home Win,73.7,19.3,7.0,Home Win,54.9,35.1,10.0
+Home Win,Home Win,94.4,3.7,1.8,Home Win,98.2,1.6,0.3,Home Win,93.5,5.9,0.6
+Home Win,Home Win,84.2,13.2,2.6,Home Win,89.3,9.0,1.7,Home Win,71.5,23.7,4.8
+Home Win,Home Win,84.6,10.5,4.8,Home Win,93.9,4.9,1.3,Home Win,85.7,12.2,2.1
+Home Win,Home Win,94.6,3.9,1.5,Home Win,98.1,1.7,0.2,Home Win,94.4,5.2,0.4
+Draw,Home Win,80.3,13.3,6.3,Home Win,84.8,12.3,2.9,Home Win,72.7,22.3,5.0
+Away Win,Away Win,20.2,23.9,55.9,Away Win,20.0,17.8,62.2,Away Win,9.5,29.2,61.3
+Away Win,Home Win,45.8,33.6,20.7,Home Win,44.1,35.1,20.9,Draw,26.0,39.8,34.2
+Away Win,Away Win,21.4,18.6,60.0,Away Win,24.9,24.1,50.9,Away Win,16.2,30.5,53.3
+Away Win,Away Win,11.8,19.7,68.5,Away Win,13.6,21.3,65.1,Away Win,7.5,28.5,64.0
+Home Win,Home Win,81.7,14.9,3.3,Home Win,84.7,12.9,2.4,Home Win,67.5,27.1,5.4
+Home Win,Home Win,88.5,8.1,3.4,Home Win,90.1,7.6,2.3,Home Win,78.2,17.5,4.2
+Home Win,Home Win,63.5,20.0,16.5,Home Win,60.0,25.5,14.5,Home Win,41.0,37.3,21.7
+Draw,Away Win,14.8,19.9,65.3,Away Win,15.3,19.5,65.2,Away Win,10.1,30.6,59.3
+Home Win,Home Win,88.9,9.0,2.1,Home Win,94.5,4.7,0.8,Home Win,83.0,14.7,2.3
+Home Win,Home Win,68.3,20.7,11.0,Home Win,74.5,15.9,9.6,Home Win,49.3,29.5,21.2
+Away Win,Away Win,17.6,22.6,59.9,Away Win,19.9,22.2,57.9,Away Win,13.0,31.4,55.5
+Home Win,Home Win,84.8,8.1,7.0,Home Win,90.4,6.7,3.0,Home Win,78.4,16.7,4.8
+Away Win,Away Win,27.5,23.3,49.1,Away Win,28.2,26.2,45.7,Draw,23.8,43.3,32.9
+Away Win,Away Win,2.6,2.2,95.2,Away Win,4.3,4.1,91.6,Away Win,2.4,10.0,87.6
+Away Win,Away Win,13.8,20.6,65.6,Away Win,16.6,25.3,58.1,Away Win,8.2,28.0,63.8
+Away Win,Away Win,17.5,23.5,59.0,Away Win,14.4,16.2,69.4,Away Win,6.3,26.1,67.6
+Away Win,Away Win,8.3,13.3,78.4,Away Win,6.5,11.2,82.3,Away Win,3.1,17.5,79.4
+Home Win,Home Win,65.5,19.7,14.8,Home Win,66.8,19.0,14.2,Home Win,51.1,30.2,18.7
+Away Win,Away Win,20.8,30.6,48.6,Away Win,35.6,27.6,36.9,Away Win,8.8,34.7,56.4
+Home Win,Home Win,46.9,41.3,11.8,Home Win,63.5,28.0,8.5,Draw,42.5,46.0,11.5
+Away Win,Away Win,6.5,11.8,81.7,Away Win,8.0,15.5,76.5,Away Win,3.0,21.3,75.7
+Home Win,Home Win,52.8,32.4,14.9,Home Win,56.5,30.5,12.9,Draw,37.9,43.6,18.5
+Away Win,Away Win,26.2,31.5,42.3,Away Win,33.6,25.4,41.0,Away Win,14.6,34.4,51.1
+Home Win,Home Win,59.3,21.4,19.3,Home Win,70.3,18.0,11.7,Home Win,49.0,31.8,19.2
+Home Win,Home Win,68.1,17.8,14.1,Home Win,69.6,18.0,12.3,Home Win,56.9,28.7,14.4
+Home Win,Home Win,71.3,18.6,10.2,Home Win,78.5,14.5,6.9,Home Win,60.1,29.0,10.9
+Away Win,Away Win,21.6,26.5,51.9,Away Win,19.8,22.4,57.9,Away Win,11.5,29.6,58.9
+Home Win,Away Win,19.2,19.9,60.9,Away Win,24.3,21.3,54.4,Away Win,17.1,31.0,51.9
+Draw,Away Win,27.4,32.2,40.4,Away Win,27.6,31.6,40.8,Away Win,20.5,36.5,43.1
+Away Win,Away Win,8.6,11.4,80.0,Away Win,6.8,11.3,81.9,Away Win,3.4,19.3,77.3
+Away Win,Away Win,3.5,7.8,88.7,Away Win,3.6,8.4,88.0,Away Win,1.7,18.0,80.4
+Away Win,Away Win,9.0,11.4,79.6,Away Win,10.4,15.1,74.6,Away Win,5.6,24.4,70.1
+Away Win,Away Win,4.2,6.2,89.6,Away Win,3.8,8.3,88.0,Away Win,1.8,14.0,84.2
+Draw,Draw,29.0,42.4,28.6,Away Win,29.1,35.0,35.9,Away Win,14.1,41.0,45.0
+Away Win,Away Win,4.1,5.4,90.5,Away Win,4.6,7.9,87.5,Away Win,2.0,15.6,82.4
+Away Win,Away Win,6.0,8.2,85.8,Away Win,11.2,15.1,73.7,Away Win,4.1,20.7,75.2
+Draw,Away Win,32.4,25.6,42.0,Away Win,31.2,24.2,44.6,Away Win,24.6,31.6,43.8
+Draw,Home Win,44.5,34.9,20.6,Home Win,60.7,23.1,16.2,Draw,28.2,41.0,30.8
+Draw,Away Win,11.6,24.8,63.5,Away Win,15.0,23.2,61.8,Away Win,6.2,29.4,64.4
+Away Win,Away Win,13.3,31.3,55.4,Away Win,13.1,18.4,68.5,Away Win,5.6,31.2,63.2
+Away Win,Home Win,51.8,23.6,24.6,Home Win,55.3,24.2,20.5,Draw,30.9,38.0,31.1
+Away Win,Away Win,1.8,1.7,96.6,Away Win,2.6,4.2,93.2,Away Win,0.8,9.0,90.1
+Draw,Home Win,67.9,18.7,13.4,Home Win,62.1,23.2,14.7,Home Win,46.0,33.0,21.0
+Home Win,Home Win,80.6,15.6,3.8,Home Win,83.0,14.2,2.7,Home Win,60.6,31.8,7.7
+Home Win,Home Win,92.5,6.2,1.3,Home Win,96.3,3.3,0.4,Home Win,85.6,13.4,1.1
+Away Win,Away Win,6.9,8.4,84.7,Away Win,6.3,8.9,84.8,Away Win,3.9,17.0,79.1
+Home Win,Home Win,91.2,6.9,2.0,Home Win,97.0,2.6,0.4,Home Win,91.6,7.7,0.8
+Home Win,Home Win,41.6,32.5,25.9,Home Win,40.9,35.1,24.0,Draw,25.3,43.4,31.3
+Home Win,Home Win,83.5,12.9,3.6,Home Win,86.8,11.0,2.3,Home Win,72.4,23.6,4.1
+Home Win,Away Win,12.2,20.0,67.8,Away Win,10.2,13.7,76.1,Away Win,6.5,27.9,65.5
+Away Win,Away Win,17.5,27.1,55.4,Away Win,18.5,23.8,57.7,Away Win,8.9,31.3,59.8
+Away Win,Away Win,18.7,25.8,55.4,Away Win,18.5,25.6,55.8,Away Win,9.0,31.8,59.2
+Away Win,Home Win,54.0,24.0,22.1,Home Win,51.5,26.0,22.6,Home Win,39.8,35.9,24.2
+Home Win,Home Win,51.3,31.6,17.1,Home Win,66.5,21.3,12.2,Draw,38.2,40.8,21.1
+Home Win,Home Win,89.4,7.1,3.5,Home Win,93.6,5.1,1.3,Home Win,81.9,15.6,2.5
+Home Win,Home Win,47.2,27.1,25.8,Home Win,47.2,27.4,25.4,Away Win,28.7,33.6,37.7
+Home Win,Home Win,80.6,10.4,9.0,Home Win,85.2,9.0,5.8,Home Win,71.1,19.0,9.9
+Home Win,Home Win,75.2,14.8,10.0,Home Win,79.4,13.9,6.7,Home Win,60.8,25.2,13.9
+Home Win,Home Win,72.1,20.8,7.1,Home Win,77.6,18.5,3.9,Home Win,62.8,31.1,6.1
+Home Win,Away Win,4.8,6.1,89.0,Away Win,5.5,9.2,85.3,Away Win,2.9,21.3,75.8
+Away Win,Away Win,0.5,0.4,99.0,Away Win,0.6,1.3,98.0,Away Win,0.2,3.3,96.5
+Home Win,Home Win,57.0,22.4,20.6,Home Win,44.9,24.2,30.9,Away Win,31.4,31.7,36.9
+Home Win,Home Win,58.4,26.1,15.5,Home Win,61.6,26.5,11.9,Home Win,44.6,37.6,17.9
+Home Win,Home Win,69.3,16.2,14.5,Home Win,68.8,15.1,16.1,Home Win,58.6,23.4,17.9
+Home Win,Home Win,93.3,5.5,1.2,Home Win,98.0,1.8,0.2,Home Win,90.4,9.1,0.5
+Home Win,Home Win,87.8,7.8,4.4,Home Win,92.1,6.0,2.0,Home Win,78.5,16.6,4.9
+Away Win,Away Win,3.7,6.7,89.6,Away Win,4.1,8.7,87.2,Away Win,1.9,15.7,82.4
+Home Win,Home Win,73.0,16.3,10.7,Home Win,64.5,20.3,15.3,Home Win,49.2,31.4,19.4
+Home Win,Home Win,52.4,15.5,32.1,Home Win,69.0,16.9,14.2,Home Win,53.4,30.0,16.6
+Home Win,Home Win,86.8,9.9,3.3,Home Win,94.7,4.5,0.9,Home Win,82.4,14.7,2.9
+Draw,Home Win,44.6,35.7,19.7,Home Win,54.5,32.5,13.0,Draw,35.1,43.8,21.1
+Home Win,Home Win,73.2,18.5,8.3,Home Win,76.0,18.0,6.0,Home Win,51.9,35.3,12.8
+Away Win,Home Win,45.6,23.6,30.8,Away Win,37.5,24.0,38.6,Away Win,22.2,34.2,43.6
+Away Win,Away Win,5.4,11.0,83.6,Away Win,6.1,12.3,81.6,Away Win,2.4,18.4,79.2
+Draw,Home Win,44.1,25.1,30.8,Home Win,53.5,22.4,24.0,Home Win,38.9,33.0,28.1
+Draw,Home Win,42.5,31.9,25.6,Home Win,44.8,35.5,19.7,Draw,33.7,41.4,24.9
+Home Win,Home Win,58.2,23.3,18.4,Home Win,64.7,18.9,16.4,Home Win,49.6,31.4,19.0
+Home Win,Home Win,89.6,5.5,4.9,Home Win,93.9,4.2,1.9,Home Win,81.9,14.0,4.1
+Draw,Home Win,52.1,30.4,17.6,Home Win,56.9,28.5,14.6,Draw,36.4,41.8,21.9
+Home Win,Home Win,78.0,16.4,5.6,Home Win,77.9,16.0,6.1,Home Win,59.1,29.5,11.4
+Home Win,Home Win,79.2,12.8,8.0,Home Win,73.3,6.4,20.3,Away Win,18.9,21.5,59.5
+Home Win,Home Win,66.0,25.6,8.4,Home Win,71.2,23.7,5.1,Home Win,54.6,36.4,9.0
+Draw,Draw,31.1,35.6,33.3,Draw,33.7,40.3,26.0,Draw,21.1,46.1,32.8
+Home Win,Home Win,51.9,32.1,16.1,Home Win,52.0,34.0,14.0,Draw,38.9,41.4,19.8
+Away Win,Away Win,25.5,29.5,45.0,Away Win,27.7,27.9,44.4,Away Win,20.3,38.6,41.2
+Draw,Home Win,66.2,16.8,17.0,Home Win,60.5,17.9,21.6,Home Win,46.1,27.2,26.7
+Draw,Home Win,48.6,23.6,27.8,Home Win,43.9,26.2,29.9,Away Win,30.1,33.7,36.2
+Draw,Home Win,67.6,19.8,12.6,Home Win,69.7,18.8,11.5,Home Win,48.8,29.9,21.3
+Away Win,Home Win,60.2,24.8,15.0,Home Win,63.4,23.0,13.6,Home Win,46.9,32.5,20.6
+Home Win,Home Win,60.1,20.7,19.2,Home Win,62.3,23.7,14.0,Home Win,47.5,34.7,17.8
+Home Win,Home Win,65.4,19.0,15.6,Home Win,61.6,22.1,16.3,Home Win,48.5,29.9,21.7
+Home Win,Home Win,54.9,24.3,20.9,Home Win,38.1,27.8,34.1,Away Win,27.8,34.8,37.3
+Home Win,Home Win,80.0,15.2,4.7,Home Win,89.3,8.9,1.7,Home Win,79.9,17.8,2.4
+Home Win,Home Win,53.0,37.4,9.6,Home Win,63.8,29.2,7.0,Home Win,45.7,45.6,8.7
+Away Win,Away Win,18.7,31.3,50.0,Away Win,16.5,24.6,58.9,Away Win,8.1,34.1,57.9
+Away Win,Home Win,54.0,27.6,18.4,Home Win,53.3,29.5,17.3,Draw,33.0,41.4,25.6
+Away Win,Away Win,7.2,8.7,84.0,Away Win,8.1,12.8,79.1,Away Win,3.2,19.5,77.3
+Draw,Draw,31.7,40.6,27.6,Draw,34.3,34.9,30.7,Draw,18.6,44.9,36.5
+Home Win,Away Win,29.1,27.9,43.0,Away Win,25.6,26.3,48.1,Away Win,13.4,33.4,53.2
+Away Win,Home Win,38.9,33.1,28.0,Home Win,43.6,36.3,20.1,Draw,29.7,40.3,30.0
+Home Win,Home Win,77.1,13.9,9.0,Home Win,82.1,11.6,6.3,Home Win,69.5,22.2,8.3
+Draw,Home Win,62.2,23.3,14.5,Home Win,62.9,27.0,10.2,Home Win,46.8,39.2,14.0
+Draw,Home Win,67.5,20.2,12.3,Home Win,73.0,18.7,8.3,Home Win,64.0,26.7,9.3
+Home Win,Home Win,79.5,15.8,4.7,Home Win,86.3,11.5,2.2,Home Win,74.9,21.8,3.4
+Home Win,Home Win,63.9,22.8,13.4,Home Win,63.6,23.1,13.3,Home Win,51.5,33.2,15.3
+Away Win,Home Win,60.0,24.8,15.2,Home Win,61.7,22.5,15.8,Draw,32.8,35.4,31.8
+Draw,Home Win,55.6,24.0,20.4,Home Win,52.1,24.6,23.3,Away Win,27.0,35.1,37.9
+Away Win,Away Win,36.2,27.5,36.4,Home Win,39.4,24.9,35.7,Home Win,35.3,30.6,34.0
+Away Win,Away Win,16.8,20.1,63.1,Away Win,20.9,23.4,55.7,Away Win,13.9,32.9,53.2
+Home Win,Home Win,61.6,31.7,6.7,Home Win,76.2,20.0,3.8,Home Win,55.8,37.7,6.4
+Home Win,Home Win,67.8,24.2,8.1,Home Win,73.5,21.0,5.6,Home Win,56.9,35.7,7.4
+Home Win,Home Win,83.6,12.7,3.7,Home Win,87.3,10.5,2.2,Home Win,73.1,22.6,4.4
+Draw,Home Win,57.3,24.1,18.6,Home Win,50.3,28.0,21.7,Home Win,40.6,34.2,25.2
+Home Win,Home Win,80.5,14.4,5.1,Home Win,82.4,13.1,4.4,Home Win,64.9,26.1,9.0
+Home Win,Home Win,65.6,23.3,11.2,Home Win,66.4,23.2,10.5,Home Win,44.0,37.2,18.8
+Home Win,Home Win,69.6,25.0,5.4,Home Win,80.7,16.3,3.1,Home Win,62.8,31.8,5.4
+Home Win,Home Win,80.7,11.6,7.7,Home Win,84.9,11.1,4.0,Home Win,71.1,21.6,7.4
+Draw,Home Win,70.0,23.1,6.9,Home Win,71.4,23.3,5.3,Home Win,56.3,35.8,7.9
+Home Win,Home Win,65.9,27.0,7.0,Home Win,82.6,14.0,3.4,Home Win,58.5,34.6,7.0
+Home Win,Home Win,64.1,21.5,14.4,Home Win,66.2,21.3,12.5,Home Win,56.5,31.8,11.6
+Home Win,Home Win,51.7,24.6,23.7,Home Win,49.8,28.2,22.0,Home Win,39.8,36.9,23.3
+Home Win,Home Win,82.6,13.7,3.7,Home Win,86.1,11.1,2.7,Home Win,69.6,25.8,4.6
+Away Win,Home Win,58.7,28.9,12.4,Home Win,57.6,28.5,14.0,Draw,37.0,40.2,22.8
+Home Win,Home Win,80.1,15.2,4.7,Home Win,83.9,13.0,3.1,Home Win,64.0,28.3,7.7
+Home Win,Home Win,76.6,17.9,5.5,Home Win,82.6,13.7,3.7,Home Win,67.7,26.4,6.0
+Home Win,Home Win,53.3,21.6,25.1,Home Win,52.6,24.8,22.6,Home Win,35.7,34.4,29.9
+Draw,Home Win,78.3,14.5,7.2,Home Win,82.3,12.9,4.8,Home Win,68.5,24.1,7.4
+Home Win,Home Win,80.3,12.1,7.6,Home Win,87.9,8.4,3.7,Home Win,76.8,17.1,6.1
+Home Win,Home Win,77.1,15.0,7.9,Home Win,79.1,14.4,6.6,Home Win,61.1,28.5,10.4
+Draw,Home Win,56.5,23.7,19.8,Home Win,64.0,21.1,14.8,Home Win,38.1,37.5,24.4
+Home Win,Home Win,82.5,14.7,2.8,Home Win,87.4,10.9,1.7,Home Win,68.3,26.8,4.9
+Home Win,Home Win,74.3,19.7,5.9,Home Win,77.3,17.7,5.0,Home Win,62.8,29.3,8.0
+Away Win,Away Win,8.9,13.0,78.2,Away Win,10.1,16.6,73.3,Away Win,4.9,28.8,66.2
+Home Win,Home Win,54.7,23.4,21.9,Home Win,57.6,23.1,19.3,Draw,32.5,40.5,26.9
+Home Win,Away Win,35.7,27.6,36.7,Away Win,32.2,26.8,41.1,Away Win,17.3,36.8,45.8
+Home Win,Home Win,55.3,21.1,23.6,Home Win,46.4,25.4,28.2,Draw,30.6,36.2,33.2
+Draw,Away Win,21.6,20.9,57.5,Away Win,26.1,19.6,54.2,Away Win,13.0,31.8,55.1
+Home Win,Away Win,20.9,33.2,45.9,Away Win,28.3,32.2,39.5,Away Win,5.0,34.2,60.8
+Draw,Away Win,28.7,32.9,38.5,Away Win,32.0,24.8,43.2,Away Win,17.8,40.7,41.5
+Home Win,Home Win,86.0,9.3,4.8,Home Win,93.2,5.1,1.7,Home Win,83.1,13.3,3.6
+Away Win,Away Win,19.7,36.8,43.5,Away Win,21.7,29.2,49.1,Away Win,12.6,36.0,51.3
+Draw,Away Win,17.8,32.8,49.4,Away Win,18.6,26.1,55.3,Away Win,9.3,35.1,55.6
+Home Win,Away Win,36.1,25.4,38.5,Away Win,30.0,21.3,48.7,Away Win,15.1,37.3,47.5
+Draw,Away Win,22.9,22.6,54.5,Away Win,25.2,23.0,51.8,Away Win,13.3,32.5,54.3
+Home Win,Home Win,38.5,28.1,33.4,Home Win,37.9,29.2,32.8,Away Win,24.1,36.7,39.3
+Home Win,Away Win,27.3,32.8,39.9,Away Win,32.9,31.8,35.2,Away Win,19.0,39.5,41.4
+Away Win,Away Win,11.6,20.6,67.8,Away Win,11.7,17.1,71.2,Away Win,5.4,24.9,69.8
+Draw,Home Win,48.9,26.0,25.1,Home Win,58.0,21.5,20.6,Draw,32.9,34.5,32.5
+Home Win,Away Win,35.2,27.8,37.1,Away Win,29.8,29.4,40.9,Away Win,17.8,36.9,45.2
+Draw,Home Win,70.0,19.0,10.9,Home Win,79.9,14.6,5.5,Home Win,65.0,26.8,8.2
+Away Win,Away Win,17.3,26.8,55.9,Away Win,20.9,23.8,55.3,Away Win,10.6,31.8,57.7
+Home Win,Away Win,15.2,23.0,61.8,Away Win,15.7,24.0,60.3,Away Win,6.6,29.2,64.3
+Away Win,Home Win,43.4,31.5,25.1,Home Win,44.6,30.6,24.8,Draw,33.8,38.8,27.4
+Away Win,Away Win,15.9,29.0,55.1,Away Win,18.6,27.4,54.0,Away Win,7.7,33.2,59.1
+Away Win,Away Win,29.9,33.2,36.9,Away Win,24.4,33.1,42.4,Away Win,13.4,35.3,51.2
+Draw,Away Win,17.6,25.1,57.3,Away Win,20.1,24.7,55.2,Away Win,8.8,31.5,59.7
+Home Win,Home Win,49.9,27.0,23.2,Home Win,60.2,22.7,17.1,Draw,38.2,38.3,23.5
+Draw,Away Win,21.2,26.8,52.1,Away Win,20.5,24.8,54.7,Away Win,11.6,31.3,57.1
+Draw,Away Win,18.9,23.5,57.7,Away Win,15.8,18.8,65.4,Away Win,9.7,28.4,61.9
+Away Win,Away Win,24.7,28.8,46.5,Away Win,22.8,25.8,51.3,Away Win,10.5,33.0,56.5
+Draw,Away Win,35.3,26.2,38.5,Away Win,32.4,23.7,43.9,Away Win,14.8,35.6,49.6
+Home Win,Home Win,88.3,8.6,3.1,Home Win,92.7,5.9,1.4,Home Win,79.2,17.0,3.8
+Draw,Away Win,31.4,25.9,42.7,Away Win,35.3,24.7,40.0,Away Win,29.6,32.1,38.3
+Home Win,Home Win,71.0,20.1,9.0,Home Win,81.6,15.0,3.4,Home Win,72.2,23.2,4.6
+Home Win,Home Win,68.9,21.5,9.5,Home Win,85.4,12.0,2.6,Home Win,71.6,24.8,3.6
+Home Win,Home Win,44.3,23.8,31.9,Home Win,54.0,26.4,19.6,Draw,34.6,36.9,28.4
+Home Win,Home Win,75.5,19.2,5.3,Home Win,88.0,10.5,1.5,Home Win,75.9,21.5,2.6
+Home Win,Home Win,54.7,29.7,15.5,Home Win,58.4,27.8,13.8,Draw,39.1,43.4,17.5
+Draw,Home Win,77.8,16.5,5.7,Home Win,83.9,12.5,3.6,Home Win,70.6,24.3,5.0
+Home Win,Home Win,62.3,27.6,10.0,Home Win,67.1,25.5,7.4,Home Win,58.0,34.3,7.7
+Home Win,Home Win,62.2,26.3,11.6,Home Win,73.1,19.3,7.7,Home Win,58.2,31.9,9.9
+Draw,Home Win,48.4,28.7,23.0,Home Win,63.8,23.4,12.8,Home Win,49.1,34.6,16.3
+Away Win,Away Win,8.2,14.1,77.8,Away Win,8.3,14.8,76.9,Away Win,5.5,25.4,69.1
+Away Win,Away Win,9.0,14.3,76.7,Away Win,8.1,13.5,78.4,Away Win,3.5,21.5,75.0
+Away Win,Draw,29.3,36.2,34.5,Draw,33.6,35.7,30.7,Draw,19.8,41.4,38.9
+Away Win,Away Win,11.6,19.4,69.0,Away Win,13.0,19.4,67.6,Away Win,5.5,24.5,70.1
+Home Win,Home Win,34.7,32.3,33.0,Away Win,31.9,28.4,39.7,Away Win,23.9,37.4,38.7
+Away Win,Home Win,42.1,26.4,31.5,Home Win,42.3,27.7,30.0,Draw,33.0,35.3,31.7
+Home Win,Home Win,55.7,25.5,18.8,Home Win,48.2,29.2,22.5,Home Win,39.4,36.0,24.6
+Draw,Away Win,13.3,23.0,63.7,Away Win,15.0,23.0,62.0,Away Win,10.1,29.3,60.6
+Draw,Home Win,49.7,36.2,14.1,Home Win,58.2,29.3,12.5,Draw,30.0,47.0,23.0
+Away Win,Away Win,24.7,22.1,53.1,Away Win,34.6,21.0,44.4,Away Win,18.4,29.4,52.2
+Home Win,Home Win,59.9,25.3,14.8,Home Win,64.0,22.3,13.7,Home Win,44.3,35.2,20.5
+Home Win,Away Win,22.5,34.0,43.5,Away Win,23.2,27.2,49.6,Away Win,12.4,32.8,54.8
+Home Win,Away Win,23.9,33.2,42.9,Away Win,24.1,29.5,46.4,Away Win,12.6,37.1,50.3
+Away Win,Home Win,49.0,36.5,14.6,Home Win,69.8,21.5,8.7,Draw,26.0,43.6,30.4
+Draw,Draw,32.5,36.6,30.9,Home Win,37.0,35.7,27.3,Away Win,18.7,40.6,40.7
+Home Win,Home Win,51.0,30.1,19.0,Home Win,56.2,30.3,13.5,Draw,39.0,41.9,19.0
+Home Win,Home Win,81.4,15.3,3.3,Home Win,90.3,8.5,1.2,Home Win,75.6,21.8,2.6
+Home Win,Home Win,73.2,17.3,9.5,Home Win,75.9,16.5,7.7,Home Win,64.0,24.6,11.4
+Home Win,Away Win,30.9,30.2,39.0,Away Win,29.3,21.7,49.0,Away Win,24.9,34.4,40.7
+Draw,Home Win,76.3,19.0,4.7,Home Win,80.8,16.5,2.6,Home Win,63.3,32.1,4.6
+Home Win,Home Win,78.6,14.9,6.6,Home Win,79.5,14.1,6.4,Home Win,66.9,23.9,9.2
+Away Win,Away Win,15.4,25.7,58.9,Away Win,15.2,24.0,60.8,Away Win,9.3,34.6,56.1
+Home Win,Home Win,50.0,33.6,16.4,Home Win,50.5,30.9,18.6,Home Win,44.6,37.3,18.1
+Away Win,Away Win,16.0,31.7,52.3,Away Win,18.6,29.2,52.2,Away Win,7.1,30.7,62.2
+Home Win,Home Win,52.1,27.3,20.6,Home Win,58.5,25.4,16.1,Home Win,48.8,32.2,18.9
+Home Win,Home Win,65.4,25.1,9.5,Home Win,67.6,24.8,7.5,Home Win,52.6,37.4,10.0
+Home Win,Home Win,70.3,19.1,10.5,Home Win,65.6,21.2,13.2,Home Win,47.6,33.2,19.2
+Home Win,Home Win,46.0,31.6,22.4,Home Win,39.4,35.7,25.0,Draw,26.7,41.7,31.7
+Draw,Home Win,64.0,19.5,16.6,Home Win,64.7,17.5,17.9,Home Win,41.2,35.2,23.6
+Draw,Draw,34.8,36.7,28.5,Home Win,42.3,35.6,22.1,Draw,24.9,42.8,32.3
+Away Win,Away Win,7.4,9.4,83.2,Away Win,8.2,13.5,78.3,Away Win,6.0,27.6,66.5
+Draw,Draw,35.1,36.3,28.6,Home Win,38.0,36.9,25.1,Draw,23.3,42.1,34.6
+Home Win,Home Win,81.0,12.4,6.6,Home Win,86.3,8.9,4.8,Home Win,75.5,18.0,6.5
+Away Win,Away Win,18.8,23.6,57.6,Away Win,21.2,19.9,59.0,Away Win,12.4,32.7,54.9
+Away Win,Away Win,17.2,30.1,52.8,Away Win,20.4,28.3,51.3,Away Win,9.8,33.8,56.4
+Home Win,Home Win,49.0,26.5,24.6,Home Win,43.0,31.3,25.6,Draw,31.6,38.4,30.0
+Draw,Away Win,20.8,35.6,43.6,Away Win,23.8,31.6,44.6,Away Win,13.4,37.7,48.9
+Away Win,Draw,32.7,34.9,32.4,Home Win,34.7,32.8,32.5,Draw,23.2,44.1,32.8
+Draw,Away Win,22.0,30.9,47.1,Away Win,23.4,31.5,45.1,Away Win,13.2,35.8,51.0
+Home Win,Home Win,59.2,20.4,20.4,Home Win,58.8,25.4,15.8,Draw,32.9,35.1,32.0
+Home Win,Home Win,76.4,14.9,8.7,Home Win,77.5,15.5,6.9,Home Win,68.2,23.5,8.2
+Home Win,Home Win,96.6,2.7,0.8,Home Win,99.2,0.7,0.0,Home Win,97.6,2.3,0.1
+Draw,Home Win,47.5,29.4,23.0,Home Win,44.8,36.2,18.9,Draw,33.2,41.1,25.6
+Draw,Home Win,66.2,18.8,15.0,Home Win,62.8,22.6,14.6,Home Win,40.6,37.2,22.2
+Home Win,Draw,26.6,41.9,31.5,Away Win,28.8,34.6,36.7,Away Win,13.8,41.5,44.7
+Draw,Away Win,14.9,25.8,59.3,Away Win,14.1,21.0,64.9,Away Win,7.1,31.3,61.5
+Draw,Away Win,21.3,32.4,46.2,Away Win,20.8,28.2,51.0,Away Win,9.3,36.3,54.3
+Away Win,Home Win,37.4,26.2,36.4,Home Win,47.2,27.5,25.3,Draw,28.2,39.3,32.5
+Away Win,Away Win,8.9,14.1,77.0,Away Win,9.0,13.4,77.6,Away Win,5.4,23.6,71.0
+Away Win,Away Win,26.0,26.7,47.3,Away Win,28.7,32.0,39.4,Away Win,18.8,33.9,47.3
+Away Win,Away Win,18.9,18.2,62.9,Away Win,26.9,13.2,59.9,Away Win,20.4,25.4,54.2
+Away Win,Away Win,8.1,10.3,81.6,Away Win,9.8,13.7,76.4,Away Win,6.3,21.8,71.9
+Away Win,Away Win,2.2,2.6,95.2,Away Win,3.7,6.9,89.4,Away Win,1.2,10.0,88.7
+Away Win,Away Win,0.7,1.1,98.2,Away Win,2.9,6.9,90.2,Away Win,1.4,10.6,88.0
+Away Win,Away Win,10.7,9.3,80.0,Away Win,18.3,16.5,65.3,Away Win,9.9,22.4,67.7
+Away Win,Home Win,78.9,14.3,6.8,Home Win,86.7,9.7,3.6,Home Win,73.1,21.2,5.7
+Draw,Away Win,24.6,37.7,37.8,Away Win,22.2,30.4,47.4,Away Win,10.7,35.1,54.3
+Draw,Away Win,23.2,22.2,54.7,Away Win,19.1,17.3,63.6,Away Win,11.6,29.6,58.7
+Home Win,Home Win,79.8,13.8,6.4,Home Win,82.5,14.1,3.4,Home Win,69.4,25.4,5.2
+Home Win,Home Win,86.6,10.4,3.0,Home Win,92.5,6.3,1.2,Home Win,79.0,17.5,3.5
+Away Win,Home Win,37.6,30.3,32.1,Home Win,40.6,29.6,29.8,Away Win,26.6,34.2,39.2
+Home Win,Home Win,55.0,29.1,15.9,Home Win,65.3,23.9,10.9,Home Win,47.5,36.6,15.9
+Home Win,Home Win,85.0,7.0,8.0,Home Win,91.9,4.5,3.6,Home Win,76.0,15.3,8.6
+Draw,Home Win,83.2,12.6,4.1,Home Win,88.6,9.0,2.4,Home Win,70.7,23.5,5.8
+Draw,Home Win,52.8,23.6,23.6,Home Win,48.8,27.5,23.7,Draw,31.9,39.3,28.9
+Away Win,Away Win,30.8,33.6,35.6,Away Win,29.9,33.0,37.0,Away Win,17.2,37.4,45.4
+Home Win,Home Win,65.6,14.8,19.7,Home Win,58.8,20.8,20.5,Home Win,45.2,33.0,21.7
+Draw,Away Win,14.7,26.6,58.8,Away Win,17.8,26.1,56.1,Away Win,8.0,31.0,61.0
+Home Win,Home Win,87.9,9.9,2.1,Home Win,93.2,5.9,0.9,Home Win,79.6,17.4,3.1
+Away Win,Away Win,6.5,11.4,82.1,Away Win,8.4,12.8,78.8,Away Win,5.2,21.2,73.7
+Draw,Away Win,17.6,15.3,67.1,Away Win,18.1,15.6,66.3,Away Win,9.7,29.0,61.3
+Away Win,Away Win,6.2,13.4,80.4,Away Win,6.4,12.9,80.7,Away Win,2.3,17.5,80.2
+Away Win,Away Win,19.9,24.2,55.9,Away Win,24.2,25.4,50.4,Away Win,9.8,30.6,59.6
+Home Win,Home Win,90.8,6.3,3.0,Home Win,94.2,4.5,1.3,Home Win,82.7,14.1,3.2
+Away Win,Away Win,11.4,23.9,64.6,Away Win,9.4,18.1,72.5,Away Win,4.2,28.8,67.0
+Away Win,Away Win,10.2,24.7,65.2,Away Win,8.6,16.9,74.5,Away Win,3.8,23.4,72.8
+Away Win,Away Win,10.4,16.6,73.1,Away Win,11.6,14.2,74.1,Away Win,7.7,30.5,61.8
+Home Win,Home Win,90.9,6.7,2.5,Home Win,95.8,3.6,0.6,Home Win,89.0,9.9,1.1
+Home Win,Away Win,28.0,30.9,41.2,Home Win,35.2,31.0,33.7,Away Win,18.2,37.1,44.7
+Draw,Away Win,28.4,29.4,42.2,Away Win,30.0,29.1,40.9,Away Win,19.1,37.0,43.9
+Home Win,Home Win,93.8,4.1,2.1,Home Win,98.0,1.7,0.3,Home Win,94.2,5.2,0.5
+Away Win,Away Win,1.7,2.2,96.1,Away Win,1.7,3.1,95.2,Away Win,0.6,7.3,92.1
+Home Win,Home Win,44.6,25.4,30.1,Home Win,49.9,23.5,26.7,Draw,31.4,34.5,34.1
+Draw,Home Win,63.4,22.0,14.6,Home Win,58.8,22.4,18.8,Home Win,38.3,33.9,27.8
+Away Win,Away Win,25.3,28.8,45.9,Away Win,22.6,24.6,52.9,Away Win,11.2,30.4,58.4
+Home Win,Home Win,75.3,18.9,5.8,Home Win,79.5,16.7,3.8,Home Win,63.6,29.8,6.6
+Home Win,Home Win,86.2,7.5,6.3,Home Win,90.9,6.8,2.3,Home Win,77.7,18.0,4.4
+Home Win,Home Win,90.0,6.9,3.1,Home Win,95.6,3.6,0.8,Home Win,89.0,9.2,1.8
+Home Win,Away Win,22.1,25.6,52.3,Away Win,22.1,23.9,54.0,Away Win,14.3,30.0,55.7
+Away Win,Away Win,8.1,17.0,74.9,Away Win,9.4,18.6,71.9,Away Win,3.6,24.4,72.0
+Home Win,Home Win,52.6,22.7,24.7,Home Win,49.0,26.8,24.3,Draw,32.1,35.0,32.9
+Home Win,Home Win,85.9,9.9,4.3,Home Win,92.4,5.9,1.7,Home Win,81.0,16.0,3.0
+Away Win,Away Win,4.1,6.5,89.4,Away Win,3.0,7.0,90.0,Away Win,2.2,14.5,83.2
+Home Win,Home Win,59.2,32.4,8.4,Home Win,76.5,19.5,4.0,Home Win,56.7,37.1,6.1
+Home Win,Draw,28.1,43.5,28.4,Draw,35.7,38.2,26.1,Draw,19.3,50.6,30.1
+Home Win,Home Win,40.4,35.1,24.5,Home Win,42.1,32.3,25.7,Draw,27.8,42.9,29.2
+Home Win,Home Win,61.5,22.5,16.0,Home Win,66.8,19.3,13.9,Home Win,42.2,36.1,21.7
+Home Win,Home Win,84.0,13.2,2.8,Home Win,91.7,7.1,1.2,Home Win,77.2,19.4,3.4
+Home Win,Home Win,79.3,14.5,6.2,Home Win,90.1,7.6,2.4,Home Win,77.5,18.3,4.2
+Away Win,Home Win,55.8,24.6,19.6,Home Win,51.1,26.7,22.2,Draw,35.1,36.2,28.7
+Away Win,Home Win,38.7,26.4,34.9,Home Win,41.0,25.2,33.8,Away Win,20.0,35.7,44.3
+Home Win,Home Win,81.2,8.4,10.4,Home Win,83.3,8.1,8.7,Home Win,63.7,20.1,16.2
+Home Win,Home Win,54.9,28.9,16.2,Home Win,53.8,29.6,16.6,Home Win,41.3,38.0,20.6
+Away Win,Away Win,6.0,12.1,82.0,Away Win,6.8,14.3,78.9,Away Win,2.6,19.6,77.8
+Away Win,Away Win,15.9,29.9,54.2,Away Win,16.3,21.0,62.6,Away Win,8.6,32.9,58.5
+Home Win,Home Win,64.6,17.7,17.7,Home Win,56.1,21.6,22.3,Home Win,34.9,30.5,34.6
+Home Win,Home Win,76.1,11.9,12.0,Home Win,74.7,12.5,12.9,Home Win,60.3,24.8,14.9
+Home Win,Home Win,94.5,2.4,3.0,Home Win,97.3,1.7,0.9,Home Win,93.0,5.4,1.6
+Home Win,Away Win,29.9,32.3,37.8,Home Win,40.2,29.9,29.9,Draw,20.7,42.0,37.3
+Away Win,Away Win,3.4,4.2,92.4,Away Win,3.3,6.1,90.6,Away Win,1.3,11.3,87.4
+Home Win,Home Win,88.7,9.2,2.2,Home Win,93.6,5.1,1.4,Home Win,82.8,13.8,3.4
+Home Win,Home Win,85.6,7.5,6.9,Home Win,90.7,6.1,3.2,Home Win,81.2,13.2,5.6
+Home Win,Home Win,77.5,13.5,9.0,Home Win,89.0,7.6,3.4,Home Win,77.9,16.2,5.9
+Home Win,Home Win,84.5,12.3,3.2,Home Win,91.4,7.0,1.6,Home Win,79.2,17.4,3.3
+Away Win,Home Win,56.4,20.4,23.2,Home Win,56.8,23.1,20.1,Away Win,28.5,35.0,36.5
+Draw,Home Win,62.0,18.4,19.6,Home Win,68.4,16.5,15.1,Home Win,51.5,28.2,20.4
+Home Win,Home Win,69.5,21.0,9.5,Home Win,72.8,20.9,6.4,Home Win,55.6,32.8,11.6
+Draw,Home Win,91.3,7.1,1.6,Home Win,95.9,3.6,0.5,Home Win,88.5,10.2,1.2
+Draw,Home Win,85.4,10.5,4.1,Home Win,87.3,9.7,3.1,Home Win,74.0,21.0,5.0
+Away Win,Home Win,41.8,25.1,33.1,Home Win,45.3,24.4,30.3,Away Win,33.0,31.0,36.0
+Away Win,Away Win,33.8,32.2,33.9,Home Win,37.9,31.9,30.2,Away Win,20.9,36.8,42.3
+Home Win,Home Win,79.4,15.4,5.2,Home Win,87.8,10.0,2.2,Home Win,72.4,22.5,5.1
+Draw,Home Win,59.5,29.0,11.5,Home Win,76.0,18.3,5.7,Home Win,59.3,33.2,7.5
+Home Win,Home Win,92.4,6.3,1.2,Home Win,97.4,2.4,0.3,Home Win,92.0,7.3,0.7
+Home Win,Home Win,69.7,22.0,8.3,Home Win,74.9,19.0,6.1,Home Win,60.7,31.7,7.7
+Home Win,Home Win,41.6,30.7,27.7,Away Win,33.7,29.4,37.0,Away Win,20.1,37.0,42.9
+Home Win,Home Win,91.6,5.9,2.5,Home Win,93.9,4.7,1.4,Home Win,77.8,16.9,5.2
+Home Win,Away Win,16.2,30.2,53.5,Away Win,21.3,27.2,51.6,Away Win,11.8,36.6,51.6
+Home Win,Home Win,86.6,10.5,2.9,Home Win,93.3,5.4,1.3,Home Win,80.1,16.5,3.4
+Away Win,Away Win,17.4,27.6,55.0,Away Win,15.7,22.4,61.8,Away Win,5.9,27.7,66.5
+Draw,Home Win,50.9,20.9,28.1,Home Win,59.3,19.9,20.8,Home Win,44.0,30.2,25.8
+Away Win,Away Win,5.4,11.0,83.7,Away Win,5.0,11.7,83.3,Away Win,1.8,19.8,78.4
+Draw,Home Win,72.8,19.9,7.3,Home Win,75.6,19.2,5.2,Home Win,57.3,33.7,9.0
+Away Win,Away Win,4.9,5.2,89.9,Away Win,5.5,7.9,86.6,Away Win,2.5,15.8,81.7
+Draw,Home Win,81.5,10.8,7.8,Home Win,87.1,8.1,4.8,Home Win,74.0,18.4,7.6
+Home Win,Away Win,32.6,27.9,39.5,Away Win,30.8,27.8,41.4,Away Win,16.4,33.1,50.5
+Home Win,Home Win,78.8,17.5,3.8,Home Win,81.9,15.2,2.8,Home Win,58.9,34.7,6.4
+Away Win,Away Win,14.8,18.8,66.4,Away Win,16.1,18.6,65.2,Away Win,9.7,30.8,59.5
+Away Win,Away Win,2.4,2.6,95.0,Away Win,2.2,4.7,93.2,Away Win,1.0,9.6,89.4
+Home Win,Home Win,88.1,9.1,2.9,Home Win,94.1,4.8,1.1,Home Win,80.9,15.3,3.9
+Away Win,Draw,33.7,36.7,29.6,Draw,28.4,36.8,34.8,Away Win,17.6,36.1,46.2
+Away Win,Home Win,82.3,13.5,4.2,Home Win,84.2,11.9,3.9,Home Win,71.1,23.4,5.4
+Away Win,Away Win,10.8,14.7,74.5,Away Win,10.9,13.8,75.2,Away Win,9.8,29.7,60.5
+Home Win,Home Win,83.7,12.7,3.6,Home Win,91.6,7.5,1.0,Home Win,81.5,17.1,1.5
+Home Win,Home Win,79.9,14.4,5.7,Home Win,91.3,7.3,1.4,Home Win,84.9,13.4,1.6
+Home Win,Home Win,68.6,16.1,15.3,Home Win,80.5,11.2,8.3,Home Win,62.8,22.3,14.9
+Home Win,Home Win,80.3,10.6,9.1,Home Win,83.6,8.4,8.1,Home Win,70.7,19.8,9.5
+Home Win,Home Win,90.2,4.0,5.8,Home Win,94.6,2.8,2.5,Home Win,88.5,8.1,3.4
+Home Win,Home Win,64.7,17.9,17.4,Home Win,55.8,23.6,20.6,Home Win,42.0,35.0,23.0
+Away Win,Away Win,31.1,17.2,51.6,Home Win,43.2,14.8,42.0,Home Win,41.1,28.8,30.1
+Home Win,Home Win,90.9,6.0,3.1,Home Win,95.1,3.9,1.0,Home Win,89.0,9.3,1.7
+Home Win,Home Win,41.5,26.1,32.5,Away Win,30.2,23.5,46.3,Home Win,36.0,33.7,30.4
+Home Win,Home Win,79.4,14.4,6.2,Home Win,89.0,9.1,1.9,Home Win,78.2,19.4,2.4
+Draw,Home Win,71.0,17.1,11.9,Home Win,73.7,15.9,10.4,Home Win,60.4,24.5,15.2
+Home Win,Home Win,60.0,23.5,16.4,Home Win,53.1,24.9,22.0,Draw,33.4,36.1,30.5
+Home Win,Home Win,78.9,14.5,6.7,Home Win,74.7,16.8,8.5,Home Win,50.2,34.0,15.8
+Draw,Home Win,65.0,23.7,11.3,Home Win,67.5,23.5,9.0,Home Win,50.5,35.3,14.2
+Draw,Away Win,27.1,30.8,42.1,Away Win,24.9,26.4,48.7,Away Win,20.9,33.7,45.4
+Home Win,Away Win,22.8,31.6,45.6,Away Win,24.6,32.6,42.8,Away Win,17.1,36.3,46.6
+Away Win,Draw,23.8,39.6,36.6,Away Win,24.5,29.5,46.0,Away Win,13.5,38.2,48.3
+Home Win,Home Win,82.8,12.6,4.7,Home Win,86.9,9.9,3.2,Home Win,68.7,23.5,7.8
+Away Win,Home Win,41.7,33.5,24.8,Home Win,37.1,32.3,30.6,Draw,21.3,41.3,37.5
+Draw,Home Win,63.4,26.0,10.7,Home Win,65.2,26.1,8.7,Home Win,49.7,36.5,13.8
+Away Win,Away Win,7.8,15.2,77.0,Away Win,11.9,19.9,68.2,Away Win,6.7,25.8,67.5
+Home Win,Home Win,39.7,25.9,34.4,Home Win,46.2,23.6,30.2,Away Win,29.8,34.9,35.2
+Home Win,Home Win,77.6,18.2,4.2,Home Win,83.3,13.8,2.9,Home Win,67.8,28.1,4.1
+Home Win,Home Win,58.2,23.6,18.1,Home Win,51.6,26.5,21.9,Draw,34.2,37.4,28.4
+Draw,Home Win,62.2,26.0,11.8,Home Win,65.6,24.1,10.3,Home Win,49.5,37.8,12.7
+Home Win,Home Win,65.3,26.4,8.3,Home Win,80.4,16.7,3.0,Home Win,65.8,30.4,3.8
+Home Win,Home Win,67.5,20.7,11.8,Home Win,73.1,18.1,8.9,Home Win,56.9,30.8,12.3
+Home Win,Home Win,53.1,27.4,19.5,Home Win,55.4,27.8,16.8,Draw,35.5,38.6,25.9
+Draw,Away Win,16.9,13.3,69.7,Away Win,20.5,14.4,65.2,Away Win,12.8,24.5,62.7
+Home Win,Home Win,77.4,17.1,5.5,Home Win,81.2,15.1,3.6,Home Win,72.9,22.8,4.3
+Away Win,Away Win,9.0,10.7,80.3,Away Win,13.8,17.3,68.9,Away Win,6.2,25.2,68.6
+Away Win,Away Win,2.7,3.0,94.3,Away Win,2.1,3.6,94.3,Away Win,1.2,9.1,89.7
+Away Win,Away Win,1.8,2.2,96.0,Away Win,3.1,5.5,91.4,Away Win,1.5,10.3,88.2
+Home Win,Home Win,96.9,1.7,1.4,Home Win,99.3,0.6,0.1,Home Win,97.0,2.7,0.3
+Away Win,Away Win,2.0,2.1,95.8,Away Win,2.7,4.5,92.8,Away Win,1.4,8.6,90.0
+Home Win,Home Win,81.8,14.0,4.2,Home Win,88.1,10.1,1.8,Home Win,81.5,16.6,1.9
+Home Win,Home Win,81.2,12.4,6.4,Home Win,86.9,10.0,3.1,Home Win,77.5,17.8,4.6
+Home Win,Home Win,95.2,3.6,1.2,Home Win,98.0,1.7,0.3,Home Win,91.2,8.1,0.7
+Home Win,Home Win,65.4,21.8,12.8,Home Win,74.8,18.2,7.0,Home Win,61.9,28.0,10.1
+Away Win,Away Win,7.7,14.3,78.1,Away Win,9.7,16.3,73.9,Away Win,4.5,22.8,72.7
+Away Win,Away Win,19.3,29.7,50.9,Away Win,16.2,23.6,60.2,Away Win,12.9,33.8,53.3
+Home Win,Home Win,93.6,4.5,1.8,Home Win,96.9,2.5,0.5,Home Win,90.5,8.2,1.4
+Home Win,Home Win,79.9,12.9,7.2,Home Win,74.7,16.1,9.2,Home Win,52.4,29.2,18.4
+Away Win,Home Win,82.3,9.0,8.7,Home Win,83.2,9.8,6.9,Home Win,65.7,21.1,13.1
+Home Win,Home Win,88.6,9.5,1.9,Home Win,95.6,4.0,0.4,Home Win,82.4,16.2,1.4
+Home Win,Home Win,75.6,17.4,7.1,Home Win,76.4,16.4,7.2,Home Win,51.5,33.9,14.7
+Home Win,Home Win,71.5,19.1,9.4,Home Win,68.6,20.5,10.9,Home Win,50.2,32.1,17.7
+Away Win,Home Win,34.0,32.7,33.3,Away Win,33.9,30.9,35.1,Away Win,23.0,37.7,39.3
+Home Win,Home Win,61.0,28.0,11.0,Home Win,58.1,30.7,11.2,Home Win,45.1,38.9,16.1
+Away Win,Away Win,2.7,3.5,93.8,Away Win,3.7,7.1,89.3,Away Win,1.8,11.3,86.9
+Home Win,Home Win,77.6,16.4,6.0,Home Win,81.3,13.6,5.1,Home Win,61.8,28.0,10.2
+Away Win,Home Win,68.8,21.0,10.2,Home Win,67.9,21.3,10.8,Home Win,44.4,33.7,21.9
+Draw,Away Win,25.8,30.8,43.4,Away Win,27.6,29.0,43.4,Away Win,14.7,36.5,48.8
+Away Win,Home Win,50.1,21.2,28.7,Home Win,52.5,26.4,21.0,Away Win,31.0,32.8,36.3
+Draw,Home Win,81.9,8.9,9.2,Home Win,81.2,9.5,9.3,Home Win,72.0,18.7,9.3
+Away Win,Away Win,20.8,38.7,40.5,Away Win,15.8,22.4,61.8,Away Win,6.8,32.8,60.5
+Away Win,Home Win,43.6,18.2,38.2,Home Win,48.0,22.2,29.8,Home Win,38.3,34.1,27.6
+Home Win,Away Win,24.5,25.7,49.9,Away Win,27.1,24.1,48.8,Away Win,20.4,38.9,40.6
+Draw,Home Win,36.8,32.5,30.7,Home Win,33.8,32.9,33.4,Away Win,19.6,39.3,41.1
+Home Win,Home Win,79.6,15.0,5.3,Home Win,79.1,15.9,5.0,Home Win,62.0,28.9,9.0
+Home Win,Home Win,82.2,14.0,3.8,Home Win,83.5,13.2,3.3,Home Win,62.7,29.4,7.9
+Draw,Home Win,47.7,26.9,25.4,Home Win,47.5,26.7,25.8,Home Win,36.7,33.8,29.5
+Draw,Home Win,74.2,16.5,9.3,Home Win,82.0,12.6,5.5,Home Win,66.2,24.7,9.0
+Draw,Home Win,42.9,35.8,21.4,Home Win,47.8,30.9,21.3,Draw,23.0,44.1,32.8
+Away Win,Away Win,24.2,22.0,53.8,Away Win,27.5,22.3,50.2,Away Win,19.8,33.8,46.4
+Home Win,Home Win,67.3,18.8,13.9,Home Win,65.7,19.1,15.3,Home Win,43.8,38.1,18.1
+Home Win,Away Win,22.2,27.0,50.8,Away Win,25.1,25.6,49.3,Away Win,14.6,29.7,55.7
+Home Win,Home Win,95.5,3.4,1.1,Home Win,98.8,1.1,0.2,Home Win,95.9,3.8,0.4
+Away Win,Away Win,9.7,20.0,70.3,Away Win,11.9,20.3,67.9,Away Win,5.6,24.8,69.6
+Home Win,Home Win,76.4,10.6,13.0,Home Win,82.1,9.3,8.6,Home Win,65.9,23.1,11.0
+Away Win,Away Win,15.4,25.4,59.2,Away Win,15.7,24.7,59.7,Away Win,11.3,32.3,56.4
+Away Win,Away Win,1.6,2.2,96.2,Away Win,1.2,3.1,95.7,Away Win,0.8,8.4,90.8
+Draw,Home Win,40.9,33.7,25.3,Home Win,47.0,29.8,23.2,Draw,25.3,40.0,34.7
+Away Win,Away Win,1.1,1.5,97.4,Away Win,1.1,2.8,96.1,Away Win,0.5,6.4,93.1
+Away Win,Away Win,8.0,11.0,81.0,Away Win,6.6,10.6,82.8,Away Win,3.1,17.7,79.1
+Away Win,Away Win,5.4,9.9,84.7,Away Win,6.4,13.0,80.5,Away Win,3.6,20.2,76.2
+Away Win,Away Win,12.2,15.3,72.5,Away Win,14.4,13.1,72.4,Away Win,14.0,23.4,62.7
+Home Win,Home Win,90.0,8.0,2.0,Home Win,93.3,5.5,1.2,Home Win,78.6,18.4,3.0
+Home Win,Home Win,87.2,8.9,3.9,Home Win,91.3,6.1,2.6,Home Win,72.7,21.3,6.0
+Home Win,Home Win,85.3,9.5,5.2,Home Win,91.7,6.3,1.9,Home Win,79.9,16.6,3.6
+Away Win,Home Win,34.5,31.8,33.7,Home Win,36.8,30.6,32.7,Away Win,18.2,39.5,42.3
+Away Win,Home Win,44.6,29.2,26.2,Home Win,44.4,25.8,29.9,Away Win,21.5,35.7,42.8
+Home Win,Home Win,76.0,19.4,4.6,Home Win,74.6,20.2,5.2,Home Win,49.2,38.0,12.8
+Home Win,Home Win,86.9,10.7,2.4,Home Win,90.1,8.3,1.6,Home Win,76.3,20.0,3.6
+Home Win,Home Win,92.5,6.4,1.2,Home Win,96.7,2.9,0.4,Home Win,83.9,14.7,1.4
+Draw,Home Win,72.0,14.3,13.7,Home Win,69.2,16.7,14.1,Home Win,55.2,27.4,17.4
+Home Win,Home Win,62.6,25.8,11.5,Home Win,72.1,21.5,6.4,Home Win,54.9,36.4,8.6
+Home Win,Home Win,72.7,19.5,7.8,Home Win,78.0,17.7,4.3,Home Win,56.6,35.6,7.8
+Home Win,Home Win,84.7,9.7,5.6,Home Win,88.8,7.9,3.3,Home Win,76.1,18.4,5.5
+Home Win,Home Win,66.4,24.8,8.8,Home Win,77.7,18.5,3.9,Home Win,56.2,37.3,6.6
+Home Win,Home Win,70.8,16.4,12.9,Home Win,72.6,17.2,10.2,Home Win,56.6,29.9,13.6
+Home Win,Home Win,51.6,34.0,14.4,Home Win,58.7,31.5,9.8,Home Win,47.3,41.2,11.5
+Draw,Home Win,67.2,18.2,14.6,Home Win,65.0,20.7,14.3,Home Win,50.9,28.9,20.2
+Home Win,Home Win,76.5,12.2,11.3,Home Win,78.4,10.6,11.1,Home Win,57.6,24.8,17.5
+Away Win,Away Win,5.1,11.5,83.5,Away Win,4.7,10.3,85.0,Away Win,2.9,18.6,78.6
+Draw,Home Win,42.9,29.8,27.3,Home Win,40.9,24.6,34.5,Draw,22.3,39.7,38.0
+Home Win,Home Win,69.1,21.9,8.9,Home Win,73.1,20.1,6.8,Home Win,53.0,36.5,10.5
+Home Win,Home Win,54.1,22.2,23.7,Home Win,63.4,22.8,13.8,Home Win,47.2,38.9,13.8
+Home Win,Home Win,74.3,19.9,5.8,Home Win,83.1,14.2,2.7,Home Win,62.6,31.6,5.8
+Home Win,Home Win,90.0,6.0,4.0,Home Win,96.3,2.8,0.9,Home Win,89.0,8.7,2.2
+Home Win,Away Win,20.4,35.6,44.0,Away Win,25.5,30.4,44.1,Away Win,13.6,36.3,50.1
+Away Win,Home Win,56.7,25.6,17.7,Home Win,58.9,22.7,18.3,Home Win,35.4,33.5,31.2
+Away Win,Away Win,32.0,31.2,36.8,Home Win,38.3,29.7,32.0,Draw,23.9,40.7,35.4
+Home Win,Home Win,88.6,7.4,4.0,Home Win,92.4,6.0,1.6,Home Win,83.3,13.7,2.9
+Home Win,Home Win,70.9,17.0,12.0,Home Win,72.3,18.1,9.6,Home Win,53.0,31.9,15.1
+Home Win,Home Win,81.0,10.7,8.3,Home Win,83.9,11.2,4.9,Home Win,64.8,23.1,12.2
+Home Win,Home Win,57.8,26.0,16.1,Home Win,60.3,26.5,13.2,Home Win,46.4,35.5,18.1
+Home Win,Home Win,54.1,28.4,17.5,Home Win,55.5,27.5,17.0,Home Win,38.4,37.9,23.7
+Home Win,Home Win,60.0,23.6,16.4,Home Win,63.0,20.1,16.9,Home Win,42.7,33.0,24.3
+Home Win,Home Win,81.8,11.6,6.6,Home Win,85.6,10.3,4.1,Home Win,69.4,22.9,7.7
+Home Win,Home Win,46.5,21.6,31.9,Home Win,44.6,21.1,34.2,Away Win,32.7,30.9,36.4
+Home Win,Home Win,68.9,23.0,8.2,Home Win,78.7,16.2,5.1,Home Win,64.6,27.7,7.7
+Away Win,Away Win,21.4,31.9,46.6,Away Win,26.0,28.0,46.0,Away Win,22.2,38.9,39.0
+Home Win,Home Win,84.4,9.1,6.5,Home Win,82.3,12.9,4.8,Home Win,61.8,27.5,10.7
+Home Win,Home Win,79.3,14.6,6.1,Home Win,75.2,16.5,8.3,Home Win,52.8,29.0,18.2
+Draw,Home Win,62.0,26.6,11.4,Home Win,67.0,21.9,11.1,Home Win,43.6,41.8,14.6
+Draw,Home Win,45.9,25.6,28.6,Home Win,47.9,28.1,24.0,Draw,34.6,35.8,29.6
+Draw,Away Win,18.5,25.9,55.6,Away Win,22.2,28.3,49.5,Away Win,16.4,38.8,44.8
+Home Win,Home Win,71.0,20.5,8.5,Home Win,74.9,18.9,6.2,Home Win,58.1,33.1,8.8
+Home Win,Home Win,73.9,19.6,6.4,Home Win,77.6,18.1,4.3,Home Win,60.8,32.2,7.0
+Draw,Away Win,17.5,30.2,52.3,Away Win,19.5,23.2,57.3,Away Win,12.0,30.2,57.8
+Home Win,Home Win,41.4,37.8,20.8,Home Win,58.9,26.8,14.3,Draw,32.1,43.2,24.7
+Home Win,Home Win,38.7,28.5,32.8,Home Win,44.0,30.8,25.2,Draw,29.1,40.2,30.7
+Home Win,Home Win,64.7,27.4,7.9,Home Win,73.5,22.3,4.2,Home Win,59.9,33.7,6.4
+Home Win,Home Win,79.0,8.9,12.1,Home Win,77.2,12.8,10.0,Home Win,65.9,22.2,11.9
+Away Win,Away Win,5.8,7.5,86.7,Away Win,7.9,12.0,80.1,Away Win,3.3,20.3,76.4
+Home Win,Home Win,41.9,27.9,30.2,Home Win,48.8,27.5,23.7,Draw,32.6,40.2,27.2
+Draw,Away Win,13.6,21.1,65.3,Away Win,13.0,19.3,67.7,Away Win,9.0,27.2,63.8
+Away Win,Away Win,18.5,25.1,56.5,Away Win,20.9,25.3,53.8,Away Win,13.9,30.2,55.8
+Draw,Away Win,33.3,32.4,34.3,Home Win,36.3,28.9,34.8,Away Win,31.9,34.0,34.1
+Draw,Home Win,80.9,13.9,5.2,Home Win,89.3,8.5,2.2,Home Win,78.0,18.4,3.6
+Draw,Home Win,49.5,28.3,22.2,Home Win,52.2,29.6,18.2,Home Win,42.8,37.3,19.9
+Draw,Away Win,24.4,36.1,39.5,Away Win,23.0,34.9,42.2,Away Win,13.8,38.4,47.8
+Draw,Home Win,74.0,17.9,8.1,Home Win,78.9,14.1,7.0,Home Win,64.4,24.8,10.9
+Home Win,Away Win,29.6,27.7,42.7,Away Win,34.3,30.1,35.6,Draw,28.1,36.3,35.6
+Home Win,Home Win,69.9,21.5,8.6,Home Win,76.8,17.2,6.0,Home Win,52.6,35.4,12.0
+Home Win,Home Win,76.6,19.6,3.8,Home Win,82.1,15.8,2.1,Home Win,66.6,29.6,3.8
+Away Win,Away Win,14.1,26.7,59.1,Away Win,18.8,27.7,53.5,Away Win,10.3,37.2,52.5
+Home Win,Home Win,95.2,4.0,0.8,Home Win,97.4,2.4,0.2,Home Win,90.8,8.6,0.6
+Draw,Home Win,54.4,27.5,18.1,Home Win,50.9,31.1,18.0,Draw,34.0,42.0,24.0
+Draw,Draw,30.5,35.5,34.0,Draw,31.5,35.0,33.5,Away Win,18.2,40.1,41.7
+Draw,Home Win,52.1,30.8,17.0,Home Win,53.8,30.6,15.6,Draw,39.4,43.3,17.3
+Home Win,Home Win,49.2,29.5,21.3,Home Win,53.0,29.7,17.3,Draw,42.2,42.8,15.0
+Draw,Home Win,68.1,23.8,8.1,Home Win,73.3,20.8,5.9,Home Win,53.9,36.2,9.9
+Home Win,Home Win,78.5,15.7,5.8,Home Win,91.2,7.4,1.4,Home Win,73.2,23.8,3.0
+Draw,Home Win,76.3,15.7,8.0,Home Win,80.0,15.2,4.9,Home Win,62.5,30.4,7.1
+Away Win,Home Win,71.0,21.3,7.7,Home Win,84.7,13.0,2.2,Home Win,61.6,33.6,4.8
+Draw,Home Win,83.4,13.1,3.5,Home Win,91.8,7.0,1.2,Home Win,80.9,16.8,2.3
+Home Win,Home Win,75.5,19.9,4.6,Home Win,83.8,13.6,2.6,Home Win,68.2,27.7,4.1
+Away Win,Away Win,30.9,31.0,38.1,Home Win,34.4,31.5,34.0,Draw,23.9,39.0,37.1
+Home Win,Away Win,31.9,33.0,35.1,Away Win,29.0,34.9,36.1,Away Win,17.0,35.3,47.7
+Away Win,Home Win,58.9,21.8,19.4,Home Win,58.9,22.0,19.1,Home Win,41.1,32.5,26.4
+Away Win,Away Win,14.5,20.9,64.7,Away Win,15.8,22.0,62.3,Away Win,10.8,31.9,57.4
+Away Win,Away Win,17.7,34.9,47.4,Away Win,17.9,24.3,57.8,Away Win,6.6,33.1,60.3
+Away Win,Away Win,1.1,1.5,97.4,Away Win,1.2,2.6,96.3,Away Win,0.5,5.9,93.7
+Home Win,Home Win,79.9,9.2,10.9,Home Win,89.3,6.6,4.1,Home Win,71.8,20.9,7.2
+Away Win,Away Win,17.6,37.1,45.3,Away Win,16.8,31.9,51.3,Away Win,6.6,31.4,62.0
+Home Win,Home Win,70.0,18.5,11.4,Home Win,75.1,15.2,9.7,Home Win,56.4,29.3,14.3
+Away Win,Away Win,31.9,30.9,37.2,Away Win,34.9,28.2,36.9,Away Win,26.1,34.8,39.2
+Draw,Home Win,61.5,21.6,16.9,Home Win,55.8,26.2,17.9,Draw,33.6,35.9,30.4
+Draw,Away Win,21.1,25.5,53.4,Away Win,19.5,22.4,58.1,Away Win,8.8,36.3,54.9
+Away Win,Away Win,4.7,10.0,85.4,Away Win,6.2,12.3,81.5,Away Win,2.3,18.7,79.0
+Draw,Away Win,27.9,32.8,39.4,Away Win,29.3,31.4,39.3,Away Win,14.2,37.7,48.1
+Away Win,Away Win,18.6,37.1,44.3,Away Win,20.1,31.2,48.7,Away Win,8.2,34.8,57.0
+Draw,Away Win,17.0,22.1,60.9,Away Win,19.4,25.6,55.0,Away Win,10.0,29.2,60.7
+Draw,Home Win,56.6,24.6,18.8,Home Win,69.7,18.1,12.2,Home Win,46.7,34.7,18.6
+Home Win,Home Win,85.3,10.5,4.1,Home Win,89.1,8.1,2.8,Home Win,74.2,19.1,6.7
+Draw,Away Win,36.3,26.7,37.1,Home Win,37.0,30.3,32.6,Away Win,25.2,35.7,39.1
+Home Win,Home Win,73.7,21.1,5.1,Home Win,81.0,15.9,3.1,Home Win,60.3,33.1,6.6
+Home Win,Home Win,47.9,23.1,29.1,Home Win,42.5,28.8,28.7,Away Win,27.2,35.7,37.1
+Home Win,Home Win,74.0,19.0,7.0,Home Win,84.1,12.3,3.6,Home Win,71.3,24.0,4.7
+Away Win,Home Win,40.8,30.7,28.5,Home Win,42.4,34.6,23.0,Draw,25.1,41.3,33.6
+Home Win,Home Win,75.3,19.0,5.8,Home Win,80.3,16.3,3.4,Home Win,67.5,27.3,5.2
+Draw,Away Win,16.4,25.1,58.4,Away Win,15.7,22.0,62.4,Away Win,8.4,31.0,60.7
+Draw,Draw,26.0,39.9,34.1,Home Win,34.2,33.7,32.1,Draw,18.2,42.4,39.4
+Home Win,Home Win,72.9,19.5,7.6,Home Win,77.7,16.9,5.3,Home Win,56.6,32.9,10.5
+Home Win,Home Win,68.6,25.0,6.4,Home Win,79.7,16.7,3.7,Home Win,59.0,34.1,6.9
+Home Win,Home Win,81.6,12.7,5.7,Home Win,90.7,6.9,2.4,Home Win,76.2,18.3,5.5
+Away Win,Away Win,3.6,5.1,91.2,Away Win,3.8,8.3,88.0,Away Win,1.6,13.4,85.1
+Draw,Home Win,75.9,15.3,8.8,Home Win,82.0,12.9,5.0,Home Win,62.7,27.0,10.4
+Home Win,Home Win,79.5,13.5,6.9,Home Win,86.6,10.3,3.1,Home Win,70.4,23.1,6.5
+Draw,Away Win,19.4,27.5,53.1,Away Win,18.3,24.3,57.4,Away Win,8.6,29.8,61.6
+Home Win,Home Win,82.1,13.2,4.7,Home Win,86.5,10.6,2.9,Home Win,72.3,21.8,5.9
+Home Win,Home Win,87.0,8.0,4.9,Home Win,94.8,3.8,1.4,Home Win,88.5,9.5,2.0
+Away Win,Away Win,10.0,15.6,74.4,Away Win,14.2,21.2,64.6,Away Win,7.0,23.5,69.4
+Away Win,Away Win,5.7,7.5,86.8,Away Win,6.1,9.9,84.0,Away Win,3.2,15.8,81.1
+Home Win,Home Win,85.4,11.7,2.9,Home Win,90.7,7.8,1.5,Home Win,75.7,20.1,4.2
+Away Win,Away Win,25.4,31.1,43.4,Away Win,30.2,29.0,40.9,Away Win,19.8,35.5,44.7
+Away Win,Away Win,11.2,21.1,67.7,Away Win,14.5,22.5,63.0,Away Win,6.6,30.0,63.3
+Home Win,Away Win,20.0,25.0,55.0,Away Win,25.9,28.8,45.3,Away Win,13.8,34.7,51.5
+Draw,Home Win,37.2,31.6,31.2,Home Win,37.0,28.3,34.7,Away Win,15.8,32.2,52.0
+Home Win,Home Win,75.3,14.3,10.4,Home Win,84.8,10.1,5.1,Home Win,73.8,18.6,7.7
+Home Win,Home Win,82.8,12.5,4.7,Home Win,91.0,7.2,1.8,Home Win,77.1,18.8,4.1
+Draw,Away Win,30.8,24.9,44.4,Away Win,30.9,26.8,42.3,Away Win,17.5,33.0,49.5
+Away Win,Home Win,56.6,22.5,20.9,Home Win,54.7,23.6,21.7,Draw,34.7,36.7,28.6
+Home Win,Home Win,77.4,16.7,5.9,Home Win,80.9,14.4,4.8,Home Win,62.8,29.2,8.0
+Away Win,Away Win,8.3,12.6,79.1,Away Win,13.3,18.9,67.8,Away Win,5.7,23.5,70.8
+Draw,Away Win,18.8,26.0,55.1,Away Win,17.9,24.2,57.9,Away Win,8.7,31.6,59.7
+Home Win,Home Win,79.3,15.5,5.3,Home Win,87.7,10.1,2.2,Home Win,73.9,22.1,4.1
+Draw,Home Win,47.2,33.4,19.3,Home Win,53.3,27.9,18.8,Draw,25.0,45.1,29.9
+Draw,Away Win,29.0,30.3,40.7,Away Win,30.7,31.0,38.3,Away Win,20.5,38.1,41.4
+Home Win,Away Win,24.7,28.1,47.2,Away Win,25.1,26.1,48.8,Away Win,14.3,30.9,54.8
+Away Win,Home Win,58.4,24.5,17.1,Home Win,53.3,26.9,19.8,Home Win,37.5,35.2,27.3
+Draw,Home Win,60.0,26.8,13.3,Home Win,60.0,26.2,13.8,Draw,32.4,42.1,25.4
+Home Win,Home Win,67.2,17.4,15.4,Home Win,58.3,23.9,17.8,Home Win,44.5,35.1,20.4
+Draw,Home Win,78.5,18.1,3.3,Home Win,84.2,13.0,2.7,Home Win,59.5,31.8,8.7
+Away Win,Draw,24.4,39.4,36.2,Away Win,24.2,31.0,44.8,Away Win,10.3,40.2,49.5
+Draw,Home Win,43.8,26.1,30.1,Home Win,39.8,30.0,30.2,Draw,26.4,37.4,36.2
+Home Win,Home Win,92.9,4.1,3.0,Home Win,97.6,1.9,0.5,Home Win,91.4,7.2,1.4
+Home Win,Home Win,87.7,9.7,2.6,Home Win,91.1,7.1,1.8,Home Win,77.8,17.8,4.3
+Draw,Home Win,55.8,23.5,20.7,Home Win,48.5,27.8,23.7,Home Win,37.5,35.0,27.5
+Away Win,Away Win,1.3,1.6,97.2,Away Win,0.9,1.6,97.5,Away Win,0.5,5.4,94.0
+Home Win,Home Win,93.9,5.3,0.8,Home Win,98.0,1.9,0.1,Home Win,93.8,6.0,0.2
+Home Win,Home Win,48.5,38.9,12.6,Home Win,58.3,31.0,10.6,Draw,37.6,46.4,16.1
+Home Win,Home Win,49.0,24.4,26.6,Home Win,52.3,24.0,23.7,Draw,35.1,37.6,27.3
+Away Win,Away Win,12.6,14.4,73.1,Away Win,15.7,17.8,66.5,Away Win,11.7,28.4,59.9
+Draw,Draw,28.1,38.8,33.1,Away Win,35.4,28.9,35.7,Draw,19.7,42.4,37.9
+Draw,Home Win,50.3,28.6,21.1,Home Win,52.1,29.8,18.1,Draw,34.4,40.4,25.2
+Home Win,Home Win,45.3,37.6,17.1,Home Win,48.0,37.0,15.0,Draw,28.2,46.8,25.0
+Home Win,Home Win,81.4,15.2,3.4,Home Win,87.2,10.9,1.9,Home Win,71.3,24.5,4.2
+Draw,Away Win,19.7,29.1,51.2,Away Win,15.8,19.1,65.1,Away Win,8.9,31.6,59.5
+Away Win,Draw,25.2,38.0,36.8,Away Win,27.5,35.0,37.4,Away Win,16.8,39.2,43.9
+Home Win,Home Win,49.8,26.8,23.4,Home Win,51.9,28.9,19.2,Draw,33.9,41.7,24.4
+Away Win,Home Win,45.7,33.9,20.4,Home Win,53.5,27.8,18.7,Home Win,43.0,36.9,20.1
+Home Win,Home Win,53.9,23.7,22.4,Home Win,45.6,29.2,25.2,Draw,32.1,37.9,30.0
+Away Win,Away Win,23.8,33.9,42.3,Away Win,20.8,25.8,53.4,Away Win,10.7,35.3,54.0
+Away Win,Home Win,61.1,22.0,16.9,Home Win,63.9,22.2,13.9,Home Win,46.4,34.6,19.1
+Away Win,Draw,29.5,37.7,32.8,Away Win,29.2,30.5,40.4,Away Win,15.0,39.5,45.6
+Draw,Away Win,25.8,27.0,47.2,Away Win,25.8,25.4,48.8,Away Win,13.5,31.3,55.1
+Home Win,Away Win,25.2,36.7,38.1,Away Win,29.8,31.7,38.5,Draw,20.3,43.7,36.0
+Home Win,Home Win,76.0,13.2,10.8,Home Win,84.3,10.3,5.4,Home Win,71.4,20.6,8.1
+Home Win,Home Win,63.9,21.6,14.5,Home Win,60.7,24.6,14.7,Home Win,46.2,35.4,18.5
+Home Win,Home Win,82.5,13.8,3.7,Home Win,82.2,14.3,3.5,Home Win,65.4,28.2,6.4
+Away Win,Away Win,18.2,30.9,50.9,Away Win,16.8,23.9,59.3,Away Win,11.3,35.6,53.1
+Away Win,Away Win,17.0,27.3,55.6,Away Win,18.6,19.8,61.6,Away Win,10.0,31.2,58.8
+Away Win,Away Win,28.5,35.2,36.2,Home Win,36.2,36.0,27.7,Draw,25.6,44.7,29.7
+Away Win,Away Win,7.4,13.5,79.1,Away Win,6.5,13.1,80.3,Away Win,3.8,22.6,73.5
+Draw,Home Win,80.0,13.1,6.9,Home Win,87.0,9.4,3.6,Home Win,67.1,23.9,9.0
+Home Win,Home Win,70.3,19.9,9.7,Home Win,80.0,15.2,4.8,Home Win,58.7,32.2,9.1
+Home Win,Home Win,42.0,22.5,35.4,Home Win,58.5,20.8,20.7,Home Win,42.3,33.4,24.3
+Draw,Away Win,29.3,30.0,40.7,Away Win,32.3,26.6,41.1,Away Win,18.9,37.6,43.5
+Draw,Home Win,74.4,15.8,9.8,Home Win,75.8,15.2,9.1,Home Win,58.0,25.9,16.1
+Home Win,Home Win,75.1,19.0,5.8,Home Win,80.9,15.4,3.8,Home Win,60.4,32.0,7.5
+Home Win,Home Win,93.9,4.1,2.0,Home Win,96.9,2.6,0.5,Home Win,92.4,7.0,0.7
+Home Win,Home Win,68.8,21.9,9.4,Home Win,69.4,22.8,7.8,Home Win,48.7,36.3,15.0
+Home Win,Home Win,87.4,9.9,2.8,Home Win,91.8,6.8,1.4,Home Win,82.4,14.9,2.7
+Away Win,Away Win,22.5,22.0,55.5,Away Win,14.5,19.6,65.8,Away Win,6.7,25.5,67.8
+Away Win,Home Win,57.3,26.2,16.4,Home Win,53.2,28.9,17.9,Draw,37.4,41.1,21.5
+Draw,Home Win,79.0,15.6,5.4,Home Win,80.5,15.3,4.2,Home Win,68.9,25.8,5.3
+Away Win,Away Win,11.1,16.7,72.2,Away Win,10.7,16.1,73.2,Away Win,4.1,21.4,74.5
+Home Win,Home Win,90.2,7.6,2.2,Home Win,96.7,2.8,0.5,Home Win,90.2,8.6,1.2
+Home Win,Home Win,34.9,33.4,31.7,Away Win,28.6,26.2,45.3,Away Win,13.0,34.9,52.1
+Away Win,Away Win,2.3,3.6,94.1,Away Win,2.4,5.9,91.7,Away Win,0.9,9.2,89.9
+Draw,Away Win,22.8,31.8,45.4,Away Win,21.1,29.3,49.6,Away Win,9.3,31.2,59.5
+Draw,Away Win,21.7,27.5,50.8,Away Win,23.9,25.5,50.6,Away Win,14.4,33.2,52.4
+Draw,Away Win,20.3,29.4,50.2,Away Win,16.8,28.7,54.5,Away Win,8.3,29.9,61.8
+Home Win,Home Win,90.9,5.6,3.5,Home Win,96.4,2.9,0.7,Home Win,91.2,7.7,1.2
+Away Win,Away Win,18.3,36.1,45.6,Away Win,19.7,29.2,51.1,Away Win,9.2,34.8,56.0
+Home Win,Home Win,66.3,22.7,11.0,Home Win,77.0,15.2,7.9,Home Win,53.2,32.7,14.1
+Home Win,Home Win,94.5,3.3,2.2,Home Win,98.3,1.4,0.3,Home Win,94.3,5.0,0.7
+Draw,Away Win,34.2,26.8,38.9,Away Win,30.3,28.8,41.0,Away Win,17.1,34.8,48.1
+Draw,Home Win,88.2,5.8,6.0,Home Win,92.6,5.1,2.2,Home Win,81.9,13.7,4.3
+Away Win,Away Win,14.4,18.9,66.7,Away Win,13.7,18.0,68.3,Away Win,6.1,24.6,69.3
+Draw,Home Win,57.9,28.9,13.2,Home Win,60.1,25.9,13.9,Home Win,42.6,40.0,17.4
+Home Win,Home Win,53.3,25.5,21.2,Home Win,52.3,28.2,19.4,Draw,35.5,41.5,23.0
+Home Win,Home Win,59.2,23.0,17.8,Home Win,54.0,27.4,18.6,Home Win,41.9,38.9,19.2
+Home Win,Home Win,61.9,26.7,11.4,Home Win,70.0,21.9,8.0,Home Win,49.5,37.8,12.7
+Home Win,Home Win,85.9,10.5,3.7,Home Win,92.6,6.2,1.3,Home Win,82.0,15.6,2.4
+Home Win,Home Win,79.0,16.7,4.3,Home Win,82.3,15.2,2.5,Home Win,68.4,27.4,4.2
+Draw,Away Win,24.9,27.3,47.8,Away Win,23.2,25.9,50.9,Away Win,15.5,30.2,54.3
+Home Win,Home Win,83.3,14.2,2.6,Home Win,87.3,11.2,1.5,Home Win,73.3,23.7,3.0
+Draw,Home Win,57.5,27.1,15.4,Home Win,58.9,25.9,15.3,Home Win,46.7,36.3,17.0
+Home Win,Home Win,77.8,17.7,4.6,Home Win,81.3,15.7,3.0,Home Win,64.1,29.9,5.9
+Home Win,Home Win,45.9,33.3,20.9,Home Win,54.0,28.4,17.6,Draw,36.3,42.5,21.1
+Home Win,Home Win,61.6,23.0,15.4,Home Win,62.7,21.6,15.7,Home Win,43.3,34.2,22.5
+Home Win,Home Win,56.2,27.7,16.2,Home Win,75.7,18.6,5.7,Home Win,55.2,37.2,7.6
+Away Win,Away Win,20.4,27.1,52.5,Away Win,22.7,26.6,50.8,Away Win,10.4,31.3,58.3
+Home Win,Away Win,31.9,30.1,38.1,Away Win,32.7,30.6,36.7,Away Win,19.9,37.0,43.0
+Home Win,Home Win,45.7,31.1,23.2,Home Win,44.9,27.1,28.0,Draw,21.3,42.6,36.1
+Draw,Home Win,71.4,22.2,6.4,Home Win,72.8,20.5,6.8,Home Win,47.8,36.7,15.6
+Away Win,Home Win,84.3,11.5,4.2,Home Win,91.7,6.5,1.9,Home Win,81.6,15.1,3.3
+Draw,Home Win,39.1,30.2,30.8,Home Win,43.5,29.0,27.6,Draw,29.5,42.1,28.4
+Home Win,Home Win,80.3,15.7,3.9,Home Win,87.0,10.8,2.2,Home Win,68.2,26.7,5.1
+Away Win,Away Win,21.8,24.7,53.4,Away Win,20.4,23.9,55.7,Away Win,16.6,33.3,50.1
+Home Win,Home Win,52.0,23.7,24.4,Home Win,39.4,30.6,30.0,Draw,29.7,40.2,30.2
+Away Win,Home Win,45.4,35.8,18.8,Home Win,52.3,32.2,15.5,Draw,27.4,48.4,24.2
+Home Win,Home Win,55.0,28.1,17.0,Home Win,59.3,25.1,15.6,Draw,35.1,37.3,27.6
+Home Win,Home Win,71.8,18.3,9.9,Home Win,72.1,19.3,8.6,Home Win,55.6,32.4,12.0
+Home Win,Home Win,78.8,12.6,8.6,Home Win,81.6,12.0,6.4,Home Win,66.9,23.7,9.4
+Away Win,Away Win,12.8,29.9,57.2,Away Win,14.5,24.3,61.2,Away Win,4.9,31.8,63.4
+Draw,Away Win,20.0,31.3,48.7,Away Win,18.1,23.6,58.3,Away Win,8.3,32.6,59.1
+Away Win,Away Win,32.0,32.3,35.7,Home Win,41.1,32.5,26.3,Draw,29.3,39.9,30.8
+Draw,Home Win,55.6,31.9,12.5,Home Win,62.9,28.0,9.1,Home Win,46.3,39.9,13.7
+Home Win,Home Win,69.8,12.0,18.1,Home Win,69.2,10.4,20.4,Home Win,64.7,19.7,15.7
+Home Win,Home Win,81.2,15.7,3.1,Home Win,87.0,11.4,1.6,Home Win,75.4,22.3,2.3
+Away Win,Away Win,11.5,19.3,69.2,Away Win,14.4,22.7,62.9,Away Win,8.5,29.9,61.7
+Draw,Home Win,72.7,15.3,12.0,Home Win,62.8,20.1,17.1,Home Win,51.1,29.5,19.4
+Draw,Home Win,56.1,27.6,16.3,Home Win,53.5,27.4,19.1,Draw,31.8,41.7,26.5
+Home Win,Home Win,52.6,22.6,24.8,Home Win,51.9,24.3,23.8,Home Win,46.1,33.1,20.9
+Away Win,Away Win,12.5,15.0,72.5,Away Win,18.7,19.3,62.0,Away Win,10.7,28.4,60.9
+Away Win,Away Win,4.5,8.5,87.0,Away Win,4.3,9.7,86.0,Away Win,2.2,16.0,81.8
+Draw,Home Win,38.7,27.5,33.7,Home Win,37.6,27.7,34.6,Away Win,23.5,35.0,41.5
+Away Win,Away Win,6.2,9.4,84.4,Away Win,7.2,11.4,81.4,Away Win,4.5,21.0,74.5
+Home Win,Home Win,79.6,15.0,5.4,Home Win,81.0,14.5,4.5,Home Win,62.4,30.6,7.0
+Home Win,Home Win,83.9,12.0,4.1,Home Win,93.7,5.0,1.3,Home Win,81.8,15.4,2.8
+Away Win,Away Win,4.6,7.7,87.7,Away Win,7.2,12.8,80.0,Away Win,3.1,16.7,80.2
+Away Win,Away Win,10.0,20.6,69.4,Away Win,11.4,19.1,69.5,Away Win,6.8,28.1,65.1
+Home Win,Home Win,65.6,26.9,7.5,Home Win,82.1,14.7,3.2,Home Win,63.1,31.1,5.9
+Home Win,Home Win,42.7,33.5,23.8,Home Win,45.8,30.2,24.0,Draw,31.8,43.0,25.2
+Home Win,Home Win,69.5,22.7,7.8,Home Win,73.9,21.5,4.7,Home Win,60.7,32.8,6.5
+Away Win,Away Win,7.1,10.9,82.0,Away Win,10.6,14.9,74.5,Away Win,6.3,26.1,67.5
+Home Win,Home Win,62.6,26.1,11.3,Home Win,64.7,26.5,8.8,Home Win,50.5,38.6,10.9
+Away Win,Away Win,3.3,4.5,92.2,Away Win,3.3,6.8,89.9,Away Win,1.3,13.7,85.1
+Away Win,Away Win,7.7,11.5,80.7,Away Win,12.0,20.0,68.1,Away Win,6.1,26.8,67.2
+Home Win,Home Win,68.1,19.6,12.4,Home Win,66.3,21.8,12.0,Home Win,54.9,31.3,13.9
+Away Win,Away Win,20.0,26.9,53.1,Away Win,26.1,25.7,48.1,Away Win,14.2,32.9,52.9
+Away Win,Home Win,42.4,28.0,29.5,Home Win,45.3,24.9,29.8,Draw,33.2,36.8,30.0
+Away Win,Away Win,10.5,18.5,71.0,Away Win,11.2,18.7,70.1,Away Win,6.6,26.0,67.4
+Home Win,Away Win,13.9,14.2,71.9,Away Win,17.3,17.7,65.0,Away Win,10.7,26.2,63.1
+Away Win,Away Win,22.6,24.5,52.9,Away Win,20.9,23.4,55.7,Away Win,11.8,33.5,54.7
+Home Win,Home Win,82.2,13.1,4.7,Home Win,86.7,10.4,2.9,Home Win,75.2,18.8,6.0
+Away Win,Home Win,64.9,22.3,12.7,Home Win,64.0,23.4,12.5,Home Win,52.4,32.6,15.0
+Home Win,Home Win,67.4,21.0,11.7,Home Win,75.5,17.3,7.3,Home Win,54.2,32.7,13.2
+Away Win,Away Win,17.4,27.7,54.8,Away Win,18.8,24.5,56.6,Away Win,10.0,33.4,56.6
+Home Win,Home Win,97.3,1.4,1.3,Home Win,99.4,0.5,0.1,Home Win,97.1,2.6,0.3
+Away Win,Draw,22.2,40.4,37.5,Away Win,32.3,32.9,34.7,Draw,18.2,41.8,40.0
+Home Win,Home Win,88.1,10.4,1.6,Home Win,92.6,6.6,0.8,Home Win,81.2,17.2,1.6
+Away Win,Home Win,48.0,9.6,42.4,Home Win,49.9,9.5,40.6,Home Win,48.4,23.2,28.4
+Draw,Home Win,57.0,23.5,19.5,Home Win,53.2,26.3,20.5,Home Win,38.9,33.7,27.4
+Home Win,Home Win,80.1,15.4,4.4,Home Win,78.7,17.2,4.1,Home Win,61.5,30.9,7.7
+Draw,Home Win,48.9,28.2,22.9,Home Win,50.1,28.1,21.8,Draw,33.5,41.9,24.6
+Home Win,Home Win,64.7,25.3,10.0,Home Win,73.3,19.6,7.1,Home Win,56.0,35.1,9.0
+Away Win,Away Win,1.3,2.1,96.7,Away Win,1.6,4.8,93.6,Away Win,0.4,8.5,91.1
+Home Win,Home Win,63.2,20.3,16.5,Home Win,68.4,19.1,12.5,Home Win,55.2,29.2,15.6
+Away Win,Away Win,8.8,18.4,72.7,Away Win,11.2,16.3,72.5,Away Win,6.1,24.8,69.0
+Draw,Home Win,52.3,28.3,19.4,Home Win,59.7,24.7,15.6,Home Win,44.9,35.9,19.2
+Home Win,Home Win,75.7,19.1,5.2,Home Win,83.1,13.7,3.1,Home Win,64.6,29.1,6.4
+Home Win,Away Win,17.0,20.5,62.5,Away Win,20.2,26.2,53.6,Away Win,11.5,31.8,56.7
+Draw,Away Win,28.5,27.1,44.4,Away Win,27.3,27.1,45.6,Away Win,19.3,33.0,47.7
+Home Win,Home Win,47.8,37.5,14.7,Home Win,64.4,25.8,9.8,Draw,38.8,45.5,15.7
+Away Win,Home Win,62.4,24.0,13.6,Home Win,62.3,26.2,11.6,Home Win,46.2,37.6,16.2
+Home Win,Home Win,46.9,36.0,17.1,Home Win,67.4,23.4,9.2,Home Win,45.1,42.5,12.4
+Home Win,Away Win,18.5,34.2,47.3,Away Win,18.5,28.7,52.9,Away Win,8.5,33.3,58.1
+Draw,Away Win,14.7,32.8,52.5,Away Win,16.3,25.3,58.4,Away Win,7.7,38.0,54.3
+Away Win,Away Win,22.5,32.3,45.2,Away Win,25.6,32.3,42.1,Away Win,16.3,36.1,47.6
+Home Win,Home Win,58.6,23.1,18.4,Home Win,59.5,23.7,16.9,Draw,37.7,39.2,23.1
+Home Win,Home Win,56.2,33.6,10.2,Home Win,67.6,25.0,7.4,Home Win,47.7,40.8,11.5
+Home Win,Home Win,34.5,31.4,34.0,Home Win,36.2,31.2,32.6,Draw,21.6,40.7,37.7
+Draw,Draw,24.5,40.0,35.5,Away Win,21.7,30.1,48.3,Away Win,8.9,36.1,55.0
+Home Win,Away Win,22.0,28.0,49.9,Away Win,26.0,27.2,46.8,Away Win,16.7,36.0,47.3
+Away Win,Away Win,18.6,23.2,58.2,Away Win,22.9,25.2,51.9,Away Win,10.7,32.0,57.3
+Away Win,Away Win,7.9,13.5,78.6,Away Win,9.5,15.8,74.6,Away Win,6.4,22.3,71.3
+Home Win,Home Win,96.0,2.9,1.1,Home Win,98.1,1.8,0.2,Home Win,94.4,5.2,0.4
+Draw,Home Win,75.4,16.8,7.9,Home Win,76.5,17.2,6.3,Home Win,58.3,33.0,8.7
+Away Win,Away Win,14.9,25.4,59.7,Away Win,15.3,20.5,64.3,Away Win,10.5,29.0,60.4
+Home Win,Home Win,78.5,15.6,5.9,Home Win,82.4,13.5,4.1,Home Win,65.3,26.3,8.4
+Away Win,Draw,30.9,39.7,29.4,Draw,33.0,38.4,28.5,Draw,20.4,44.3,35.3
+Away Win,Away Win,16.3,27.5,56.2,Away Win,19.4,25.7,54.9,Away Win,7.9,34.3,57.8
+Draw,Home Win,55.4,24.0,20.7,Home Win,60.2,23.1,16.7,Home Win,50.2,33.6,16.2
+Home Win,Home Win,78.2,16.5,5.3,Home Win,78.8,16.6,4.6,Home Win,59.8,31.9,8.3
+Home Win,Home Win,90.2,6.6,3.2,Home Win,93.6,5.2,1.1,Home Win,86.0,11.9,2.1
+Home Win,Home Win,80.2,14.4,5.4,Home Win,80.6,14.5,4.9,Home Win,63.4,27.5,9.1
+Away Win,Away Win,13.9,31.2,55.0,Away Win,15.0,25.1,59.9,Away Win,6.7,30.9,62.4
+Home Win,Home Win,87.9,6.0,6.1,Home Win,93.0,4.9,2.1,Home Win,82.6,13.2,4.3
+Home Win,Home Win,42.3,29.5,28.1,Home Win,44.2,31.3,24.5,Draw,31.6,41.1,27.4
+Away Win,Away Win,15.8,12.3,71.9,Away Win,16.8,9.9,73.3,Away Win,13.0,20.7,66.3
+Away Win,Away Win,20.2,33.9,45.9,Away Win,15.4,17.9,66.7,Away Win,7.9,26.8,65.2
+Draw,Home Win,61.2,26.7,12.1,Home Win,71.3,23.3,5.4,Home Win,55.0,38.6,6.4
+Away Win,Home Win,36.4,29.6,33.9,Home Win,37.4,29.7,32.9,Draw,31.0,38.3,30.7
+Away Win,Away Win,9.4,12.2,78.4,Away Win,10.7,17.5,71.8,Away Win,5.5,26.9,67.6
+Home Win,Home Win,51.7,26.5,21.8,Home Win,61.2,25.6,13.2,Draw,31.4,43.8,24.8
+Home Win,Home Win,71.9,19.2,8.9,Home Win,71.8,18.8,9.4,Home Win,58.6,28.1,13.3
+Home Win,Home Win,69.8,22.2,8.0,Home Win,80.1,15.6,4.3,Home Win,57.9,34.6,7.5
+Home Win,Home Win,85.1,10.4,4.5,Home Win,88.2,9.4,2.4,Home Win,75.9,20.1,4.0
+Away Win,Home Win,55.3,19.7,25.1,Home Win,59.4,20.1,20.5,Home Win,48.7,31.3,20.0
+Draw,Home Win,63.0,17.7,19.4,Home Win,60.3,22.1,17.6,Home Win,42.9,32.0,25.1
+Home Win,Away Win,28.8,28.2,43.0,Away Win,29.8,30.4,39.8,Draw,23.5,39.3,37.2
+Away Win,Away Win,3.8,5.8,90.4,Away Win,5.5,9.1,85.4,Away Win,2.4,16.3,81.3
+Away Win,Away Win,17.4,22.9,59.7,Away Win,20.5,26.0,53.5,Away Win,9.8,33.0,57.2
+Home Win,Home Win,91.2,7.1,1.8,Home Win,94.6,4.7,0.7,Home Win,84.1,14.4,1.5
+Draw,Home Win,50.8,28.2,20.9,Home Win,65.0,21.3,13.7,Draw,35.7,39.5,24.8
+Home Win,Home Win,70.5,21.9,7.6,Home Win,65.2,25.3,9.5,Home Win,45.8,37.8,16.4
+Home Win,Home Win,72.7,20.6,6.7,Home Win,79.2,16.6,4.2,Home Win,58.7,34.5,6.7
+Away Win,Away Win,10.2,18.6,71.1,Away Win,11.3,18.7,69.9,Away Win,6.3,25.4,68.3
+Draw,Home Win,81.0,15.9,3.0,Home Win,90.9,8.0,1.1,Home Win,70.5,25.8,3.7
+Away Win,Away Win,23.9,24.0,52.1,Away Win,15.0,17.8,67.2,Away Win,10.4,27.8,61.8
+Away Win,Away Win,6.3,7.1,86.6,Away Win,4.1,6.8,89.1,Away Win,2.0,13.8,84.2
+Away Win,Away Win,22.6,37.6,39.8,Away Win,25.7,32.1,42.3,Away Win,13.8,40.6,45.6
+Home Win,Home Win,69.4,23.1,7.5,Home Win,78.6,18.1,3.4,Home Win,60.8,32.4,6.8
+Away Win,Away Win,16.5,9.8,73.7,Away Win,28.9,10.4,60.7,Away Win,22.4,33.2,44.4
+Home Win,Home Win,79.8,9.7,10.5,Home Win,85.3,8.6,6.1,Home Win,74.8,18.2,6.9
+Home Win,Away Win,20.8,9.1,70.1,Away Win,38.0,8.9,53.1,Home Win,35.7,30.3,34.0
+Home Win,Home Win,81.4,16.0,2.6,Home Win,88.8,10.0,1.2,Home Win,70.5,26.6,3.0
+Away Win,Home Win,61.3,21.4,17.3,Home Win,54.4,28.4,17.2,Draw,39.3,40.1,20.6
+Away Win,Home Win,53.0,25.4,21.6,Home Win,51.0,27.4,21.6,Draw,38.0,38.2,23.8
+Home Win,Home Win,67.9,24.6,7.6,Home Win,76.1,19.5,4.5,Home Win,58.3,34.5,7.2
+Home Win,Home Win,57.6,27.9,14.5,Home Win,60.4,25.5,14.1,Home Win,41.1,38.0,21.0
+Away Win,Away Win,14.5,27.6,57.9,Away Win,12.5,20.1,67.3,Away Win,6.3,31.6,62.1
+Draw,Home Win,52.4,27.3,20.3,Home Win,62.0,23.1,14.9,Home Win,43.8,37.0,19.2
+Home Win,Home Win,69.2,25.0,5.8,Home Win,78.3,18.1,3.7,Home Win,58.7,34.8,6.4
+Home Win,Away Win,23.8,26.3,49.9,Away Win,29.0,28.5,42.5,Away Win,16.6,37.1,46.4
+Home Win,Home Win,65.0,22.1,12.8,Home Win,66.9,21.8,11.3,Home Win,52.4,34.1,13.4
+Home Win,Home Win,73.5,20.6,5.9,Home Win,78.8,17.6,3.6,Home Win,63.6,31.4,5.0
+Draw,Home Win,49.9,28.8,21.2,Home Win,52.1,25.9,22.0,Home Win,39.0,34.1,26.9
+Home Win,Home Win,74.3,19.5,6.2,Home Win,77.0,17.0,6.1,Home Win,57.0,30.7,12.3
+Draw,Home Win,54.3,31.1,14.6,Home Win,65.2,25.5,9.3,Home Win,46.9,40.3,12.8
+Away Win,Draw,23.6,41.3,35.1,Away Win,26.4,29.0,44.6,Away Win,11.9,40.3,47.8
+Draw,Home Win,56.9,23.6,19.4,Home Win,54.0,25.9,20.1,Home Win,41.1,35.8,23.2
+Home Win,Home Win,68.2,24.7,7.1,Home Win,74.8,21.1,4.1,Home Win,58.2,36.0,5.8
+Draw,Away Win,12.4,25.4,62.3,Away Win,13.9,24.5,61.7,Away Win,7.3,30.3,62.5
+Draw,Away Win,34.6,24.8,40.6,Away Win,29.9,26.0,44.0,Away Win,19.7,29.7,50.6
+Away Win,Home Win,34.4,31.9,33.6,Home Win,41.9,32.5,25.7,Draw,27.9,41.6,30.5
+Home Win,Home Win,60.2,27.6,12.3,Home Win,59.7,27.4,12.8,Home Win,48.9,38.0,13.1
+Away Win,Away Win,11.6,31.9,56.5,Away Win,13.5,22.9,63.7,Away Win,5.3,30.9,63.8
+Draw,Away Win,15.6,25.4,59.0,Away Win,15.6,19.5,64.9,Away Win,8.6,32.6,58.8
+Draw,Home Win,72.3,17.8,9.9,Home Win,68.4,22.1,9.5,Home Win,51.0,34.5,14.6
+Home Win,Home Win,63.1,22.9,13.9,Home Win,65.3,23.9,10.8,Home Win,49.5,37.7,12.8
+Draw,Home Win,62.0,26.3,11.7,Home Win,63.2,28.1,8.6,Draw,40.0,43.3,16.7
+Draw,Away Win,23.8,32.9,43.3,Away Win,20.9,24.8,54.3,Away Win,11.5,35.2,53.3
+Draw,Home Win,54.0,27.5,18.5,Home Win,54.4,28.4,17.2,Draw,36.0,39.5,24.5
+Home Win,Away Win,8.9,10.9,80.2,Away Win,9.5,13.6,76.9,Away Win,3.8,21.1,75.1
+Away Win,Away Win,18.8,36.3,44.9,Away Win,17.3,29.3,53.4,Away Win,9.3,34.4,56.3
+Home Win,Home Win,91.1,7.0,1.9,Home Win,95.1,4.3,0.6,Home Win,86.8,12.0,1.2
+Away Win,Home Win,48.3,24.1,27.6,Home Win,56.3,23.6,20.2,Home Win,41.0,33.4,25.6
+Away Win,Home Win,46.9,26.3,26.8,Home Win,43.4,29.2,27.3,Draw,28.2,39.1,32.7
+Home Win,Home Win,96.7,2.4,0.8,Home Win,99.0,0.9,0.1,Home Win,96.4,3.4,0.2
+Home Win,Home Win,72.5,22.9,4.6,Home Win,81.0,16.4,2.6,Home Win,63.2,31.9,4.9
+Away Win,Away Win,13.5,21.7,64.8,Away Win,13.1,20.2,66.7,Away Win,7.1,26.3,66.6
+Home Win,Home Win,67.7,19.1,13.2,Home Win,64.4,23.1,12.5,Home Win,50.9,34.0,15.2
+Away Win,Away Win,27.3,35.8,36.9,Away Win,28.5,32.9,38.6,Draw,17.6,43.0,39.4
+Away Win,Away Win,6.2,13.0,80.8,Away Win,8.2,15.8,76.0,Away Win,4.2,23.8,72.0
+Away Win,Home Win,43.5,30.0,26.5,Home Win,41.1,29.8,29.0,Draw,27.7,41.4,30.9
+Draw,Home Win,68.0,16.2,15.8,Home Win,70.6,17.3,12.1,Home Win,55.7,27.5,16.8
+Draw,Home Win,38.7,34.9,26.4,Home Win,40.1,32.2,27.7,Draw,25.2,45.6,29.2
+Home Win,Home Win,60.3,24.6,15.1,Home Win,63.5,25.2,11.4,Home Win,48.7,36.8,14.5
+Home Win,Home Win,89.5,9.2,1.3,Home Win,93.1,6.2,0.7,Home Win,78.9,19.3,1.7
+Draw,Home Win,83.3,11.9,4.8,Home Win,85.2,11.6,3.2,Home Win,70.0,23.9,6.0
+Draw,Away Win,17.0,33.7,49.4,Away Win,18.1,25.1,56.8,Away Win,7.7,36.3,56.0
+Home Win,Home Win,48.8,24.8,26.4,Home Win,57.6,24.7,17.7,Home Win,42.0,34.0,24.0
+Draw,Home Win,54.5,32.4,13.1,Home Win,58.9,29.1,12.0,Home Win,41.6,41.6,16.8
+Away Win,Away Win,1.1,1.5,97.4,Away Win,0.8,2.1,97.1,Away Win,0.3,4.9,94.8
+Away Win,Away Win,9.2,9.0,81.8,Away Win,10.9,15.8,73.3,Away Win,4.1,23.3,72.6
+Away Win,Draw,24.1,38.1,37.8,Away Win,24.9,34.8,40.3,Away Win,12.5,39.4,48.1
+Home Win,Home Win,95.8,2.4,1.8,Home Win,99.2,0.7,0.1,Home Win,97.1,2.6,0.3
+Away Win,Away Win,2.9,4.1,93.0,Away Win,2.3,4.1,93.7,Away Win,1.0,9.5,89.5
+Home Win,Home Win,80.8,11.7,7.5,Home Win,88.2,8.4,3.4,Home Win,75.5,18.1,6.4
+Home Win,Home Win,75.3,16.3,8.4,Home Win,69.9,19.4,10.7,Home Win,50.3,33.1,16.6
+Home Win,Home Win,93.6,5.3,1.1,Home Win,97.7,2.1,0.2,Home Win,91.5,8.1,0.5
+Home Win,Home Win,56.4,30.0,13.6,Home Win,54.8,32.9,12.2,Draw,38.1,40.3,21.6
+Home Win,Home Win,80.5,16.5,2.9,Home Win,91.0,8.1,0.9,Home Win,76.0,21.7,2.3
+Home Win,Home Win,76.6,15.0,8.5,Home Win,75.7,16.3,8.0,Home Win,61.6,27.1,11.3
+Home Win,Home Win,57.3,25.4,17.4,Home Win,71.3,19.2,9.5,Home Win,59.2,28.8,12.0
+Home Win,Away Win,15.6,30.4,54.0,Away Win,19.7,29.0,51.3,Away Win,7.9,33.2,58.9
+Away Win,Away Win,8.9,17.8,73.3,Away Win,11.7,20.5,67.9,Away Win,5.8,29.2,65.0
+Away Win,Away Win,12.3,29.2,58.5,Away Win,15.5,25.5,58.9,Away Win,7.3,34.2,58.5
+Away Win,Home Win,48.4,30.0,21.6,Home Win,45.1,33.6,21.3,Draw,24.6,42.5,32.9
+Home Win,Home Win,92.7,5.5,1.8,Home Win,96.7,2.8,0.5,Home Win,90.8,8.1,1.1
+Home Win,Home Win,80.1,14.2,5.7,Home Win,86.2,10.7,3.1,Home Win,75.6,19.8,4.6
+Home Win,Home Win,89.4,8.0,2.6,Home Win,92.6,6.0,1.4,Home Win,82.5,15.1,2.4
+Draw,Home Win,82.7,13.4,3.9,Home Win,88.8,9.2,2.0,Home Win,74.2,21.3,4.5
+Home Win,Home Win,92.0,3.7,4.3,Home Win,95.8,2.9,1.4,Home Win,90.9,7.4,1.7
+Draw,Away Win,7.0,13.4,79.6,Away Win,5.4,9.6,85.1,Away Win,2.5,18.5,79.0
+Home Win,Home Win,83.5,12.7,3.8,Home Win,85.7,11.2,3.1,Home Win,70.0,24.3,5.8
+Away Win,Home Win,65.2,27.4,7.4,Home Win,71.3,23.2,5.5,Home Win,51.2,38.2,10.6
+Home Win,Home Win,51.5,34.6,14.0,Home Win,65.3,27.6,7.1,Draw,40.5,45.4,14.1
+Draw,Home Win,51.4,27.4,21.2,Home Win,53.1,25.7,21.2,Draw,37.4,40.0,22.6
+Home Win,Home Win,48.9,38.8,12.3,Home Win,54.4,33.5,12.0,Draw,33.8,48.0,18.2
+Home Win,Home Win,49.0,32.4,18.6,Home Win,58.0,28.6,13.4,Draw,40.1,42.0,17.9
+Draw,Home Win,42.4,26.5,31.2,Home Win,46.5,26.8,26.7,Draw,30.6,39.8,29.6
+Home Win,Home Win,79.1,16.2,4.7,Home Win,85.0,12.3,2.7,Home Win,66.3,26.9,6.8
+Away Win,Away Win,10.6,16.7,72.8,Away Win,13.3,21.2,65.5,Away Win,6.6,27.5,65.9
+Home Win,Home Win,66.4,23.1,10.5,Home Win,66.9,24.1,9.1,Home Win,47.1,38.2,14.7
+Home Win,Home Win,40.8,39.5,19.7,Home Win,48.2,36.2,15.6,Draw,29.4,43.7,26.9
+Away Win,Away Win,9.5,14.5,76.0,Away Win,11.1,17.4,71.4,Away Win,7.8,25.6,66.5
+Home Win,Home Win,80.7,10.5,8.8,Home Win,88.6,7.3,4.1,Home Win,77.0,17.4,5.6
+Away Win,Away Win,2.9,3.3,93.8,Away Win,4.9,7.4,87.7,Away Win,1.7,13.6,84.7
+Home Win,Home Win,65.4,20.2,14.5,Home Win,56.0,26.1,17.9,Home Win,40.7,35.7,23.6
+Away Win,Away Win,5.5,6.8,87.8,Away Win,3.7,6.5,89.8,Away Win,1.3,11.6,87.1
+Draw,Home Win,77.6,14.5,7.9,Home Win,80.5,13.6,5.8,Home Win,66.9,23.5,9.6
+Draw,Away Win,17.7,28.1,54.2,Away Win,18.4,26.1,55.5,Away Win,7.8,31.6,60.6
+Home Win,Home Win,86.4,6.3,7.3,Home Win,90.2,6.0,3.9,Home Win,77.3,16.1,6.6
+Home Win,Home Win,57.4,25.7,16.9,Home Win,68.6,18.8,12.6,Home Win,52.1,33.2,14.6
+Away Win,Home Win,38.8,26.5,34.7,Home Win,41.8,24.0,34.3,Away Win,29.8,31.5,38.7
+Draw,Away Win,25.8,22.7,51.6,Away Win,30.3,21.7,48.0,Away Win,26.4,30.6,43.0
+Home Win,Home Win,79.6,16.1,4.4,Home Win,88.4,9.7,1.9,Home Win,69.2,25.0,5.8
+Home Win,Away Win,19.6,28.1,52.3,Away Win,21.9,25.8,52.2,Draw,18.5,44.9,36.5
+Home Win,Home Win,88.8,7.0,4.1,Home Win,93.8,4.9,1.3,Home Win,86.0,11.8,2.2
+Home Win,Home Win,75.3,11.7,13.0,Home Win,79.0,10.9,10.2,Home Win,66.8,20.3,12.8
+Away Win,Home Win,69.0,21.2,9.9,Home Win,69.7,20.2,10.1,Home Win,49.1,36.3,14.6
+Away Win,Away Win,0.3,0.4,99.3,Away Win,0.4,1.1,98.6,Away Win,0.1,3.0,97.0
+Home Win,Home Win,86.9,9.4,3.7,Home Win,91.6,6.9,1.5,Home Win,80.8,16.9,2.3
+Draw,Home Win,75.4,19.9,4.7,Home Win,83.0,14.7,2.3,Home Win,59.2,34.7,6.2
+Draw,Home Win,40.1,26.5,33.4,Home Win,49.3,27.6,23.2,Draw,33.8,38.9,27.3
+Home Win,Home Win,69.6,23.2,7.2,Home Win,72.4,21.5,6.1,Home Win,51.1,38.0,10.9
+Home Win,Home Win,85.6,12.4,2.0,Home Win,91.7,7.5,0.8,Home Win,75.2,22.6,2.2
+Home Win,Home Win,69.8,23.3,6.9,Home Win,73.1,21.7,5.3,Home Win,57.8,33.5,8.7
+Home Win,Home Win,40.6,34.6,24.8,Home Win,45.4,33.9,20.7,Draw,32.8,46.1,21.1
+Home Win,Home Win,39.6,29.5,30.9,Home Win,35.8,31.0,33.2,Draw,26.2,43.1,30.7
+Draw,Home Win,71.4,21.6,6.9,Home Win,76.3,18.6,5.1,Home Win,57.8,34.0,8.2
+Home Win,Away Win,32.5,28.7,38.9,Home Win,46.1,25.2,28.7,Draw,30.0,40.3,29.8
+Away Win,Away Win,28.9,32.6,38.5,Away Win,29.8,29.5,40.7,Away Win,21.6,37.8,40.6
+Away Win,Away Win,19.3,39.9,40.8,Away Win,21.4,27.9,50.7,Away Win,8.9,34.9,56.2
+Home Win,Away Win,20.5,29.4,50.1,Away Win,26.6,27.9,45.6,Away Win,11.1,36.6,52.4
+Draw,Home Win,39.6,35.0,25.4,Home Win,51.0,26.5,22.5,Draw,30.4,43.9,25.7
+Draw,Away Win,25.4,29.8,44.8,Away Win,19.1,23.9,57.0,Away Win,11.3,33.1,55.6
+Away Win,Away Win,20.1,27.4,52.5,Away Win,22.5,28.1,49.5,Away Win,9.6,30.1,60.4
+Away Win,Away Win,19.9,35.7,44.5,Away Win,19.4,30.0,50.6,Away Win,12.9,35.6,51.6
+Draw,Away Win,18.6,32.7,48.6,Away Win,18.8,27.2,54.0,Away Win,9.3,34.6,56.1
+Home Win,Home Win,38.3,31.9,29.8,Home Win,41.1,36.4,22.5,Draw,24.5,40.5,35.0
+Home Win,Home Win,65.7,21.1,13.2,Home Win,62.6,23.9,13.5,Home Win,46.3,37.2,16.5
+Home Win,Home Win,59.3,23.1,17.6,Home Win,60.9,22.8,16.2,Home Win,40.9,36.9,22.2
+Away Win,Home Win,36.7,31.5,31.8,Home Win,40.5,25.3,34.2,Away Win,23.8,35.8,40.4
+Away Win,Away Win,16.3,21.1,62.6,Away Win,13.1,18.3,68.6,Away Win,8.8,31.1,60.1
+Away Win,Away Win,8.7,24.1,67.2,Away Win,9.3,18.4,72.3,Away Win,4.5,24.4,71.1
+Home Win,Home Win,79.9,13.8,6.3,Home Win,81.0,14.6,4.4,Home Win,65.7,27.4,6.8
+Draw,Away Win,17.4,28.0,54.6,Away Win,14.3,21.7,63.9,Away Win,9.4,26.9,63.7
+Draw,Home Win,49.4,35.3,15.4,Home Win,50.0,36.7,13.4,Draw,33.5,46.5,20.0
+Draw,Home Win,60.6,26.4,12.9,Home Win,71.7,20.3,8.1,Home Win,51.4,37.4,11.2
+Away Win,Away Win,23.5,28.7,47.7,Away Win,22.0,21.3,56.7,Away Win,11.4,29.9,58.7
+Away Win,Home Win,48.7,29.7,21.6,Home Win,55.1,29.3,15.5,Home Win,41.7,41.4,16.9
+Home Win,Home Win,68.9,24.6,6.5,Home Win,78.0,18.0,4.0,Home Win,52.7,37.2,10.1
+Away Win,Away Win,15.4,14.3,70.4,Away Win,22.2,16.3,61.5,Away Win,15.2,31.0,53.7
+Away Win,Away Win,26.6,29.7,43.7,Away Win,30.4,33.0,36.7,Draw,18.1,41.3,40.5
+Home Win,Home Win,67.7,15.2,17.1,Home Win,63.4,12.7,23.9,Home Win,54.8,24.2,21.0
+Draw,Away Win,14.1,29.0,56.9,Away Win,12.7,21.0,66.3,Away Win,7.8,32.2,60.0
+Draw,Draw,28.5,36.9,34.6,Away Win,32.0,33.5,34.5,Draw,20.2,44.3,35.5
+Away Win,Draw,31.6,36.2,32.2,Away Win,32.0,33.6,34.4,Draw,17.7,44.9,37.5
+Away Win,Away Win,14.1,28.0,58.0,Away Win,15.1,24.2,60.8,Away Win,6.8,31.0,62.2
+Home Win,Home Win,78.6,16.4,4.9,Home Win,85.1,12.1,2.8,Home Win,70.9,24.1,5.0
+Draw,Away Win,13.3,27.6,59.1,Away Win,17.2,27.6,55.2,Away Win,9.3,34.0,56.7
+Away Win,Away Win,21.3,29.1,49.6,Away Win,22.8,27.1,50.2,Away Win,18.3,40.5,41.1
+Home Win,Home Win,42.3,28.4,29.3,Home Win,43.7,27.6,28.7,Draw,29.6,40.8,29.6
+Away Win,Away Win,23.0,37.8,39.2,Away Win,25.6,33.7,40.6,Away Win,15.5,40.6,43.9
+Draw,Away Win,20.8,28.7,50.5,Away Win,20.2,26.6,53.2,Away Win,15.4,40.4,44.2
+Home Win,Home Win,40.3,27.5,32.2,Home Win,39.5,29.4,31.2,Draw,26.6,37.8,35.6
+Draw,Away Win,21.9,32.7,45.4,Away Win,22.5,30.3,47.2,Away Win,16.8,38.6,44.6
+Home Win,Home Win,45.3,33.1,21.6,Home Win,44.6,37.3,18.1,Draw,32.8,43.2,24.0
+Away Win,Home Win,41.1,28.4,30.4,Home Win,43.7,31.1,25.3,Draw,32.9,38.8,28.3
+Draw,Draw,30.5,35.0,34.5,Away Win,31.0,33.4,35.6,Away Win,14.8,37.9,47.3
+Home Win,Home Win,69.7,21.9,8.4,Home Win,70.3,23.3,6.4,Home Win,55.3,33.9,10.8
+Home Win,Home Win,54.9,29.9,15.2,Home Win,67.8,22.5,9.7,Home Win,48.9,36.8,14.3
+Draw,Home Win,61.1,24.7,14.3,Home Win,64.9,25.1,10.0,Home Win,44.4,39.0,16.7
+Away Win,Away Win,10.2,13.3,76.4,Away Win,13.5,18.1,68.4,Away Win,5.6,23.6,70.8
+Home Win,Home Win,88.2,8.7,3.1,Home Win,94.6,4.6,0.8,Home Win,87.6,10.9,1.6
+Home Win,Home Win,66.1,22.1,11.8,Home Win,66.7,23.0,10.3,Home Win,45.5,36.4,18.0
+Home Win,Home Win,67.9,22.1,10.0,Home Win,64.9,22.6,12.5,Home Win,42.8,37.0,20.2
+Home Win,Home Win,44.8,35.0,20.2,Home Win,55.8,24.3,19.8,Draw,27.8,43.5,28.7
+Home Win,Home Win,82.8,14.0,3.2,Home Win,87.1,10.9,1.9,Home Win,72.9,23.5,3.6
+Away Win,Away Win,22.8,34.6,42.5,Away Win,22.0,28.2,49.8,Away Win,11.5,36.7,51.8
+Away Win,Away Win,24.4,32.2,43.3,Away Win,29.4,25.7,44.9,Away Win,15.6,36.2,48.1
+Home Win,Home Win,88.3,5.6,6.1,Home Win,93.8,3.7,2.5,Home Win,87.4,8.9,3.7
+Home Win,Home Win,57.0,26.1,16.9,Home Win,66.6,19.7,13.7,Home Win,39.3,36.8,23.9
+Home Win,Home Win,48.3,29.6,22.1,Home Win,65.4,26.0,8.6,Draw,38.4,44.7,16.9
+Home Win,Home Win,49.0,29.6,21.4,Home Win,53.0,26.5,20.5,Draw,29.6,39.9,30.5
+Away Win,Away Win,12.5,23.7,63.7,Away Win,11.8,17.8,70.4,Away Win,5.5,30.4,64.2
+Home Win,Home Win,71.5,22.5,6.1,Home Win,84.1,13.3,2.6,Home Win,62.8,32.1,5.1
+Draw,Away Win,21.7,34.4,44.0,Away Win,23.4,33.1,43.5,Away Win,7.8,32.8,59.4
+Home Win,Home Win,85.6,11.9,2.5,Home Win,86.9,10.5,2.6,Home Win,64.2,28.5,7.3
+Away Win,Draw,24.4,41.0,34.6,Draw,32.2,37.6,30.2,Away Win,12.0,43.7,44.3
+Away Win,Draw,34.0,38.4,27.6,Away Win,32.9,31.9,35.2,Draw,20.5,46.0,33.5
+Home Win,Home Win,64.8,21.6,13.5,Home Win,61.0,24.6,14.4,Home Win,47.0,36.0,17.0
+Home Win,Home Win,66.3,23.4,10.3,Home Win,64.4,24.3,11.3,Home Win,48.9,35.9,15.2
+Home Win,Home Win,71.2,20.9,7.9,Home Win,80.5,15.3,4.2,Home Win,64.6,28.3,7.1
+Home Win,Away Win,21.3,27.4,51.3,Away Win,22.1,27.2,50.7,Away Win,15.0,32.6,52.3
+Home Win,Home Win,70.1,19.8,10.0,Home Win,69.7,20.1,10.2,Home Win,53.6,32.3,14.0
+Away Win,Home Win,49.2,31.1,19.7,Home Win,54.5,28.8,16.7,Draw,34.5,42.7,22.8
+Home Win,Home Win,44.8,26.8,28.4,Home Win,54.1,25.8,20.0,Draw,29.4,40.8,29.8
+Home Win,Home Win,38.8,36.3,24.9,Draw,31.4,34.4,34.2,Draw,30.5,41.5,28.0
+Home Win,Home Win,39.6,29.4,31.0,Home Win,48.0,29.1,22.9,Draw,37.8,38.3,23.9
+Home Win,Home Win,48.7,30.6,20.8,Home Win,55.2,29.6,15.2,Home Win,43.4,39.1,17.6
+Home Win,Home Win,58.9,21.4,19.7,Home Win,45.9,28.7,25.5,Home Win,39.6,34.3,26.1
+Away Win,Home Win,42.0,25.4,32.6,Home Win,47.6,26.6,25.8,Draw,33.0,39.6,27.4
+Home Win,Home Win,89.3,5.4,5.3,Home Win,94.3,3.4,2.2,Home Win,88.3,8.5,3.2
+Home Win,Home Win,37.4,33.2,29.4,Draw,36.1,37.7,26.2,Draw,25.9,43.3,30.8
+Draw,Home Win,64.1,23.6,12.3,Home Win,63.2,24.6,12.2,Home Win,49.9,36.3,13.8
+Draw,Draw,34.5,35.5,30.0,Home Win,38.7,30.1,31.2,Draw,19.6,44.4,36.1
+Home Win,Home Win,59.4,23.6,16.9,Home Win,64.6,21.1,14.3,Home Win,56.7,29.6,13.8
+Draw,Home Win,67.3,21.1,11.6,Home Win,71.5,19.9,8.6,Home Win,52.0,34.7,13.2
+Home Win,Home Win,74.0,20.4,5.6,Home Win,85.8,11.7,2.5,Home Win,62.7,31.6,5.7
+Away Win,Home Win,46.4,27.7,25.9,Home Win,58.4,25.2,16.4,Home Win,47.3,35.7,16.9
+Away Win,Away Win,8.8,16.3,74.9,Away Win,8.3,16.0,75.7,Away Win,3.3,23.1,73.6
+Home Win,Home Win,39.2,27.4,33.4,Home Win,41.4,30.8,27.8,Home Win,39.4,35.3,25.3
+Home Win,Home Win,37.6,32.7,29.7,Home Win,49.0,29.8,21.2,Draw,32.5,39.2,28.3
+Draw,Away Win,21.0,33.2,45.8,Away Win,22.9,31.1,45.9,Away Win,14.0,36.5,49.5
+Home Win,Home Win,64.9,27.9,7.1,Home Win,78.7,17.7,3.6,Home Win,59.7,35.0,5.3
+Home Win,Home Win,77.5,18.1,4.4,Home Win,88.5,9.7,1.8,Home Win,72.9,23.9,3.1
+Draw,Home Win,57.7,29.3,13.0,Home Win,60.6,29.1,10.3,Draw,40.7,41.4,17.9
+Home Win,Home Win,66.0,24.7,9.3,Home Win,73.4,21.1,5.5,Home Win,52.7,38.2,9.1
+Home Win,Home Win,65.5,20.9,13.6,Home Win,64.1,22.6,13.3,Home Win,54.0,32.9,13.1
+Away Win,Away Win,27.2,28.0,44.7,Away Win,27.9,27.9,44.3,Away Win,14.5,34.9,50.5
+Home Win,Away Win,33.7,28.0,38.4,Away Win,25.0,23.6,51.4,Away Win,15.4,32.5,52.1
+Away Win,Home Win,35.8,30.1,34.1,Home Win,35.0,31.8,33.2,Draw,20.0,41.3,38.7
+Away Win,Away Win,23.4,31.0,45.6,Away Win,26.3,23.3,50.4,Away Win,11.2,37.4,51.4
+Home Win,Home Win,74.2,19.0,6.8,Home Win,75.6,16.6,7.8,Home Win,55.2,30.2,14.5
+Home Win,Home Win,79.5,15.5,5.0,Home Win,87.0,10.4,2.7,Home Win,74.4,21.5,4.1
+Away Win,Away Win,17.6,25.4,57.0,Away Win,7.6,14.8,77.6,Away Win,3.2,23.7,73.1
+Home Win,Home Win,55.3,27.8,17.0,Home Win,53.4,27.1,19.5,Home Win,38.8,37.6,23.5
+Away Win,Away Win,25.0,27.4,47.6,Away Win,21.9,38.1,40.1,Away Win,11.1,33.7,55.2
+Away Win,Home Win,43.4,38.1,18.5,Home Win,53.7,34.5,11.7,Draw,29.2,45.3,25.5
+Draw,Home Win,75.2,13.3,11.5,Home Win,76.4,14.2,9.4,Home Win,59.7,26.6,13.7
+Home Win,Away Win,22.9,30.5,46.5,Away Win,25.0,26.0,49.0,Away Win,11.5,31.1,57.4
+Home Win,Home Win,50.8,24.0,25.2,Home Win,48.0,26.0,26.0,Draw,31.0,34.9,34.1
+Home Win,Away Win,27.7,27.7,44.6,Away Win,26.3,24.5,49.3,Away Win,21.6,32.7,45.7
+Home Win,Home Win,64.1,25.7,10.2,Home Win,69.5,22.1,8.5,Home Win,52.1,36.7,11.3
+Draw,Away Win,20.0,17.4,62.6,Away Win,25.2,18.0,56.8,Draw,24.3,38.3,37.4
+Home Win,Draw,21.9,39.2,39.0,Away Win,29.2,31.5,39.3,Draw,18.8,45.6,35.6
+Home Win,Home Win,48.9,22.5,28.5,Home Win,46.1,22.8,31.2,Home Win,41.9,33.9,24.2
+Away Win,Away Win,26.4,30.3,43.3,Away Win,27.6,29.4,42.9,Away Win,18.6,29.0,52.5
+Draw,Home Win,58.0,23.1,18.9,Home Win,51.2,25.1,23.7,Home Win,37.5,36.2,26.3
+Away Win,Away Win,16.6,29.4,54.0,Away Win,18.9,25.4,55.7,Away Win,10.9,32.1,57.0
+Away Win,Away Win,4.8,5.4,89.8,Away Win,9.6,21.4,69.0,Away Win,6.7,36.1,57.2
+Draw,Away Win,28.6,24.0,47.4,Away Win,29.1,17.6,53.4,Away Win,17.6,29.8,52.5
+Away Win,Away Win,13.5,16.0,70.5,Away Win,14.8,13.3,71.9,Away Win,9.6,25.0,65.4
+Home Win,Home Win,62.3,21.5,16.2,Home Win,65.0,22.2,12.8,Home Win,53.8,31.0,15.3
+Home Win,Draw,29.6,38.6,31.8,Away Win,31.2,30.3,38.5,Draw,20.1,41.5,38.4
+Draw,Home Win,48.0,26.9,25.1,Home Win,50.1,28.9,21.0,Draw,32.6,41.7,25.7
+Draw,Home Win,40.1,36.5,23.4,Home Win,41.6,37.7,20.7,Draw,26.7,43.6,29.8
+Home Win,Away Win,26.4,30.5,43.0,Away Win,32.9,27.6,39.5,Draw,18.7,42.3,39.0
+Home Win,Draw,35.1,39.0,25.9,Home Win,42.1,32.8,25.1,Draw,20.6,47.3,32.1
+Away Win,Home Win,47.5,28.5,24.0,Home Win,44.1,31.0,25.0,Draw,33.8,41.1,25.1
+Home Win,Home Win,51.3,33.2,15.5,Home Win,60.7,29.7,9.6,Home Win,45.2,43.0,11.9
+Home Win,Home Win,72.2,18.8,9.0,Home Win,80.0,14.0,6.0,Home Win,61.0,30.1,8.9
+Away Win,Away Win,27.3,28.1,44.7,Away Win,27.7,29.5,42.8,Away Win,21.1,34.5,44.4
+Away Win,Home Win,41.4,39.8,18.8,Home Win,44.1,35.9,20.0,Draw,21.1,42.7,36.2
+Home Win,Away Win,31.3,26.4,42.3,Home Win,40.3,26.8,32.9,Away Win,25.6,31.0,43.3
+Home Win,Home Win,49.4,27.5,23.1,Home Win,52.5,28.6,18.9,Draw,34.1,39.1,26.8
+Draw,Away Win,15.7,27.0,57.4,Away Win,20.4,24.3,55.3,Away Win,12.4,31.0,56.6
+Home Win,Home Win,76.8,19.0,4.2,Home Win,79.5,17.6,2.9,Home Win,63.8,31.2,5.0
+Draw,Home Win,59.8,20.2,20.0,Home Win,61.4,21.7,16.9,Home Win,54.3,29.6,16.1
+Home Win,Home Win,35.7,34.5,29.8,Draw,35.8,37.2,27.0,Draw,25.4,43.9,30.7
+Away Win,Home Win,45.7,27.0,27.3,Home Win,38.4,27.6,34.0,Away Win,27.9,33.1,39.0
+Away Win,Away Win,18.3,32.7,49.0,Away Win,22.0,32.9,45.1,Away Win,13.8,40.8,45.3
+Away Win,Away Win,27.1,33.4,39.6,Away Win,33.2,30.3,36.6,Draw,23.9,39.3,36.8
+Home Win,Home Win,72.7,20.8,6.5,Home Win,77.0,17.6,5.4,Home Win,54.0,34.1,11.9
+Home Win,Home Win,43.6,30.1,26.3,Home Win,48.7,30.7,20.6,Draw,33.7,41.0,25.4
+Home Win,Home Win,48.9,32.8,18.3,Home Win,47.4,33.5,19.2,Draw,31.1,42.9,26.0
+Home Win,Home Win,40.2,27.5,32.3,Home Win,40.4,30.8,28.7,Draw,29.8,37.2,33.0
+Home Win,Home Win,63.3,22.9,13.9,Home Win,72.4,19.5,8.1,Home Win,61.0,30.8,8.2
+Home Win,Home Win,40.5,27.1,32.4,Home Win,38.0,29.3,32.7,Away Win,25.0,35.1,39.9
+Home Win,Home Win,52.0,32.5,15.4,Home Win,58.5,28.9,12.5,Home Win,41.0,38.9,20.1
+Home Win,Home Win,58.3,20.9,20.8,Home Win,48.5,29.0,22.5,Home Win,38.4,38.1,23.5
+Draw,Home Win,36.3,31.1,32.6,Home Win,41.2,32.4,26.4,Draw,31.5,45.0,23.5
+Home Win,Home Win,76.7,18.6,4.7,Home Win,84.6,13.4,2.0,Home Win,71.0,25.2,3.8
+Home Win,Home Win,64.4,19.4,16.2,Home Win,67.5,19.4,13.1,Home Win,54.9,27.6,17.5
+Away Win,Home Win,75.2,19.4,5.4,Home Win,80.3,15.3,4.3,Home Win,64.4,29.0,6.6
+Away Win,Away Win,26.9,33.2,40.0,Away Win,23.9,29.9,46.1,Away Win,14.3,37.9,47.8
+Draw,Home Win,36.1,33.7,30.2,Home Win,38.9,31.5,29.5,Draw,15.4,42.4,42.2
+Home Win,Home Win,45.5,37.5,17.0,Home Win,52.0,33.1,15.0,Draw,29.3,47.4,23.3
+Draw,Home Win,37.7,34.5,27.8,Home Win,39.8,35.0,25.3,Draw,23.7,41.6,34.7
+Away Win,Home Win,49.3,30.3,20.4,Home Win,52.9,28.3,18.8,Draw,34.6,41.1,24.3
+Home Win,Home Win,80.1,15.8,4.0,Home Win,87.9,10.5,1.6,Home Win,78.1,19.7,2.1
+Home Win,Away Win,17.5,26.3,56.1,Away Win,19.9,27.7,52.4,Away Win,13.8,37.3,48.9
+Home Win,Home Win,85.1,8.8,6.1,Home Win,90.2,6.8,3.0,Home Win,79.6,15.1,5.3
+Away Win,Home Win,46.3,35.1,18.6,Home Win,53.4,35.0,11.6,Draw,34.0,47.8,18.3
+Away Win,Home Win,45.5,33.7,20.8,Home Win,45.2,32.2,22.6,Draw,26.2,40.1,33.7
+Draw,Away Win,20.7,28.0,51.2,Away Win,23.2,30.3,46.5,Away Win,12.6,33.6,53.8
+Home Win,Away Win,32.1,28.5,39.4,Away Win,33.4,28.3,38.3,Away Win,24.9,31.9,43.2
+Away Win,Away Win,5.7,4.7,89.6,Away Win,9.4,6.7,83.9,Away Win,6.0,17.5,76.5
+Home Win,Home Win,78.4,17.2,4.4,Home Win,84.4,12.8,2.8,Home Win,66.3,28.5,5.2
+Home Win,Away Win,26.2,29.2,44.6,Away Win,30.3,21.8,47.9,Draw,31.3,35.3,33.3
+Home Win,Home Win,51.4,30.1,18.5,Home Win,54.1,31.3,14.5,Home Win,41.7,38.9,19.4
+Away Win,Home Win,42.0,37.4,20.5,Home Win,50.1,34.8,15.0,Draw,34.3,46.7,19.0
+Away Win,Away Win,13.7,25.0,61.2,Away Win,18.3,27.9,53.8,Away Win,10.0,34.0,55.9
+Draw,Home Win,43.7,36.4,19.9,Home Win,49.3,37.4,13.3,Draw,28.6,48.0,23.4
+Home Win,Home Win,73.6,16.8,9.7,Home Win,75.6,17.1,7.4,Home Win,60.3,27.4,12.3
+Draw,Home Win,58.7,23.1,18.2,Home Win,47.5,29.8,22.7,Draw,33.1,39.6,27.3
+Home Win,Home Win,86.8,10.6,2.6,Home Win,93.8,5.2,1.0,Home Win,80.6,17.1,2.2
+Home Win,Home Win,36.2,34.8,29.0,Home Win,38.8,36.1,25.1,Draw,26.1,44.6,29.3
+Home Win,Home Win,67.9,20.0,12.1,Home Win,60.3,24.4,15.3,Home Win,51.4,30.3,18.2
+Home Win,Away Win,26.6,27.1,46.2,Away Win,30.3,28.4,41.3,Away Win,16.4,34.6,49.0
+Draw,Home Win,68.7,23.4,7.9,Home Win,64.8,27.3,7.9,Home Win,46.1,38.8,15.1
+Home Win,Home Win,60.2,31.7,8.0,Home Win,70.0,25.7,4.3,Home Win,48.6,42.0,9.4
+Draw,Away Win,27.4,25.5,47.1,Away Win,29.1,25.0,45.9,Away Win,19.5,36.3,44.2
+Draw,Away Win,28.2,31.6,40.2,Away Win,27.5,29.7,42.8,Away Win,10.6,35.5,53.9
+Home Win,Home Win,41.1,28.1,30.8,Home Win,48.6,29.2,22.2,Draw,29.2,42.3,28.5
+Home Win,Home Win,51.6,33.8,14.6,Home Win,59.8,30.7,9.5,Draw,37.9,41.9,20.1
+Home Win,Home Win,67.5,19.4,13.1,Home Win,68.7,21.6,9.7,Home Win,46.2,35.4,18.4
+Home Win,Away Win,34.8,29.4,35.8,Home Win,36.1,28.7,35.2,Draw,25.3,38.7,35.9
+Home Win,Home Win,76.3,19.0,4.7,Home Win,83.0,14.4,2.7,Home Win,70.3,26.3,3.3
+Home Win,Home Win,71.6,17.3,11.1,Home Win,59.9,23.1,17.1,Home Win,45.1,32.3,22.6
+Draw,Away Win,28.1,20.6,51.3,Away Win,34.0,19.6,46.4,Draw,32.4,35.2,32.4
+Home Win,Home Win,75.5,18.4,6.1,Home Win,77.9,17.2,4.9,Home Win,58.9,33.0,8.1
+Home Win,Home Win,72.6,21.8,5.6,Home Win,78.5,17.4,4.0,Home Win,62.5,31.0,6.4
+Away Win,Away Win,15.4,26.3,58.3,Away Win,20.4,26.4,53.2,Away Win,8.5,34.8,56.7
+Away Win,Draw,28.0,41.6,30.4,Home Win,35.6,33.5,30.8,Draw,13.9,44.7,41.4
+Home Win,Home Win,74.7,16.8,8.5,Home Win,69.4,19.0,11.5,Home Win,49.4,32.5,18.1
+Away Win,Away Win,21.7,32.0,46.3,Away Win,22.1,23.1,54.8,Away Win,20.6,33.0,46.4
+Home Win,Home Win,35.4,29.7,35.0,Away Win,29.9,30.4,39.7,Away Win,21.1,39.0,39.9
+Away Win,Home Win,36.0,28.0,36.0,Home Win,49.3,24.4,26.3,Draw,33.7,38.1,28.2
+Home Win,Home Win,75.4,11.7,12.9,Home Win,85.3,9.1,5.7,Home Win,69.4,19.8,10.8
+Home Win,Home Win,36.6,34.7,28.8,Away Win,33.3,32.1,34.6,Draw,26.4,39.5,34.1
+Away Win,Away Win,23.8,27.0,49.2,Away Win,28.0,30.5,41.5,Draw,21.1,44.7,34.2
+Draw,Home Win,69.9,15.8,14.3,Home Win,78.8,13.1,8.2,Home Win,61.9,24.4,13.7
+Home Win,Home Win,64.0,26.6,9.4,Home Win,68.4,23.0,8.6,Home Win,46.1,37.8,16.1
+Home Win,Home Win,45.0,17.9,37.0,Home Win,41.7,21.3,37.0,Away Win,32.1,33.5,34.4
+Home Win,Home Win,60.2,22.5,17.4,Home Win,65.3,17.4,17.3,Home Win,44.7,34.3,21.0
+Home Win,Home Win,88.8,7.8,3.4,Home Win,93.4,5.5,1.1,Home Win,83.4,13.5,3.1
+Home Win,Home Win,54.4,29.0,16.6,Home Win,53.6,28.2,18.2,Home Win,51.0,34.8,14.3
+Home Win,Away Win,27.0,25.3,47.8,Away Win,30.5,29.2,40.4,Draw,24.2,39.6,36.2
+Home Win,Home Win,93.5,3.8,2.7,Home Win,97.5,2.0,0.6,Home Win,92.6,6.2,1.2
+Home Win,Away Win,27.9,33.2,38.9,Away Win,26.1,31.2,42.8,Away Win,12.8,37.1,50.2
+Away Win,Home Win,41.0,24.4,34.6,Home Win,39.7,28.9,31.4,Away Win,20.8,34.6,44.6
+Draw,Draw,25.2,40.5,34.3,Away Win,22.1,32.8,45.1,Away Win,9.1,35.4,55.5
+Home Win,Home Win,42.0,33.0,25.0,Home Win,39.6,32.5,27.9,Draw,25.1,40.2,34.7
+Home Win,Home Win,66.3,20.0,13.8,Home Win,65.0,20.8,14.2,Home Win,39.7,32.6,27.7
+Home Win,Away Win,16.0,25.2,58.8,Away Win,16.8,20.7,62.5,Away Win,7.4,34.0,58.6
+Home Win,Home Win,45.3,37.9,16.8,Home Win,52.5,33.8,13.7,Draw,30.4,47.9,21.7
+Draw,Home Win,59.5,31.1,9.4,Home Win,72.3,21.9,5.8,Home Win,44.7,43.0,12.3
+Home Win,Home Win,61.2,25.7,13.1,Home Win,62.3,26.8,10.9,Home Win,45.3,39.9,14.8
+Draw,Home Win,60.7,28.2,11.1,Home Win,63.1,26.2,10.7,Home Win,45.5,40.0,14.5
+Home Win,Home Win,61.9,27.1,11.1,Home Win,70.2,22.6,7.2,Home Win,54.9,35.5,9.6
+Draw,Away Win,21.7,30.1,48.2,Away Win,23.8,29.7,46.5,Away Win,13.2,37.8,49.0
+Away Win,Home Win,63.4,26.4,10.2,Home Win,67.1,23.9,9.1,Home Win,48.0,37.2,14.8
+Home Win,Home Win,84.3,11.8,3.9,Home Win,89.5,7.7,2.8,Home Win,73.4,19.1,7.4
+Away Win,Away Win,10.0,16.4,73.6,Away Win,10.7,18.6,70.7,Away Win,3.9,23.4,72.7
+Away Win,Away Win,34.0,30.9,35.2,Draw,31.0,36.8,32.2,Draw,20.6,42.7,36.7
+Draw,Home Win,67.1,15.9,17.0,Home Win,66.5,18.2,15.3,Home Win,55.1,26.6,18.3
+Away Win,Home Win,70.4,18.8,10.8,Home Win,74.2,16.8,9.0,Home Win,60.9,29.2,10.0
+Away Win,Away Win,28.4,32.3,39.4,Away Win,28.1,31.3,40.6,Away Win,21.2,36.1,42.7
+Draw,Home Win,37.9,34.2,27.9,Home Win,44.5,35.1,20.4,Draw,23.0,41.8,35.2
+Draw,Away Win,19.3,26.4,54.3,Away Win,22.4,24.4,53.2,Away Win,14.6,33.5,52.0
+Draw,Draw,29.7,37.5,32.8,Away Win,31.5,33.6,35.0,Draw,23.1,40.2,36.6
+Draw,Draw,31.7,41.3,27.0,Home Win,41.4,35.2,23.3,Draw,28.9,46.7,24.4
+Home Win,Home Win,73.7,21.1,5.2,Home Win,79.1,16.5,4.3,Home Win,60.9,31.5,7.7
+Home Win,Home Win,39.1,33.4,27.5,Home Win,41.3,31.5,27.1,Away Win,22.4,37.4,40.2
+Away Win,Draw,33.7,35.8,30.5,Draw,33.7,36.9,29.4,Draw,21.0,42.2,36.8
+Away Win,Away Win,20.6,27.0,52.4,Away Win,26.2,30.3,43.4,Away Win,13.7,38.1,48.2
+Home Win,Home Win,71.8,15.8,12.4,Home Win,77.8,15.2,7.0,Home Win,62.5,26.1,11.4
+Draw,Home Win,85.9,11.9,2.3,Home Win,93.5,5.7,0.8,Home Win,82.9,15.8,1.3
+Home Win,Home Win,72.2,18.9,8.9,Home Win,71.1,20.3,8.6,Home Win,49.4,32.7,17.9
+Home Win,Home Win,34.2,32.1,33.7,Home Win,38.1,33.8,28.2,Draw,22.7,42.6,34.7
+Away Win,Away Win,32.5,31.3,36.2,Home Win,36.0,32.5,31.6,Away Win,21.9,39.1,39.1
+Draw,Home Win,49.7,31.8,18.6,Home Win,45.7,30.1,24.2,Draw,26.9,40.4,32.7
+Home Win,Away Win,12.4,16.3,71.3,Away Win,17.0,17.2,65.8,Away Win,12.2,28.9,58.9
+Away Win,Away Win,29.7,29.6,40.7,Away Win,29.6,32.5,37.9,Away Win,22.2,37.1,40.7
+Home Win,Home Win,83.9,13.4,2.7,Home Win,88.9,9.4,1.7,Home Win,70.3,26.1,3.5
+Draw,Home Win,71.7,20.2,8.1,Home Win,71.0,21.1,7.9,Home Win,47.6,35.0,17.4
+Home Win,Home Win,74.2,11.1,14.7,Home Win,75.8,9.8,14.4,Home Win,63.9,21.6,14.5
+Home Win,Home Win,80.6,15.9,3.5,Home Win,87.5,10.8,1.7,Home Win,65.6,29.5,4.9
+Away Win,Away Win,25.6,27.9,46.5,Away Win,29.4,25.9,44.7,Away Win,23.7,36.1,40.1
+Home Win,Home Win,79.4,15.5,5.1,Home Win,86.5,11.1,2.4,Home Win,70.4,24.4,5.3
+Draw,Home Win,82.0,13.9,4.1,Home Win,89.1,8.8,2.1,Home Win,74.1,21.1,4.7
+Home Win,Home Win,88.1,9.5,2.4,Home Win,90.0,8.3,1.7,Home Win,76.2,20.5,3.3
+Home Win,Home Win,76.4,18.0,5.7,Home Win,81.6,14.4,3.9,Home Win,66.2,27.3,6.5
+Draw,Home Win,59.9,23.6,16.5,Home Win,58.1,28.0,13.9,Home Win,41.6,39.8,18.5
+Home Win,Home Win,57.6,30.0,12.3,Home Win,60.9,27.8,11.2,Home Win,42.9,40.5,16.6
+Home Win,Home Win,41.0,27.8,31.1,Home Win,42.3,28.0,29.7,Home Win,35.8,34.4,29.8
+Draw,Home Win,72.7,15.7,11.7,Home Win,77.1,14.2,8.7,Home Win,62.4,26.2,11.4
+Home Win,Home Win,81.3,14.7,4.1,Home Win,90.1,8.4,1.5,Home Win,77.2,20.2,2.6
+Draw,Home Win,38.5,33.8,27.6,Home Win,42.6,34.5,22.9,Draw,29.4,41.0,29.6
+Away Win,Away Win,23.5,31.0,45.5,Away Win,23.0,28.2,48.7,Away Win,11.6,33.3,55.1
+Draw,Home Win,70.5,18.3,11.2,Home Win,68.0,21.7,10.3,Home Win,55.0,30.8,14.3
+Draw,Draw,27.8,36.4,35.8,Draw,30.0,37.3,32.6,Draw,18.7,43.8,37.5
+Home Win,Home Win,76.5,18.4,5.1,Home Win,82.9,14.4,2.8,Home Win,68.1,27.8,4.1
+Home Win,Draw,28.0,38.7,33.3,Draw,34.4,38.8,26.9,Draw,20.0,44.6,35.3
+Home Win,Away Win,18.0,36.8,45.3,Away Win,21.4,33.3,45.4,Away Win,12.5,37.5,49.9
+Home Win,Home Win,58.8,20.9,20.3,Home Win,58.0,23.5,18.6,Home Win,46.5,33.4,20.1
+Away Win,Away Win,19.0,14.1,66.9,Away Win,20.5,19.9,59.6,Away Win,14.1,30.3,55.5
+Home Win,Home Win,40.1,37.1,22.8,Draw,36.9,39.8,23.4,Draw,30.8,39.3,29.9
+Away Win,Home Win,35.2,32.1,32.7,Away Win,33.5,32.8,33.7,Draw,16.2,42.3,41.5
+Draw,Home Win,58.5,32.7,8.8,Home Win,64.7,28.5,6.8,Draw,43.5,44.8,11.7
+Home Win,Home Win,73.8,12.8,13.4,Home Win,74.2,14.2,11.6,Home Win,69.7,21.6,8.7
+Home Win,Home Win,42.4,31.3,26.2,Home Win,41.2,30.7,28.1,Draw,37.3,40.1,22.6
+Away Win,Home Win,77.9,9.8,12.3,Home Win,82.8,9.1,8.1,Home Win,75.3,17.2,7.4
+Home Win,Home Win,53.1,23.0,23.9,Home Win,45.6,26.1,28.3,Home Win,39.5,36.4,24.2
+Away Win,Home Win,60.5,24.0,15.5,Home Win,62.8,22.6,14.6,Home Win,40.8,39.2,20.0
+Home Win,Home Win,45.3,35.0,19.7,Home Win,56.7,30.8,12.5,Draw,34.8,42.7,22.6
+Home Win,Home Win,81.0,12.5,6.5,Home Win,83.4,10.4,6.3,Home Win,74.3,18.7,6.9
+Home Win,Home Win,84.2,10.9,4.9,Home Win,89.4,7.3,3.3,Home Win,76.7,17.8,5.5
+Home Win,Home Win,67.0,23.9,9.1,Home Win,77.6,17.9,4.5,Home Win,64.5,28.3,7.2
+Draw,Home Win,66.5,17.3,16.2,Home Win,63.1,20.1,16.7,Home Win,55.4,28.1,16.5
+Away Win,Away Win,18.8,30.0,51.2,Away Win,20.3,29.3,50.4,Away Win,12.2,33.7,54.0
+Home Win,Home Win,46.2,37.6,16.2,Home Win,61.7,28.9,9.4,Draw,37.7,46.4,15.9
+Draw,Home Win,62.7,25.6,11.7,Home Win,74.1,18.5,7.4,Home Win,49.2,37.3,13.5
+Draw,Home Win,70.6,14.8,14.6,Home Win,69.8,16.0,14.2,Home Win,59.2,25.0,15.7
+Home Win,Home Win,62.7,24.0,13.3,Home Win,64.5,25.7,9.8,Home Win,60.9,29.4,9.7
+Away Win,Home Win,46.5,32.2,21.3,Home Win,57.7,29.8,12.5,Draw,39.5,41.8,18.8
+Home Win,Home Win,56.9,28.7,14.3,Home Win,55.2,28.5,16.3,Draw,35.1,38.8,26.1
+Away Win,Home Win,35.7,35.3,29.0,Home Win,47.0,32.7,20.3,Draw,35.6,38.9,25.4
+Home Win,Home Win,70.1,16.5,13.4,Home Win,74.6,17.0,8.3,Home Win,59.5,27.2,13.3
+Home Win,Home Win,63.3,23.5,13.2,Home Win,56.7,27.6,15.7,Home Win,45.5,36.4,18.1
+Home Win,Home Win,76.6,14.8,8.6,Home Win,79.9,14.5,5.6,Home Win,63.0,26.8,10.2
+Draw,Home Win,78.5,14.5,7.0,Home Win,79.0,14.9,6.2,Home Win,67.7,23.8,8.5
+Away Win,Away Win,10.1,16.2,73.7,Away Win,14.2,17.6,68.2,Away Win,11.1,28.6,60.4
+Home Win,Home Win,42.2,28.5,29.3,Home Win,55.0,23.4,21.6,Home Win,50.6,33.9,15.5
+Home Win,Home Win,49.8,28.6,21.6,Home Win,48.2,30.2,21.5,Draw,31.4,41.0,27.6
+Home Win,Home Win,68.5,24.0,7.5,Home Win,67.1,22.7,10.1,Draw,34.7,37.9,27.4
+Home Win,Home Win,75.6,17.3,7.1,Home Win,76.1,16.5,7.5,Home Win,56.6,30.1,13.3
+Home Win,Home Win,48.4,27.8,23.8,Home Win,43.4,29.5,27.1,Draw,31.7,39.3,29.0
+Draw,Away Win,26.1,36.0,37.9,Away Win,29.4,34.0,36.6,Draw,22.6,41.5,35.9
+Home Win,Home Win,73.7,21.3,5.0,Home Win,85.5,12.3,2.2,Home Win,66.3,29.0,4.6
+Home Win,Home Win,63.5,26.6,9.8,Home Win,76.1,19.0,4.9,Home Win,55.8,36.4,7.7
+Home Win,Home Win,65.2,12.8,22.0,Home Win,65.6,11.1,23.3,Home Win,60.7,24.0,15.3
+Away Win,Draw,32.8,41.5,25.7,Draw,35.7,44.0,20.3,Draw,20.1,50.6,29.3
+Home Win,Home Win,37.4,34.6,28.0,Home Win,44.1,29.1,26.8,Away Win,20.8,38.6,40.6
+Away Win,Away Win,25.5,32.5,42.0,Away Win,21.9,37.0,41.2,Away Win,10.6,37.5,52.0
+Home Win,Away Win,24.6,32.5,43.0,Away Win,28.5,26.6,44.9,Away Win,20.0,34.0,46.0
+Home Win,Home Win,60.3,19.0,20.7,Home Win,60.2,18.8,21.0,Home Win,43.6,30.1,26.4
+Draw,Home Win,62.6,25.5,11.9,Home Win,70.9,20.8,8.3,Home Win,47.3,36.4,16.3
+Away Win,Away Win,6.2,13.5,80.3,Away Win,7.2,15.9,76.9,Away Win,4.2,24.6,71.1
+Home Win,Home Win,73.5,17.5,8.9,Home Win,71.9,18.5,9.6,Home Win,50.7,31.2,18.1
+Away Win,Home Win,52.4,28.1,19.5,Home Win,54.1,28.3,17.7,Draw,35.1,38.8,26.1
+Home Win,Home Win,63.0,20.1,16.9,Home Win,60.6,24.6,14.8,Draw,37.2,39.3,23.5
+Home Win,Home Win,73.8,20.9,5.3,Home Win,81.9,15.3,2.8,Home Win,64.1,30.3,5.6
+Draw,Home Win,45.2,23.0,31.8,Home Win,45.3,26.9,27.9,Away Win,31.8,31.7,36.5
+Home Win,Home Win,80.3,14.6,5.1,Home Win,83.7,12.2,4.1,Home Win,66.9,24.7,8.4
+Draw,Away Win,19.8,22.1,58.2,Away Win,23.0,19.6,57.4,Away Win,14.0,26.5,59.5
+Home Win,Home Win,53.0,32.8,14.2,Home Win,58.5,30.4,11.0,Home Win,42.5,42.4,15.1
+Home Win,Home Win,73.6,20.6,5.8,Home Win,79.4,17.2,3.3,Home Win,62.4,31.2,6.4
+Draw,Home Win,46.0,23.0,31.0,Home Win,44.3,23.4,32.3,Draw,25.8,37.8,36.4
+Home Win,Home Win,40.1,32.4,27.6,Home Win,46.0,28.0,26.0,Draw,29.4,35.7,34.9
+Home Win,Home Win,63.6,27.7,8.7,Home Win,78.3,18.0,3.7,Home Win,59.3,35.0,5.7
+Draw,Away Win,7.9,13.0,79.1,Away Win,10.1,15.0,74.9,Away Win,5.0,21.8,73.2
+Home Win,Home Win,52.4,24.9,22.8,Home Win,46.8,25.7,27.4,Draw,35.0,36.7,28.3
+Draw,Away Win,13.8,27.1,59.1,Away Win,16.6,25.6,57.8,Away Win,7.4,33.2,59.4
+Home Win,Home Win,79.5,16.8,3.7,Home Win,86.7,11.6,1.7,Home Win,71.7,24.9,3.4
+Draw,Draw,40.0,40.3,19.7,Home Win,45.1,40.5,14.4,Draw,26.8,50.2,23.0
+Draw,Home Win,41.7,35.9,22.4,Home Win,47.4,35.4,17.2,Draw,30.1,45.2,24.7
+Home Win,Home Win,36.5,35.6,27.8,Home Win,50.4,30.2,19.5,Draw,26.8,44.0,29.1
+Away Win,Draw,19.1,43.7,37.2,Away Win,21.2,33.9,44.9,Draw,12.7,44.4,42.9
+Home Win,Home Win,39.2,32.9,28.0,Home Win,54.9,26.3,18.8,Draw,34.7,41.9,23.5
+Home Win,Home Win,55.4,26.8,17.8,Home Win,62.4,25.7,11.9,Home Win,45.3,37.9,16.9
+Away Win,Away Win,25.2,25.8,49.0,Away Win,17.4,30.1,52.4,Away Win,10.0,33.6,56.4
+Away Win,Away Win,25.2,30.1,44.6,Away Win,24.2,29.2,46.6,Away Win,12.6,30.2,57.2
+Home Win,Home Win,51.5,25.1,23.4,Home Win,50.5,26.6,22.9,Draw,33.0,36.5,30.6
+Home Win,Home Win,69.6,17.7,12.7,Home Win,74.1,15.3,10.6,Home Win,59.9,23.7,16.4
+Home Win,Home Win,85.0,12.2,2.8,Home Win,90.9,7.6,1.4,Home Win,78.0,19.0,3.0
+Away Win,Away Win,22.1,27.4,50.5,Away Win,19.1,26.8,54.2,Away Win,12.5,32.9,54.6
+Home Win,Home Win,48.4,20.1,31.5,Home Win,48.4,19.9,31.7,Home Win,37.5,32.2,30.3
+Home Win,Home Win,95.0,3.7,1.3,Home Win,97.1,2.4,0.5,Home Win,88.5,9.8,1.6
+Home Win,Home Win,79.9,15.6,4.5,Home Win,82.2,14.8,3.0,Home Win,72.2,23.1,4.7
+Home Win,Home Win,80.3,12.5,7.2,Home Win,84.0,11.8,4.3,Home Win,66.8,24.7,8.5
+Draw,Home Win,46.2,15.6,38.2,Home Win,46.6,24.1,29.3,Home Win,42.9,31.8,25.3
+Home Win,Home Win,85.0,11.6,3.4,Home Win,87.7,9.6,2.6,Home Win,75.4,20.0,4.6
+Away Win,Home Win,75.0,17.3,7.7,Home Win,70.4,18.5,11.1,Home Win,45.2,33.7,21.1
+Home Win,Home Win,73.2,14.9,11.9,Home Win,77.9,14.4,7.6,Home Win,60.1,26.5,13.4
+Away Win,Away Win,11.5,15.4,73.2,Away Win,15.4,17.2,67.4,Away Win,12.6,28.7,58.7
+Home Win,Home Win,58.7,21.1,20.2,Home Win,62.3,19.4,18.3,Home Win,48.8,29.6,21.5
+Home Win,Home Win,84.9,9.3,5.8,Home Win,90.1,7.1,2.9,Home Win,79.0,16.0,5.0
+Home Win,Home Win,62.0,16.5,21.5,Home Win,57.7,18.0,24.3,Home Win,37.4,29.4,33.2
+Away Win,Home Win,67.2,19.9,12.9,Home Win,64.9,23.3,11.8,Home Win,51.6,32.2,16.2
+Draw,Home Win,80.3,11.7,8.0,Home Win,84.0,9.9,6.1,Home Win,63.9,21.3,14.8
+Home Win,Away Win,22.4,29.0,48.6,Away Win,23.6,26.4,50.0,Away Win,14.7,39.6,45.7
+Draw,Home Win,64.2,22.5,13.3,Home Win,67.4,23.8,8.8,Home Win,48.5,36.8,14.8
+Home Win,Home Win,47.9,22.3,29.7,Home Win,46.0,26.1,27.8,Away Win,28.2,35.4,36.4
+Away Win,Away Win,17.9,33.9,48.2,Away Win,18.9,28.6,52.5,Away Win,10.7,34.5,54.8
+Home Win,Home Win,70.5,21.2,8.3,Home Win,78.9,16.4,4.7,Home Win,61.8,30.8,7.4
+Away Win,Away Win,13.4,21.5,65.1,Away Win,14.4,21.7,63.8,Away Win,6.9,26.4,66.7
+Home Win,Away Win,10.2,25.3,64.5,Away Win,13.7,27.2,59.1,Away Win,5.7,30.2,64.2
+Home Win,Home Win,63.6,22.9,13.5,Home Win,65.5,21.6,12.9,Home Win,46.8,36.3,16.9
+Away Win,Away Win,12.9,26.5,60.5,Away Win,18.7,26.6,54.8,Away Win,3.7,29.5,66.8
+Draw,Away Win,6.8,14.5,78.6,Away Win,7.5,13.1,79.4,Away Win,4.1,21.3,74.7
+Home Win,Home Win,61.6,25.6,12.7,Home Win,69.5,19.5,11.0,Home Win,51.1,34.8,14.1
+Home Win,Home Win,74.9,14.5,10.5,Home Win,79.2,12.6,8.2,Home Win,61.5,24.1,14.3
+Away Win,Home Win,35.9,34.7,29.5,Home Win,42.2,30.9,26.9,Draw,32.7,39.8,27.5
+Draw,Home Win,41.2,29.5,29.3,Home Win,43.7,35.3,21.0,Draw,24.3,41.8,34.0
+Away Win,Away Win,3.1,3.3,93.7,Away Win,3.4,3.8,92.7,Away Win,2.3,10.6,87.1
+Draw,Home Win,69.8,19.6,10.6,Home Win,80.9,13.3,5.7,Home Win,62.9,28.8,8.4
+Home Win,Home Win,75.7,15.8,8.4,Home Win,86.9,9.9,3.2,Home Win,72.7,21.4,5.9
+Away Win,Away Win,14.7,23.2,62.1,Away Win,14.8,21.1,64.1,Away Win,9.7,26.3,63.9
+Away Win,Away Win,15.5,21.6,62.8,Away Win,17.8,19.2,63.1,Away Win,13.8,34.4,51.7
+Away Win,Away Win,2.8,3.6,93.5,Away Win,2.9,6.2,90.9,Away Win,1.1,10.6,88.3
+Home Win,Home Win,92.1,6.1,1.8,Home Win,92.1,6.6,1.3,Home Win,77.0,19.6,3.3
+Away Win,Away Win,20.0,28.0,52.1,Away Win,17.4,22.7,59.8,Away Win,16.1,32.1,51.8
+Away Win,Away Win,10.9,8.9,80.2,Away Win,15.1,13.4,71.5,Away Win,11.3,25.1,63.6
+Away Win,Away Win,21.9,21.4,56.7,Away Win,25.9,25.7,48.5,Away Win,17.5,33.9,48.6
+Away Win,Away Win,20.4,26.9,52.7,Away Win,23.3,26.6,50.1,Away Win,19.0,33.3,47.7
+Home Win,Home Win,79.7,8.4,11.9,Home Win,83.4,7.2,9.5,Home Win,69.4,18.4,12.1
+Away Win,Away Win,17.7,18.5,63.8,Away Win,21.3,18.3,60.4,Away Win,19.7,33.2,47.1
+Home Win,Home Win,76.2,16.2,7.6,Home Win,78.0,15.9,6.0,Home Win,61.6,28.2,10.2
+Home Win,Home Win,60.5,28.4,11.1,Home Win,67.7,24.8,7.4,Home Win,47.8,40.5,11.7
+Home Win,Home Win,45.7,32.0,22.3,Home Win,57.3,26.4,16.3,Home Win,38.2,37.9,23.9
+Away Win,Home Win,53.0,30.1,16.9,Home Win,55.8,31.3,12.9,Draw,33.2,44.0,22.8
+Draw,Away Win,18.9,33.0,48.2,Away Win,19.6,26.6,53.8,Away Win,12.5,33.0,54.4
+Away Win,Away Win,2.8,4.1,93.1,Away Win,4.9,7.6,87.5,Away Win,2.3,12.9,84.8
+Home Win,Home Win,86.2,8.6,5.2,Home Win,91.2,6.4,2.4,Home Win,80.7,15.1,4.1
+Draw,Away Win,33.0,31.3,35.7,Home Win,35.9,30.3,33.9,Draw,26.4,40.6,33.0
+Draw,Home Win,55.9,27.7,16.4,Home Win,58.5,26.8,14.7,Home Win,42.3,39.3,18.4
+Away Win,Away Win,26.8,34.4,38.8,Away Win,31.9,30.7,37.4,Away Win,18.9,39.3,41.8
+Home Win,Home Win,72.1,15.6,12.3,Home Win,80.0,11.1,8.8,Home Win,68.1,21.1,10.9
+Home Win,Home Win,58.4,23.2,18.5,Home Win,51.8,27.4,20.8,Home Win,39.6,34.1,26.2
+Home Win,Away Win,34.1,24.9,41.0,Home Win,57.1,16.6,26.3,Home Win,37.8,37.1,25.0
+Home Win,Home Win,63.6,25.1,11.3,Home Win,62.2,27.1,10.8,Draw,40.9,41.9,17.1
+Draw,Home Win,74.3,11.7,14.0,Home Win,77.3,11.9,10.8,Home Win,57.7,23.6,18.7
+Home Win,Home Win,81.5,12.8,5.7,Home Win,81.1,12.7,6.2,Home Win,68.3,22.9,8.7
+Away Win,Away Win,13.4,13.2,73.4,Away Win,17.9,14.6,67.5,Away Win,12.1,26.2,61.8
+Home Win,Home Win,80.3,12.7,6.9,Home Win,85.2,11.0,3.8,Home Win,70.7,23.3,6.0
+Draw,Home Win,36.6,28.3,35.1,Home Win,42.5,27.5,30.0,Draw,30.2,35.0,34.7
+Home Win,Home Win,56.8,23.4,19.8,Home Win,58.7,26.4,14.9,Home Win,46.5,36.7,16.8
+Home Win,Home Win,36.3,33.8,29.9,Home Win,45.7,31.5,22.8,Draw,31.3,41.6,27.1
+Home Win,Home Win,73.1,14.3,12.5,Home Win,74.7,14.7,10.5,Home Win,56.6,26.4,17.0
+Home Win,Home Win,50.5,32.8,16.7,Home Win,68.1,22.9,9.0,Home Win,44.8,41.5,13.7
+Home Win,Away Win,42.0,15.0,42.9,Home Win,41.5,17.0,41.4,Home Win,35.4,31.1,33.6
+Draw,Home Win,73.7,10.9,15.4,Home Win,55.1,9.6,35.2,Home Win,66.1,18.1,15.8
+Away Win,Home Win,59.9,25.8,14.3,Home Win,63.6,25.7,10.8,Home Win,45.7,38.5,15.8
+Away Win,Away Win,23.4,31.3,45.3,Away Win,29.4,29.9,40.7,Draw,18.1,41.0,40.9
+Home Win,Home Win,65.6,17.1,17.3,Home Win,71.8,13.5,14.7,Home Win,58.0,27.9,14.1
+Draw,Home Win,43.6,28.2,28.3,Home Win,38.5,28.8,32.7,Draw,26.9,40.6,32.5
+Draw,Away Win,21.6,17.1,61.3,Away Win,29.6,17.4,53.0,Away Win,22.2,38.4,39.4
+Home Win,Home Win,64.4,22.8,12.8,Home Win,60.5,26.4,13.1,Home Win,46.2,36.7,17.1
+Home Win,Home Win,48.6,32.1,19.4,Home Win,56.2,28.0,15.8,Draw,39.5,41.0,19.4
+Away Win,Home Win,45.1,22.8,32.2,Home Win,43.5,25.2,31.3,Draw,30.9,34.9,34.2
+Away Win,Away Win,5.9,18.8,75.3,Away Win,10.7,20.8,68.6,Away Win,4.4,25.4,70.2
+Home Win,Away Win,25.0,31.5,43.5,Away Win,25.1,32.4,42.5,Away Win,15.5,36.5,48.0
+Home Win,Away Win,32.5,31.0,36.5,Home Win,37.3,31.5,31.2,Away Win,23.5,36.2,40.4
+Home Win,Home Win,67.5,23.6,8.9,Home Win,74.4,21.0,4.6,Home Win,58.6,35.3,6.1
+Home Win,Home Win,75.6,19.0,5.4,Home Win,84.8,13.4,1.9,Home Win,71.8,24.7,3.5
+Away Win,Home Win,56.3,27.2,16.5,Home Win,69.2,23.1,7.7,Home Win,54.7,35.1,10.3
+Home Win,Home Win,82.8,14.7,2.5,Home Win,88.1,10.7,1.2,Home Win,72.0,25.5,2.5
+Home Win,Home Win,84.8,12.2,3.0,Home Win,89.0,8.8,2.2,Home Win,72.7,22.3,5.0
+Home Win,Home Win,43.0,31.6,25.3,Home Win,49.9,31.2,19.0,Draw,27.4,39.8,32.8
+Away Win,Draw,30.7,36.5,32.8,Away Win,30.4,27.5,42.1,Away Win,21.1,36.0,42.9
+Home Win,Away Win,25.1,36.7,38.2,Draw,29.0,37.8,33.2,Away Win,13.6,42.1,44.3
+Away Win,Away Win,28.1,35.5,36.3,Away Win,24.9,32.0,43.0,Away Win,17.6,38.2,44.2
+Home Win,Home Win,40.9,30.2,29.0,Home Win,51.3,27.0,21.7,Draw,31.5,41.1,27.4
+Home Win,Draw,28.3,36.1,35.6,Away Win,31.0,32.6,36.4,Draw,20.3,41.1,38.7
+Draw,Draw,28.1,39.1,32.9,Draw,30.2,35.7,34.1,Draw,20.9,43.8,35.3
+Draw,Away Win,23.5,37.6,38.9,Away Win,22.0,33.2,44.8,Away Win,14.3,41.3,44.4
+Draw,Home Win,49.5,36.8,13.7,Home Win,57.3,32.6,10.0,Draw,39.6,45.5,14.9
+Home Win,Home Win,63.4,26.4,10.3,Home Win,66.3,24.7,9.0,Home Win,43.9,41.1,15.0
+Home Win,Draw,27.8,40.3,31.9,Home Win,37.4,37.0,25.6,Draw,19.7,48.6,31.6
+Home Win,Home Win,53.2,33.5,13.4,Home Win,66.0,26.6,7.4,Home Win,44.0,43.8,12.2
+Away Win,Home Win,50.8,24.5,24.7,Home Win,46.8,26.1,27.1,Home Win,43.5,35.4,21.0
+Draw,Home Win,67.5,16.8,15.7,Home Win,76.2,12.8,11.0,Home Win,61.1,27.2,11.7
+Home Win,Home Win,54.4,28.8,16.7,Home Win,57.1,28.6,14.2,Home Win,41.1,40.1,18.8
+Away Win,Away Win,16.8,23.5,59.7,Away Win,22.0,28.7,49.4,Away Win,13.4,37.0,49.6
+Draw,Away Win,33.3,32.1,34.6,Away Win,28.6,31.9,39.6,Draw,19.7,40.8,39.6
+Draw,Home Win,61.0,22.3,16.7,Home Win,57.0,25.9,17.1,Draw,37.1,37.6,25.3
+Home Win,Away Win,25.3,32.3,42.4,Draw,27.7,36.7,35.6,Draw,17.4,43.2,39.4
+Home Win,Home Win,49.9,27.6,22.5,Home Win,59.0,23.0,18.1,Home Win,42.0,33.6,24.4
+Away Win,Away Win,14.4,18.0,67.6,Away Win,14.6,19.2,66.2,Away Win,7.0,22.2,70.8
+Home Win,Home Win,61.5,24.0,14.6,Home Win,62.9,25.5,11.6,Home Win,49.7,36.7,13.6
+Away Win,Away Win,13.9,34.6,51.6,Away Win,19.2,27.6,53.2,Away Win,7.5,30.2,62.2
+Home Win,Away Win,26.0,32.7,41.3,Away Win,25.2,32.4,42.3,Away Win,15.2,36.6,48.2
+Away Win,Home Win,42.3,34.2,23.5,Home Win,48.1,29.5,22.5,Away Win,19.1,40.3,40.6
+Draw,Away Win,32.7,25.1,42.2,Away Win,34.3,28.3,37.4,Away Win,27.2,34.2,38.6
+Draw,Home Win,63.8,19.9,16.2,Home Win,53.6,28.7,17.7,Home Win,43.5,36.3,20.2
+Home Win,Home Win,57.5,29.0,13.5,Home Win,54.2,34.0,11.8,Home Win,44.0,41.7,14.3
+Home Win,Home Win,80.8,16.0,3.2,Home Win,86.7,11.8,1.5,Home Win,72.6,24.3,3.1
+Away Win,Draw,33.7,33.9,32.4,Home Win,41.9,30.8,27.3,Draw,30.3,39.1,30.6
+Home Win,Home Win,64.3,28.0,7.7,Home Win,75.4,21.7,2.9,Home Win,60.2,35.3,4.5
+Home Win,Home Win,47.4,17.4,35.2,Home Win,50.3,17.1,32.5,Home Win,37.1,31.6,31.2
+Home Win,Home Win,49.1,28.2,22.7,Home Win,49.4,28.6,22.1,Draw,28.8,40.9,30.3
+Away Win,Away Win,25.4,36.0,38.5,Away Win,26.1,35.7,38.3,Away Win,11.6,37.4,51.0
+Home Win,Home Win,47.9,25.4,26.7,Home Win,49.5,27.6,22.9,Home Win,37.3,34.6,28.1
+Home Win,Home Win,77.5,16.3,6.2,Home Win,86.7,10.8,2.6,Home Win,73.6,22.5,3.9
+Draw,Away Win,33.2,32.2,34.6,Away Win,33.0,32.2,34.8,Draw,22.6,44.4,33.0
+Home Win,Home Win,56.1,27.6,16.3,Home Win,62.2,23.7,14.2,Home Win,40.1,36.1,23.8
+Home Win,Away Win,20.5,35.1,44.4,Away Win,26.5,32.6,40.9,Away Win,14.9,39.9,45.2
+Home Win,Home Win,56.8,21.7,21.5,Home Win,59.4,19.8,20.8,Home Win,46.3,31.0,22.7
+Draw,Home Win,45.6,30.6,23.7,Home Win,53.1,30.2,16.8,Draw,32.1,41.2,26.6
+Home Win,Home Win,37.6,33.3,29.1,Home Win,52.2,28.6,19.2,Draw,37.9,42.2,19.9
+Home Win,Home Win,36.9,34.6,28.4,Home Win,41.7,30.1,28.1,Draw,23.3,43.5,33.2
+Home Win,Home Win,73.3,16.7,10.0,Home Win,68.5,19.3,12.2,Home Win,57.4,28.1,14.5
+Home Win,Away Win,22.4,22.3,55.3,Away Win,20.2,20.2,59.6,Away Win,14.3,30.4,55.3
+Home Win,Home Win,69.9,21.9,8.2,Home Win,76.2,17.3,6.4,Home Win,53.3,33.3,13.4
+Home Win,Home Win,58.9,26.1,15.1,Home Win,58.3,28.4,13.3,Home Win,42.2,38.8,19.0
+Home Win,Home Win,47.6,29.0,23.4,Home Win,40.8,37.6,21.6,Draw,26.3,44.9,28.8
+Away Win,Draw,27.1,39.4,33.6,Draw,31.6,40.8,27.6,Draw,17.7,48.5,33.8
+Home Win,Home Win,44.8,27.7,27.5,Home Win,49.1,28.1,22.7,Draw,37.8,39.8,22.4
+Draw,Away Win,19.4,29.2,51.4,Away Win,18.5,24.1,57.4,Away Win,11.1,33.1,55.7
+Home Win,Home Win,68.8,22.5,8.8,Home Win,68.9,23.2,8.0,Home Win,50.1,36.5,13.5
+Draw,Away Win,32.6,30.3,37.1,Home Win,37.0,31.5,31.4,Away Win,20.5,38.2,41.3
+Home Win,Away Win,18.5,30.5,51.0,Away Win,22.4,29.0,48.6,Away Win,15.6,34.8,49.6
+Home Win,Home Win,64.0,26.3,9.7,Home Win,71.1,23.4,5.6,Home Win,54.3,37.6,8.0
+Away Win,Away Win,25.8,34.5,39.7,Away Win,29.4,31.8,38.8,Draw,19.7,40.6,39.7
+Draw,Away Win,15.6,36.8,47.6,Away Win,18.2,29.9,52.0,Away Win,8.9,36.6,54.5
+Away Win,Home Win,46.4,22.6,31.0,Home Win,44.4,21.8,33.8,Home Win,39.0,35.0,26.0
+Home Win,Home Win,41.9,38.6,19.5,Home Win,51.6,29.2,19.2,Draw,36.1,45.1,18.8
+Home Win,Home Win,38.1,33.9,27.9,Home Win,48.0,30.4,21.5,Draw,24.7,38.2,37.0
+Draw,Home Win,55.7,29.7,14.6,Home Win,63.7,24.7,11.7,Home Win,44.0,39.1,16.9
+Home Win,Home Win,50.9,25.9,23.2,Home Win,48.1,31.6,20.4,Home Win,37.3,36.0,26.8
+Draw,Home Win,50.7,29.0,20.3,Home Win,59.0,25.6,15.4,Home Win,42.4,36.4,21.2
+Home Win,Home Win,59.7,14.3,26.0,Home Win,60.6,13.4,26.0,Home Win,56.4,25.1,18.5
+Home Win,Home Win,46.0,37.6,16.4,Home Win,54.2,30.4,15.3,Draw,33.5,45.1,21.4
+Home Win,Draw,32.3,36.0,31.7,Home Win,38.9,37.0,24.1,Draw,21.0,43.1,35.9
+Away Win,Home Win,64.2,10.7,25.1,Home Win,69.3,10.6,20.1,Home Win,60.0,21.8,18.3
+Away Win,Away Win,19.9,35.6,44.5,Away Win,16.2,25.7,58.1,Away Win,10.1,32.2,57.7
+Draw,Home Win,66.0,20.2,13.7,Home Win,61.8,23.0,15.2,Home Win,44.9,33.7,21.4
+Home Win,Home Win,59.4,25.7,15.0,Home Win,55.7,28.9,15.4,Draw,35.8,39.4,24.8
+Home Win,Home Win,48.3,32.4,19.3,Home Win,57.4,29.8,12.8,Draw,38.4,42.1,19.5
+Home Win,Home Win,83.1,13.9,3.1,Home Win,88.3,9.7,1.9,Home Win,70.3,24.5,5.2
+Draw,Draw,33.7,37.9,28.4,Home Win,35.7,35.4,28.8,Draw,24.7,45.1,30.2
+Draw,Away Win,23.1,36.8,40.1,Away Win,26.7,32.0,41.3,Away Win,17.2,37.8,45.0
+Home Win,Home Win,78.6,16.2,5.2,Home Win,83.5,13.0,3.6,Home Win,68.3,26.0,5.7
+Draw,Draw,21.4,39.6,39.0,Away Win,22.7,35.8,41.5,Away Win,11.1,40.5,48.4
+Away Win,Away Win,15.1,28.7,56.2,Away Win,15.3,22.7,62.0,Away Win,7.4,32.8,59.8
+Draw,Away Win,8.3,2.7,89.0,Away Win,26.1,3.6,70.3,Away Win,9.5,9.2,81.3
+Draw,Away Win,29.3,30.3,40.4,Home Win,41.0,31.1,27.9,Draw,22.2,42.1,35.6
+Away Win,Home Win,43.2,31.9,24.9,Home Win,50.9,28.6,20.5,Draw,25.2,42.4,32.4
+Draw,Home Win,67.6,14.9,17.6,Home Win,65.6,18.8,15.6,Home Win,54.1,28.3,17.6
+Away Win,Home Win,47.6,33.1,19.2,Home Win,53.7,32.4,13.9,Draw,31.2,44.5,24.3
+Home Win,Home Win,51.3,17.5,31.2,Home Win,69.4,14.9,15.6,Home Win,52.8,30.4,16.8
+Away Win,Away Win,16.2,27.6,56.2,Away Win,14.2,25.0,60.8,Away Win,5.6,28.8,65.7
+Home Win,Home Win,83.6,11.1,5.2,Home Win,89.1,7.8,3.2,Home Win,72.6,20.0,7.4
+Away Win,Away Win,24.8,24.5,50.6,Away Win,24.4,22.2,53.4,Away Win,13.9,35.2,50.9
+Away Win,Away Win,6.7,12.5,80.8,Away Win,7.8,15.7,76.4,Away Win,4.4,23.4,72.2
+Draw,Home Win,54.3,34.7,11.0,Home Win,58.8,33.3,7.9,Home Win,49.8,42.0,8.3
+Away Win,Away Win,26.6,33.6,39.8,Draw,32.3,38.5,29.3,Draw,21.2,43.1,35.7
+Away Win,Home Win,48.5,27.1,24.4,Home Win,51.8,28.4,19.8,Draw,27.4,40.0,32.6
+Away Win,Away Win,18.6,26.3,55.1,Away Win,14.0,20.4,65.6,Away Win,6.5,26.8,66.7
+Home Win,Home Win,41.5,37.2,21.3,Home Win,36.6,35.6,27.8,Home Win,42.0,40.7,17.3
+Home Win,Home Win,73.8,18.0,8.3,Home Win,70.2,21.0,8.7,Home Win,58.7,28.8,12.5
+Home Win,Home Win,74.4,18.7,6.9,Home Win,82.8,13.6,3.6,Home Win,60.5,31.0,8.4
+Away Win,Away Win,8.9,19.1,72.0,Away Win,7.4,15.0,77.6,Away Win,2.8,24.0,73.2
+Home Win,Home Win,53.5,28.5,18.0,Home Win,55.2,25.6,19.3,Draw,35.1,35.7,29.2
+Home Win,Home Win,57.7,21.0,21.3,Home Win,61.0,19.3,19.7,Home Win,46.9,32.0,21.1
+Home Win,Home Win,56.6,31.8,11.7,Home Win,64.3,27.9,7.8,Home Win,44.5,43.4,12.1
+Home Win,Away Win,34.8,28.9,36.3,Away Win,33.9,29.5,36.5,Away Win,22.9,35.7,41.4
+Away Win,Draw,31.3,37.2,31.4,Away Win,32.5,27.0,40.5,Draw,18.7,42.6,38.7
+Draw,Away Win,31.5,31.9,36.6,Away Win,31.6,31.1,37.3,Away Win,20.1,37.4,42.5
+Away Win,Away Win,24.2,32.3,43.5,Away Win,28.0,34.0,38.0,Away Win,15.7,39.2,45.1
+Home Win,Home Win,37.4,33.8,28.8,Draw,34.2,38.6,27.2,Draw,24.0,44.2,31.8
+Home Win,Home Win,50.7,31.2,18.1,Home Win,50.5,31.9,17.6,Draw,34.1,39.1,26.9
+Home Win,Home Win,42.0,28.6,29.4,Home Win,45.7,27.1,27.2,Away Win,27.4,33.4,39.2
+Away Win,Home Win,49.0,32.8,18.2,Home Win,62.2,25.5,12.4,Draw,35.5,41.9,22.7
+Away Win,Away Win,23.8,30.0,46.2,Away Win,27.5,31.5,41.0,Away Win,12.4,37.4,50.2
+Draw,Away Win,11.5,21.2,67.3,Away Win,13.9,23.1,62.9,Away Win,5.6,27.8,66.6
+Draw,Away Win,10.2,21.6,68.2,Away Win,14.1,25.5,60.4,Away Win,6.8,31.8,61.4
+Home Win,Home Win,47.3,36.2,16.6,Home Win,51.2,32.8,16.0,Draw,34.8,41.8,23.4
+Away Win,Home Win,49.2,29.7,21.1,Home Win,49.8,31.2,19.0,Draw,28.5,41.5,30.0
+Away Win,Home Win,55.5,26.9,17.5,Home Win,58.1,27.0,15.0,Home Win,41.3,38.1,20.5
+Draw,Home Win,56.5,27.5,16.0,Home Win,59.6,26.0,14.5,Draw,36.3,42.8,20.9
+Home Win,Home Win,60.3,29.2,10.5,Home Win,69.4,25.6,5.0,Home Win,56.6,37.2,6.2
+Draw,Home Win,84.9,9.6,5.5,Home Win,92.4,5.8,1.8,Home Win,79.7,17.0,3.3
+Away Win,Home Win,63.3,22.7,14.0,Home Win,55.4,30.1,14.4,Home Win,40.7,38.9,20.4
+Away Win,Home Win,61.5,21.6,16.9,Home Win,54.9,26.3,18.8,Home Win,39.0,35.7,25.3
+Draw,Away Win,21.0,36.3,42.7,Away Win,20.8,28.2,51.1,Away Win,9.1,34.1,56.9
+Home Win,Home Win,76.0,18.0,6.0,Home Win,80.1,15.2,4.7,Home Win,56.2,33.0,10.8
+Draw,Away Win,31.5,32.4,36.1,Home Win,36.9,32.8,30.3,Draw,19.7,41.0,39.3
+Away Win,Away Win,23.1,28.2,48.7,Away Win,23.4,28.5,48.0,Away Win,15.0,32.9,52.1
+Draw,Away Win,27.3,33.0,39.6,Away Win,27.7,32.1,40.2,Away Win,20.8,35.7,43.4
+Draw,Home Win,45.3,27.1,27.6,Home Win,48.1,25.7,26.2,Draw,24.5,38.9,36.6
+Home Win,Away Win,17.3,25.4,57.3,Away Win,11.9,20.8,67.3,Away Win,7.4,27.1,65.5
+Home Win,Home Win,50.2,23.0,26.8,Home Win,54.5,24.4,21.0,Draw,33.3,40.5,26.2
+Home Win,Home Win,50.4,30.8,18.8,Home Win,52.9,35.5,11.5,Draw,41.4,45.0,13.6
+Home Win,Home Win,42.9,32.9,24.2,Home Win,45.3,31.4,23.3,Draw,33.2,42.3,24.5
+Home Win,Away Win,24.6,34.6,40.7,Away Win,25.4,35.5,39.1,Draw,22.7,44.1,33.2
+Draw,Home Win,79.8,11.9,8.3,Home Win,80.8,11.6,7.6,Home Win,59.7,24.7,15.7
+Home Win,Home Win,74.3,13.0,12.7,Home Win,70.0,17.6,12.5,Home Win,59.8,26.1,14.1
+Away Win,Home Win,46.2,32.1,21.7,Home Win,43.0,37.7,19.3,Draw,33.1,42.7,24.1
+Home Win,Home Win,54.8,28.9,16.3,Home Win,65.7,22.4,11.9,Draw,36.6,43.3,20.2
+Home Win,Home Win,41.7,31.9,26.4,Home Win,44.9,31.9,23.2,Draw,26.5,37.0,36.5
+Home Win,Home Win,71.0,17.0,11.9,Home Win,76.7,14.4,8.9,Home Win,59.6,26.7,13.7
+Home Win,Home Win,41.5,29.3,29.1,Home Win,42.3,28.6,29.1,Home Win,37.2,35.7,27.1
+Home Win,Home Win,78.0,16.7,5.3,Home Win,85.7,11.6,2.7,Home Win,69.4,26.0,4.6
+Away Win,Away Win,12.2,15.5,72.3,Away Win,14.5,20.0,65.5,Away Win,7.4,26.2,66.4
+Home Win,Away Win,22.1,33.7,44.2,Away Win,22.3,31.9,45.7,Away Win,12.3,35.2,52.5
+Draw,Home Win,46.9,33.2,20.0,Home Win,52.1,30.6,17.4,Draw,29.8,41.0,29.2
+Home Win,Home Win,50.5,32.1,17.4,Home Win,52.5,31.9,15.6,Draw,34.8,42.7,22.5
+Away Win,Home Win,76.3,12.0,11.7,Home Win,77.1,13.1,9.7,Home Win,61.8,25.5,12.7
+Draw,Away Win,28.1,28.0,43.9,Away Win,26.0,27.2,46.8,Away Win,14.4,34.9,50.7
+Away Win,Away Win,11.7,17.9,70.4,Away Win,11.7,19.8,68.4,Away Win,6.5,26.0,67.5
+Away Win,Away Win,18.9,29.3,51.7,Away Win,20.5,28.9,50.6,Away Win,10.9,32.0,57.0
+Away Win,Home Win,57.3,26.0,16.7,Home Win,69.6,20.3,10.1,Home Win,41.8,40.6,17.6
+Draw,Home Win,58.7,24.9,16.4,Home Win,56.0,28.4,15.6,Home Win,40.5,39.3,20.2
+Draw,Home Win,37.4,25.9,36.7,Away Win,35.6,27.5,36.9,Away Win,21.8,35.1,43.1
+Home Win,Home Win,60.8,20.5,18.7,Home Win,58.4,23.8,17.8,Home Win,47.9,32.3,19.8
+Draw,Home Win,57.5,28.9,13.6,Home Win,62.3,28.7,9.0,Home Win,50.5,38.9,10.5
+Home Win,Home Win,85.1,9.0,5.9,Home Win,92.4,5.6,2.0,Home Win,77.7,17.9,4.4
+Away Win,Away Win,18.2,28.2,53.6,Away Win,20.8,27.2,52.1,Away Win,11.7,35.8,52.6
+Draw,Home Win,39.2,31.5,29.3,Home Win,50.8,29.7,19.5,Draw,24.5,40.1,35.4
+Home Win,Home Win,60.0,25.4,14.7,Home Win,65.0,23.8,11.2,Home Win,42.4,36.6,21.0
+Away Win,Home Win,44.8,35.3,19.9,Home Win,57.8,31.7,10.5,Draw,39.0,44.0,17.0
