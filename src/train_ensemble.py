@@ -43,6 +43,8 @@ def get_nn_probs(model, loader, device) -> np.ndarray:
     model.eval()
     all_probs = []
     for home, away, ctx, _ in loader:
+        if ctx.shape[1] > 100:
+            ctx = ctx[:, :100]
         home, away, ctx = home.to(device), away.to(device), ctx.to(device)
         logits = model(home, away, ctx)
         probs = torch.softmax(logits, dim=1).cpu().numpy()
@@ -62,12 +64,13 @@ def main():
 
     # Context dim
     C_actual = val_ds.tensors[2].shape[1]
+    C_nn = 100 if C_actual > 100 else C_actual
 
     # ── 2. Load Checkpoints & Predict on Val ──────────────────────────────────
     log.info("Generating predictions on validation set...")
     
     # MLP
-    mlp = BaselineMLP(F=config.F, C=C_actual).to(device)
+    mlp = BaselineMLP(F=config.F, C=C_nn).to(device)
     mlp_path = config.OUTPUTS_MODELS / "baseline_mlp_best.pt"
     if mlp_path.exists():
         mlp.load_state_dict(torch.load(mlp_path, map_location=device, weights_only=True))
@@ -76,7 +79,7 @@ def main():
         mlp_probs = None
 
     # CNN
-    cnn = TacticalCNN(F=config.F, C=C_actual).to(device)
+    cnn = TacticalCNN(F=config.F, C=C_nn).to(device)
     cnn_path = config.OUTPUTS_MODELS / "tactical_cnn_best.pt"
     if cnn_path.exists():
         cnn.load_state_dict(torch.load(cnn_path, map_location=device, weights_only=True))
@@ -85,7 +88,7 @@ def main():
         cnn_probs = None
 
     # Attention CNN
-    att = AttentionCNN(F=config.F, C=C_actual).to(device)
+    att = AttentionCNN(F=config.F, C=C_nn).to(device)
     att_path = config.OUTPUTS_MODELS / "attention_cnn_best.pt"
     if att_path.exists():
         att.load_state_dict(torch.load(att_path, map_location=device, weights_only=True))

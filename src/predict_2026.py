@@ -148,7 +148,10 @@ def predict_match(models: dict, xgb_model, home_players: np.ndarray,
     """Run all models on a single match. Returns dict of probabilities."""
     home_t = torch.from_numpy(home_players).float().unsqueeze(0)   # (1, 11, F)
     away_t = torch.from_numpy(away_players).float().unsqueeze(0)
-    ctx_t  = torch.from_numpy(context).float().unsqueeze(0)         # (1, C)
+    
+    # Neural networks use only the first 100 context features
+    ctx_nn = context[:100] if len(context) > 100 else context
+    ctx_t  = torch.from_numpy(ctx_nn).float().unsqueeze(0)         # (1, C_nn)
 
     probs = {}
     for model_name, model in models.items():
@@ -232,18 +235,23 @@ def main():
         away_age = ap[:, 4].mean()
         age_diff = home_age - away_age
 
+        # Check if lineups exist for this fixture
+        has_l = 1.0 if player_mats and row_idx in player_mats["home"] else 0.0
+
         squad_data.append([
             home_elo, away_elo, elo_diff,
             home_goals, away_goals, goals_diff,
             home_assists, away_assists, assists_diff,
-            home_age, away_age, age_diff
+            home_age, away_age, age_diff,
+            has_l
         ])
     
     squad_cols = [
         "squad_home_elo_sum", "squad_away_elo_sum", "squad_elo_diff",
         "squad_home_goals90_mean", "squad_away_goals90_mean", "squad_goals90_diff",
         "squad_home_assists90_mean", "squad_away_assists90_mean", "squad_assists90_diff",
-        "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff"
+        "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff",
+        "has_lineup"
     ]
     squad_df = pd.DataFrame(squad_data, columns=squad_cols, index=fixtures.index)
     fixtures = pd.concat([fixtures, squad_df], axis=1)
@@ -253,13 +261,14 @@ def main():
     if scalers:
         ctx_array = scalers["context"].transform(ctx_array).astype(np.float32)
     C_actual = ctx_array.shape[1]
-    log.info(f"Context dimension: {C_actual}")
+    C_nn = 100 if C_actual > 100 else C_actual
+    log.info(f"Context dimension (XGBoost): {C_actual} | Context dimension (NNs): {C_nn}")
 
     # ── 5. Load models ────────────────────────────────────────────────────────
     models = {
-        "mlp":       load_trained_model(BaselineMLP,  "baseline_mlp",  C_actual),
-        "cnn":       load_trained_model(TacticalCNN,  "tactical_cnn",  C_actual),
-        "attention": load_trained_model(AttentionCNN, "attention_cnn", C_actual),
+        "mlp":       load_trained_model(BaselineMLP,  "baseline_mlp",  C_nn),
+        "cnn":       load_trained_model(TacticalCNN,  "tactical_cnn",  C_nn),
+        "attention": load_trained_model(AttentionCNN, "attention_cnn", C_nn),
     }
     loaded = {k: v for k, v in models.items() if v is not None}
     

@@ -81,6 +81,8 @@ def get_predictions(model: torch.nn.Module,
     all_true, all_pred, all_prob = [], [], []
 
     for home, away, ctx, targets in loader:
+        if ctx.shape[1] > 100:
+            ctx = ctx[:, :100]
         logits = model(home, away, ctx)
         probs  = torch.softmax(logits, dim=1).numpy()
         preds  = probs.argmax(axis=1)
@@ -98,11 +100,15 @@ def get_attention_weights(model: AttentionCNN,
     """Extract average attention weights across all validation matches."""
     all_weights = []
     for home, away, ctx, _ in loader:
-        _ = model(home, away, ctx)
+        if ctx.shape[1] > 100:
+            ctx = ctx[:, :100]
+        _ = model(home.to(next(model.parameters()).device),
+                  away.to(next(model.parameters()).device),
+                  ctx.to(next(model.parameters()).device))
         w = model.get_attention_weights()
         # Average home and away weights
         avg_w = (w["home"] + w["away"]) / 2
-        all_weights.append(avg_w.numpy())
+        all_weights.append(avg_w.cpu().numpy())
     return np.concatenate(all_weights, axis=0).mean(axis=0)  # shape: (11,)
 
 
@@ -281,7 +287,8 @@ def main():
             y_prob = model.predict_proba(X_eval)
             y_pred = model.predict(X_eval)
         else:
-            model = load_model(model_class, model_name, C=C_actual)
+            C_nn = 100 if C_actual > 100 else C_actual
+            model = load_model(model_class, model_name, C=C_nn)
             if model is None:
                 continue
             y_true, y_pred, y_prob = get_predictions(model, loader)

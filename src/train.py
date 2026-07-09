@@ -85,10 +85,14 @@ def load_split(path: Path) -> TensorDataset:
             f"{path} not found. Run src/processing/feature_engineering.py first."
         )
     data = np.load(path)
+    context_np = data["context"]
+    # Slice context to original 100 features for deep learning models
+    if context_np.shape[1] > 100:
+        context_np = context_np[:, :100]
     tensors = [
         torch.from_numpy(data["home_players"]).float(),
         torch.from_numpy(data["away_players"]).float(),
-        torch.from_numpy(data["context"]).float(),
+        torch.from_numpy(context_np).float(),
         torch.from_numpy(data["targets"]).long(),
     ]
     if "weights" in data:

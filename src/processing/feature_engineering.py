@@ -187,11 +187,20 @@ def augment_with_swap(home_arr: np.ndarray, away_arr: np.ndarray,
                     context[neutral_mask, away_j].copy(),
                     context[neutral_mask, j].copy(),
                 )
-            # Also flip elo_diff, days_since_last_diff, experience_diff, gd diffs, etc.
+        elif col.startswith("squad_home_"):
+            away_col = "squad_away_" + col[11:]
+            if away_col in context_cols:
+                away_j = context_cols.index(away_col)
+                aug_context[:, j], aug_context[:, away_j] = (
+                    context[neutral_mask, away_j].copy(),
+                    context[neutral_mask, j].copy(),
+                )
+        # Also flip elo_diff, days_since_last_diff, experience_diff, gd diffs, etc.
         elif col in ("elo_diff", "days_since_last_diff", "experience_diff",
                      "win_rate_diff_L5", "gd_avg_diff_L5", "gf_avg_diff_L5",
                      "win_rate_diff_L10", "gd_avg_diff_L10", "gf_avg_diff_L10",
-                     "win_rate_diff_L20", "gd_avg_diff_L20", "gf_avg_diff_L20"):
+                     "win_rate_diff_L20", "gd_avg_diff_L20", "gf_avg_diff_L20",
+                     "squad_elo_diff", "squad_goals90_diff", "squad_assists90_diff", "squad_age_diff"):
             aug_context[:, j] = -context[neutral_mask, j]
         elif col == "elo_expected_home":
             aug_context[:, j] = 1.0 - context[neutral_mask, j]
@@ -312,9 +321,12 @@ def main():
         "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff"
     ]
 
-    context_all = np.hstack([context_all, squad_feats]).astype(np.float32)
-    context_cols = list(context_cols) + squad_cols
-    log.info(f"Context features after squad aggregates: {context_all.shape[1]} columns.")
+    home_mats = player_matrices.get("home", {})
+    has_lineup = np.array([1.0 if idx in home_mats else 0.0 for idx in df.index], dtype=np.float32).reshape(-1, 1)
+
+    context_all = np.hstack([context_all, squad_feats, has_lineup]).astype(np.float32)
+    context_cols = list(context_cols) + squad_cols + ["has_lineup"]
+    log.info(f"Context features after squad aggregates & lineup gate: {context_all.shape[1]} columns.")
 
     # ── 4. Targets & Weights (Item 12) ────────────────────────────────────────
     df["result_encoded"] = df["result"].map(config.RESULT_MAP)
