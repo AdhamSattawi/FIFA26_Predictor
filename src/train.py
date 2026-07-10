@@ -338,9 +338,11 @@ def main():
     parser = argparse.ArgumentParser(description="Train FIFA26 prediction models")
     parser.add_argument("--model", default="all",
                         choices=["mlp", "cnn", "attention", "all"])
-    parser.add_argument("--loss", default="focal",
+    parser.add_argument("--loss", default="cross_entropy",
                         choices=["focal", "cross_entropy"],
-                        help="Loss function: focal (default) or cross_entropy")
+                        help="Loss function: cross_entropy (default) or focal")
+    parser.add_argument("--use-class-weights", action="store_true",
+                        help="Apply class weights to the loss function (causes draw bias, lower accuracy)")
     parser.add_argument("--mixup-alpha", default=0.2, type=float,
                         help="Beta distribution alpha parameter for Mixup data augmentation (Item 8)")
     parser.add_argument("--noise-std", default=0.05, type=float,
@@ -368,10 +370,15 @@ def main():
     C_actual   = sample_ctx.shape[0]
     log.info(f"Context dim C = {C_actual}")
 
-    # Compute class weights from training targets — applied to ALL models (Item 2)
+    # Compute class weights from training targets if requested
     all_targets = train_ds.tensors[3]
-    class_weights = compute_class_weights(all_targets)
-    log.info(f"Class weights: {class_weights.numpy().round(3)}")
+    if args.use_class_weights:
+        class_weights = compute_class_weights(all_targets)
+        log.info(f"Class weights: {class_weights.numpy().round(3)}")
+    else:
+        class_weights = None
+        log.info("Class weights: None (maximizing accuracy)")
+
     log.info(f"Class distribution — H:{(all_targets==0).sum()} "
              f"D:{(all_targets==1).sum()} A:{(all_targets==2).sum()}")
     log.info(f"Loss function: {args.loss}")
