@@ -40,6 +40,7 @@ WC_COMPETITIONS = {
     "WC2014": {"id": "WM14", "saison": 2013, "year": 2014},
     "WC2018": {"id": "WM18", "saison": 2017, "year": 2018},
     "WC2022": {"id": "WM22", "saison": 2022, "year": 2022},
+    "WC2026": {"id": "WM26", "saison": 2025, "year": 2026},
 }
 
 QUALIFIER_IDS = {

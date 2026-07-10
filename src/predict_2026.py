@@ -33,6 +33,127 @@ from src.processing.compute_features_2026 import (
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
 
+# Load databases globally for player matrix projection
+try:
+    _p_stats_path = config.PLAYER_STATS_CSV
+    _lineups_path = config.LINEUPS_CSV
+    _players_elo_path = config.PLAYER_ELO_DIR / "players.csv"
+    
+    if _p_stats_path.exists() and _lineups_path.exists() and _players_elo_path.exists():
+        log.info("Loading player stats and Elo databases for 2026 roster projection...")
+        p_stats_db = pd.read_csv(_p_stats_path)
+        players_elo_db = pd.read_csv(_players_elo_path)
+        
+        # Compute position medians
+        from src.processing.merge_data import compute_position_medians, load_lineups
+        _lineups = load_lineups()
+        position_medians_db = compute_position_medians(p_stats_db, _lineups)
+    else:
+        log.warning("Missing databases for player projection - falling back to zero matrices.")
+        p_stats_db = None
+        players_elo_db = None
+        position_medians_db = None
+except Exception as e:
+    log.warning(f"Could not load databases for player projection: {e}")
+    p_stats_db = None
+    players_elo_db = None
+    position_medians_db = None
+
+def normalize_name(name):
+    import unicodedata
+    name = unicodedata.normalize("NFKD", str(name))
+    name = "".join(c for c in name if not unicodedata.combining(c))
+    return name.lower().strip()
+
+def project_player_matrix(team: str) -> np.ndarray:
+    """
+    Project a (11, F) player matrix for a team using PlayerElo data.
+    Falls back to position medians if no stats are found.
+    """
+    matrix = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+    if players_elo_db is None or p_stats_db is None or position_medians_db is None:
+        return matrix
+        
+    try:
+        from src.scraping.utils import normalize_team_name
+        team_norm = normalize_team_name(team).lower()
+        
+        # Filter players
+        team_players = players_elo_db[players_elo_db["nationality"].apply(normalize_team_name).str.lower() == team_norm]
+        
+        # Group by position
+        gks = team_players[team_players["position"] == "Goalkeeper"].sort_values("elo", ascending=False)
+        defs = team_players[team_players["position"] == "Defender"].sort_values("elo", ascending=False)
+        mids = team_players[team_players["position"] == "Midfielder"].sort_values("elo", ascending=False)
+        atts = team_players[team_players["position"].isin(["Attacker", "Forward"])].sort_values("elo", ascending=False)
+        
+        # Map to POSITION_ORDER: GK, RB, CB1, CB2, LB, CDM, CM, CAM, RW, LW, ST
+        slots = [
+            {"pos": "GK",  "source": gks,  "idx": 0},
+            {"pos": "RB",  "source": defs, "idx": 0},
+            {"pos": "CB1", "source": defs, "idx": 1},
+            {"pos": "CB2", "source": defs, "idx": 2},
+            {"pos": "LB",  "source": defs, "idx": 3},
+            {"pos": "CDM", "source": mids, "idx": 0},
+            {"pos": "CM",  "source": mids, "idx": 1},
+            {"pos": "CAM", "source": mids, "idx": 2},
+            {"pos": "RW",  "source": atts, "idx": 0},
+            {"pos": "LW",  "source": atts, "idx": 1},
+            {"pos": "ST",  "source": atts, "idx": 2},
+        ]
+        
+        # Ensure we have a helper column for fast matching
+        if "player_name_norm" not in p_stats_db.columns:
+            p_stats_db["player_name_norm"] = p_stats_db["player_name"].apply(normalize_name)
+            
+        for i, slot in enumerate(slots):
+            source = slot["source"]
+            idx = slot["idx"]
+            pos = slot["pos"]
+            
+            if idx < len(source):
+                player_row = source.iloc[idx]
+                pname_norm = normalize_name(player_row["player_name"])
+                
+                # Lookup stats in 2021 season (most recent season)
+                stat_row = p_stats_db[(p_stats_db["player_name_norm"] == pname_norm) & (p_stats_db["saison"] == 2021)]
+                
+                if len(stat_row) > 0:
+                    r = stat_row.iloc[0]
+                    apps = float(r.get("appearances", 0) or 0)
+                    goals = float(r.get("goals", 0) or 0)
+                    assists = float(r.get("assists", 0) or 0)
+                    minutes = float(r.get("minutes_played", 0) or 0)
+                    yellows = float(r.get("yellow_cards", 0) or 0)
+                    reds = float(r.get("red_cards", 0) or 0)
+                    
+                    dob_str = str(r.get("date_of_birth", ""))
+                    try:
+                        dob = pd.to_datetime(dob_str, dayfirst=True, errors="coerce")
+                        age = (pd.Timestamp("2026-06-15") - dob).days / 365.25 if pd.notna(dob) else 27.0
+                    except Exception:
+                        age = 27.0
+                        
+                    matrix[i] = [
+                        (goals / minutes * 90) if minutes > 0 else 0.0,
+                        (assists / minutes * 90) if minutes > 0 else 0.0,
+                        min(minutes / (38 * 90), 1.0),
+                        apps,
+                        age,
+                        goals,
+                        assists,
+                        ((yellows + 3 * reds) / apps) if apps > 0 else 0,
+                    ]
+                    continue
+                    
+            # Fallback to position median
+            median = position_medians_db.get(pos, position_medians_db.get("CM", np.zeros(config.F)))
+            matrix[i] = median
+    except Exception as e:
+        log.warning(f"Error projecting matrix for {team}: {e}")
+        
+    return matrix
+
 WC2026_DATE_START = pd.Timestamp("2026-06-11")
 WC2026_DATE_END   = pd.Timestamp("2026-07-19")
 
@@ -313,9 +434,42 @@ def build_fresh_context(home_team: str, away_team: str, match_date: pd.Timestamp
                         scalers: dict | None) -> tuple:
     """
     Build a context vector for a KO match using the LIVE bracket state
-    (correct Elo, rolling form, H2H for the actual teams, not CSV placeholders).
-    Player matrices are always zero for 2026 since matches haven\'t been played.
+    and dynamically projected player matrices.
     """
+    # 1. Project player matrices
+    hp = project_player_matrix(home_team)
+    ap = project_player_matrix(away_team)
+    
+    # 2. Compute squad aggregates
+    home_elo = hp[:, 7].sum()
+    away_elo = ap[:, 7].sum()
+    home_goals = hp[:, 0].mean()
+    away_goals = ap[:, 0].mean()
+    home_assists = hp[:, 1].mean()
+    away_assists = ap[:, 1].mean()
+    home_age = hp[:, 4].mean()
+    away_age = ap[:, 4].mean()
+    
+    # Check if we successfully built non-zero matrices
+    has_l = 1.0 if (hp.sum() != 0 and ap.sum() != 0) else 0.0
+    
+    squad_extras = {
+        "squad_home_elo_sum":        home_elo,
+        "squad_away_elo_sum":        away_elo,
+        "squad_elo_diff":            home_elo - away_elo,
+        "squad_home_goals90_mean":   home_goals,
+        "squad_away_goals90_mean":   away_goals,
+        "squad_goals90_diff":        home_goals - away_goals,
+        "squad_home_assists90_mean": home_assists,
+        "squad_away_assists90_mean": away_assists,
+        "squad_assists90_diff":      home_assists - away_assists,
+        "squad_home_age_mean":       home_age,
+        "squad_away_age_mean":       away_age,
+        "squad_age_diff":            home_age - away_age,
+        "has_lineup":                has_l,
+    }
+    
+    # 3. Build features row from bracket state
     row_dict = build_feature_row(
         date=match_date,
         home=home_team,
@@ -326,23 +480,13 @@ def build_fresh_context(home_team: str, away_team: str, match_date: pd.Timestamp
         neutral=True,
         state=bracket_state,
     )
-    # Player squad extras are all zero (no 2026 lineups scraped yet)
-    squad_extras = {
-        "squad_home_elo_sum":        0.0, "squad_away_elo_sum":        0.0,
-        "squad_elo_diff":            0.0, "squad_home_goals90_mean":   0.0,
-        "squad_away_goals90_mean":   0.0, "squad_goals90_diff":        0.0,
-        "squad_home_assists90_mean": 0.0, "squad_away_assists90_mean": 0.0,
-        "squad_assists90_diff":      0.0, "squad_home_age_mean":       0.0,
-        "squad_away_age_mean":       0.0, "squad_age_diff":            0.0,
-        "has_lineup":                0.0,
-    }
+    
     combined = {**row_dict, **squad_extras}
     ctx_arr = np.array([combined.get(c, 0) for c in context_cols], dtype=np.float32)
     if scalers:
         ctx_arr = scalers["context"].transform(ctx_arr.reshape(1, -1)).flatten().astype(np.float32)
     ctx_arr = np.clip(ctx_arr, -3.0, 3.0)
-    hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
-    ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+    
     return ctx_arr, hp, ap
 
 

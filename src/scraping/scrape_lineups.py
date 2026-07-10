@@ -44,12 +44,34 @@ WC_DATES = {
 def get_match_scope(df: pd.DataFrame) -> pd.DataFrame:
     """
     Filter the Gulati dataset to only the matches we want lineups for.
-    To avoid Transfermarkt rate limits and ensure reasonable runtimes, we only scrape
-    the World Cup final matches for the 2014, 2018, and 2022 tournaments.
+    Additionally appends completed 2026 World Cup matches from matches_2026.csv.
     """
     df["date"] = pd.to_datetime(df["date"])
     mask_wc  = (df["is_world_cup"] == 1) & df["date"].dt.year.isin([2014, 2018, 2022])
-    return df[mask_wc].copy().reset_index(drop=True)
+    historical_wc = df[mask_wc].copy()
+    historical_wc["is_qualifier"] = 0
+    historical_wc["is_friendly"] = 0
+
+    # Load 2026 matches
+    m2026_path = Path("data/raw/matches_2026.csv")
+    if m2026_path.exists():
+        df26 = pd.read_csv(m2026_path, parse_dates=["date"])
+        # Only completed World Cup matches
+        completed_wc26 = df26[
+            (df26["tournament"] == "FIFA World Cup") &
+            df26["home_score"].notna() &
+            (df26["home_score"].astype(str).str.strip() != "")
+        ].copy()
+        completed_wc26["is_world_cup"] = 1
+        completed_wc26["is_qualifier"] = 0
+        completed_wc26["is_friendly"] = 0
+        
+        # Merge them
+        scope = pd.concat([historical_wc, completed_wc26], ignore_index=True)
+    else:
+        scope = historical_wc
+
+    return scope.reset_index(drop=True)
 
 
 def build_tm_search_url(home_team: str, away_team: str, date: str) -> str:
@@ -126,7 +148,7 @@ def build_schedule_cache(page, competition_id: str, saison: int) -> dict:
     {(home_team_normalized, away_team_normalized, date_str): match_id}
     """
     cache = {}
-    if competition_id in ("WM14", "WM18", "WM22"):
+    if competition_id in ("WM14", "WM18", "WM22", "WM26"):
         url = f"https://www.transfermarkt.com/world-cup/gesamtspielplan/pokalwettbewerb/FIWC/saison_id/{saison}"
     else:
         url = (
@@ -264,19 +286,44 @@ def run_scraper(competition_id: str, matches_df: pd.DataFrame, page) -> list[dic
 
 
 def main():
-    if LINEUPS_CSV.exists():
-        log.info(f"Lineups file already exists at {LINEUPS_CSV}. Skipping lineup scraping.")
-        return
-
-    log.info("Loading Gulati dataset …")
+    log.info("Loading Gulati dataset ...")
     df = pd.read_csv(config.GULATI_CSV)
     scope_df = get_match_scope(df)
-    log.info(f"  → {len(scope_df)} matches in scope for lineup scraping.")
+    log.info(f"  → Total scope matches for lineup scraping: {len(scope_df)}")
+
+    # Check for already scraped matches to enable incremental scraping
+    existing_keys = set()
+    if LINEUPS_CSV.exists():
+        try:
+            existing_df = pd.read_csv(LINEUPS_CSV)
+            existing_df["home_norm"] = existing_df["home_team"].apply(normalize_team_name).str.lower()
+            existing_df["away_norm"] = existing_df["away_team"].apply(normalize_team_name).str.lower()
+            existing_df["date_str"] = pd.to_datetime(existing_df["match_date"]).dt.strftime("%Y-%m-%d")
+            existing_keys = set(zip(existing_df["home_norm"], existing_df["away_norm"], existing_df["date_str"]))
+            log.info(f"  → Loaded {len(existing_keys)} already scraped matches from {LINEUPS_CSV}.")
+        except Exception as e:
+            log.warning(f"  → Could not load existing lineups file: {e}. Scraping all matches.")
+
+    # Filter to only matches that haven\'t been scraped
+    scope_df["home_norm"] = scope_df["home_team"].apply(normalize_team_name).str.lower()
+    scope_df["away_norm"] = scope_df["away_team"].apply(normalize_team_name).str.lower()
+    scope_df["date_str"] = scope_df["date"].dt.strftime("%Y-%m-%d")
+
+    def is_new(row):
+        key = (row["home_norm"], row["away_norm"], row["date_str"])
+        return key not in existing_keys
+
+    new_scope_df = scope_df[scope_df.apply(is_new, axis=1)].copy().reset_index(drop=True)
+    log.info(f"  → {len(new_scope_df)} matches need to be scraped (out of {len(scope_df)} total).")
+
+    if len(new_scope_df) == 0:
+        log.info("✓ All matches in scope are already scraped. Nothing to do.")
+        return
 
     # Group by competition type for targeted scraping
-    wc_df    = scope_df[scope_df["is_world_cup"] == 1]
-    qual_df  = scope_df[scope_df["is_qualifier"] == 1]
-    friendly_df = scope_df[scope_df["is_friendly"] == 1]
+    wc_df    = new_scope_df[new_scope_df["is_world_cup"] == 1]
+    qual_df  = new_scope_df[new_scope_df["is_qualifier"] == 1]
+    friendly_df = new_scope_df[new_scope_df["is_friendly"] == 1]
 
     config.LINEUPS_CSV.parent.mkdir(parents=True, exist_ok=True)
 
@@ -316,8 +363,11 @@ def main():
 
     if all_players:
         out_df = pd.DataFrame(all_players)
-        out_df.to_csv(LINEUPS_CSV, index=False)
-        log.info(f"\n✓ Saved {len(out_df)} player-lineup records to {LINEUPS_CSV}")
+        if LINEUPS_CSV.exists():
+            out_df.to_csv(LINEUPS_CSV, mode="a", header=False, index=False)
+        else:
+            out_df.to_csv(LINEUPS_CSV, index=False)
+        log.info(f"\n✓ Saved {len(out_df)} new player-lineup records to {LINEUPS_CSV}")
     else:
         log.warning("No players scraped. Check Transfermarkt access.")
 
