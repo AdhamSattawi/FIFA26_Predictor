@@ -186,6 +186,125 @@ def infer_stage(tournament_str: str, date: pd.Timestamp) -> str:
     return "Group Stage"
 
 
+def pick_winner(home_team: str, away_team: str, ens_probs: np.ndarray) -> str:
+    """
+    In a knockout match the draw is replayed. Redistribute draw probability
+    evenly between home and away, then pick the team with higher combined probability.
+    """
+    p_home, p_draw, p_away = ens_probs
+    # Split draw 50/50 between both sides (penalty shootout is coin-flip)
+    p_home_ko = p_home + p_draw / 2.0
+    p_away_ko = p_away + p_draw / 2.0
+    return home_team if p_home_ko >= p_away_ko else away_team
+
+
+def build_context_for_match(row: pd.Series, context_cols: list,
+                             scalers: dict | None,
+                             player_mats: dict | None,
+                             row_idx: int) -> tuple:
+    """Build a scaled context vector for a single fixture row."""
+    # Get player matrices
+    if player_mats and row_idx in player_mats["home"]:
+        hp = player_mats["home"][row_idx]
+        ap = player_mats["away"].get(row_idx, np.zeros((config.N_PLAYERS, config.F), dtype=np.float32))
+    else:
+        hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+        ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+
+    # Squad aggregates
+    home_elo   = hp[:, 7].sum()
+    away_elo   = ap[:, 7].sum()
+    home_goals = hp[:, 0].mean()
+    away_goals = ap[:, 0].mean()
+    home_assists = hp[:, 1].mean()
+    away_assists = ap[:, 1].mean()
+    home_age   = hp[:, 4].mean()
+    away_age   = ap[:, 4].mean()
+    has_l = 1.0 if player_mats and row_idx in player_mats["home"] else 0.0
+
+    squad_extras = {
+        "squad_home_elo_sum":        home_elo,
+        "squad_away_elo_sum":        away_elo,
+        "squad_elo_diff":            home_elo - away_elo,
+        "squad_home_goals90_mean":   home_goals,
+        "squad_away_goals90_mean":   away_goals,
+        "squad_goals90_diff":        home_goals - away_goals,
+        "squad_home_assists90_mean": home_assists,
+        "squad_away_assists90_mean": away_assists,
+        "squad_assists90_diff":      home_assists - away_assists,
+        "squad_home_age_mean":       home_age,
+        "squad_away_age_mean":       away_age,
+        "squad_age_diff":            home_age - away_age,
+        "has_lineup":                has_l,
+    }
+    # Merge squad extras into row for context lookup
+    combined = {**{k: row.get(k, 0) for k in context_cols}, **squad_extras}
+    ctx_arr = np.array([combined.get(c, 0) for c in context_cols], dtype=np.float32)
+    if scalers:
+        ctx_arr = scalers["context"].transform(ctx_arr.reshape(1, -1)).flatten().astype(np.float32)
+    ctx_arr = np.clip(ctx_arr, -3.0, 3.0)
+    return ctx_arr, hp, ap
+
+
+def run_prediction(home_team: str, away_team: str, date: pd.Timestamp,
+                   stage: str, ctx: np.ndarray, hp: np.ndarray, ap: np.ndarray,
+                   loaded_nn: dict, xgb_model, ensemble_weights: dict | None,
+                   scalers: dict | None) -> tuple:
+    """Run all models on one match. Returns (result_row, ensemble_probs)."""
+    if scalers:
+        hp = scalers["player"].transform(hp.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
+        ap = scalers["player"].transform(ap.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
+        hp = np.clip(hp, -3.0, 3.0)
+        ap = np.clip(ap, -3.0, 3.0)
+
+    probs = predict_match(loaded_nn, xgb_model, hp, ap, ctx)
+
+    match_row = {
+        "date":      date.strftime("%Y-%m-%d") if hasattr(date, "strftime") else str(date),
+        "home_team": home_team,
+        "away_team": away_team,
+        "stage":     stage,
+    }
+    for mname, p in probs.items():
+        match_row[f"{mname}_home%"] = round(p[0] * 100, 1)
+        match_row[f"{mname}_draw%"] = round(p[1] * 100, 1)
+        match_row[f"{mname}_away%"] = round(p[2] * 100, 1)
+
+    # Compute ensemble probabilities
+    if probs:
+        if ensemble_weights is not None:
+            name_map = {
+                "mlp":       "baseline_mlp",
+                "cnn":       "tactical_cnn",
+                "attention": "attention_cnn",
+                "xgboost":   "xgboost",
+            }
+            active_weights = {}
+            for mkey, pkey in name_map.items():
+                if mkey in probs and pkey in ensemble_weights:
+                    active_weights[mkey] = ensemble_weights[pkey]
+            total_w = sum(active_weights.values())
+            if total_w > 0:
+                for mkey in active_weights:
+                    active_weights[mkey] /= total_w
+                ens = np.zeros(3)
+                for mkey, w in active_weights.items():
+                    ens += probs[mkey] * w
+            else:
+                ens = np.array(list(probs.values())).mean(axis=0)
+        else:
+            ens = np.array(list(probs.values())).mean(axis=0)
+
+        match_row["ensemble_home%"] = round(ens[0] * 100, 1)
+        match_row["ensemble_draw%"] = round(ens[1] * 100, 1)
+        match_row["ensemble_away%"] = round(ens[2] * 100, 1)
+        match_row["predicted_outcome"] = config.RESULT_NAMES[ens.argmax()]
+    else:
+        ens = np.array([1/3, 1/3, 1/3])
+
+    return match_row, ens
+
+
 def main():
     config.OUTPUTS_PREDICTIONS.mkdir(parents=True, exist_ok=True)
 
@@ -207,84 +326,30 @@ def main():
         config.LINEUPS_CSV, config.PLAYER_STATS_CSV
     )
 
-    # ── 4. Build context array ────────────────────────────────────────────────
-    # Compute squad aggregates for upcoming 2026 fixtures
-    log.info("Computing squad aggregates for 2026 prediction fixtures...")
-    squad_data = []
-    for row_idx, row in fixtures.iterrows():
-        if player_mats and row_idx in player_mats["home"]:
-            hp = player_mats["home"][row_idx]
-            ap = player_mats["away"].get(row_idx, np.zeros((config.N_PLAYERS, config.F), dtype=np.float32))
-        else:
-            hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
-            ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
-            
-        home_elo = hp[:, 7].sum()
-        away_elo = ap[:, 7].sum()
-        elo_diff = home_elo - away_elo
-
-        home_goals = hp[:, 0].mean()
-        away_goals = ap[:, 0].mean()
-        goals_diff = home_goals - away_goals
-
-        home_assists = hp[:, 1].mean()
-        away_assists = ap[:, 1].mean()
-        assists_diff = home_assists - away_assists
-
-        home_age = hp[:, 4].mean()
-        away_age = ap[:, 4].mean()
-        age_diff = home_age - away_age
-
-        # Check if lineups exist for this fixture
-        has_l = 1.0 if player_mats and row_idx in player_mats["home"] else 0.0
-
-        squad_data.append([
-            home_elo, away_elo, elo_diff,
-            home_goals, away_goals, goals_diff,
-            home_assists, away_assists, assists_diff,
-            home_age, away_age, age_diff,
-            has_l
-        ])
-    
-    squad_cols = [
-        "squad_home_elo_sum", "squad_away_elo_sum", "squad_elo_diff",
-        "squad_home_goals90_mean", "squad_away_goals90_mean", "squad_goals90_diff",
-        "squad_home_assists90_mean", "squad_away_assists90_mean", "squad_assists90_diff",
-        "squad_home_age_mean", "squad_away_age_mean", "squad_age_diff",
-        "has_lineup"
-    ]
-    squad_df = pd.DataFrame(squad_data, columns=squad_cols, index=fixtures.index)
-    fixtures = pd.concat([fixtures, squad_df], axis=1)
-
-    available_cols = [c for c in context_cols if c in fixtures.columns]
-    ctx_array = fixtures[available_cols].fillna(0).values.astype(np.float32)
-    if scalers:
-        ctx_array = scalers["context"].transform(ctx_array).astype(np.float32)
-    C_actual = ctx_array.shape[1]
-    C_nn = 100 if C_actual > 100 else C_actual
-    log.info(f"Context dimension (XGBoost): {C_actual} | Context dimension (NNs): {C_nn}")
+    # ── 4. Log context metadata ───────────────────────────────────────────────
+    sample_ctx_len = len(context_cols)
+    C_nn = min(sample_ctx_len, 100)
+    log.info(f"Context dimension (XGBoost): {sample_ctx_len} | Context dimension (NNs): {C_nn}")
 
     # ── 5. Load models ────────────────────────────────────────────────────────
-    models = {
+    nn_models = {
         "mlp":       load_trained_model(BaselineMLP,  "baseline_mlp",  C_nn),
         "cnn":       load_trained_model(TacticalCNN,  "tactical_cnn",  C_nn),
         "attention": load_trained_model(AttentionCNN, "attention_cnn", C_nn),
     }
-    loaded = {k: v for k, v in models.items() if v is not None}
-    
-    # Load XGBoost model if it exists
+    loaded_nn = {k: v for k, v in nn_models.items() if v is not None}
+
     xgb_model = None
-    xgb_path = config.OUTPUTS_MODELS / "xgboost_best.pkl"
+    xgb_path  = config.OUTPUTS_MODELS / "xgboost_best.pkl"
     if xgb_path.exists():
         with open(xgb_path, "rb") as f:
             xgb_model = pickle.load(f)
         log.info(f"Loaded xgboost from {xgb_path}")
 
-    if not loaded and xgb_model is None:
+    if not loaded_nn and xgb_model is None:
         log.error("No trained models found. Run src/train.py or src/train_xgb.py first.")
         return
 
-    # Load optimal ensemble weights (Item 7)
     ensemble_weights = None
     weights_path = config.OUTPUTS_MODELS / "ensemble_weights.pkl"
     if weights_path.exists():
@@ -292,99 +357,111 @@ def main():
             ensemble_weights = pickle.load(f)
         log.info(f"Loaded optimal blend weights: {ensemble_weights}")
 
+    # ── 6. Separate fixtures by stage for dynamic bracket resolution ──────────
+    # Sort by date so we process chronologically: QF → SF → Final
+    fixtures_sorted = fixtures.sort_values("date").reset_index()
+    n = len(fixtures_sorted)
 
+    # Standard bracket structure:
+    #   Earliest 4 matches = Quarter-finals
+    #   Next 2             = Semi-finals  (teams replaced by QF winners)
+    #   Last 1             = Final        (teams replaced by SF winners)
+    if n >= 7:
+        qf_rows  = fixtures_sorted.iloc[:4]
+        sf_rows  = fixtures_sorted.iloc[4:6]
+        fin_rows = fixtures_sorted.iloc[6:]
+    else:
+        qf_rows  = fixtures_sorted
+        sf_rows  = pd.DataFrame()
+        fin_rows = pd.DataFrame()
 
-    # ── 6. Generate predictions ───────────────────────────────────────────────
+    log.info(f"Bracket: {len(qf_rows)} QF(s), {len(sf_rows)} SF(s), {len(fin_rows)} Final(s)")
+
     results = []
-    home_mats = player_mats["home"] if player_mats else {}
-    away_mats = player_mats["away"] if player_mats else {}
 
-    for i, (row_idx, row) in enumerate(fixtures.iterrows()):
-        home_team = row["home_team"]
-        away_team = row["away_team"]
-        date      = row["date"]
+    # ── Inner helper: predict one fixture row, return result + ensemble probs + winner ─
+    def predict_fixture_row(fixture_row: pd.Series, stage: str,
+                            override_home: str | None = None,
+                            override_away: str | None = None):
+        row_idx   = fixture_row.get("index", fixture_row.name)
+        home_team = override_home or fixture_row["home_team"]
+        away_team = override_away or fixture_row["away_team"]
+        date      = fixture_row["date"]
+        ctx, hp, ap = build_context_for_match(
+            fixture_row, context_cols, scalers, player_mats, row_idx
+        )
+        match_row, ens = run_prediction(
+            home_team, away_team, date, stage,
+            ctx, hp, ap, loaded_nn, xgb_model, ensemble_weights, scalers
+        )
+        winner = pick_winner(home_team, away_team, ens)
+        return match_row, ens, winner
 
-        # Player matrices (zero if not available)
-        if row_idx in home_mats:
-            hp = home_mats[row_idx]
-            ap = away_mats.get(row_idx, np.zeros((config.N_PLAYERS, config.F), dtype=np.float32))
-        else:
-            hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
-            ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
-
-        # Apply scaling and clipping to prediction features (Item 5)
-        if scalers:
-            hp = scalers["player"].transform(hp.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
-            ap = scalers["player"].transform(ap.reshape(-1, config.F)).reshape(config.N_PLAYERS, config.F).astype(np.float32)
-            hp = np.clip(hp, -3.0, 3.0)
-            ap = np.clip(ap, -3.0, 3.0)
-        
-        ctx = ctx_array[i]
-        ctx = np.clip(ctx, -3.0, 3.0)
-
-        probs = predict_match(loaded, xgb_model, hp, ap, ctx)
-
-
-        # Build output row
-        match_row = {
-            "date":      date.strftime("%Y-%m-%d") if hasattr(date, "strftime") else str(date),
-            "home_team": home_team,
-            "away_team": away_team,
-            "stage":     infer_stage(row.get("tournament", ""), date),
-        }
-
-        # Individual model probabilities
-        for mname, p in probs.items():
-            match_row[f"{mname}_home%"] = round(p[0] * 100, 1)
-            match_row[f"{mname}_draw%"] = round(p[1] * 100, 1)
-            match_row[f"{mname}_away%"] = round(p[2] * 100, 1)
-
-        # Ensemble: weighted average of available models if weights exist, else simple average (Item 7)
-        if probs:
-            if ensemble_weights is not None:
-                name_map = {
-                    "mlp":       "baseline_mlp",
-                    "cnn":       "tactical_cnn",
-                    "attention": "attention_cnn",
-                    "xgboost":   "xgboost",
-                }
-                # Filter weights to active models
-                active_weights = {}
-                for mkey, pkey in name_map.items():
-                    if mkey in probs and pkey in ensemble_weights:
-                        active_weights[mkey] = ensemble_weights[pkey]
-                
-                # Renormalize active weights to sum to 1
-                total_w = sum(active_weights.values())
-                if total_w > 0:
-                    for mkey in active_weights:
-                        active_weights[mkey] /= total_w
-                    
-                    # Compute weighted combination
-                    ens = np.zeros(3)
-                    for mkey, w in active_weights.items():
-                        ens += probs[mkey] * w
-                else:
-                    ens = np.array(list(probs.values())).mean(axis=0)
-            else:
-                prob_stack = np.array(list(probs.values()))
-                ens = prob_stack.mean(axis=0)
-
-            match_row["ensemble_home%"] = round(ens[0] * 100, 1)
-            match_row["ensemble_draw%"] = round(ens[1] * 100, 1)
-            match_row["ensemble_away%"] = round(ens[2] * 100, 1)
-            match_row["predicted_outcome"] = config.RESULT_NAMES[ens.argmax()]
-
-
+    # ── 7. Quarter-finals ─────────────────────────────────────────────────────
+    log.info("\n── Quarter-finals ──")
+    qf_winners = []
+    for _, qf_row in qf_rows.iterrows():
+        match_row, ens, winner = predict_fixture_row(qf_row, "Quarter-finals")
         results.append(match_row)
+        qf_winners.append(winner)
+        log.info(
+            f"  {match_row['home_team']} vs {match_row['away_team']} "
+            f"→ {match_row.get('predicted_outcome', '?')} "
+            f"(KO winner: {winner})"
+        )
 
-    # ── 7. Save ───────────────────────────────────────────────────────────────
+    # ── 8. Semi-finals — teams from QF winners, NOT CSV placeholders ──────────
+    sf_winners = []
+    if not sf_rows.empty:
+        log.info("\n── Semi-finals ──")
+        # Bracket pairing: QF0 winner vs QF1 winner = SF1
+        #                  QF2 winner vs QF3 winner = SF2
+        if len(qf_winners) >= 4:
+            sf_matchups = [
+                (qf_winners[0], qf_winners[1]),
+                (qf_winners[2], qf_winners[3]),
+            ]
+        elif len(qf_winners) == 2:
+            sf_matchups = [(qf_winners[0], qf_winners[1])]
+        else:
+            sf_matchups = [(r["home_team"], r["away_team"]) for _, r in sf_rows.iterrows()]
+
+        for i, (_, sf_row) in enumerate(sf_rows.iterrows()):
+            sf_home, sf_away = sf_matchups[i] if i < len(sf_matchups) else (sf_row["home_team"], sf_row["away_team"])
+            match_row, ens, winner = predict_fixture_row(
+                sf_row, "Semi-finals",
+                override_home=sf_home, override_away=sf_away
+            )
+            results.append(match_row)
+            sf_winners.append(winner)
+            log.info(
+                f"  {sf_home} vs {sf_away} "
+                f"→ {match_row.get('predicted_outcome', '?')} "
+                f"(KO winner: {winner})"
+            )
+
+    # ── 9. Final — teams from SF winners, NOT CSV placeholders ────────────────
+    if not fin_rows.empty:
+        log.info("\n── Final ──")
+        fin_home = sf_winners[0] if len(sf_winners) > 0 else fin_rows.iloc[0]["home_team"]
+        fin_away = sf_winners[1] if len(sf_winners) > 1 else fin_rows.iloc[0]["away_team"]
+        match_row, ens, winner = predict_fixture_row(
+            fin_rows.iloc[0], "Final",
+            override_home=fin_home, override_away=fin_away
+        )
+        results.append(match_row)
+        log.info(
+            f"  {fin_home} vs {fin_away} "
+            f"→ {match_row.get('predicted_outcome', '?')} "
+            f"(🏆 Champion: {winner})"
+        )
+
+    # ── 10. Save ───────────────────────────────────────────────────────────────
     out_df  = pd.DataFrame(results)
     out_csv = config.OUTPUTS_PREDICTIONS / "wc2026_predictions.csv"
     out_df.to_csv(out_csv, index=False)
     log.info(f"\n✓ Saved {len(out_df)} match predictions → {out_csv}")
 
-    # Print summary
     if "predicted_outcome" in out_df.columns:
         counts = out_df["predicted_outcome"].value_counts()
         log.info(f"\nPrediction distribution:\n{counts.to_string()}")

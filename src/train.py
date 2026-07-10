@@ -264,14 +264,15 @@ def train_model(model: nn.Module,
     scheduler = None
     if use_lr_scheduler:
         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-            optimizer, mode="min", patience=10, factor=0.5
+            optimizer, mode="max", patience=10, factor=0.5  # track accuracy, not loss
         )
 
     # Mixed precision (GPU only)
     amp_scaler = torch.amp.GradScaler("cuda") if device.type == "cuda" else None
 
     history = {"train_loss": [], "val_loss": [], "val_acc": []}
-    best_val_loss = float("inf")
+    best_val_acc  = -1.0          # track accuracy, not loss
+    best_val_loss = float("inf")  # still logged but not used for early stopping
     best_epoch    = 0
     no_improve    = 0
     save_path     = config.OUTPUTS_MODELS / f"{model_name}_best.pt"
@@ -285,16 +286,19 @@ def train_model(model: nn.Module,
         )
         val_loss, val_acc = evaluate(model, val_loader, criterion, device)
 
-
         history["train_loss"].append(train_loss)
         history["val_loss"].append(val_loss)
         history["val_acc"].append(val_acc)
 
         if scheduler:
-            scheduler.step(val_loss)
+            scheduler.step(val_acc)  # LR scheduler also tracks accuracy
 
-        improved = val_loss < best_val_loss
+        # Early stopping tracks val_accuracy (maximise).
+        # Under Focal Loss, val_loss can rise while accuracy still improves,
+        # so loss-based stopping fires far too early.
+        improved = val_acc > best_val_acc
         if improved:
+            best_val_acc  = val_acc
             best_val_loss = val_loss
             best_epoch    = epoch
             no_improve    = 0
@@ -316,12 +320,13 @@ def train_model(model: nn.Module,
             log.info(f"  Early stopping at epoch {epoch} (best: epoch {best_epoch}).")
             break
 
-    log.info(f"  Best val loss: {best_val_loss:.4f} at epoch {best_epoch}")
+    log.info(f"  Best val acc: {best_val_acc:.4f} at epoch {best_epoch}")
     log.info(f"  Saved best model → {save_path}")
 
     # Load best weights
     model.load_state_dict(torch.load(save_path, map_location=device, weights_only=True))
     history["best_epoch"]    = best_epoch
+    history["best_val_acc"]  = best_val_acc
     history["best_val_loss"] = best_val_loss
 
     return model, history

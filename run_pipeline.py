@@ -75,15 +75,16 @@ def main():
     train_step = ("src/train.py", ["--model", "all"])
     train_xgb_step = ("src/train_xgb.py", [])
     eval_step = ("src/evaluate.py", [])
+    train_ensemble_step = ("src/train_ensemble.py", [])  # learn blend weights after eval
     predict_step = ("src/predict_2026.py", [])
     ensemble_step = ("src/ensemble_2026.py", [])
 
     if args.only_train:
         print("[START] Starting pipeline (TRAINING ONLY mode)...")
-        pipeline = [train_step, train_xgb_step, eval_step]
+        pipeline = [train_step, train_xgb_step, eval_step, train_ensemble_step]
     elif args.skip_scraping:
         print("[START] Starting pipeline (SKIPPING SCRAPING mode)...")
-        pipeline = [merge_step, feat_step, train_step, train_xgb_step, eval_step, predict_step, ensemble_step]
+        pipeline = [merge_step, feat_step, train_step, train_xgb_step, eval_step, train_ensemble_step, predict_step, ensemble_step]
     else:
         print("[START] Starting FULL pipeline (including web scraping)...")
         pipeline = [
@@ -94,6 +95,7 @@ def main():
             train_step,
             train_xgb_step,
             eval_step,
+            train_ensemble_step,
             predict_step,
             ensemble_step
         ]

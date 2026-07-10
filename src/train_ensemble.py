@@ -151,6 +151,14 @@ def main():
     res = minimize(loss_func, init_weights, method='SLSQP', bounds=bounds, constraints=cons)
     
     opt_weights = res.x / np.sum(res.x)
+
+    # Apply minimum weight floor so no model is completely discarded.
+    # Without this, the optimizer collapses to 100% XGBoost since it has
+    # higher val accuracy. A floor of 0.05 ensures each model contributes.
+    WEIGHT_FLOOR = 0.05
+    opt_weights = np.maximum(opt_weights, WEIGHT_FLOOR)
+    opt_weights = opt_weights / opt_weights.sum()  # renormalize to sum=1
+
     weight_map = {name: float(w) for name, w in zip(models_available, opt_weights)}
     
     log.info("\n=== Learned Blend Weights ===")
