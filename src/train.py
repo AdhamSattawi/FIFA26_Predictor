@@ -357,7 +357,7 @@ def main():
     val_ds   = load_split(config.VAL_NPZ)
 
     train_loader = DataLoader(train_ds, batch_size=config.BATCH_SIZE,
-                              shuffle=True,  num_workers=0, pin_memory=True)
+                              shuffle=True,  num_workers=0, pin_memory=True, drop_last=True)
     val_loader   = DataLoader(val_ds,   batch_size=config.BATCH_SIZE,
                               shuffle=False, num_workers=0, pin_memory=True)
 

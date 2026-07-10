@@ -67,37 +67,33 @@ def load_dataset():
 def get_split_mask(df: pd.DataFrame) -> tuple[pd.Series, pd.Series, pd.Series]:
     """
     Temporal split with "Temporal Bridge":
-      Train: 2014 cycle matches + 2018 cycle matches before 2017-06-01
+      Train: 2014 cycle matches + 2018 cycle matches before 2017-06-01 + 2026 cycle matches
       Val:   2018 cycle matches on or after 2017-06-01 (temporal bridge)
       Test:  2022 cycle matches
 
-    This expands the training pool (doubling lineup coverage) while maintaining
-    a clean, domain-aligned temporal validation set (328 lineups) to guide
-    early stopping without high random holdout variance.
+    Excludes matches before 2010-07-12 (start of 2014 cycle) because they have zero lineup data.
     """
-    from datetime import timedelta
+    # Define cycles precisely based on tournament end dates
+    # 2014 cycle: day after WC2010 end (2010-07-11) to WC2014 end (2014-07-13)
+    # 2018 cycle: 2014-07-14 to 2018-07-15
+    # 2022 cycle: 2018-07-16 to 2022-12-18
+    # 2026 cycle: 2022-12-19 to 2025-12-31
 
-    WC_DATES = {
-        2014: pd.Timestamp("2014-06-12"),
-        2018: pd.Timestamp("2018-06-14"),
-        2022: pd.Timestamp("2022-11-20"),
-    }
+    c14_mask = (df["date"] >= "2010-07-12") & (df["date"] <= "2014-07-13")
+    c18_mask = (df["date"] >= "2014-07-14") & (df["date"] <= "2018-07-15")
+    c22_mask = (df["date"] >= "2018-07-16") & (df["date"] <= "2022-12-18")
+    c26_mask = (df["date"] >= "2022-12-19") & (df["date"] <= "2025-12-31")
+
     split_date = pd.Timestamp("2017-06-01")
 
-    def in_cycle(date: pd.Timestamp, wc_year: int) -> bool:
-        wc_date = WC_DATES[wc_year]
-        cycle_start = WC_DATES.get(wc_year - 4, wc_date - pd.Timedelta(days=4 * 365))
-        return cycle_start <= date <= wc_date
+    # Test mask: 2022 cycle only
+    test_mask = c22_mask
 
-    # Test mask: 2022 cycle only (strictly temporal — no leakage)
-    test_mask = df["date"].apply(lambda d: in_cycle(d, 2022))
+    # Val mask: 2018 cycle on or after split_date
+    val_mask = c18_mask & (df["date"] >= split_date)
 
-    # Identify all train+val cycle candidates (2014 + 2018 cycles)
-    cycle_14_18_mask = df["date"].apply(lambda d: in_cycle(d, 2014) or in_cycle(d, 2018))
-
-    # Split the 2014+2018 pool on 2017-06-01
-    train_mask = cycle_14_18_mask & (df["date"] < split_date)
-    val_mask   = cycle_14_18_mask & (df["date"] >= split_date)
+    # Train mask: 2014 cycle + 2018 cycle before split_date + 2026 cycle
+    train_mask = c14_mask | (c18_mask & (df["date"] < split_date)) | c26_mask
 
     log.info(f"Split: {train_mask.sum()} train / {val_mask.sum()} val / {test_mask.sum()} test rows.")
     return train_mask, val_mask, test_mask
@@ -335,6 +331,11 @@ def main():
 
     # ── 5. Train / val / test split ───────────────────────────────────────────
     train_mask, val_mask, test_mask = get_split_mask(df)
+
+    # Normalize weights so training set has mean = 1.0 (prevents inflated gradient norms)
+    train_mean_weight = weights_all[train_mask].mean()
+    if train_mean_weight > 0:
+        weights_all = weights_all / train_mean_weight
 
     train_idx = np.where(train_mask.values)[0]
     val_idx   = np.where(val_mask.values)[0]
