@@ -298,10 +298,10 @@ def main():
     # Determine WC cycle per lineup row
     lineups_matched = lineups_matched.copy()
     lineups_matched["wc_cycle"] = lineups_matched["match_date"].dt.year.map(
-        lambda y: 2014 if 2012 <= y <= 2014
-             else 2018 if 2016 <= y <= 2018
-             else 2022 if 2020 <= y <= 2022
-             else 2026 if 2024 <= y <= 2026
+        lambda y: 2014 if 2010 <= y <= 2014
+             else 2018 if 2015 <= y <= 2018
+             else 2022 if 2019 <= y <= 2022
+             else 2026 if 2023 <= y <= 2026
              else None
     )
 

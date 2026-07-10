@@ -38,15 +38,15 @@ DEFAULT_SLUG = "x"
 
 
 def determine_wc_cycle(match_date: pd.Timestamp) -> int | None:
-    """Map a match date to the WC cycle year it belongs to (2014/2018/2022)."""
+    """Map a match date to the WC cycle year it belongs to (2014/2018/2022/2026)."""
     year = match_date.year
-    if 2012 <= year <= 2014:
+    if 2010 <= year <= 2014:
         return 2014
-    elif 2016 <= year <= 2018:
+    elif 2015 <= year <= 2018:
         return 2018
-    elif 2020 <= year <= 2022:
+    elif 2019 <= year <= 2022:
         return 2022
-    elif 2024 <= year <= 2026:
+    elif 2023 <= year <= 2026:
         return 2026
     return None
 
