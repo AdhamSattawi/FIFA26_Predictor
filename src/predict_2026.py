@@ -26,6 +26,9 @@ import config
 from src.models.baseline_mlp  import BaselineMLP
 from src.models.tactical_cnn  import TacticalCNN
 from src.models.attention_cnn import AttentionCNN
+from src.processing.compute_features_2026 import (
+    load_gulati_state, build_feature_row, update_state_after_match
+)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
@@ -305,12 +308,62 @@ def run_prediction(home_team: str, away_team: str, date: pd.Timestamp,
     return match_row, ens
 
 
+def build_fresh_context(home_team: str, away_team: str, match_date: pd.Timestamp,
+                        bracket_state: dict, context_cols: list,
+                        scalers: dict | None) -> tuple:
+    """
+    Build a context vector for a KO match using the LIVE bracket state
+    (correct Elo, rolling form, H2H for the actual teams, not CSV placeholders).
+    Player matrices are always zero for 2026 since matches haven\'t been played.
+    """
+    row_dict = build_feature_row(
+        date=match_date,
+        home=home_team,
+        away=away_team,
+        home_score=np.nan,
+        away_score=np.nan,
+        tournament="FIFA World Cup",
+        neutral=True,
+        state=bracket_state,
+    )
+    # Player squad extras are all zero (no 2026 lineups scraped yet)
+    squad_extras = {
+        "squad_home_elo_sum":        0.0, "squad_away_elo_sum":        0.0,
+        "squad_elo_diff":            0.0, "squad_home_goals90_mean":   0.0,
+        "squad_away_goals90_mean":   0.0, "squad_goals90_diff":        0.0,
+        "squad_home_assists90_mean": 0.0, "squad_away_assists90_mean": 0.0,
+        "squad_assists90_diff":      0.0, "squad_home_age_mean":       0.0,
+        "squad_away_age_mean":       0.0, "squad_age_diff":            0.0,
+        "has_lineup":                0.0,
+    }
+    combined = {**row_dict, **squad_extras}
+    ctx_arr = np.array([combined.get(c, 0) for c in context_cols], dtype=np.float32)
+    if scalers:
+        ctx_arr = scalers["context"].transform(ctx_arr.reshape(1, -1)).flatten().astype(np.float32)
+    ctx_arr = np.clip(ctx_arr, -3.0, 3.0)
+    hp = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+    ap = np.zeros((config.N_PLAYERS, config.F), dtype=np.float32)
+    return ctx_arr, hp, ap
+
+
+def simulate_ko_result(home: str, away: str, winner: str,
+                       bracket_state: dict, date: pd.Timestamp):
+    """
+    Update bracket state with a simulated KO result (winner 2-1, loser 1-2).
+    This propagates Elo changes and rolling form to the next round.
+    """
+    hs, as_ = (2, 1) if winner == home else (1, 2)
+    update_state_after_match(
+        bracket_state, date, home, away, hs, as_, "FIFA World Cup"
+    )
+
+
 def main():
     config.OUTPUTS_PREDICTIONS.mkdir(parents=True, exist_ok=True)
 
     # ── 1. Load fixtures ──────────────────────────────────────────────────────
     fixtures = load_2026_fixtures(config.GULATI_CSV)
-    log.info(f"Processing {len(fixtures)} 2026 matches …")
+    log.info(f"Processing {len(fixtures)} 2026 matches ...")
 
     # ── 2. Load scalers ───────────────────────────────────────────────────────
     scaler_data = load_scalers()
@@ -321,17 +374,48 @@ def main():
         scalers      = None
         context_cols = config.CONTEXT_FEATURE_COLS
 
-    # ── 3. Load player matrices ───────────────────────────────────────────────
+    # ── 3. Load player matrices (zero for 2026 — matches not yet played) ──────
     player_mats = load_2026_player_matrices(
         config.LINEUPS_CSV, config.PLAYER_STATS_CSV
     )
 
-    # ── 4. Log context metadata ───────────────────────────────────────────────
+    # ── 4. Build live bracket state from compute_features_2026 ────────────────
+    # This gives us accurate per-team Elo, rolling form, and H2H.
+    # We load from Gulati (historical) then replay all completed 2026 matches.
+    log.info("Building live bracket state from historical + 2026 completed matches...")
+    bracket_state = load_gulati_state(config.GULATI_CSV)
+    matches_2026_path = config.DATA_RAW / "matches_2026.csv"
+    if matches_2026_path.exists():
+        m2026 = pd.read_csv(matches_2026_path, parse_dates=["date"])
+        m2026 = m2026.sort_values("date").reset_index(drop=True)
+        replayed = 0
+        for _, m in m2026.iterrows():
+            hs_raw = m.get("home_score")
+            as_raw = m.get("away_score")
+            has_result = (
+                pd.notna(hs_raw)
+                and str(hs_raw).strip() not in ("", "NA", "nan")
+                and pd.notna(as_raw)
+                and str(as_raw).strip() not in ("", "NA", "nan")
+            )
+            if has_result:
+                update_state_after_match(
+                    bracket_state, m["date"],
+                    m["home_team"], m["away_team"],
+                    int(float(hs_raw)), int(float(as_raw)),
+                    m.get("tournament", "FIFA World Cup")
+                )
+                replayed += 1
+        log.info(f"Replayed {replayed} completed 2026 matches into bracket state.")
+    else:
+        log.warning("matches_2026.csv not found — bracket state uses only historical data.")
+
+    # ── 5. Log context metadata ───────────────────────────────────────────────
     sample_ctx_len = len(context_cols)
     C_nn = min(sample_ctx_len, 100)
     log.info(f"Context dimension (XGBoost): {sample_ctx_len} | Context dimension (NNs): {C_nn}")
 
-    # ── 5. Load models ────────────────────────────────────────────────────────
+    # ── 6. Load models ────────────────────────────────────────────────────────
     nn_models = {
         "mlp":       load_trained_model(BaselineMLP,  "baseline_mlp",  C_nn),
         "cnn":       load_trained_model(TacticalCNN,  "tactical_cnn",  C_nn),
@@ -357,15 +441,10 @@ def main():
             ensemble_weights = pickle.load(f)
         log.info(f"Loaded optimal blend weights: {ensemble_weights}")
 
-    # ── 6. Separate fixtures by stage for dynamic bracket resolution ──────────
-    # Sort by date so we process chronologically: QF → SF → Final
+    # ── 7. Separate fixtures by stage ─────────────────────────────────────────
+    # Sort chronologically: QF (earliest 4) → SF (next 2) → Final (last 1)
     fixtures_sorted = fixtures.sort_values("date").reset_index()
     n = len(fixtures_sorted)
-
-    # Standard bracket structure:
-    #   Earliest 4 matches = Quarter-finals
-    #   Next 2             = Semi-finals  (teams replaced by QF winners)
-    #   Last 1             = Final        (teams replaced by SF winners)
     if n >= 7:
         qf_rows  = fixtures_sorted.iloc[:4]
         sf_rows  = fixtures_sorted.iloc[4:6]
@@ -374,93 +453,109 @@ def main():
         qf_rows  = fixtures_sorted
         sf_rows  = pd.DataFrame()
         fin_rows = pd.DataFrame()
-
     log.info(f"Bracket: {len(qf_rows)} QF(s), {len(sf_rows)} SF(s), {len(fin_rows)} Final(s)")
 
     results = []
 
-    # ── Inner helper: predict one fixture row, return result + ensemble probs + winner ─
-    def predict_fixture_row(fixture_row: pd.Series, stage: str,
-                            override_home: str | None = None,
-                            override_away: str | None = None):
-        row_idx   = fixture_row.get("index", fixture_row.name)
-        home_team = override_home or fixture_row["home_team"]
-        away_team = override_away or fixture_row["away_team"]
-        date      = fixture_row["date"]
-        ctx, hp, ap = build_context_for_match(
-            fixture_row, context_cols, scalers, player_mats, row_idx
+    # ── Inner helper: predict using LIVE bracket state context ─────────────────
+    def predict_with_state(home_team: str, away_team: str,
+                           match_date: pd.Timestamp, stage: str):
+        """
+        Build fresh context from bracket_state (correct Elo/form for actual teams),
+        run all models, return (result_row, ens_probs, ko_winner).
+        """
+        ctx, hp, ap = build_fresh_context(
+            home_team, away_team, match_date,
+            bracket_state, context_cols, scalers
         )
         match_row, ens = run_prediction(
-            home_team, away_team, date, stage,
+            home_team, away_team, match_date, stage,
             ctx, hp, ap, loaded_nn, xgb_model, ensemble_weights, scalers
         )
         winner = pick_winner(home_team, away_team, ens)
         return match_row, ens, winner
 
-    # ── 7. Quarter-finals ─────────────────────────────────────────────────────
-    log.info("\n── Quarter-finals ──")
+    # ── 8. Quarter-finals ─────────────────────────────────────────────────────
+    log.info("\n-- Quarter-finals --")
     qf_winners = []
     for _, qf_row in qf_rows.iterrows():
-        match_row, ens, winner = predict_fixture_row(qf_row, "Quarter-finals")
+        home_team = qf_row["home_team"]
+        away_team = qf_row["away_team"]
+        match_date = qf_row["date"]
+
+        match_row, ens, winner = predict_with_state(
+            home_team, away_team, match_date, "Quarter-finals"
+        )
         results.append(match_row)
         qf_winners.append(winner)
         log.info(
-            f"  {match_row['home_team']} vs {match_row['away_team']} "
-            f"→ {match_row.get('predicted_outcome', '?')} "
+            f"  {home_team} vs {away_team} "
+            f"-> {match_row.get('predicted_outcome', '?')} "
             f"(KO winner: {winner})"
         )
+        # Update bracket state so SF context reflects QF outcome
+        simulate_ko_result(home_team, away_team, winner, bracket_state, match_date)
 
-    # ── 8. Semi-finals — teams from QF winners, NOT CSV placeholders ──────────
+    # ── 9. Semi-finals — context built from actual QF winners + updated state ──
     sf_winners = []
     if not sf_rows.empty:
-        log.info("\n── Semi-finals ──")
-        # Bracket pairing: QF0 winner vs QF1 winner = SF1
-        #                  QF2 winner vs QF3 winner = SF2
+        log.info("\n-- Semi-finals --")
         if len(qf_winners) >= 4:
             sf_matchups = [
-                (qf_winners[0], qf_winners[1]),
-                (qf_winners[2], qf_winners[3]),
+                (qf_winners[0], qf_winners[1]),   # SF1
+                (qf_winners[2], qf_winners[3]),   # SF2
             ]
         elif len(qf_winners) == 2:
             sf_matchups = [(qf_winners[0], qf_winners[1])]
         else:
-            sf_matchups = [(r["home_team"], r["away_team"]) for _, r in sf_rows.iterrows()]
+            sf_matchups = [
+                (r["home_team"], r["away_team"]) for _, r in sf_rows.iterrows()
+            ]
 
         for i, (_, sf_row) in enumerate(sf_rows.iterrows()):
-            sf_home, sf_away = sf_matchups[i] if i < len(sf_matchups) else (sf_row["home_team"], sf_row["away_team"])
-            match_row, ens, winner = predict_fixture_row(
-                sf_row, "Semi-finals",
-                override_home=sf_home, override_away=sf_away
+            sf_home, sf_away = (
+                sf_matchups[i] if i < len(sf_matchups)
+                else (sf_row["home_team"], sf_row["away_team"])
+            )
+            match_date = sf_row["date"]
+
+            # Context is built from bracket_state using REAL teams, not CSV placeholders
+            match_row, ens, winner = predict_with_state(
+                sf_home, sf_away, match_date, "Semi-finals"
             )
             results.append(match_row)
             sf_winners.append(winner)
             log.info(
                 f"  {sf_home} vs {sf_away} "
-                f"→ {match_row.get('predicted_outcome', '?')} "
+                f"-> {match_row.get('predicted_outcome', '?')} "
                 f"(KO winner: {winner})"
             )
+            # Update state so Final context reflects SF outcome
+            simulate_ko_result(sf_home, sf_away, winner, bracket_state, match_date)
 
-    # ── 9. Final — teams from SF winners, NOT CSV placeholders ────────────────
+    # ── 10. Final — context built from actual SF winners + updated state ────────
     if not fin_rows.empty:
-        log.info("\n── Final ──")
+        log.info("\n-- Final --")
         fin_home = sf_winners[0] if len(sf_winners) > 0 else fin_rows.iloc[0]["home_team"]
         fin_away = sf_winners[1] if len(sf_winners) > 1 else fin_rows.iloc[0]["away_team"]
-        match_row, ens, winner = predict_fixture_row(
-            fin_rows.iloc[0], "Final",
-            override_home=fin_home, override_away=fin_away
+        match_date = fin_rows.iloc[0]["date"]
+
+        # Context uses REAL finalists' Elo/form, not the CSV placeholder teams
+        match_row, ens, winner = predict_with_state(
+            fin_home, fin_away, match_date, "Final"
         )
         results.append(match_row)
         log.info(
             f"  {fin_home} vs {fin_away} "
-            f"→ {match_row.get('predicted_outcome', '?')} "
-            f"(🏆 Champion: {winner})"
+            f"-> {match_row.get('predicted_outcome', '?')} "
+            f"(Champion: {winner})"
         )
 
-    # ── 10. Save ───────────────────────────────────────────────────────────────
+    # ── 11. Save ───────────────────────────────────────────────────────────────
     out_df  = pd.DataFrame(results)
     out_csv = config.OUTPUTS_PREDICTIONS / "wc2026_predictions.csv"
     out_df.to_csv(out_csv, index=False)
-    log.info(f"\n✓ Saved {len(out_df)} match predictions → {out_csv}")
+    log.info(f"\nSaved {len(out_df)} match predictions -> {out_csv}")
 
     if "predicted_outcome" in out_df.columns:
         counts = out_df["predicted_outcome"].value_counts()
@@ -469,3 +564,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
